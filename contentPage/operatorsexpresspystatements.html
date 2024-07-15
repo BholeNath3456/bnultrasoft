@@ -1,0 +1,1917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators, Expressions and Python Statements</title>
+   <!-- cdn links start -->
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+
+
+   <!-- cdn links end-->
+    
+    
+    
+    
+    <!-- content web page links  start-->
+    <link rel="stylesheet" href="content/content.css">
+    <script src="content/content.js"></script>
+
+    <link rel="stylesheet" href="content/prism.css">
+    <script src="content/prism.js"> </script>
+
+    <link rel="stylesheet" href="content/aos/aos.css">
+    <script src="content/aos/aos.js"></script>
+
+    <!-- content web page links end -->
+  
+
+
+
+</head>
+<body>
+
+
+    <!-- background image Start -->
+    <div class="backgrounds overlay">
+        <div class="background" style="background-image: url('content/img/hero.jpg');"></div>
+    </div>
+    <!-- background image End-->
+    
+    <!-- Sidebar Start -->
+
+
+
+     <div class="w3-sidebar w3-bnultrasoft-color topPadding   w3-card-4 w3-animate-left" style="display:none" id="mySidebar">
+        <div class="w3-bar  w3-hover-white">
+            <span class="w3-bar-item w3-padding-16  ">Contents</span> <button onclick="w3_close()" class="w3-bar-item w3-button w3-right w3-padding-16  w3-hover-black " >&times;</button>
+        </div>
+        
+        <div class="w3-bar-block  ">
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#pythonOperators">Python Operators</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#ArithmeticOperators">Arithmetic Operators</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#AssignmentOperators">Assignment Operators</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#ComparisonOperators">Comparison Operators</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#LogicalOperators">Logical Operators</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#IdentityOperators">Identity Operators</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#MembershipOperators">Membership Operators</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#Bitwiseoperators">Bitwise Operators</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#Precedence">Operator Precedence</a> 
+           
+            
+
+            <a onclick="myFunction('Demo1')" class="w3-button  w3-hover-white w3-left-align w3-block w3-animate-zoom">Conditional Statements <i class="fa fa-caret-down"></i></a>
+                <div id="Demo1" class="w3-hide w3-animate-zoom">
+                <a href="#Pythonif" class="w3-button  w3-hover-white w3-block w3-left-align">Python if</a>
+                <a href="#Pythonifelse" class="w3-button  w3-hover-white w3-block w3-left-align">Python if-else</a>
+                <a href="#Pythonifelifelse" class="w3-button  w3-hover-white w3-block w3-left-align">Python if-elif-else</a>
+                <a href="#nested-if" class="w3-button  w3-hover-white w3-block w3-left-align">Python nested-if</a>
+                </div> 
+
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#PythonForLoops">Python For Loops</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#nestedloop">Python Nested Loops</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#WhileStatement">Python While Statement</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#assert">Python Assert Keyword</a> 
+                
+<!--                 
+            <a onclick="myFunction('Demo2')" class="w3-button  w3-hover-white w3-left-align w3-block w3-animate-zoom">Accordion <i class="fa fa-caret-down"></i></a>
+                <div id="Demo2" class="w3-hide w3-animate-zoom">
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 1</a>
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 2</a>
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 3</a>
+                </div>
+
+           <a class="w3-bar-item w3-button w3-animate-zoom w3-bnultrasoft-color w3-hover-white" href="quiz.html">Python Quiz Set1</a>    
+        -->
+    
+       
+        </div>
+       
+
+
+    </div> 
+
+
+
+
+
+
+
+    <!-- Sidebar Start End -->
+
+<!-- Page Content Start -->
+
+        <!-- Page content header Start -->
+
+
+
+
+        <div class="w3-bnultrasoft-color w3-top">
+            <button class="w3-button w3-xlarge  w3-hover-white" onclick="w3_open()" >&#9776;</button>
+
+            <a href="../ittoolsandnetworkbasics.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M1</a>
+            <a href="../webdesigningandpublishing.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M2</a>
+            <a href="../python.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M3</a>
+            <a href="../iot.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M4</a>
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium w3-xlarge w3-hover-white" onclick="myFunctionRightItem()" >&#9776;</a>
+
+           
+                        <!-- SearchBar start  -->
+
+                       
+
+                     <!-- <div class="w3-dropdown-click  w3-hover-black">
+                        
+                        <input class="w3-input w3-center w3-padding w3-round-xxlarge" type="text" placeholder="Search any contents..."  onclick="dropFunction()"  id="myInput" onkeyup="filterFunction()">
+                        <div class="w3-dropdown-content w3-bar-block w3-card w3-white" id="myDIV" >
+                        
+                            <a class="w3-bar-item w3-button"  href="#pythonintroduction">Introduction of Python</a>
+                            <a class="w3-bar-item w3-button" href="#technicalStrengthofPython">Technical Strength of Python</a>
+                            <a class="w3-bar-item w3-button" href="#PythonInterpreter">Python Interpreter</a>
+                            <a class="w3-bar-item w3-button" href="#howtorunpython">Using CMD (Command Prompt)</a>
+                            <a class="w3-bar-item w3-button" href="#PythonComments">Python Comments</a>
+                            <a class="w3-bar-item w3-button" href="#PythonVariable">Python Variable</a>
+                            <a class="w3-bar-item w3-button" href="#PythonKeywords">Python Keywords</a>
+                            <a class="w3-bar-item w3-button" href="#PythonPrintFunction">Python Print Function</a>
+                            <a class="w3-bar-item w3-button" href="#PythonInputFunction">Python Input Function</a>
+                            <a class="w3-bar-item w3-button" href="#PythonDataType">Python DataType</a>
+                            <a class="w3-bar-item w3-button" href="#PythonConstants">Python Constants</a>
+                            <a class="w3-bar-item w3-button" href="#PythonLiteral">Python Literal</a>
+                            <a class="w3-bar-item w3-button" href="#PythonString">Python String</a>
+                            <a class="w3-bar-item w3-button" href="#PythonStringConcatenation">Python String Concatenation</a>
+                            <a class="w3-bar-item w3-button" href="#PythonFormatStrings">Python Format Strings</a>
+                            <a class="w3-bar-item w3-button" href="#PythonEscapeCharacter">Python Escape Character</a>
+                           
+                            
+                        </div>
+                        </div>  -->
+
+
+                    <!-- SearchBar End  -->
+                  
+                    <!-- ------------Right hidden items----------- -->
+
+                    <div id="demo" class="w3-bar-block w3-bnultrasoft-color w3-hide w3-hide-large w3-hide-medium  w3-animate-zoom w3-animate-fading">
+                        <a href="../ittoolsandnetworkbasics.html" class="w3-bar-item w3-button w3-hover-white">Olevel M1</a>
+                        <a href="../webdesigningandpublishing.html" class="w3-bar-item w3-button w3-hover-white">Olevel M2</a>
+                        <a href="../python.html" class="w3-bar-item w3-button w3-hover-white">Olevel M3</a>
+                        <a href="../iot.html" class="w3-bar-item w3-button w3-hover-white">Olevel M4</a>
+                      </div>
+
+                      
+                    <!-- ------------Right hidden items----------- -->
+   
+
+        </div>
+        <!-- Page content header  End-->
+
+        <!-- Page content Body Start -->
+
+            
+
+ <!-- Page content Coding part Start -->
+
+
+ <section id="pythonOperators" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Python Operators</u></h2>
+                    <p><b> &#10028;  Python Operators :</b>
+                        Operators are used to perform operations on variables and values.</p>
+                     
+                   
+                   
+                    <p> <b>&#10028; Operators: </b>  These are the special symbols. Eg- + , * , /, etc.
+                    </p>
+                    <p> <b> &#10028; Operands: </b> It is the value on which the operator is applied.
+                    </p>
+                      
+                 <br>
+                 <div class="w3-container  w3-sand w3-round-xlarge">
+                    
+                    <p><b>Types of Operators in Python:</b> </p>
+
+                     <ul class="w3-ul">
+                    <li> 1). Arithmetic operators</li>
+                    <li>2). Assignment operators </li>
+                    <li>3). Comparison operators</li>
+                    <li>4). Logical operators</li>
+                    <li>5). Identity operators </li>
+                    <li>6). Membership operators</li>
+                    <li>7). Bitwise operators </li>
+
+                     </ul>
+
+                </div>
+                 
+
+                 <br>
+                 
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="ArithmeticOperators" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-left"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Python Arithmetic Operators</u></h2>
+                    <p><b> &#10028; Arithmetic Operators : </b> Arithmetic operators are used with numeric values to perform common mathematical operations.</p> 
+               
+               
+                        <img src="content/img/python/arithmeticoperators.png" class="w3-round w3-center"  alt="image" style="width:100%">         
+                
+                 <br>
+                 <br>
+                 
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="AssignmentOperators" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Python Assignment Operators</u></h2>
+                    <p><b> &#10028; Assignment Operators : </b>Assignment operators are used to assign values to variables.</p> 
+               
+               
+                        <img src="content/img/python/assignmentoperators.png" class="w3-round w3-center"  alt="image" style="width:100%">         
+                
+                 <br>
+                 <br>
+                 
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="ComparisonOperators" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Python Comparison Operators</u></h2>
+                    <p><b> &#10028; Comparison Operators : </b>Comparison operators are used to compare two values.</p> 
+               
+               
+                        <img src="content/img/python/comparisionoperators.png" class="w3-round w3-center"  alt="image" style="width:100%">         
+                
+                 <br>
+                 <br>
+                 <div class="w3-container  w3-sand w3-round-xlarge">
+
+                    <p> <b>Some Examples on Comparison Operators:-</b></p>
+                   
+                <pre>
+                <code class="language-java">
+a=5
+b=10
+print("a == b", a == b)
+print("a != b", a != b)
+print("a > b", a  >b)
+print("a < b", a < b)
+print("a >= b", a >= b)
+print("a <= b", a <= b)
+</code>
+                </pre> 
+                <h3>Output:-</h3>
+                <p> a == b False </p>
+                <p>a != b True </p>
+                <p>a > b False </p>
+                <p> a < b True </p>
+                <p>a >= b False </p>
+                <p> a <= b True </p>
+               
+                
+                
+               
+                
+                
+            </div>
+
+                 <br>
+                 
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="LogicalOperators" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Python Logical Operators</u></h2>
+                    <p><b> &#10028; Python Logical Operators : </b>  Logical operators are used to combine conditional statements.</p> 
+                
+                   
+               
+                        <img src="content/img/python/logical.png" class="w3-round w3-center"  alt="image" style="width:100%">         
+                
+                        <br>
+                        <br>
+                        <div class="w3-container  w3-sand w3-round-xlarge">
+       
+                           <p> <b>Some Examples on Logical Operators:-</b></p>
+                          
+                       <pre>
+                       <code class="language-java">
+x = 5
+print(x < 5 and  x < 10)
+print(x < 5 or  x < 10)
+print(not(x > 3 and x < 10))
+print(not(x > 3 or x < 10))
+       </code>
+                       </pre> 
+                       <h3>Output:-</h3>
+                       <p>  False </p>
+                       <p> True </p>
+                       <p> False </p>
+                      
+                       <p> False </p>
+                 
+                      
+                       
+                       
+                      
+                       
+                       
+                   </div>
+                
+                
+                        <br>
+                 
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="IdentityOperators" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Python Identity Operators</u></h2>
+                    <p><b> &#10028; Python Identity Operators : </b>  The identity operators compare the objects to determine whether they share the same memory and refer to the same object type <span style="color: rgb(115, 2, 7);">(data type)</span> .</p> 
+                    <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+                        <br>
+                        <p><b>Note: </b>Python provided two identity operators.</p>
+                      <p><b>&#10028;</b> 'is' Operator </p>
+                      <p><b>&#10028;</b> 'is not' Operator </p>
+
+                     </div>
+                   
+               <br>
+               <div class="w3-container  w3-sand w3-round-xlarge">
+                <br>
+                <p><b> &#10028; Python 'is' Operator :  </b></p>
+              <p> The <b>'is'</b> operator evaluates to <b>True</b>, if both the operand objects share the same memory location. The memory location of the object can be obtained by the <span style="color: rgb(115, 2, 7);"><b>"id()"</b> function</span> . <br> <b>Note:-</b> If the <span style="color: rgb(115, 2, 7);"><b>"id()"</b>  of both variables is same,  the <b>"is"</b> operator returns <b>True.</b> </span></p>
+
+             </div>
+                     
+                        <br>
+                        <br>
+                        <div class="w3-container  w3-sand w3-round-xlarge">
+       
+                           <p> <b>Examples 1: on id() function:-</b></p>
+                          
+                       <pre>
+                       <code class="language-java">
+a=5
+b=10
+c=15
+
+#Printing Values
+print(a)
+print(b)
+print(c)
+
+# Printing IDs of a, b, and c
+print("a memory ID is =>",id(a))
+print("b memory ID is =>",id(b))
+print("c memory ID is =>",id(c))
+       </code>
+                       </pre> 
+                       <h3>Output:-</h3>
+                       <p>5</p>
+                       <p>10</p>
+                       <p>15</p>
+                       <p>a memory ID is => 140721431726648</p>
+                       <p>b memory ID is => 140721431726808</p>
+                       <p>c memory ID is => 140721431726968</p>
+                       
+                 
+                      
+                       
+                       
+                      
+                       
+                       
+                   </div>
+                   <br>
+                   <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+       
+                    <p> <b>Examples 2: on id() function:-</b> <span style="color: rgb(115, 2, 7);"><b>Note :-</b> When assign one value of a variable to another variable, it point the same memory location.</span>  </p>
+                   
+                <pre>
+                <code class="language-java">
+a=5
+b=10
+c=a
+
+#Printing Values
+print(a)
+print(b)
+print(c)
+
+# Printing IDs of a, b, and c
+print("a memory ID is =>",id(a))
+print("b memory ID is =>",id(b))
+print("c memory ID is =>",id(c))
+</code>
+                </pre> 
+                <h3>Output:-</h3>
+                <p>5</p>
+                <p>10</p>
+                <p>5</p>
+                <p>a memory ID is => 140721431726648</p>
+                <p>b memory ID is => 140721431726808</p>
+                <p>c memory ID is => 140721431726648</p>
+                
+          
+               
+                
+                
+               
+                
+                
+            </div>
+            <br>
+                   <div class="w3-container  w3-sand w3-round-xlarge">
+       
+                    <p> <b>Examples 3: on id() function:-</b> <span style="color: rgb(115, 2, 7);"><b>Note :-</b> When assign same value to all variables, it point the same memory location of all variables.</span>  </p>
+                   
+                <pre>
+                <code class="language-java">
+a=5
+b=5
+c=a
+
+#Printing Values
+print(a)
+print(b)
+print(c)
+
+# Printing IDs of a, b, and c
+print("a memory ID is =>",id(a))
+print("b memory ID is =>",id(b))
+print("c memory ID is =>",id(c))
+</code>
+                </pre> 
+                <h3>Output:-</h3>
+                <p>5</p>
+                <p>5</p>
+                <p>5</p>
+                <p>a memory ID is => 140721431726648</p>
+                <p>b memory ID is => 140721431726648</p>
+                <p>c memory ID is => 140721431726648</p>
+                
+          
+               
+                
+                
+               
+                
+                
+            </div>
+                
+                
+                
+                        <br>
+
+                        <br>
+                        <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+            
+                         <p> <b>Examples : 'is' Operator :-</b>  </p>
+                        
+                     <pre>
+                     <code class="language-java">
+a=5
+b=10
+c=a
+
+#Printing Values
+print("a =>",a)
+print("b =>",b)
+print("c =>",c)
+
+# Printing IDs of a, b, and c
+print("a memory ID is =>",id(a))
+print("b memory ID is =>",id(b))
+print("c memory ID is =>",id(c))
+
+
+# Comparing and printing return values
+print("a is b =>",a is b)
+print("a is c =>",a is c)
+     </code>
+                     </pre> 
+                     <h3>Output:-</h3>
+<p>a => 5</p>
+<p>b => 10</p>
+<p>c => 5</p>
+<p>a memory ID is => 140721431726648</p>
+<p>b memory ID is => 140721431726808</p>
+<p>c memory ID is => 140721431726648</p>
+<p>a is b => False</p>
+<p>a is c => True</p>
+                     
+ </div>
+ <br>  
+ 
+ <br>
+ <div class="w3-container  w3-sand w3-round-xlarge">
+    <br>
+    <p><b> &#10028; Python 'is not' Operator :  </b>The <b>'is not'</b> operator evaluates to <b>True</b> if both the operand objects do not share the same memory location or both operands are not the same objects.</p>
+
+ </div>
+ <br>
+ <br>
+ <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+  <p> <b>Examples : 'is not' Operator :-</b>  </p>
+ 
+<pre>
+<code class="language-java">
+a=5
+b=10
+c=a
+
+#Printing Values
+print("a =>",a)
+print("b =>",b)
+print("c =>",c)
+
+# Printing IDs of a, b, and c
+print("a memory ID is =>",id(a))
+print("b memory ID is =>",id(b))
+print("c memory ID is =>",id(c))
+
+
+# Comparing and printing return values
+print("a is not b =>",a is not b)
+print("a is not c =>",a is not c)
+</code>
+</pre> 
+<h3>Output:-</h3>
+
+<p>a => 5</p>
+<p>b => 10</p>
+<p>c => 5</p>
+<p>a memory ID is => 140721434675768</p>
+<p>b memory ID is => 140721434675928</p>
+<p>c memory ID is => 140721434675768</p>
+<p>a is not b => True</p>
+<p>a is not c => False</p>
+
+</div>
+<br>  
+ 
+ 
+ 
+ <br>
+
+                                       
+                 
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="MembershipOperators" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-left"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Python Membership Operators</u></h2>
+
+                    <p><b> &#10028; Python Membership Operators: </b>  Python offers two membership operators to check or validate the membership of a value. It tests for membership in a sequence, such as strings, lists, or tuples.
+                    </p>
+                   
+                        <img src="content/img/python/membershipoperators.png" class="w3-round w3-center"  alt="image" style="width:100%">         
+                
+                 <br>
+                 <br>
+
+                 <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+                    <p> <b>Examples : 'in' Operator :-</b>  </p>
+                   
+                  <pre>
+                  <code class="language-java">
+a="bnultrasoft"
+print("u" in a)   #returns True because "u" is present in "bnultrasoft"
+print("B" in a)   #returns False because "B" is not present in "bnultrasoft" 
+print("z" in a)   #returns False because "z" is not present in "bnultrasoft" 
+
+x = ["apple", "banana"]
+print("banana" in x)  #returns True because a sequence with the value "banana" is in the list
+</code>
+                  </pre> 
+                  <h3>Output:-</h3>
+                  
+                <p> True </p>
+                <p>False</p>
+                <p>False</p>
+                <p> True </p>
+                  
+                  </div>
+                  <br>
+                  <div class="w3-container  w3-sand w3-round-xlarge">
+
+                    <p> <b>Examples : 'not in' Operator :-</b>  </p>
+                   
+                  <pre>
+                  <code class="language-java">
+a="bnultrasoft"
+print("z" not in a)  #returns True because "z" is not present in "bnultrasoft" 
+print("u" not in a)  #returns False because "u" is present in "bnultrasoft" 
+
+x = ["apple", "banana"]
+print("pineapple" not in x)   #returns True because a sequence with the value "pineapple" is not in the list
+</code>
+                  </pre> 
+                  <h3>Output:-</h3>
+                  
+                <p> True </p>
+                <p>False</p>
+                
+                <p> True </p>
+                  
+                  </div>
+                  <br>
+                  <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+                     <p> <b>&#10028;</b> Labwork </p>
+             <p>Q42) WAP to input your name and check vowels (a,e,i,o,u) character <b>is present</b> one by one. <br> 
+                <b>[Hint: "e" in "computer" , Output: True |  "y" in "computer",   Output: False]</b> </p> 
+             <p>Q43) WAP to create a list of 8 colors names and input from user ( "pink","red", "blue") and check these <b>are present</b> in List.
+            </p> 
+            <p>Q44) WAP to create a list of 7 animals names and input from user ("Tiger") is <b>not present</b> in List.
+            </p>         
+<p>Q45) WAP to create a list of 6 fruits names and input from user ("Pomegranate") is <b>not present</b> in List.
+</p>
+
+
+
+
+
+                  </div>
+                 <br>
+                 <br>
+
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="Bitwiseoperators" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u> Python Bitwise operators</u></h2>
+               <p> <b> &#10028;</b> Bitwise operators are used to compare (binary) numbers</p>
+                        <br> 
+
+                        <div class="w3-container  w3-sand w3-round-xlarge">
+                            <br> 
+                            <div class="w3-responsive">
+                            <table class="w3-table-all">
+                            <tr> <th> Operator</th> <th>Name </th> <th>Description </th> <th>Syntax </th> </tr>
+                             <tr> <td>&  </td> <td> Bitwise AND </td> <td> Result bit 1,if both operand bits are 1;otherwise results bit 0</td> <td> x & y</td></tr>			
+                             <tr> <td>|  </td> <td> Bitwise OR </td> <td> Result bit 1,if any of the operand bit is 1; otherwise results bit 0.</td> <td> x | y</td></tr>			
+                             <tr> <td>^  </td> <td> Bitwise XOR </td> <td> Results bit 1,if any of the operand bit is 1 but not both, otherwise 
+
+                                results bit 0.</td> <td> x ^ y</td></tr>			
+                             <tr> <td>~ </td> <td> Bitwise NOT </td> <td>Inverts individual bits</td> <td> ~ x </td></tr>			
+                             <tr> <td>>>  </td> <td> Bitwise Right Shift </td> <td> The left operand’s value is moved toward right by the number of bits specified by the right operand. </td> <td> x >> 1</td></tr>			
+                             <tr> <td><<  </td> <td>Bitwise Left Shift </td> <td> The left operand’s value is moved toward left by the number of bits specified by the right operand.</td> <td> x << 1</td></tr>			
+                            </table>
+                           </div>
+                            <br>
+                            <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+                                <p> <b>&#10028;</b> Labwork </p>
+                                <p>Q46) What will be the following output?</p>
+                                 <ul class="w3-ul">
+                                      <li> 1) 45 >> 2</li>
+                                      <li> 2) 36 & 76</li>
+                                      <li> 3) 101 | 205</li>
+                                      <li> 4) 97 ^ 58</li>
+                                      <li> 5) 101 << 2 </li>
+                                      <li> 6) 285 & 308</li>
+                                      <li> 7) 83 | 936</li>
+                                      <li> 8) 405 & 511</li>
+                                      <li> 9) 708 ^ 432</li>
+                                      <li> 10) 359 & 608</li>
+                                 </ul>
+
+                            </div>
+
+                           <br> 
+                        </div>
+
+                 <br>
+                 
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="Precedence" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Python Operator Precedence</u></h2>
+                    <p><b> Operator Precedence : </b> </p>
+                    <p> Operator precedence describes the order in which operations are performed.</p> 
+                     <p> A rule of precedence in Python it guides the order in which these operations are carried out.</p>
+               
+                        <img src="content/img/python/Precedence.png" class="w3-round w3-center"  alt="image" style="width:100%">         
+                
+                 <br>
+                 <p><b> &#10028; Note : </b> If two operators have the same precedence, the expression is evaluated from <span style="color: rgb(115, 2, 7);">left to right</span> .</p> 
+                 <br>
+                            <div class="w3-container  w3-sand w3-round-xlarge">
+                                <p> <b>&#10028;</b> Labwork </p>
+                                <p>Q47) What will be the following output?</p>
+                                 <ul class="w3-ul">
+                                      <li> 1). 108 & 99 + 2 * (45//5) >> 1</li>
+                                      <li> 2). 78 ^ 8 ** 4 + 25 & 42 << 1 </li>
+                                      <li> 3). 110 | 85 // 2 * (95 // 4) + 55 >> 2</li>
+                                      <li> 4). 45 + (56 // 2) & 23 + 45 >> 1</li>
+                                      <li> 5). 67 ^ 45 & 34 | 98 + 67 >> 1 </li>
+                                      <li> 6). 89 & 52 | 49 ^ 73</li>
+                                      <li> 7). 88 & 8 ** 2 + 25 ^ 4 << 1</li>
+                                      <li> 8). 34 // 4 ** 2 + 95 ^ 67 + 3</li>
+                                      <li> 9). 38 ** 2 - (45 // 9) + 97 % 3 * 6 >> 1</li>
+                                      <li> 10). ( 90 + 35 // 7)* 2 + 69 & 7 | 30 & 89</li>
+                                 </ul>
+
+                            </div>
+                            <br>
+                            <br>
+
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+
+<section id="Pythonif" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Conditional Statements</u></h2>
+                    <br>
+                    <p> <b>&#10028; </b>Conditional statements in Python languages decide the direction (Control Flow) of the flow of program execution.</p>
+                    <p> <b>&#10028; </b>If-Else statements in Python are part of conditional statements, which decide the control of code.</p>
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+
+                        <p> <b>Types of Control Flow in Python</b></p>
+                         <ul class="w3-ul">
+                            <li>1). The if statement</li>
+                            <li>2). The if-else statement</li>
+                            <li>3). The if-elif-else ladder</li>
+                            <li>4). The nested-if statement </li>
+                           
+                         </ul>
+
+                    </div>
+                    <br>
+                    <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+                        <p> <b>Python Indentation:</b></p>
+                         <ul class="w3-ul">
+                           <p> <b>&#10028; </b> Since other programming languages uses curly-braces { } to define a block of code but in Python uses <span style="color: rgb(115, 2, 7);">Indentation (whitespace at the beginning of a line)</span>  to define scope in the code.</p>
+                            <p> <b>Note: </b>If we not use indentation when it required, then  <span style="color: rgb(115, 2, 7);">Python will raise an error. </span>  </p>
+                         </ul>
+
+                    </div>
+
+                    <br>
+                    <br> 
+                    <h2 class="w3-panel w3-center"><u>The if Statements</u></h2>
+                    <p> <b> &#10028; </b>The if statement is used to test a particular condition and if the condition is true, it executes a block of code known as <span style="color: rgb(115, 2, 7);">if-block.</span>  </p>
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+
+                        <p> <b>Syntax of if:</b></p>
+                        <pre>
+                            <code class="language-java">
+if condition:
+   statement 
+</code>
+</pre> 
+<br>
+<p> <b>Example 1 of <span style="color: rgb(115, 2, 7);">if statements: </span></b> Here, if condition is <span style="color: rgb(115, 2, 7);">True</span>, then if block statements will be executes. Out of if block also executes as normally.</p>
+<pre>
+    <code class="language-java">
+a = 45
+b = 20
+
+if a > b:
+    print("a is greater than b") #If block starts
+    print("a is greater than b")
+    print("a is greater than b")
+    print("a is greater than b") #If block ends
+        
+print("Out of If block") #Out of If block
+</code>
+    </pre> 
+    <hr style="height: 1px; background-color: brown;">
+    <p><b>Output: </b></p>
+    <p>a is greater than b</p>
+    <p>a is greater than b</p>
+    <p>a is greater than b</p>
+    <p>a is greater than b</p>
+   
+    
+<p>Out of If block</p>
+
+<br>
+<p> <b>Example 2 of <span style="color: rgb(115, 2, 7);">if statements: </span></b> Here, if condition is <span style="color: rgb(115, 2, 7);"> False</span>, then if block statements will not be executes. Out of if block executes as normally.</p>
+<pre>
+    <code class="language-java">
+a = 45
+b = 20
+
+if a < b:
+    print("a is greater than b") #If block starts
+    print("a is greater than b")
+    print("a is greater than b")
+    print("a is greater than b") #If block ends
+        
+print("Out of If block") #Out of If block
+</code>
+    </pre> 
+    <hr style="height: 1px; background-color: brown;">
+    <p><b>Output: </b></p>
+  
+   
+    
+<p>Out of If block</p>
+
+
+
+
+
+</div>
+                 <br>
+
+
+
+                 <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+                    <p> <b>Labwork: </b></p>
+                  <p>Q48) WAP to input any two number <span style="color: rgb(115, 2, 7);">(a , b)</span>  and print its greater number.</p>
+                  <p>Q49) WAP to Enter a Name and check <span style="color: rgb(115, 2, 7);">name="Python"</span> , if the name matches to "Python" then print <span style="color: rgb(115, 2, 7);">"Hello Python"</span> .</p>
+                  <p>Q50) WAP to Enter a Name and print it if vowels matches. <span style="color: rgb(115, 2, 7);"> By using if statement</span> <br>
+                      [ Hint: <br> 
+                      Enter any name : <span style="color: rgb(115, 2, 7);">Computer </span><br>
+                      Vowel <span style="color: rgb(115, 2, 7);">'e'</span>  is matches in <span style="color: rgb(115, 2, 7);">Computer</span>  <br>
+                      Vowel <span style="color: rgb(115, 2, 7);">'o'</span>  is matches in <span style="color: rgb(115, 2, 7);">Computer</span>   <br>
+                      Vowel <span style="color: rgb(115, 2, 7);">'u'</span>  is matches in <span style="color: rgb(115, 2, 7);">Computer</span>   ] 
+                  </p>
+                </div>
+                <br>
+                <br>
+                 
+
+
+ </div>
+</div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+
+
+<section id="Pythonifelse" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>The  If-else Statement</u></h2>
+                <p> <b> &#10028; </b> Here, if the condition is false, we can use the else statement, when the <span style="color: rgb(115, 2, 7);"> if </span>  condition is <span style="color: rgb(115, 2, 7);">false</span> . </p>
+                 <br>
+                 <div class="w3-container  w3-sand w3-round-xlarge">
+
+                    <p> <b>Syntax of if-else:</b></p>
+                   
+                <pre>
+                <code class="language-java">
+if (condition):
+    # Executes this block if
+    # condition is true
+
+else:
+    # Executes this block if
+    # condition is false
+</code>
+                </pre>
+            
+            </div> 
+            <br>
+            <div class="w3-container  w3-sand w3-round-xlarge">
+
+                <p> <b>Example of  if-else:</b></p>
+               
+            <pre>
+            <code class="language-java">
+a= -20
+if a>0:
+    print(a,"is greater than 0")
+else:
+    print(a,"is negative number")
+</code>
+            </pre>
+
+            
+            <hr style="height: 1px; background-color: brown;">
+            <p><b> Output: </b></p>
+            <p> -20 is negative number</p>  
+        </div> 
+        
+                
+                 <br>
+                   
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+<section id="Pythonifelifelse" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>The if-elif-else ladder</u></h2>
+                <p> <b> &#10028; </b> Here, a user can decide among multiple options. The <span style="color: rgb(115, 2, 7);">if statements </span> are executed from the top to down. If none of the conditions is true, then the final <span style="color: rgb(115, 2, 7);">“else”</span>  statement will be executed. </p>
+                 <br>
+                 <div class="w3-container  w3-sand w3-round-xlarge">
+
+                    <p> <b>Syntax of if-elif-else:</b></p>
+                   
+                <pre>
+                <code class="language-java">
+if (condition):
+    statement
+
+elif (condition):
+    statement
+
+elif (condition):
+    statement
+.
+.
+
+else:
+    statement
+</code>
+                </pre>
+            
+            </div> 
+            <br>
+            <div class="w3-container  w3-sand w3-round-xlarge">
+
+                <p> <b>Example of  if-elif-else:</b></p>
+               
+            <pre>
+            <code class="language-java">
+a = 20
+
+if (a == 10): 
+    print("a is 10")
+    
+elif (a == 15): 
+    print("a is 15")
+    
+elif (a == 20): 
+    print("a is 20")
+    
+else: 
+    print("a is not find") 
+                
+</code>
+            </pre>
+
+            
+            <hr style="height: 1px; background-color: brown;">
+            <p><b> Output: </b></p>
+            <p> a is 20</p>  
+        </div> 
+        <br>
+
+        <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+            <p> <b>Labwork:</b></p>
+            <ul class="w3-ul">
+             <li> Q51) WAP to  check whether a number entered by user is divisible by 7 or not.</li>
+             <li> Q52) WAP to program to check whether a number entered by user is even or odd. </li>
+             <li> Q53) WAP to check whether a person is eligible for voting or not (accept are from user).</li>
+             <li> Q54) WAP to program to check whether the sum of first and last digit of a number (entered by user which is 3 digits number) is divisible by 3 or not. </li>
+             <li> Q55) WAP to accept a number from 1 to 7 and display the name of the day like 1 for Sunday, 2 for Monday and so on.</li>
+             <li> Q56) WAP to accept 3 numbers from the user and print the greatest number among them.</li>
+             <li> Q57) WAP to accept a character from user and check the character is Vowels or not (user may enter 
+                small / capital Character  ).</li>
+             <li> Q58) WAP to accept two number and perform all mathematical operations <span style="color: rgb(115, 2, 7);"> (+, -, *, %, //, /, **) </span> <br>
+                 <p> Hint  :  </p>
+                 <p> Enter first number : 7</p>
+                 <p> Enter second number : 3</p>
+                 <p> Enter Operator : +</p>
+                 <p> Your answer is : 10</p>
+            </li>
+             <li> Q59) WAP to accept percentage from the user and display the grade according to the following criteria. <br>
+                <table class="w3-table-all">
+                <tr> <th> Percentage</th> <th>Grade</th></tr>
+                 <tr> <td>  > = 85</td> <td> <b> S Grade</b></td></tr>
+                 <tr> <td>  > = 75 to < 85</td> <td> <b> A Grade</b></td></tr>
+                 <tr> <td>  > = 65 to < 75</td> <td> <b> B Grade</b></td></tr>
+                 <tr> <td>  > = 55 to < 65</td> <td> <b> C Grade</b></td></tr>
+                 <tr> <td>  > = 50 to < 55</td> <td> <b> D Grade</b></td></tr>
+                <tr> <td>  < 50</td> <td> <b> F Grade</b></td></tr>
+                </table>
+            </li>
+             <li>Q60)  WAP to program to calculate the electricity bill (accept number of unit from user) according to the following criteria:  <br>
+                 <table class="w3-table-all">
+                   <tr> <th> Unit</th> <th> Price</th></tr>
+                   <tr> <td> First 100 units</td> <td> no charge</td></tr>
+                   <tr> <td> Next 100 units</td> <td> Rs 5 per unit</td></tr>
+                   <tr> <td > After 200 units</td> <td> Rs 10 per unit </td> </tr>
+                   <tr> <td colspan="2"><span style="color: rgb(115, 2, 7);">Eg: If input unit is 350 than total bill amount is Rs 2000.</span>  </td></tr>
+                </table>   
+                  
+             </li>
+             <li> Q61) WAP to accept three sides of a triangle and check whether it is an equilateral, isosceles or scalane triangle. <br>
+                <b> Note: </b> <br>
+                <p> An equilateral triangle: In which all sides are equal.</p>            
+                <p> A scalane triangle : In which three unequal sides.</p>
+                 <p>An isosceles triangle : In which at least two sides are equal.</p>
+            </li>
+
+            <li> Q62) WAP  to compute the wages of a daily laborer as per the following rules: -
+           
+                <table class="w3-table-all">
+                    <tr> <td> Hours Worked Rate Applicable Upto first 8 hrs Rs100/- </td></tr>
+                    <tr> <td> a) For next 4 hrs Rs30/- per hr extra </td></tr>
+                    <tr> <td> b) For next 4 hrs Rs40/- per hr extra </td></tr>
+                    <tr> <td> c) For next 4 hrs Rs50/- per hr extra </td></tr>
+                    <tr> <td> d) For rest Rs60/- per hr extra  </td></tr>
+                </table>    </li>  
+            
+            </ul>
+        
+        </div>
+        
+                
+                 <br>
+                   
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+
+<section id="nested-if" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>The nested-if statement</u></h2>
+
+                    <p><b> &#10028;The nested-if statement : </b> If statement can also be checked inside other if statement. This conditional statement is called a nested if statement. This means that inner if condition will be checked only if outer if condition is true.</p> 
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+
+                        <p> <b>Syntax:</b></p>
+                       
+                    <pre>
+                    <code class="language-java">
+# If condition 1 is true, we are heading towards condition 2, if not, we are heading towards condition 3
+if condition_1:
+
+    # If condition 2 is true, the statement A will be executed, if not, the statement B will be executed.
+    if condition_2:
+        statement_A...
+    else:
+        statement_B...
+
+# If condition 1 is not true but condition 3 is true, the statement C will be executed, if not, the statement D will be executed
+elif condition_3:
+    statement_C...
+
+else: 
+    statement_D...
+</code>
+                    </pre> 
+               
+                   
+                 <br>
+
+
+                 
+               </div>
+               <br>
+               <div class="w3-container  w3-sand w3-round-xlarge">
+
+                <p> <b>Example: </b></p>
+               
+            <pre>
+            <code class="language-java">
+# Python Program to display the greatest among three 
+# distinct numbers using nested if statement
+
+# Inputting the three numbers
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+c = int(input("Enter third number: "))
+
+# If a is greater than b
+if a > b:               
+    # If b is greater than c
+    if a > c:
+        print(f"{a} is the greatest number among the three")
+
+# If b is greater than c
+if b > c:
+    # If b is greater than a
+    if b > a:
+        print(f"{b} is the greatest number among the three")
+        
+# If c is greater than a
+if c > a:
+    # If c is greater than b
+    if c > b:
+        print(f"{c} is the greatest number among the three")
+        
+        
+# nested if statement in python
+# explain the nested if statement in python with example
+</code>
+            </pre> 
+<p> <b>Output:</b></p>
+          <p> Enter first number: 3  </p>
+ <p>Enter second number: 2  </p>
+<p>Enter third number: 1  </p>
+<p> 3 is the greatest number among the three</p>
+
+
+             
+
+            </div> 
+             <br>
+            <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+                <p> <b>Labwork:-</b></p>
+                <ul class="w3-ul">
+                    <li> Q63) WAP using nested if else statement to check whether a number is zero, positive, or negative.</li> 
+                    <li> Q64) Write a program in Python using nested if statement, check the following: <br>
+
+                        If age < 18; <span style="color: rgb(115, 2, 7);"> Display output :</span> "You are minor and not eligible to cast vote." <br>
+                        If age >= 18 and age < 60;  <span style="color: rgb(115, 2, 7);">Display output : </span> "You are young and eligible to cast vote." <br>
+                         Otherwise, <span style="color: rgb(115, 2, 7);">Display output : </span> "You are a senior citizen person and will be given special care to cast vote."</li>
+
+                     <li>Q65) A student will not be allowed to sit in exam if his/her attendence is less than 75%. <br>
+                      <b>  &#10028; Take following input from user :</b> <br>
+                       1). Number of classes held<br>
+                       2).  Number of classes attended.<br>
+                      <b> &#10028;Print :</b> <br>
+                       &#10028; percentage of class attended <br>
+                       &#10028; Is student is allowed to sit in exam or not.</li>
+
+                       <li> Q66). Consider the following code.  <br>
+                    
+                        <pre>
+                            <code class="language-java">
+if i < j:
+    if j < k:
+        i = J
+    else:
+        j = k
+
+else:
+    if j > k:
+       j = i
+    else:
+       i = k
+
+print(i,j,k)
+                            </code>
+                            </pre> 
+                        <p> &#10028; What will the above code print if the variable i,j and k have the following values?</p>    
+                        <p>a) <b>i = 3, j = 5, k = 7 </b></p>
+                        <p>b) <b>i = -2, j = -5, k = 9  </b></p>
+                        <p>c) <b>i = 8, j = 15, k = 12  </b></p>
+                        <p>d) <b>i = 13, j = 15, k = 13 </b></p>
+                        <p>e) <b>i = 3, j = 5, k = 17 </b></p>
+                        <p>f) <b> i = 25, j = 15, k = 17 </b></p>
+                    
+                       </li>
+                          
+
+
+                    </ul>
+            
+            </div>
+
+
+            <br>
+
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="PythonForLoops" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Python For Loops</u></h2>
+               
+                 <p> <b>&#10028;  Python For Loops :</b> A for loop is used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string). </p>
+                 <p><b>&#10028; Python range() : </b> The Python range() function returns a sequence of numbers, in a given range. <br>
+                     <b>Note: </b>It returns a sequence of numbers, starting from <span style="color: rgb(115, 2, 7);"> 0 by default</span>, and increments by <span style="color: rgb(115, 2, 7);">1 (by default)</span> , and ends at a specified number.
+                </p>
+                <div class="w3-container  w3-sand w3-round-xlarge">
+                  <br>
+                    <ul class="w3-ul">
+                     <li>  &#10028; <b> Python range() function takes can be initialized in 3 ways.</b> </li>
+                     <li>1). range <span style="color: rgb(115, 2, 7);">(stop)</span>  takes one argument. </li>
+                     <li>2). range <span style="color: rgb(115, 2, 7);"> (start, stop)</span> takes two arguments. </li>
+                     <li>3). range <span style="color: rgb(115, 2, 7);">(start, stop, step)</span>  takes three arguments.</li>
+
+                    </ul>
+                   
+                  <br>
+                </div>
+                 <br>
+                 <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+                    <p> <b>1). range (stop) takes one argument.</b> Note :  range(6) is not the values of 0 to 6, but the values 0 to 5.</p>
+                   
+                <pre>
+                <code class="language-java">
+# printing first 6
+# whole number
+
+for i in range(6):
+    print(i, end=" ")
+</code>
+                </pre> 
+                 <p><b> Output:</b> </p>
+                  <p> 0 1 2 3 4 5 </p>
+                </div>
+               <br>
+               <div class="w3-container  w3-sand w3-round-xlarge">
+
+                <p> <b>2). range (start, stop) takes two arguments.</b> Note :  The user gets to decide not only where the series of numbers stops but also where it starts, so the user doesn’t have to start at 0 all the time.</p>
+               
+            <pre>
+            <code class="language-java">
+# printing a natural
+# number from 5 to 20
+for i in range(5, 20):
+    print(i, end=" ")
+</code>
+            </pre> 
+             <p><b> Output:</b> </p>
+              <p> 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 </p>
+            </div>
+            <br>
+            <div class="w3-container  w3-sand w3-round-xlarge">
+
+                <p> <b>3). range (start, stop, step) takes three arguments.</b> Note : The user can choose not only where the series of numbers will start and stop, but also how big the difference will be between one number and the next. <br>
+                    <span style="color: rgb(115, 2, 7);">If the user doesn’t provide a step, then range() will automatically behave as if the step is 1.
+                    </span>
+                   
+                 </p>
+               
+            <pre>
+            <code class="language-java">
+for i in range(0, 10, 2):
+     print(i, end=" ")
+</code>
+            </pre> 
+             <p><b> Output:</b> </p>
+              <p> 0 2 4 6 8  </p>
+            </div>
+           
+
+
+
+
+                
+                 <br>
+
+                 <div class="w3-container  w3-sand w3-round-xlarge">
+
+                    <p> <b>Labwork :</b></p>
+                     <ul class="w3-ul">
+                        <li>Q67). WAP to print the first 10 natural numbers using for loop.  </li>
+                        <li>Q68). WAP to print all the even numbers within the given range.</li>
+                        <li>Q69). WAP to print all the odd numbers within the given range without <span style="color: rgb(115, 2, 7);">using if keyword.</span>  </li>
+                        <li>Q70). WAP to calculate and print the sum of all numbers from 1 to a given number. </li>
+                        <li>Q71). WAP to calculate the sum of all the odd numbers within the given range. </li>
+                        <li>Q72). WAP to print a multiplication table of a given number.<span style="color: rgb(115, 2, 7);"> [Hint: 5 x 1 = 5]</span>  </li>
+                        <li>Q73). WAP to count the total number of digits in a number. <span style="color: rgb(115, 2, 7);"> [Hint : given number = 23646842, digits is=8 ]</span> </li>
+                        <li>Q74). WAP to program that accepts any digits number from the user and  <span style="color: rgb(115, 2, 7);">reverses</span>  it.
+                        </li>
+                        <li>Q75). WAP to check if a given number is an  <span style="color: rgb(115, 2, 7);">Armstrong number</span>  or not [ <span style="color: rgb(115, 2, 7);">Hint: 371 => 27 + 343 + 1 =  371 </span>] .
+                        </li>
+                        <li> Q76). WAP to find the sum of the digits of a number. [ <span style="color: rgb(115, 2, 7);">Hint: 2563 => 2 + 5 + 6 + 3 =  16 </span>]</li>
+                        <li> Q77). WAP to find the factorial of a number. [ <span style="color: rgb(115, 2, 7);">Hint: 5 => 1 x 2 x 3 x 4 x 5 =  120 </span>]</li>
+                        <li> Q78). WAP to check whether a number is <span style="color: rgb(115, 2, 7);">prime or not</span> .</li>
+                        <li> Q79). WAP to check if the given string is a <span style="color: rgb(115, 2, 7);">palindrome.</span>  [Hint : Book = kooB is not Palindrome  ]</li>
+                        <li> Q80). WAP to print the series of number of <span style="color: rgb(115, 2, 7);"> non-prime number</span> upto N number. </li> 
+                        <li> Q81). WAP to print the <span style="color: rgb(115, 2, 7);"> Fibonacci series </span> upto N number. [Hint : 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, ... ]</li>
+                        <li> Q82). WAP count the number of vowels in a string using a for loop.</li>
+                        <li> Q83). WAP to display the sum of odd number and even number that fall between 12 and 37(including both numbers).</li>
+                        <li> Q84). WAP to display all the numbers which are divisible by 11 but not by 2 between 100 and 500.
+                        </li>
+                    </ul>
+                     
+                </div>
+                <br>
+                     <br>
+
+                     <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+                        <p> <b> Negative step :-</b>
+                            If you want to<span style="color: rgb(115, 2, 7);">  decrement</span>, your <span style="color: rgb(115, 2, 7);">step</span>  must be a <span style="color: rgb(115, 2, 7);">negative</span>  value.</p>
+                    
+                      
+                      <p> <b>Example:</b></p>
+                   
+                <pre>
+                <code class="language-java">
+for num in range(10, 0, -2):
+    print(num)
+</code>
+                </pre> 
+                <p><b> Output:-</b></p>
+                <p>10</p>
+                <p>8</p>
+                <p>6</p>
+                <p>4</p>
+                <p>2</p>
+
+
+                    </div>
+                    <br>
+
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+
+                        <p> <b>The break Statement:</b> With the break statement we can <span style="color: rgb(115, 2, 7);">stop</span>  the loop before it has looped through all the items</p>
+                       
+                    <pre>
+                    <code class="language-java">
+for i in range(0,11):
+if i==5:
+    break
+else:
+    print(i, end=" ")
+</code>
+                    </pre> 
+                    <br>
+                  <p> <b> Output:-</b></p>
+                  <p>0 1 2 3 4</p>
+
+                </div>
+                <br>
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+
+                        <p> <b>The continue Statement:</b>The continue statement forces the loop to <span style="color: rgb(115, 2, 7);"> jump</span> to the next iteration of the loop </p>
+                       
+                    <pre>
+                    <code class="language-java">
+for i in range(0,11):
+if i==5:
+    continue
+else:
+    print(i, end=" ")
+</code>
+                    </pre> 
+                    <br>
+                  <p> <b> Output:-</b></p>
+                  <p>0 1 2 3 4 6 7 8 9 10</p>
+
+                </div>
+                <br>
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="nestedloop" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u> Python Nested for Loop </u></h2>
+                    <p><b> &#10028; Python Nested for Loop : </b> Nested loops mean loops inside a loop.</p> 
+              
+                    <img src="content/img/python/Nestedloop.png" class="w3-round w3-center"  alt="image" style="width:100%"> 
+                 <br>
+                 <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+                    <p> <b>Labwork:</b></p>
+                    <p>Q85). WAP to print the series of number of prime number upto N number.</p>
+                    <p>Q86). WAP to print multiplication table 1 t0 50 using nested loop</p>
+                    <p>Q87). WAP to print the following patterns: </p>
+                    <pre>
+                        <code class="language-java">
+a) ****   b)  0123    c) 0000  
+   ****       0123       1111  
+   ****       0123       2222 
+   ****       0123       3333
+   ****       0123       4444  
+
+d) 1      e) 55555   f) *    
+   22        4444       **   
+   333       333        ***  
+   4444      22         ****
+   55555     1          *****
+
+g)  *     h)     *   i) *****
+   ***          **      ****
+  *****        ***      ***
+              ****      **
+             *****      *
+  
+                        </code>
+                        </pre> 
+                        
+                
+                </div>
+                 <br>
+                 <br>
+                <div class="w3-container  w3-sand w3-round-xlarge">
+                 <br>
+                    <p><b> &#10028;</b> The <span style="color: rgb(115, 2, 7);"> chr () function </span>  in python, that converts any integer passed in the function into a character.</p>
+               
+                    <p> <b>Example :</b></p>
+                   
+                <pre>
+                <code class="language-java">
+>>> print(chr(65))   
+
+   # Output is: A 
+                </code>
+                </pre> 
+   <br>
+<p><b>Labwork:</b> <br>  Q88). WAP to print the following patterns:</p>
+
+<pre>
+    <code class="language-java">
+a) A         b) EEEEE
+   BB           DDDD
+   CCC          CCC
+   DDDD         BB
+   EEEEE        A
+   FFFFFF 
+</code>
+    </pre> 
+
+                
+</div>
+
+
+                <br>
+
+                <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+                    <p> <b>Python pass Statement: </b> The <span style="color: rgb(115, 2, 7);">pass</span>  statement is used as a placeholder for future code.</p>
+                    <p> &#10028; In python, <span style="color: rgb(115, 2, 7);">empty code</span>  is not allowed in <span style="color: rgb(115, 2, 7);"> loops, function definitions, class definitions, or in if statements.</span>.
+                     <p> &#10028; When the <span style="color: rgb(115, 2, 7);">pass</span>  statement is executed, <span style="color: rgb(115, 2, 7);">nothing happens, but you avoid getting an error</span>  when empty code is not allowed.</p>
+                    </p>
+                   
+                <pre>
+                <code class="language-java">
+#Example1:
+a=45
+b=65
+if a>b:
+    pass
+
+
+#Example2:
+for i in range(5):
+    pass
+                </code>
+                </pre> 
+   <br>
+
+   <p> <b>Output:</b></p>
+   <p> No any output</p>
+          
+                
+</div>
+
+<br>
+<br>
+
+                </div>
+             
+                
+ 
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+
+<section id="WhileStatement" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Python While Statement</u></h2>
+                   
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+                    <p><b> &#10028; Python While Statement : </b> With the <span style="color: rgb(115, 2, 7);">while</span>  loop we can execute a set of statements as long as a  <span style="color: rgb(115, 2, 7);"> condition is true</span>.</p> 
+                
+              
+                    <p> <b>Example:</b></p>
+                   
+                    <pre>
+                    <code class="language-java">
+i = 1
+while i<=5:
+    print(i)
+    i=i+1
+</code>
+                    </pre> 
+                    <br>
+                    <p><b>Output:</b></p>
+                    <p> 1 <br>2 <br>3 <br>4 <br>5 </p>
+ 
+                </div>
+
+                <br>
+                <p><b>Note: </b> Remember to increment <span style="color: rgb(115, 2, 7);">i</span> , otherwise the <span style="color: rgb(115, 2, 7);">loop</span>  will continue forever which is known as  <span style="color: rgb(115, 2, 7);">infinite loop</span>.</p>
+              
+                <br>
+
+
+                <div class="w3-container  w3-sand w3-round-xlarge">
+ 
+                 <p> <b>The else Statement : <span style="color: rgb(115, 2, 7);">for loop and while loop</span> .</b></p>
+                
+             <pre>
+             <code class="language-java">
+#Example of else with for:
+for x in range(4):
+    print(x, end="")
+else:
+    print("\n Finally finished!")
+
+
+# Example of else with while:
+i = 1
+while i<=3:
+    print(i, end="")
+    i = i+1
+else:
+    print("\n i is not less than or equal to 3")                
+</code>
+             </pre> 
+             <p><b>Output: </b></p>
+             <p>0123 <br>
+                Finally finished! <br>
+               123 <br>
+                i is not less than or equal to 3</p>
+         
+         </div>
+         <br>
+
+         <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+            <p> <b>Labwork:</b></p>
+            <p>Q89). WAP to print first 10 integers and their 
+               squares using while loop. <br>
+              [Hint:] <br>
+               <pre>
+Number   Squares 
+1        1
+2        4
+3        9
+.        .
+.        .
+10      100
+               </pre>
+               
+            </p>
+            <p>Q90). WAP to multiply two numbers accept from user by repeated addition e.g.
+                6*7 = 6+6+6+6+6+6+6</p>
+            <p>Q91). WAP to find the sum of following series:-
+                s=1+4-9+16-25+36-.....n terms.</p>
+                <p>    Q92). WAP to reverse the any digits of number
+                    which is accepted from user using while loop. </p>    
+                                    
+                                <p>Q93). WAP to find the product of the digits of
+                    a number accepted from the user. </p>
+                       <p>Q94). WAP to find to print the Fibonacci series till N terms (Accept N from user) using while loop. </p>
+                    
+                    <p> Q95). WAP to check whether a number is palindrome or not. </p>
+                    
+                    <p>Q96). WAP to print the following series till N terms.
+                    [Hint: 1 4 9 16 25 36........... nth term.] </p>
+
+                    <p>Q97). WAP to print the following patterns:</p>
+          
+                    <pre>
+                        <code class="language-java">
+a)           b) 
+  P             PYTHON
+  PY            PYTHO
+  PYT           PYTH
+  PYTH          PYT
+  PYTHO         PY
+  PYTHON        P
+
+c)            d)
+       N        PYTHON
+      ON         YTHON
+     HON          THON        
+    THON           HON
+   YTHON            ON                     </code>
+  PYTHON             N                     </pre>
+       
+        
+</div>
+<br>
+
+        
+            
+            </div>
+               
+
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+<section id="assert" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Python Assert Keyword</u></h2>
+                    <p><b> &#10028; Python assert keyword : </b> Python assertion is the boolean expression that checks if the statement is True or False. If the statement is  true then it does nothing and continues the execution, but if the statement is <span style="color: rgb(115, 2, 7);">False then it  stops the execution of the program and throws an error</span> .</p> 
+               
+                     
+                 <br>
+                 <div class="w3-container  w3-sand w3-round-xlarge">
+
+                    <p> <b>Python assert keyword Example:</b></p>
+                   
+                <pre>
+                <code class="language-java">
+#Example1
+
+x = "hello"
+
+#if condition returns True, then nothing happens:
+assert x == "hello"
+
+#if condition returns False, AssertionError is raised:
+assert x == "goodbye"
+
+-------------------------------------------------------
+#Example2
+
+x = "hello"
+
+#if condition returns False, AssertionError is raised:
+assert x == "goodbye", "x should be 'hello'"
+
+
+                </code>
+                </pre>  
+                 <p><b> Output:-</b></p>
+                 <p>AssertionError:</p>
+
+                 <p>AssertionError: x should be 'hello'</p>
+                
+               </div>
+               <br>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+
+<!-- 
+Coding Part
+
+<section id="sec1" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                        <h2 class="w3-panel w3-center">Example1</h2>
+
+                         <div class=" w3-leftbar w3-border-pink w3-border w3-round-large ">
+                           
+<pre class="line-numbers" data-line="15-25">
+    <code class="language-java">
+      package com.example.webviewtest;
+      import androidx.appcompat.app.AppCompatActivity;
+      import android.os.Bundle;
+      import android.view.View;
+      import android.webkit.WebView;
+    
+      public class MainActivity extends AppCompatActivity {
+      private WebView webView;
+      @Override
+      protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_main);
+            webView=findViewById(R.id.webviewforhighlight);
+            webView.getSettings().setJavaScriptEnabled(true);
+            webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+            webView.loadUrl("file:///android_asset/prismjs_template.html");
+        }
+     }
+    
+    
+     x = "awesome"
+    
+     def myfunc():
+       x = "fantastic"
+       print("Python is " + x)
+     
+     myfunc()
+     
+     print("Python is " + x)
+    
+    
+    </code>
+    </pre>
+    
+
+                         </div>
+
+                    </div> 
+                </div>
+            </div>
+
+
+
+</section> 
+ -->
+
+         
+            
+              
+           
+
+   
+            
+            
+            <!-- Page content Coding part Start -->
+
+
+        <!-- Page content Body Start -->
+
+
+ <!-- Page Content End --> 
+ 
+ <script>
+ 
+ AOS.init();
+
+
+
+</script>
+</body>
+</html>

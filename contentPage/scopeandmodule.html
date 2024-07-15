@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction of Python</title>
+   <!-- cdn links start -->
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+
+
+   <!-- cdn links end-->
+    
+    
+    
+    
+    <!-- content web page links  start-->
+    <link rel="stylesheet" href="content/content.css">
+    <script src="content/content.js"></script>
+
+    <link rel="stylesheet" href="content/prism.css">
+    <script src="content/prism.js"> </script>
+
+    <link rel="stylesheet" href="content/aos/aos.css">
+    <script src="content/aos/aos.js"></script>
+
+    <!-- content web page links end -->
+  
+
+
+
+</head>
+<body>
+
+
+    <!-- background image Start -->
+    <div class="backgrounds overlay">
+        <div class="background" style="background-image: url('content/img/hero.jpg');"></div>
+    </div>
+    <!-- background image End-->
+    
+    <!-- Sidebar Start -->
+
+
+
+     <div class="w3-sidebar w3-bnultrasoft-color topPadding   w3-card-4 w3-animate-left" style="display:none" id="mySidebar">
+        <div class="w3-bar  w3-hover-white">
+            <span class="w3-bar-item w3-padding-16  ">Contents</span> <button onclick="w3_close()" class="w3-bar-item w3-button w3-right w3-padding-16  w3-hover-black " >&times;</button>
+        </div>
+        
+        <div class="w3-bar-block  ">
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#Scopeofobjects">Scope of objects and Names</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#ModuleBasics">ModuleBasics</a> 
+            
+            
+            
+            <!-- <a class="w3-bar-item w3-button  w3-hover-white w3-animate-zoom" href="#sec2">About</a>
+            <a class="w3-bar-item w3-button  w3-hover-white w3-animate-zoom" href="#sec3">Contact</a>
+            <a class="w3-bar-item w3-button  w3-hover-white w3-animate-zoom" href="javascript:void(0)">Support</a>
+            <a onclick="myFunction('Demo1')" class="w3-button  w3-hover-white w3-left-align w3-block w3-animate-zoom">Accordion <i class="fa fa-caret-down"></i></a>
+                <div id="Demo1" class="w3-hide w3-animate-zoom">
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 1</a>
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 2</a>
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 3</a>
+                </div> 
+            <a onclick="myFunction('Demo2')" class="w3-button  w3-hover-white w3-left-align w3-block w3-animate-zoom">Accordion <i class="fa fa-caret-down"></i></a>
+                <div id="Demo2" class="w3-hide w3-animate-zoom">
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 1</a>
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 2</a>
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 3</a>
+                </div>
+
+           <a class="w3-bar-item w3-button w3-animate-zoom w3-bnultrasoft-color w3-hover-white" href="quiz.html">Python Quiz Set1</a>    
+       
+        -->
+       
+        </div>
+       
+
+
+    </div> 
+
+
+
+
+
+
+
+    <!-- Sidebar Start End -->
+
+<!-- Page Content Start -->
+
+        <!-- Page content header Start -->
+
+
+
+
+        <div class="w3-bnultrasoft-color w3-top">
+            <button class="w3-button w3-xlarge  w3-hover-white" onclick="w3_open()" >&#9776;</button>
+
+            <a href="../ittoolsandnetworkbasics.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M1</a>
+            <a href="../webdesigningandpublishing.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M2</a>
+            <a href="../python.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M3</a>
+            <a href="../iot.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M4</a>
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium w3-xlarge w3-hover-white" onclick="myFunctionRightItem()" >&#9776;</a>
+
+           
+                        <!-- SearchBar start  -->
+
+                       
+
+                     <!-- <div class="w3-dropdown-click  w3-hover-black">
+                        
+                        <input class="w3-input w3-center w3-padding w3-round-xxlarge" type="text" placeholder="Search any contents..."  onclick="dropFunction()"  id="myInput" onkeyup="filterFunction()">
+                        <div class="w3-dropdown-content w3-bar-block w3-card w3-white" id="myDIV" >
+                        
+                            <a class="w3-bar-item w3-button"  href="#pythonintroduction">Introduction of Python</a>
+                            <a class="w3-bar-item w3-button" href="#technicalStrengthofPython">Technical Strength of Python</a>
+                            <a class="w3-bar-item w3-button" href="#PythonInterpreter">Python Interpreter</a>
+                            <a class="w3-bar-item w3-button" href="#howtorunpython">Using CMD (Command Prompt)</a>
+                            <a class="w3-bar-item w3-button" href="#PythonComments">Python Comments</a>
+                            <a class="w3-bar-item w3-button" href="#PythonVariable">Python Variable</a>
+                            <a class="w3-bar-item w3-button" href="#PythonKeywords">Python Keywords</a>
+                            <a class="w3-bar-item w3-button" href="#PythonPrintFunction">Python Print Function</a>
+                            <a class="w3-bar-item w3-button" href="#PythonInputFunction">Python Input Function</a>
+                            <a class="w3-bar-item w3-button" href="#PythonDataType">Python DataType</a>
+                            <a class="w3-bar-item w3-button" href="#PythonConstants">Python Constants</a>
+                            <a class="w3-bar-item w3-button" href="#PythonLiteral">Python Literal</a>
+                            <a class="w3-bar-item w3-button" href="#PythonString">Python String</a>
+                            <a class="w3-bar-item w3-button" href="#PythonStringConcatenation">Python String Concatenation</a>
+                            <a class="w3-bar-item w3-button" href="#PythonFormatStrings">Python Format Strings</a>
+                            <a class="w3-bar-item w3-button" href="#PythonEscapeCharacter">Python Escape Character</a>
+                           
+                            
+                        </div>
+                        </div>  -->
+
+
+                    <!-- SearchBar End  -->
+                  
+                    <!-- ------------Right hidden items----------- -->
+
+                    <div id="demo" class="w3-bar-block w3-bnultrasoft-color w3-hide w3-hide-large w3-hide-medium  w3-animate-zoom w3-animate-fading">
+                        <a href="../ittoolsandnetworkbasics.html" class="w3-bar-item w3-button w3-hover-white">Olevel M1</a>
+                        <a href="../webdesigningandpublishing.html" class="w3-bar-item w3-button w3-hover-white">Olevel M2</a>
+                        <a href="../python.html" class="w3-bar-item w3-button w3-hover-white">Olevel M3</a>
+                        <a href="../iot.html" class="w3-bar-item w3-button w3-hover-white">Olevel M4</a>
+                      </div>
+
+                      
+                 
+   
+
+        </div>
+
+        <section id="Scopeofobjects" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>Scope of objects and Names</u></h2>
+                       
+
+                            <p> <b> &#10028; Namespaces :  </b> A namespace is a system that has a unique name for each and every object in Python. An object might be a variable or a method.</p>
+                              
+                            <p> <b> &#x21db; </b> So, the division of the word itself gives a little more information. Its Name <span style="color: rgb(115, 2, 7);">(which means name, a unique identifier)</span>  + <span style="color: rgb(115, 2, 7);">Space(which talks something related to scope)</span> .</p>
+                              <br>
+                              <h2 class="w3-panel w3-center"><u>Scope of Object and Names </u></h2>
+    <ul class="w3-ul">
+        <li>       &#x21db; The scope refers to the region in the program code where variables and names are accessible.
+        </li>
+        <li>  &#x21db; It also determines the visibility and lifetime of a variable in the program code.
+        </li>
+        <li> &#x21db;    Assigning a value, defining a function or class (using def or class) or importing module operation creates a name and its place in the code defines its scope.
+        </li>
+        <li>&#x21db;   The names or objects which are accessible are called in-scope. </li>
+        <li> &#x21db;    The names or objects which are not accessible are called out-of-scope.</li>
+        <li>   &#x21db;   The Python scope concept follows the LEGB (Local, Enclosing, Global and built-in) rule.
+        </li>
+        <li> &#x21db;  The scope concept helps to avoid the name collision and use of global names across the
+            programs. 
+            </li>
+        
+        
+        
+        
+         
+
+
+    </ul>
+
+    <p> Others names or objects come in existence as given:-</p>
+
+    <table class="w3-table-all">
+        <tr> <th>Operation </th> <th> Statement</th></tr>
+        <tr> <td> Assignment </td> <td> X=value </td></tr>
+        <tr> <td>Import Operation  </td> <td>import module </td> </tr>
+        <tr> <td>Function definitions  </td> <td>def fun( ) </td></tr>
+        <tr> <td>Arguments in the function </td> <td> def fun( x1, x2 , x3 )</td></tr>
+        <tr> <td> Class definition </td> <td>class abc : 
+        </td></tr>
+
+    </table>
+<br>
+<p> <b> Note:- </b>  On similar lines, the Python interpreter understands what exact method or variable one is trying to point to in the code, depending upon the namespace. Here, a name might be of any Python method or variable and space depends upon the location from where is trying to access a variable or a method.</p>
+<br>
+
+<p> In a Python program, there are four types of namespaces: </p>
+ <p> &#x21db; Built-In.</p>   
+ <p> &#x21db; Global. </p>
+ <p> &#x21db;  Enclosing.</p>
+ <p> &#x21db;  Local. </p>
+ <br>
+
+ <br> 
+    
+                
+ <img src="https://sp-uploads.s3.amazonaws.com/uploads/services/7613525/20230508071642_6458a1dab387e_legb_rule_in_pythonpage1.jpg" class="w3-round w3-center"  alt="image" style="width:100%">  
+   
+                            
+                            
+                            <h2 class="w3-panel w3-center"><u>Here’s a quick overview of what these terms mean: </u></h2>
+                            <p> <b> &#10028;  Local (or function) scope  </b> is the code block or body of any Python function or lambda expression. This Python scope contains the names that you define inside the function. These names will only be visible from the code of the function.</p>
+                            <p> <b> &#10028;  Enclosing (or nonlocal) scope  </b>is a special scope that only exists for nested functions. The names in the enclosing scope are visible from the code of the inner and enclosing functions.</p>
+                            <p> <b> &#10028;  Global (or module) scope </b> is the top-most scope in a Python program, script, or module. This Python scope contains all of the names that you define at the top level of a program or a module. Names in this Python scope are visible from everywhere in your code.</p>
+                            <p> <b> &#10028;  Built-in scope </b> is a special Python scope that's created or loaded whenever you run a script or open an interactive session. This scope contains names such as keywords, functions, exceptions, and other attributes that are built into Python. Names in this Python scope are also available from everywhere in your code. It’s automatically loaded by Python when you run a program or script.</p>
+                          <br>
+                          <br>
+                          <br>
+                          <div class="w3-container  w3-sand w3-round-xlarge">
+
+                            <p> <b>Example :</b></p>
+                           
+                        <pre>
+                        <code class="language-java">
+var1 = 5   #var1 is in the global namespace
+def ABC( ):
+    var2 = 6    # var2 is in the local namespace
+    def XYZ( ):
+        var3 = 7  # var3 is in the nested local namespace</code>
+                        </pre> 
+                        </div>
+                        <br>
+                        <p> <b> Output :- </b></p>
+                        <p>  &#x21db; In this example, the var1 is declared in the global namespace because it is not enclosed
+                            inside any function. So it is accessible everywhere in the script. </p>
+                         <p>  &#x21db;   var2 is inside the ABC( ). So, it can be accessed only inside the ABC( ) and outside the
+                            function, it no longer exists.</p> 
+
+                         <p>  &#x21db;  var3 also has a local scope, the function is nested and we can use var3 only inside XYZ( )
+                        </p>   
+                           
+                            
+                            
+                       </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section> 
+
+
+        <section id="ModuleBasics" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>Module Basics</u></h2>
+                            <p> <b> &#10028;  What is a Module?</b></p>
+ <p> &#x21db;
+    A Python module is a file containing Python definitions and statements. A module can define functions, classes, and variables. A module can also include runnable code. </p>
+                            
+<p> <b> &#10028; Create a Module : </b> </p>
+<p>  &#x21db;
+    To create a module just save the code you want in a file with the file extension <span style="color: rgb(115, 2, 7);"> <b>.py: </b></span>  </p>
+ <br>
+ <br>
+ <div class="w3-container  w3-sand w3-round-xlarge">
+
+    <p> <b> &#10028; Example:</b>  Save this code in a file named  <span style="color: rgb(115, 2, 7);">mymodule.py</span> </p>
+   
+<pre>
+<code class="language-java">
+def greeting(name):
+    print("Hello, " + name)
+</code>
+</pre> 
+</div>
+
+<br>
+
+<div class="w3-container  w3-sand w3-round-xlarge">
+
+    <p> <b> &#10028; Use a Module:</b> Now we can use the module we just created, by using the <span style="color: rgb(115, 2, 7);">import</span>  statement:</p>
+
+    <p> <b> Example : </b> Import the module named mymodule, and call the greeting function:</p>
+   
+<pre>
+<code class="language-java">
+import mymodule
+mymodule.greeting("Python")
+</code>
+</pre> 
+
+<p> <b>Note : </b> When using a function from a module, use the syntax: <span style="color: rgb(115, 2, 7);"> module_name.function_name</span>.</p>
+</div>
+<br>
+<hr style="height: 1px; background-color: brown;">
+<br>
+<div class="w3-container  w3-sand w3-round-xlarge">
+    <p> <b>  &#10028;  Variables in Module </b></p>
+  <p>The module can contain <span style="color: rgb(115, 2, 7);">functions</span> , as already described, but also variables of all types <span style="color: rgb(115, 2, 7);">(arrays, dictionaries, objects etc)</span> :
+</p>
+
+    <p> <b>Example :</b> Save this code in the file <span style="color: rgb(115, 2, 7);">mymodule.py</span>  </p>
+   
+<pre>
+<code class="language-java">
+person1 = {
+        "name": "John",
+        "age": 32,
+        "country": "Norway"
+      }
+</code>
+</pre> 
+</div>
+<br>
+<div class="w3-container  w3-sand w3-round-xlarge">
+    
+
+
+    <p> <b>Example:</b> Import the module named mymodule, and access the <span style="color: rgb(115, 2, 7);">person1</span>  dictionary.</p>
+   
+<pre>
+<code class="language-java">
+import mymodule
+
+a = mymodule.person1["name"]
+print(a)
+
+</code>
+</pre> 
+</div>
+<br>
+<hr style="height: 1px; background-color: brown;">
+<br>
+<br>
+<br>
+<h2 class="w3-panel w3-center"><u>Module Files as Namespaces</u></h2>
+
+
+<div class="w3-container  w3-sand w3-round-xlarge">
+    <p> <b>  &#10028; Re-naming a Module : </b>You can create an alias when you import a module, by using the <span style="color: rgb(115, 2, 7);">as</span>  keyword:</p>
+
+    <p> <b>Example:</b> Create an alias for mymodule called <span style="color: rgb(115, 2, 7);">mx</span> </p>
+   
+<pre>
+<code class="language-java">
+import mymodule as mx
+
+a = mx.person1["age"]
+print(a)
+</code>
+</pre> 
+</div>
+
+<br>
+<hr style="height: 1px; background-color: brown;">
+<br>
+
+<div class="w3-container  w3-sand w3-round-xlarge">
+   
+    <p> <b>  &#10028;  Using the dir() Function : </b>  There is a built-in function to list all the function names (or variable names) in a module.
+    </p>
+
+    <p> <b>  &#10028; Example :</b> List all the defined names belonging to the <span style="color: rgb(115, 2, 7);">math</span>  module.</p>
+   
+<pre>
+<code class="language-java">
+import math
+
+x = dir(math)
+print(x)
+</code>
+</pre> 
+</div>
+<br>
+<hr style="height: 1px; background-color: brown;">
+<br>
+
+<div class="w3-container  w3-sand w3-round-xlarge">
+    <p> <b>Import From Module : </b> You can choose to import only parts from a module, by using the <span style="color: rgb(115, 2, 7);">from</span>  keyword.</p>
+    
+   
+   
+
+    <p> <b> Example:</b>  The module named <span style="color: rgb(115, 2, 7);">mymodule</span>  has one <span style="color: rgb(115, 2, 7);">function</span>  and one <span style="color: rgb(115, 2, 7);">dictionary</span> :</p>
+   
+<pre>
+<code class="language-java">
+def greeting(name):
+    print("Hello, " + name)
+  
+  person1 = {
+    "name": "John",
+    "age": 36,
+    "country": "Norway"
+  }
+
+</code>
+</pre> 
+</div>
+
+
+<div class="w3-container  w3-sand w3-round-xlarge">
+    
+
+
+    <p> <b>Example:</b> Import only the person1 dictionary from the module:</p>
+   
+<pre>
+<code class="language-java">
+from mymodule import person1
+print (person1["age"])
+</code>
+</pre> 
+
+<p> <b>Note: </b> When importing using the <span style="color: rgb(115, 2, 7);">from</span>  keyword, do not use the module name when referring to elements in the module. <br> Example: <span style="color: rgb(115, 2, 7);">person1["age"]</span> , not <span style="color: rgb(115, 2, 7);"> <s>mymodule.person1["age"]</s></span> otherwise you will get Error:-  <span style="color: rgb(115, 2, 7);"> <b>NameError:</b></span>  </p>
+</div>
+
+<br>
+<br>
+<br>
+<h2 class="w3-panel w3-center"><u>Reloading Modules</u></h2>
+ <p> <b> &#x21db;</b> If you’ve altered the module source file using an outside editor and want to test the updated version without leaving the Python interpreter, this is helpful.</p>                      
+  <br>
+  <p> <b> &#x21db;
+     For above 2. x and <=Python3.3 </b></p>
+  <p>import imp </p>
+  <p> imp.reload(module)</p>
+  <p> <b> &#x21db;
+    Reloading modules for >=Python3.4 and above </b></p>
+ <p>import importlib</p>
+ <p>importlib.reload(module) </p>
+
+ <br>
+ <div class="w3-container  w3-sand w3-round-xlarge">
+
+    <p> <b>Example :</b></p>
+   
+<pre>
+<code class="language-java">
+
+>>>import importlib
+>>>importlib.reload(mymodule)
+>>>print (mymodule.person2["age"])
+</code>
+</pre> 
+</div>
+
+
+
+ 
+ 
+ <br>             
+                <br>             
+                       </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section> 
+        
+      
+              
+           
+
+   
+            
+            
+           
+ 
+ <script>
+ 
+ AOS.init();
+
+
+
+</script>
+</body>
+</html>

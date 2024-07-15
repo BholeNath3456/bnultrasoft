@@ -1,0 +1,665 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Home</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/practicleassignmentquestions.css">
+
+    <!-- Hightlight Start -->
+    <link rel="stylesheet" href="assets/highlight/styles/base16/harmonic16-dark.min.css">
+    <!-- <link rel="stylesheet" href="assets/highlight/styles/monokai-sublime.css"> -->
+
+    <script src="assets/highlight/es/core.js"></script>
+    <script src="assets/highlight/es/core.min.js"></script>
+    <script src="assets/highlight/es/highlight.js"></script>
+    <script src="assets/highlight/es/highlight.min.js"></script>
+    <script src="assets/highlight/languages/xml.min.js"></script>
+    <!-- <script src="assets/highlight/languages/css.min.js"></script> -->
+    <!-- normal -->
+    <script src="assets/highlight/highlight.js"></script>
+    <script src="assets/highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <!-- Favicons -->
+<link href="assets/img/favicon.png" rel="icon">
+<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+</head>
+
+<body>
+   
+
+
+  <section class="home-section">
+    <div  class="w3-container">  
+        <div class="w3-panel  w3-card-4 ">
+
+          <br>
+          <br>
+          <center> <h2><b>Introduction to CSS</b></h2> </center>
+          <br>
+           <h3>What is CSS?</h3>
+           <p> <b>&#10028;</b>  CSS stands for Cascading Style Sheets. </p>
+           <p> <b>&#10028;</b> CSS is the language we use to style a Web page. </p>
+           <p> <b>&#10028;</b>  HTML describes the structure of a Web page where as
+             CSS describes how HTML elements are to be displayed on screen. </p>
+             <p> <b>&#10028;</b> CSS saves a lot of work. It can control the layout of multiple web pages all at once.</p> 
+             <br>
+             <p><b>Note: </b></p>
+             <p> Developed by : <b>World Wide Web Consortium (W3C)</b>	 </p>
+             <p> Initial release : <b>17 December 1996</b>	</p>
+             <p> File Extension name is :  <b> .css </b></p>
+             <br>
+             <br>
+             <h3>CSS Syntax :</h3>
+             <p> A CSS rule consists of a selector and a declaration block. Like: </p> <br>
+             <div class="w3-card-4 ">
+              <img src="assets/img/css/img_selector.png" class="w3-round-4" alt="image" style="width:100%;">
+            </div> <br>
+            <p> <b>&#10028;</b> The selector points to the HTML element you want to style. </p>
+            <p> <b>&#10028;</b> The declaration block contains one or more declarations separated by semicolons. </p>
+            <p> <b>&#10028; </b> Each declaration includes a CSS property name and a value, separated by a colon.</p>   
+            <p> <b>&#10028; </b> Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.</p> </p> 
+             
+            <br>
+            <p><b>Why Use CSS?</b></p>
+            <p> CSS is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes.</p> 
+           
+            <br>
+            <p><b>CSS Saves a Lot of Work!</b></p>
+              <p>The style definitions are normally saved in external <b>.css</b> files.
+              
+              With an external stylesheet file, you can change the look of an <b>entire website</b> by changing just one file!</p>
+           
+          <br>
+          <br>
+    </div>
+   </div>
+  </section>
+
+  <section class="home-section">
+    <div  class="w3-container">  
+        <div class="w3-panel  w3-card-4 ">
+      <br>
+      <br>
+      <center> <h2><b> Types of CSS</b></h2> </center>
+      <br>
+      <h3>  There are three types of CSS or we can say there are three ways to insert:</h3>
+       <h3><b>&#10028;</b> :  Inline CSS</h3> 
+       <h3><b>&#10028;</b> :  Internal/ Embedded CSS</h3> 
+       <h3><b>&#10028;</b> :  External CSS</h3> 
+         <br>
+   
+
+      
+    </div>
+   </div>
+  </section>
+  
+
+
+  <section class="home-section">
+    <div  class="w3-container">  
+        <div class="w3-panel  w3-card-4 ">
+          <br><br>
+          <h3> <b>&#10028; </b> Inline CSS :</h3>
+          <p> &#10028; An inline style may be used to apply a unique style for a single element.</p>
+          <p> &#10028; To use inline styles, add the <b>style</b>  attribute to the relevant element. The style attribute can contain any CSS property.</p>
+         <br>
+         
+          <pre><code class="language-html">
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+  &lt;body&gt;
+  &lt;h1 style="color:blue; text-align:center;"&gt;This is a heading.&lt;/h1&gt;
+  &lt;p style="color:red;"&gt;This is a paragraph.&lt;/p&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;
+          
+</code></pre>
+            <br>
+          
+          <center><div class="w3-container">
+              <a href="HTMLTryitEditor.html" target="_blank">
+              <button  class="w3-button w3-blue w3-text-white w3-hover-blue  w3-round-large w3-card-2">Tryit with LIVE Editor</button></a>
+              </div>
+           </center>
+           <br>
+          
+          <h2>Output (Result) of above: </h2>
+                   <br>
+          <iframe srcdoc='
+          &lt;br&gt;
+          <h1 style="color:blue; text-align:center;">This is a heading.</h1>
+          <p style="color:red;">This is a paragraph.</p>
+         
+                   
+          'src=""  width="100%" height="150px" >
+          &lt;br&gt;
+          </iframe>
+          
+          <br>
+          <br>
+    </div>
+   </div>
+  </section>
+
+  <section class="home-section">
+    <div  class="w3-container">  
+        <div class="w3-panel  w3-card-4 ">
+          <br><br>
+          <h3> <b>&#10028; </b> Internal/ Embedded CSS:</h3>
+          <p> &#10028; An internal style sheet may be used if one single HTML page has a unique style.</p>
+          <p> &#10028; The internal style is defined inside the <b>&lt;style&gt;</b> element, inside the <b>head section</b>.</p>
+         <br>
+         
+<pre><code class="language-html">
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+  &lt;head&gt;
+  &lt;style&gt;
+  body {
+    background-color: linen;
+  }
+  
+  h1 {
+    color: maroon;
+  
+  }
+  &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  
+  &lt;h1&gt;This is a heading&lt;/h1&gt;
+  &lt;p&gt;This is a paragraph.&lt;/p&gt;
+  
+  &lt;/body&gt;
+  &lt;/html&gt; 
+          
+</code></pre>
+            <br>
+          
+          <center><div class="w3-container">
+              <a href="HTMLTryitEditor.html" target="_blank">
+              <button  class="w3-button w3-blue w3-text-white w3-hover-blue  w3-round-large w3-card-2">Tryit with LIVE Editor</button></a>
+              </div>
+           </center>
+           <br>
+          
+          <h2>Output (Result) of above: </h2>
+                   <br>
+          <iframe srcdoc='
+          &lt;br&gt;
+          <style>
+            body {
+              background-color: linen;
+            }
+            
+            h1 {
+              color: maroon;
+            
+            }
+            </style>
+            </head>
+            <body>
+            
+            <h1>This is a heading</h1>
+            <p>This is a paragraph.</p>
+            </body>
+         
+                   
+          'src=""  width="100%" height="150px" >
+          &lt;br&gt;
+          </iframe>
+          
+          <br>
+          <br>
+    </div>
+   </div>
+  </section>
+
+  <section class="home-section">
+    <div  class="w3-container">  
+        <div class="w3-panel  w3-card-4 ">
+          <br><br>
+  <h3> <b>&#10028; </b>  External CSS</h3>
+  <p> &#10028; With an external style sheet, you can change the look of an entire website by changing just one file!
+  </p>
+         
+<p>  &#10028; Each HTML page must include a reference to the external style sheet file inside the <b>&lt;link&gt;</b> element, inside the head section.
+</p>
+<p> &#10028; An external style sheet can be written in any text editor, and must be saved with a <b>.css</b> extension. <br>
+
+  The external <b>.css</b> file should not contain any HTML tags.</p> <br>
+     <p>Here is how the <b>mystyle.css</b> file looks:</p>    
+          <pre><code class="language-html">
+  body {
+      background-color: lightblue;
+    }
+            
+  h1 {
+     color: navy;
+   }
+          
+</code></pre>
+            <br>
+            <pre><code class="language-html">
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+  &lt;head&gt;
+  &lt;link rel="stylesheet" href="mystyle.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+              
+  &lt;h1&gt;This is a heading&lt;/h1&gt;
+  &lt;p&gt;This is a paragraph.&lt;/p&gt;
+      
+  &lt;/body&gt;
+  &lt;/html&gt;
+                      
+            </code></pre> <br>
+          
+          <center><div class="w3-container">
+              <a href="HTMLTryitEditor.html" target="_blank">
+              <button  class="w3-button w3-blue w3-text-white w3-hover-blue  w3-round-large w3-card-2">Tryit with LIVE Editor</button></a>
+              </div>
+           </center>
+           <br>
+          
+          <h2>Output (Result) of above: </h2>
+                   <br>
+          <iframe srcdoc='
+          &lt;br&gt;
+          <body style="background-color: lightblue;">
+
+            <h1 style="color:navy">This is a heading</h1>
+             <p>This is a paragraph.</p>    
+         
+                   
+          'src=""  width="100%" height="150px" >
+          &lt;br&gt;
+          </iframe>
+          
+          <br>
+          <br>
+    </div>
+   </div>
+  </section>
+
+  <section class="home-section">
+    <div  class="w3-container">  
+        <div class="w3-panel  w3-card-4 ">
+          <br><br>
+         <center> <h2><b>CSS Color Properties </b></h2> </center>
+          <p>&#10028; The <b>color</b> property specifies the color of text.</p> <br>
+           <h4>  CSS Syntax :</h4>
+           <p> <b>color :</b> color | initial | inherit;</p>
+           <br>
+          
+
+       
+           <center><div class="w3-container">
+              
+            <button  class="w3-button w3-blue w3-text-white w3-hover-blue  w3-round-large w3-card-2">Tryit with LIVE Editor 👇 </button></a>
+            </div>
+         </center>
+         <p><b>Example :</b> CSS color Name</p>
+           <p class="codepen" data-height="300" data-theme-id="dark" data-default-tab="css,result" data-slug-hash="VwgMGWG" data-editable="true" data-user="BholeNath" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/BholeNath/pen/VwgMGWG">
+            Css ColorName</a> by Bhole Nath Maddheshiya (<a href="https://codepen.io/BholeNath">@BholeNath</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+        <br>
+        <br>
+        <hr style="height: 3px; background-color: #f51170;">
+        <br>
+        <br>
+        <h3> <b>&#10028; </b>   CSS initial Keyword</h3>
+       
+        
+        <p> &#10028; The <b>initial</b> keyword is used to set a CSS property to its default value.</p>
+        <h4> CSS Syntax :</h4>
+        <p><b>property:</b> initial;</p>
+         
+         
+          <div class="w3-container w3-center">
+              
+            <button  class="w3-button w3-blue w3-text-white w3-hover-blue  w3-round-large w3-card-2">Tryit with LIVE Editor 👇 </button></a>
+            </div>
+         
+        <p><b>Example : </b> CSS color initial</p>
+        <p class="codepen" data-height="300" data-theme-id="dark" data-default-tab="css,result" data-slug-hash="VwgMGBq" data-editable="true" data-user="BholeNath" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+          <span>See the Pen <a href="https://codepen.io/BholeNath/pen/VwgMGBq">
+          Css Color Initial</a> by Bhole Nath Maddheshiya (<a href="https://codepen.io/BholeNath">@BholeNath</a>)
+          on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
+        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+        <br>
+        <br>
+        <hr style="height: 3px; background-color: #f51170;">
+        <br>
+        <br>
+        <h3> <b>&#10028; </b>  CSS inherit Keyword</h3>
+     
+        <p> &#10028; The <b>inherit</b> keyword specifies that a property should inherit its value from its <b>parent</b> element.</p> <br>
+        <p> <b> HTML &lt;span&gt; Tag : </b> The &lt;span&gt; tag is an inline container used to mark up a part of a text, or a part of a document.</p>
+        <h4> CSS Syntax :</h4>
+        <p><b>property:</b> inherit;</p>
+        <center><div class="w3-container">
+              
+          <button  class="w3-button w3-blue w3-text-white w3-hover-blue  w3-round-large w3-card-2">Tryit with LIVE Editor 👇 </button></a>
+          </div>
+       </center>
+       <p><b>Example : </b> CSS color inherit</p>
+       <p class="codepen" data-height="300" data-theme-id="dark" data-default-tab="css,result" data-slug-hash="jOdGeQz" data-editable="true" data-user="BholeNath" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+        <span>See the Pen <a href="https://codepen.io/BholeNath/pen/jOdGeQz">
+        Css Color Inherit</a> by Bhole Nath Maddheshiya (<a href="https://codepen.io/BholeNath">@BholeNath</a>)
+        on <a href="https://codepen.io">CodePen</a>.</span>
+      </p>
+      <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+      <br>
+      <br>
+    </div>
+   </div>
+  </section>
+
+
+  <section class="home-section">
+    <div  class="w3-container">  
+        <div class="w3-panel  w3-card-4 ">
+          <br>
+          <h3 class="w3-center"> CSS Legal Color Values</h3>
+          <p> Colors in CSS can be specified by the following methods:
+          </p>
+
+          <ul class="w3-ul">
+            <li> <a href="#hexadecimalcolor" style="text-decoration: none;">1) Hexadecimal colors </a></li>
+            <li><a href="#hexadecimalcolorwithtransparency" style="text-decoration: none;">2)  Hexadecimal colors with transparency </a></li>
+            <li><a href="#rgbcolor" style="text-decoration: none;">3) RGB colors </a> </li>
+            <li> <a href="#rgbacolor" style="text-decoration: none;">4) RGBA colors </a> </li>
+            <li> <a href="#hslcolor" style="text-decoration: none;">5) HSL colors  </a></li>
+            <li><a href="#hslacolor" style="text-decoration: none;">6) HSLA colors</a>  </li>
+            <li> <a href="#predefinedcolor" style="text-decoration: none;">7) Predefined/Cross-browser color names </a> </li>
+            <li> <a href="#currentcolor" style="text-decoration: none;"> 8) With the <span style="color:blue">currentcolor </span> keyword</a>  </li>
+
+          </ul>
+          <br>
+          <hr style="background-color: black; height: 1px;">
+          <br>
+
+         <h4 id="hexadecimalcolor"> 1) Hexadecimal Colors </h4>
+    <p>A hexadecimal color is specified with: #RRGGBB, where the RR (red), GG (green) and BB (blue) hexadecimal integers specify the components of the color. 
+        </p>
+      <p> All values must be between 00 and FF.
+      </p> <br>
+     
+     
+
+   <p> <b>For example, </b>  the #0000ff value is rendered as blue, because the blue component is set to its highest value (ff) and the others are set to 00.
+   </p>   
+   <div class="w3-container w3-center">
+              
+    <button  class="w3-button w3-blue w3-text-white w3-hover-blue  w3-round-large w3-card-2">Tryit with LIVE Editor 👇 </button></a>
+  </div>
+  <br>
+   <p class="codepen" data-height="300" data-default-tab="css,result" data-slug-hash="RwvdvRy" data-editable="true" data-user="BholeNath" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+    <span>See the Pen <a href="https://codepen.io/BholeNath/pen/RwvdvRy">
+    Hexadecimal Colors</a> by Bhole Nath Maddheshiya (<a href="https://codepen.io/BholeNath">@BholeNath</a>)
+    on <a href="https://codepen.io">CodePen</a>.</span>
+  </p>
+  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+          
+  <br>
+  <hr style="background-color: black; height: 1px;">
+  <br> 
+  <h4 id="hexadecimalcolorwithtransparency"> 2) Hexadecimal Colors With Transparency </h4>    
+ <p> A hexadecimal color is specified with: <span style="color: brown;">#RRGGBB</span> .  <br> To add transparency, add two additional digits between <span style="color: brown;">00 and FF</span> .   
+</p>
+ <br>
+ <p class="codepen" data-height="300" data-default-tab="css,result" data-slug-hash="RwvdvoJ" data-editable="true" data-user="BholeNath" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/BholeNath/pen/RwvdvoJ">
+  Hexadecimal Colors With Transparency</a> by Bhole Nath Maddheshiya (<a href="https://codepen.io/BholeNath">@BholeNath</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+   
+<br>
+<hr style="background-color: black; height: 1px;">
+<br> 
+<h4 id="rgbcolor">3)  RGB Colors</h4>
+<ul class="w3-ul">
+  <li> &#10028; An RGB color value is specified with the <span style="color: brown;"> rgb() function</span> , which has the following:
+    <br> syntax: <span style="color: brown;">rgb(red, green, blue)</span> 
+  </li>
+  <li> &#10028; Each parameter <span style="color: brown;">(red, green, and blue)</span>  defines the intensity of the color and can be an integer between <span style="color: brown;">0 and 255 </span>  or a percentage value <span style="color: brown;">(from 0% to 100%)</span> .
+  </li>
+
+  <li> &#10028; For example, the rgb(0,0,255) value is rendered as blue, because the blue parameter is set to its highest value (255) and the others are set to 0.
+  </li>
+
+  <li> &#10028; Also, the following values define equal color: <span style="color: brown;">  rgb(0,0,255) and rgb(0%,0%,100%) </span>.     
+  </li>
+
+</ul>
+
+  
+</p>
+
+<div class="w3-container w3-center">
+              
+            <button  class="w3-button w3-blue w3-text-white w3-hover-blue  w3-round-large w3-card-2">Tryit with LIVE Editor 👇 </button></a>
+            </div>
+          
+         <p><b>Example : </b> CSS RGB Colors</p>
+
+          <p class="codepen" data-height="300" data-theme-id="dark" data-default-tab="css,result" data-slug-hash="gOqGQpx" data-editable="true" data-user="BholeNath" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/BholeNath/pen/gOqGQpx">
+            Untitled</a> by Bhole Nath Maddheshiya (<a href="https://codepen.io/BholeNath">@BholeNath</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+  <br>
+   <hr style="background-color: black; height: 1px;">
+   <br> 
+
+   <h4 id="rgbacolor">4)  RGBA Colors</h4>
+
+    <ul class="w3-ul">
+      <li> &#10028; RGBA color values are an extension of RGB color values with an alpha channel - which specifies the opacity of the object.
+      </li>
+      <li> &#10028; An RGBA color is specified with the <span style="color: brown;">rgba() function</span> , which has the following syntax:
+      </li>
+      <li> &#10028; <span style="color: brown;"> rgba(red, green, blue, alpha) </span> </li>
+    <li>&#10028; The alpha parameter is a number between <span style="color: brown;">0.0 (fully transparent) and 1.0 (fully opaque)</span> .
+    </li>
+    </ul>
+  <br>
+  <p class="codepen" data-height="300" data-default-tab="css,result" data-slug-hash="BaMbMJE" data-editable="true" data-user="BholeNath" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+    <span>See the Pen <a href="https://codepen.io/BholeNath/pen/BaMbMJE">
+    RGBA Colors</a> by Bhole Nath Maddheshiya (<a href="https://codepen.io/BholeNath">@BholeNath</a>)
+    on <a href="https://codepen.io">CodePen</a>.</span>
+  </p>
+  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+  <br>
+  <hr style="background-color: black; height: 1px;">
+  <br> 
+  <h4 id="hslcolor">5)  HSL Colors</h4>
+   <ul class="w3-ul">
+    <li>&#10028; HSL stands for <span style="color: brown;"> hue, saturation, and lightness </span> - and represents a cylindrical-coordinate representation of colors.
+    </li>
+    <li> &#10028;  An HSL color value is specified with the  <span style="color: brown;">hsl() function</span> , which has the following syntax:
+    </li>
+   <li> &#10028; <span style="color: brown;">hsl(hue, saturation, lightness)</span> 
+    </li>
+    <li> &#10028; Hue is a degree on the color wheel <span style="color: brown;"> (from 0 to 360) - 0 (or 360) is red, 120 is green, 240 is blue</span>. 
+    </li>
+    <li> &#10028;  Saturation is a percentage value; 0% means a shade of gray and 100% is the full color. </li>
+    <li>  &#10028;   Lightness is also a percentage; 0% is black, 100% is white.
+    </li>
+   </ul>
+   <br>
+   <p class="codepen" data-height="300" data-default-tab="css,result" data-slug-hash="MWLxLXj" data-editable="true" data-user="BholeNath" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+    <span>See the Pen <a href="https://codepen.io/BholeNath/pen/MWLxLXj">
+    HSL Colors</a> by Bhole Nath Maddheshiya (<a href="https://codepen.io/BholeNath">@BholeNath</a>)
+    on <a href="https://codepen.io">CodePen</a>.</span>
+  </p>
+  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+  <br>
+<hr style="background-color: black; height: 1px;">
+<br> 
+<h4 id="hslacolor">6) HSLA Colors</h4>
+<ul class="w3-ul">
+<li> &#10028; HSLA color values are an extension of HSL color values with an alpha channel - which specifies the opacity of the object.
+</li>
+<li> &#10028;An HSLA color value is specified with the <span style="color: brown;">hsla() function</span> , which has the following syntax:
+</li>
+<li> &#10028; <span style="color: brown;">hsla(hue, saturation, lightness, alpha)</span> 
+</li> 
+<li> &#10028; The alpha parameter is a number between <span style="color: brown;">  0.0 (fully transparent) and 1.0 (fully opaque).</span>
+</li>
+</ul>
+<br>
+
+<p class="codepen" data-height="300" data-default-tab="css,result" data-slug-hash="VwgRgGB" data-editable="true" data-user="BholeNath" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/BholeNath/pen/VwgRgGB">
+  HSLA Colors</a> by Bhole Nath Maddheshiya (<a href="https://codepen.io/BholeNath">@BholeNath</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+<br>
+<hr style="background-color: black; height: 1px;">
+<br> 
+<h4 id="predefinedcolor"> 7) Predefined/Cross-browser Color Names</h4>
+<ul class="w3-ul">
+  <li> &#10028; <span style="color: brown;"> 140 color  </span>names are predefined in the HTML and CSS color specification.
+  </li>
+  <li>  &#10028; For example:  <span style="color: brown;">blue, red, coral, brown, etc:</span> 
+  </li>
+
+</ul>
+  <br>
+  <p class="codepen" data-height="300" data-default-tab="css,result" data-slug-hash="qBgvggY" data-editable="true" data-user="BholeNath" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+    <span>See the Pen <a href="https://codepen.io/BholeNath/pen/qBgvggY">
+    Predefined/Cross-browser Color Names</a> by Bhole Nath Maddheshiya (<a href="https://codepen.io/BholeNath">@BholeNath</a>)
+    on <a href="https://codepen.io">CodePen</a>.</span>
+  </p>
+  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+  <br>
+  <hr style="background-color: black; height: 1px;">
+  <br> 
+  <h4 id="currentcolor"> 8) The currentcolor Keyword</h4>
+ 
+ <ul class="w3-ul">
+ <li> &#10028; The  <span style="color: brown;"> currentcolor </span> keyword refers to the value of the color property of an element.
+</li>  
+</ul>
+<br>
+<p class="codepen" data-height="300" data-default-tab="css,result" data-slug-hash="WNPmmvw" data-editable="true" data-user="BholeNath" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/BholeNath/pen/WNPmmvw">
+  The currentcolor Keyword</a> by Bhole Nath Maddheshiya (<a href="https://codepen.io/BholeNath">@BholeNath</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<br>
+  <br>
+ <br>
+
+
+
+
+        
+    </div>
+   </div>
+  </section>
+
+  <section class="home-section">
+    <div  class="w3-container">  
+        <div class="w3-panel  w3-card-4 ">
+          <br><br>
+         
+         
+    </div>
+   </div>
+  </section>
+
+  <section class="home-section">
+    <div  class="w3-container">  
+        <div class="w3-panel  w3-card-4 ">
+          <br><br>
+         
+         
+    </div>
+   </div>
+  </section>
+
+  <section class="home-section">
+    <div  class="w3-container">  
+        <div class="w3-panel  w3-card-4 ">
+          <br><br>
+         
+         
+    </div>
+   </div>
+  </section>
+
+  <section class="home-section">
+    <div  class="w3-container">  
+        <div class="w3-panel  w3-card-4 ">
+          <br><br>
+         
+          <pre><code class="language-html">
+ 
+          
+</code></pre>
+            <br>
+          
+          <center><div class="w3-container">
+              
+              <button  class="w3-button w3-blue w3-text-white w3-hover-blue  w3-round-large w3-card-2">Tryit with LIVE Editor</button></a>
+              </div>
+           </center>
+           <br>
+          
+          <h2>Output (Result) of above: </h2>
+                   <br>
+          <iframe srcdoc='
+          &lt;br&gt;
+        
+         
+                   
+          'src=""  width="100%" height="150px" >
+          &lt;br&gt;
+          </iframe>
+          
+          <br>
+          <br>
+    </div>
+   </div>
+  </section>
+
+
+  <section class="home-section">
+    <div  class="w3-container">  
+        <div class="w3-panel  w3-card-4 ">
+      ====
+    </div>
+   </div>
+  </section>
+
+</body>
+
+</html>
+
+
+
+  

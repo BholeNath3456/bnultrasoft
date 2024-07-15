@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Processing</title>
+   <!-- cdn links start -->
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+
+
+   <!-- cdn links end-->
+    
+    
+    
+    
+    <!-- content web page links  start-->
+    <link rel="stylesheet" href="content/content.css">
+    <script src="content/content.js"></script>
+
+    <link rel="stylesheet" href="content/prism.css">
+    <script src="content/prism.js"> </script>
+
+    <link rel="stylesheet" href="content/aos/aos.css">
+    <script src="content/aos/aos.js"></script>
+
+    <!-- content web page links end -->
+  
+
+
+
+</head>
+<body>
+
+
+    <!-- background image Start -->
+    <div class="backgrounds overlay">
+        <div class="background" style="background-image: url('content/img/hero.jpg');"></div>
+    </div>
+    <!-- background image End-->
+    
+    <!-- Sidebar Start -->
+
+
+
+     <div class="w3-sidebar w3-bnultrasoft-color topPadding   w3-card-4 w3-animate-left" style="display:none" id="mySidebar">
+        <div class="w3-bar  w3-hover-white">
+            <span class="w3-bar-item w3-padding-16  ">Contents</span> <button onclick="w3_close()" class="w3-bar-item w3-button w3-right w3-padding-16  w3-hover-black " >&times;</button>
+        </div>
+        
+        <div class="w3-bar-block  ">
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#FileHandling">File Handling</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#PythonFileOpen">Python File Open</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#CloseFile">Python File Close</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#PythonFileWrite">Python File Write</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#writelines">Python  writelines Method</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#tell()Method">Python tell() Method</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#Fileseek()Method">Python seek() Method</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#CommandLineArguments">Command Line Arguments</a> 
+
+               
+            
+            <!-- <a class="w3-bar-item w3-button  w3-hover-white w3-animate-zoom" href="#sec2">About</a>
+            <a class="w3-bar-item w3-button  w3-hover-white w3-animate-zoom" href="#sec3">Contact</a>
+            <a class="w3-bar-item w3-button  w3-hover-white w3-animate-zoom" href="javascript:void(0)">Support</a>
+            <a onclick="myFunction('Demo1')" class="w3-button  w3-hover-white w3-left-align w3-block w3-animate-zoom">Accordion <i class="fa fa-caret-down"></i></a>
+                <div id="Demo1" class="w3-hide w3-animate-zoom">
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 1</a>
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 2</a>
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 3</a>
+                </div> 
+            <a onclick="myFunction('Demo2')" class="w3-button  w3-hover-white w3-left-align w3-block w3-animate-zoom">Accordion <i class="fa fa-caret-down"></i></a>
+                <div id="Demo2" class="w3-hide w3-animate-zoom">
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 1</a>
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 2</a>
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 3</a>
+                </div>
+
+           <a class="w3-bar-item w3-button w3-animate-zoom w3-bnultrasoft-color w3-hover-white" href="quiz.html">Python Quiz Set1</a>    
+       
+        -->
+       
+        </div>
+       
+
+
+    </div> 
+
+
+
+
+
+
+
+    <!-- Sidebar Start End -->
+
+<!-- Page Content Start -->
+
+        <!-- Page content header Start -->
+
+
+
+
+        <div class="w3-bnultrasoft-color w3-top">
+            <button class="w3-button w3-xlarge  w3-hover-white" onclick="w3_open()" >&#9776;</button>
+
+            <a href="../ittoolsandnetworkbasics.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M1</a>
+            <a href="../webdesigningandpublishing.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M2</a>
+            <a href="../python.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M3</a>
+            <a href="../iot.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M4</a>
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium w3-xlarge w3-hover-white" onclick="myFunctionRightItem()" >&#9776;</a>
+
+           
+                        <!-- SearchBar start  -->
+
+                       
+
+                     <!-- <div class="w3-dropdown-click  w3-hover-black">
+                        
+                        <input class="w3-input w3-center w3-padding w3-round-xxlarge" type="text" placeholder="Search any contents..."  onclick="dropFunction()"  id="myInput" onkeyup="filterFunction()">
+                        <div class="w3-dropdown-content w3-bar-block w3-card w3-white" id="myDIV" >
+                        
+                            <a class="w3-bar-item w3-button"  href="#pythonintroduction">Introduction of Python</a>
+                            <a class="w3-bar-item w3-button" href="#technicalStrengthofPython">Technical Strength of Python</a>
+                            <a class="w3-bar-item w3-button" href="#PythonInterpreter">Python Interpreter</a>
+                            <a class="w3-bar-item w3-button" href="#howtorunpython">Using CMD (Command Prompt)</a>
+                            <a class="w3-bar-item w3-button" href="#PythonComments">Python Comments</a>
+                            <a class="w3-bar-item w3-button" href="#PythonVariable">Python Variable</a>
+                            <a class="w3-bar-item w3-button" href="#PythonKeywords">Python Keywords</a>
+                            <a class="w3-bar-item w3-button" href="#PythonPrintFunction">Python Print Function</a>
+                            <a class="w3-bar-item w3-button" href="#PythonInputFunction">Python Input Function</a>
+                            <a class="w3-bar-item w3-button" href="#PythonDataType">Python DataType</a>
+                            <a class="w3-bar-item w3-button" href="#PythonConstants">Python Constants</a>
+                            <a class="w3-bar-item w3-button" href="#PythonLiteral">Python Literal</a>
+                            <a class="w3-bar-item w3-button" href="#PythonString">Python String</a>
+                            <a class="w3-bar-item w3-button" href="#PythonStringConcatenation">Python String Concatenation</a>
+                            <a class="w3-bar-item w3-button" href="#PythonFormatStrings">Python Format Strings</a>
+                            <a class="w3-bar-item w3-button" href="#PythonEscapeCharacter">Python Escape Character</a>
+                           
+                            
+                        </div>
+                        </div>  -->
+
+
+                    <!-- SearchBar End  -->
+                  
+                    <!-- ------------Right hidden items----------- -->
+
+                    <div id="demo" class="w3-bar-block w3-bnultrasoft-color w3-hide w3-hide-large w3-hide-medium  w3-animate-zoom w3-animate-fading">
+                        <a href="../ittoolsandnetworkbasics.html" class="w3-bar-item w3-button w3-hover-white">Olevel M1</a>
+                        <a href="../webdesigningandpublishing.html" class="w3-bar-item w3-button w3-hover-white">Olevel M2</a>
+                        <a href="../python.html" class="w3-bar-item w3-button w3-hover-white">Olevel M3</a>
+                        <a href="../iot.html" class="w3-bar-item w3-button w3-hover-white">Olevel M4</a>
+                      </div>
+
+                      
+                    <!-- ------------Right hidden items----------- -->
+   
+
+        </div>
+      
+
+        <section id="FileHandling" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>Concept of Files, File opening in various modes and closing of a file</u></h2>
+                       
+                           
+                         <p><b> &#10028; Python File Handling : </b> Python has several functions for <span style="color: rgb(115, 2, 7);">creating, reading, updating, and deleting files</span> .</p> 
+                         <p><b> &#x21db; </b>The key function for working with files in Python is the <span style="color: rgb(115, 2, 7);">open()</span>  function.  </p>  
+                         <p><b> &#x21db; </b> The <span style="color: rgb(115, 2, 7);"></span>open() function takes two parameters; <span style="color: rgb(115, 2, 7);">filename, and mode</span> . </p>  
+                         <p><b> &#x21db; </b> There are four different methods <span style="color: rgb(115, 2, 7);">(modes)</span>  for opening a file: </p>  
+                         
+                           <br>
+                           <br>
+                           <ul class="w3-ul">
+
+                            <li> <span style="color: rgb(115, 2, 7);"> <b>"r" </b> - Read - </span>   Default value. Opens a file for reading, error if the file does not exist.
+                            </li>
+                            <li> <span style="color: rgb(115, 2, 7);"> <b> "a" </b> - Append - </span> Opens a file for appending, creates the file if it does not exist. </li>
+                            <li> <span style="color: rgb(115, 2, 7);"> <b>  "w" </b>- Write - </span>Opens a file for writing, creates the file if it does not exist.  </li>
+                            <li> <span style="color: rgb(115, 2, 7);"> <b> "x" </b>  - Create - </span>     Creates the specified file, returns an error if the file exists. </li>
+                          
+                            
+                            
+                             
+                            
+                         
+
+                           </ul>
+                           <br>
+                           <br>
+
+
+                         
+                         <img src="content/img/python/filehandling.png" class="w3-round w3-center"  alt="image" style="width:100%">         
+                          <br>
+                          <br>
+                          <p> <b>Note: </b>  Make sure the file exists, or else you will get an error.</p>
+
+                         <br>
+                       </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section> 
+
+        <section id="PythonFileOpen" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>Python File Open</u></h2>
+                         
+                           
+
+                           
+                            <p> <b>&#10028; </b>  To open the file, use the built-in <span style="color: rgb(115, 2, 7);">open()</span>  function.</p>
+                            <p> <b>&#10028; </b>  The <span style="color: rgb(115, 2, 7);"> open()</span> function returns a file object, which has a <span style="color: rgb(115, 2, 7);"> read()</span> method for reading the content of the file.</p>
+                              <br> 
+                              <br>
+                              <ul class="w3-ul">
+                                <li> <b>Step 1 :</b> Create a folder. </li> 
+                                <li> <b>Step 2 :</b> Open notepad and create a file and save it on the same folder.</li> 
+                                <li> <b> Step 3 : </b> Create a Python file and save it on the same folder.</li>
+
+
+                              </ul>
+
+                              <br>
+                              <div class="w3-container  w3-sand w3-round-xlarge">
+
+                                <p> <b>Example:</b></p>
+                               
+                            <pre>
+                            <code class="language-java">
+f = open("file.txt")
+f1 = open("file.txt","rt")
+f2 = open("file.txt","r")
+
+print(f.read())
+print(f1.read())
+print(f2.read())            
+                            </code>
+                            </pre> 
+                            <p><b>Output:-</b></p>
+                            <p>Hello, guys how are you?</p>
+                            <p>Hello, guys how are you?</p>
+                            <p>Hello, guys how are you?</p>
+
+                            
+                            </div> 
+                            <br>
+
+
+
+                            <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+                                <p> <b> &#10028; Note: </b>If the file is located in a different location, you will have to specify the file path, like this:</p>
+
+                                <p> <b>Example:</b></p>
+                               
+                            <pre>
+                            <code class="language-java">
+f = open("D:\\myfiles\welcome.txt", "r")
+print(f.read())</code>
+                            </pre> 
+                            </div>
+                            <br>
+                            <br>
+                            <div class="w3-container  w3-sand w3-round-xlarge">
+                                <p><b>  &#10028; </b>If your file is not exist or not found in the specific location. Then you will get Error.</p>
+
+                                <p> <b>Example:</b></p>
+                               
+                            <pre>
+                            <code class="language-java">
+f = open("file1.txt")
+print(f.read())            
+                            </code>
+                            </pre> 
+                            <p><b>Output:-</b></p>
+                            <p> <span style="color: rgb(115, 2, 7);"> <b>FileNotFoundError: </b>  [Errno 2] No such file or directory: 'file1.txt'</span> </p>
+                            </div>
+                            <br>
+
+
+                            <div class="w3-container  w3-sand w3-round-xlarge">
+
+                                <p> <b>  &#10028; Read Only Parts of the File: </b> <br> &#x21db; By default the <span style="color: rgb(115, 2, 7);">read() method</span>  returns the whole text, but you can also specify how many characters you want to return:</p>
+
+                                <p> <b>Example:</b></p>
+                               
+                            <pre>
+                            <code class="language-java">
+f = open("file.txt")
+print(f.read(8))            
+                            </code>
+                            </pre> 
+                            <p><b> Output :-</b></p>
+                            <p> Hello, g</p>
+                            </div>
+                            <br>
+                            <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+                                <p> <b> &#10028;  Read Lines :</b> You can return one line by using the <span style="color: rgb(115, 2, 7);">readline()</span>  method:</p>
+                                
+                                
+                                <p> <b>Example:</b></p>
+                               
+                            <pre>
+                            <code class="language-java">
+f = open("file.txt")
+print(f.readline())
+                            </code>
+                            </pre> 
+                            <p><b>Output:-</b></p>
+                            <p> Hello, guys how are you?  Line 1</p>
+                            </div>
+                            <br>
+                            <div class="w3-container  w3-sand w3-round-xlarge">
+                                <p> <b>&#10028; </b>By calling <span style="color: rgb(115, 2, 7);">readline()</span>  two times, you can read the two first lines:</p>
+
+                                <p> <b>Example:</b></p>
+                               
+                            <pre>
+                            <code class="language-java">
+f = open("file.txt")
+print(f.readline())
+print(f.readline())</code>
+                            </pre>
+                            <p><b>Output :- </b></p> 
+                            <p> Hello, guys how are you?  Line 1</p>
+                            <p> Hello, guys how are you?  Line 2</p>
+                            </div>
+                            <br>
+                            <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+                                <p> <b> &#10028; </b> By looping through the lines of the file, you can read the whole file, line by line:</p>
+
+                                <p> <b>Example:</b></p>
+                               
+                            <pre>
+                            <code class="language-java">
+f = open("file.txt")
+for i in f:
+    print(i)</code>
+                            </pre>
+                            <p> <b> Output :-</b></p>
+                            <p> Hello, guys how are you?  Line 1</p>
+                            <p> Hello, guys how are you?  Line 2</p>
+                            <p> Hello, guys how are you?  Line 3</p>
+                            </div>
+                            <br>
+                            <div class="w3-container  w3-sand w3-round-xlarge">
+                             <p> <b>  &#10028; </b>The <span style="color: rgb(115, 2, 7);">readlines()</span>  method returns a list containing each line in the file as a list item.</p>
+                             <p> <b>Syntax : </b>file.readlines(hint) </p>
+                             <p> <b> Note:- </b>Hint is Optional. If the number of bytes returned exceed the hint number, no more lines will be returned. <br>  <span style="color: rgb(115, 2, 7);"> Default value is  -1, which means all lines will be returned.</span></p>
+                             <p> <b>Example :-</b></p>
+                               
+                            <pre>
+                            <code class="language-java">
+f = open("file.txt")
+f1 = open("file.txt")
+
+print(f.readlines())
+
+#Do not return the next line if the total number of returned bytes are more than 33
+print(f1.readlines(33))            
+                            </code>
+                            </pre> 
+                            </div>
+
+
+
+
+
+
+                            <br>
+                            <br>
+                          
+                       </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section> 
+
+        <section id="CloseFile" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>Python Close File</u></h2>
+                       
+                        
+                         <p><b> &#10028; Close Files : </b> It is a good practice to always close the file when you are done with it.</p> 
+                        
+                         <div class="w3-container  w3-sand w3-round-xlarge">
+
+                            <p> <b>Example:</b></p>
+                           
+                        <pre>
+                        <code class="language-java">
+f = open("file.txt")
+print(f.readline())
+f.close()</code>
+                        </pre> 
+                        <p><b>Note :-</b></p>
+                        <p>Note: You should always close your files. <br> <span style="color: rgb(115, 2, 7);">In some cases,</span>  due to buffering, changes made to a file may not show until you close the file. </p>
+                        </div>
+                        <br>
+                        <br>
+
+
+                       </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section> 
+
+        
+<section id="PythonFileWrite" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+              
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Python File Write</u></h2>
+               <p> <b> Write to an Existing File :</b></p>
+                 <p>  To write to an existing file, you must add a parameter to the open() function:
+                </p> 
+                <p> <span style="color: rgb(115, 2, 7);"><b>"a"</b> - Append - </span> will append to the end of the file. </p>  
+                <p><span style="color: rgb(115, 2, 7);"> <b>"w" </b> - Write -</span>  will overwrite any existing content. </p>  
+                    
+                    
+                  <br>  
+
+                  <div class="w3-container  w3-sand w3-round-xlarge">
+
+                    <p> <b>Example :</b> Append content to the existing file. <span style="color: rgb(115, 2, 7);">(By using : 'a')</span> </p>
+                   
+                <pre>
+                <code class="language-java">
+f = open("file.txt","a")
+f.write("Now the file has more content!")
+f.close()
+
+f=open("file.txt")
+print(f.read())</code>
+</pre> 
+                <p> <b> Output :-</b></p>
+<p> This is old text. Now the file has more content!</p>
+                </div>
+                <br>
+                  <div class="w3-container  w3-sand w3-round-xlarge">
+
+                    <p> <b>Example:</b> Overwrite the content (Delete the all old content and add new content) <span style="color: rgb(115, 2, 7);">(By using : 'w')</span></p>
+                   
+                <pre>
+                <code class="language-java">
+f = open("file.txt","w")
+f.write("Woops! I have deleted the content!")
+f.close()
+
+f=open("file.txt")
+print(f.read())</code>
+                </pre> 
+                <p><b> Output :-</b></p>
+                <p> Woops! I have deleted the content!</p>
+                </div>
+                <br>
+                    
+
+ 
+                  
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="writelines" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+              
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Python File writelines() Method</u></h2>
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+
+                        <p> <b>Example :</b> Open the file with "a" for appending, then add a list of texts to append to the file: </p>
+                        <p> <b>&#10028; Note:</b> If not in proper list then you will get error:  <span style="color: rgb(115, 2, 7);"><b> TypeError: </b></span> </p>
+                       
+                    <pre>
+                    <code class="language-java">
+f = open("file.txt","a")
+f.writelines(["This text is added!", "by writeline method."])
+
+f = open("file.txt","r")
+print(f.read())    
+                    </code>
+                    </pre> 
+                    </div>
+                    <br>
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+   <p> <b> &#10028; </b> "w": The file will be emptied before the texts will be inserted at the current file stream position.</p>
+                        <p> <b>Example :</b></p>
+                       
+                    <pre>
+                    <code class="language-java">
+f = open("file.txt","w")
+f.writelines(["This text is added!", "by writeline method."])
+
+f = open("file.txt","r")
+print(f.read())</code>
+                    </pre> 
+                    </div>
+                     <br>
+                     <br>
+                    
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+
+<section id="tell()Method" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+              
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Python File tell() Method</u></h2>
+                    
+                     <p> <b>&#10028; </b> The <span style="color: rgb(115, 2, 7);">tell() method</span>  returns the current file position in a file stream.</p>
+
+                     <br>
+                     <div class="w3-container  w3-sand w3-round-xlarge">
+
+                        <p> <b>Example:</b> Return the current file position after reading the first line.</p>
+                       
+                    <pre>
+                    <code class="language-java">
+f = open("file.txt")
+print(f.readline())
+print(f.tell())    
+                    </code>
+                    </pre>
+                    <p> <b>Output :- </b></p>
+                    <p> Thisisline1</p>
+                    <p>13</p>
+                    </div>
+                    <br>
+ 
+                        
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="Fileseek()Method" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+              
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Python File seek() Method</u></h2>
+                    <p> <b> &#10028; </b>The <span style="color: rgb(115, 2, 7);">seek() method</span>  sets the current file position in a file stream.</p>
+                    <p> <b>  &#10028;</b> The <span style="color: rgb(115, 2, 7);">seek() method</span>  also returns the new postion.</p>
+
+                     <br>
+                     <div class="w3-container  w3-sand w3-round-xlarge">
+
+                        <p> <b>Example :</b></p>
+                       
+                    <pre>
+                    <code class="language-java">
+f = open("file.txt")
+f.seek(4)
+print(f.readline())
+print(f.seek(4)) # Return the new position:
+                    </code>
+                    </pre>
+                    <p> <b> Output :-</b> </p>
+                    <p>isline1 </p>
+                    <p>4  </p>
+
+
+                   
+                    </div>
+               
+                   
+                    <br>
+                    <br>
+
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="CommandLineArguments" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+              
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Python Command Line Arguments</u></h2>
+                    <p><b> &#10028; Python Command Line Arguments : </b> Python Command Line Arguments provides a convenient way to accept some information at the command line while running the program. </p>
+                    <p> <b> &#x21db; </b>To run a Python program, we execute the following command in the command prompt terminal of the operating system. For example, in windows, the following command is entered in Windows command prompt terminal.</p>
+                    <p> <b> Note 1:</b> Command Line Arguments return in the form of <span style="color: rgb(115, 2, 7);"> List.</span></p> 
+                    <p> <b> Note 2: </b> The list elements are in <span style="color: rgb(115, 2, 7);"> string</span>.</p>
+                    <br>
+                     <div class="w3-container  w3-sand w3-round-xlarge">
+
+                        <p> <b> Q154)</b> WAP to display number the list of  command line arguments or length of command line arguments .</p>
+
+                        <p> <b>Solution:</b></p>
+                       
+                    <pre>
+                    <code class="language-java">
+from sys import argv
+
+print("The no. of command line argument :", len(argv))
+print("The list of command line arguments :", argv)</code>
+                    </pre> 
+                    <p> <b>Output : </b></p>
+                    <img src="content/img/python/commandline.png" class="w3-round w3-center"  alt="image" style="width:100%">   
+                    </div>
+
+                    <br>
+                   
+                    <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+                        <p> <b> Q155)</b> WAP to print all command line arguments only which is entered by user.</p>
+
+                        <p> <b>Solution:</b></p>
+                       
+                    <pre>
+                    <code class="language-java">
+from sys import argv
+
+print("The list of command line arguments :", argv[1:])</code>
+                    </pre> 
+                    <p> <b>Output : </b></p>
+                    <p> python Q155.py 12 34 56 67 </p>
+                    <p>The list of command line arguments : ['12', '34', '56', '67']  </p>
+                      
+                </div>
+                <br>
+                <div class="w3-container  w3-sand w3-round-xlarge">
+
+                    <p> <b> Q156)</b> WAP to print sum of all   command line arguments only which is entered by user.</p>
+
+                    <p> <b>Solution:</b></p>
+                   
+                <pre>
+                <code class="language-java">
+from sys import argv
+s=0
+args = argv[1:]
+for i in args:
+    s=s+int(i)
+print("The sum of all arguments :", s)</code>
+                </pre> 
+                <p> <b>Output : </b></p>
+                <p> python Q156.py 12 34 56 67 </p>
+                <p>The sum of all arguments : 169 </p>
+                  
+            </div>
+            <br>
+            <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+                <p> <b>Labwork :</b></p>
+                <p> <b>Q157) </b> WAP to print 5 colors name by command line argument. </p>
+                <p> <b> Hint :</b></p>
+                <p>  python Q157.py Blue Black Red Yellow Green</p>
+                <p>Your color names are : </p>
+                <p>  Your entered color 1 is Blue </p>
+                <p> Your entered color 2 is Black</p>
+                <p>Your entered color 3 is Red </p>
+                <p>       Your entered color 4 is Yellow</p>
+            <p>Your entered color 5 is Green </p>
+                
+            </div>
+
+
+
+                <br>
+                <br>
+
+
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+        
+
+
+
+ 
+ <script>
+ 
+ AOS.init();
+
+
+
+</script>
+</body>
+</html>

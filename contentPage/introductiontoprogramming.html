@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction of Python</title>
+   <!-- cdn links start -->
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+
+
+   <!-- cdn links end-->
+    
+    
+    
+    
+    <!-- content web page links  start-->
+    <link rel="stylesheet" href="content/content.css">
+    <script src="content/content.js"></script>
+
+    <link rel="stylesheet" href="content/prism.css">
+    <script src="content/prism.js"> </script>
+
+    <link rel="stylesheet" href="content/aos/aos.css">
+    <script src="content/aos/aos.js"></script>
+
+    <!-- content web page links end -->
+  
+
+
+
+</head>
+<body>
+
+
+    <!-- background image Start -->
+    <div class="backgrounds overlay">
+        <div class="background" style="background-image: url('content/img/hero.jpg');"></div>
+    </div>
+    <!-- background image End-->
+    
+    <!-- Sidebar Start -->
+
+
+
+     <div class="w3-sidebar w3-bnultrasoft-color topPadding   w3-card-4 w3-animate-left" style="display:none" id="mySidebar">
+        <div class="w3-bar  w3-hover-white">
+            <span class="w3-bar-item w3-padding-16  ">Contents</span> <button onclick="w3_close()" class="w3-bar-item w3-button w3-right w3-padding-16  w3-hover-black " >&times;</button>
+        </div>
+        
+        <div class="w3-bar-block  ">
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#ProgrammingLanguages">Programming Languages</a> 
+           
+            <a onclick="myFunction('Demo1')" class="w3-button  w3-hover-white w3-left-align w3-block w3-animate-zoom" href="#classificationofcomputerlanguage">It's classification <i class="fa fa-caret-down"></i>  </a>
+            <div id="Demo1" class="w3-hide w3-animate-zoom">
+            <a href="#lowlevellanguage" class="w3-button  w3-hover-white w3-block w3-left-align">Low Level Language</a>
+            <a href="#highlevellanguage" class="w3-button  w3-hover-white w3-block w3-left-align">High Level Language</a>
+            <a href="#midlevelLanguage" class="w3-button  w3-hover-white w3-block w3-left-align">Middle Level Language</a>
+         
+            </div> 
+
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#diffbetweenlowhighlanguage">Low vs High Level Language</a> 
+          
+            <a onclick="myFunction('Demo2')" class="w3-button  w3-hover-white w3-left-align w3-block w3-animate-zoom" href="javascript:void(0)">Language Processors <i class="fa fa-caret-down"></i>  </a>
+            <div id="Demo2" class="w3-hide w3-animate-zoom">
+            <a href="#assembler" class="w3-button  w3-hover-white w3-block w3-left-align">Assembler</a>
+            <a href="#compiler" class="w3-button  w3-hover-white w3-block w3-left-align">Compiler</a>
+            <a href="#interpreter" class="w3-button  w3-hover-white w3-block w3-left-align">Interpreter</a>
+         
+            </div> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#sourcecodeandobjectcode">Source Code and Object Code</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#CompilationandExecutionProcess">Compilation and Execution Process</a> 
+        
+            
+            <!-- <a class="w3-bar-item w3-button  w3-hover-white w3-animate-zoom" href="#sec2">About</a>
+            <a class="w3-bar-item w3-button  w3-hover-white w3-animate-zoom" href="#sec3">Contact</a>
+            <a class="w3-bar-item w3-button  w3-hover-white w3-animate-zoom" href="javascript:void(0)">Support</a>
+            <a onclick="myFunction('Demo1')" class="w3-button  w3-hover-white w3-left-align w3-block w3-animate-zoom">Accordion <i class="fa fa-caret-down"></i></a>
+                <div id="Demo1" class="w3-hide w3-animate-zoom">
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 1</a>
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 2</a>
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 3</a>
+                </div> 
+            <a onclick="myFunction('Demo2')" class="w3-button  w3-hover-white w3-left-align w3-block w3-animate-zoom">Accordion <i class="fa fa-caret-down"></i></a>
+                <div id="Demo2" class="w3-hide w3-animate-zoom">
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 1</a>
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 2</a>
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 3</a>
+                </div>
+
+           <a class="w3-bar-item w3-button w3-animate-zoom w3-bnultrasoft-color w3-hover-white" href="quiz.html">Python Quiz Set1</a>    
+       
+        -->
+       
+        </div>
+       
+
+
+    </div> 
+
+
+
+
+
+
+
+    <!-- Sidebar Start End -->
+
+<!-- Page Content Start -->
+
+        <!-- Page content header Start -->
+
+
+
+
+        <div class="w3-bnultrasoft-color w3-top">
+            <button class="w3-button w3-xlarge  w3-hover-white" onclick="w3_open()" >&#9776;</button>
+
+            <a href="../ittoolsandnetworkbasics.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M1</a>
+            <a href="../webdesigningandpublishing.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M2</a>
+            <a href="../python.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M3</a>
+            <a href="../iot.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M4</a>
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium w3-xlarge w3-hover-white" onclick="myFunctionRightItem()" >&#9776;</a>
+
+           
+                        <!-- SearchBar start  -->
+
+                       
+
+                     <div class="w3-dropdown-click  w3-hover-black">
+                        
+                        <input class="w3-input w3-center w3-padding w3-round-xxlarge" type="text" placeholder="Search any contents..."  onclick="dropFunction()"  id="myInput" onkeyup="filterFunction()">
+                        <div class="w3-dropdown-content w3-bar-block w3-card w3-white" id="myDIV" >
+                        
+                            <a class="w3-bar-item w3-button"  href="#ProgrammingLanguages">Programming Languages</a>
+                            <a class="w3-bar-item w3-button" href="#classificationofcomputerlanguage">Classification of Languages</a>
+                            <a class="w3-bar-item w3-button" href="#lowlevellanguage">Low Level Language</a>
+
+                            <a class="w3-bar-item w3-button" href="#machinelanguage">Machine Language</a>
+                            <a class="w3-bar-item w3-button" href="#assemblylanguage">Assembly Language</a>
+                            <a class="w3-bar-item w3-button" href="#highlevellanguage">High Level Language</a>
+                            <a class="w3-bar-item w3-button" href="#midlevelLanguage">Middle Level Language</a>
+                            
+                            <a class="w3-bar-item w3-button" href="#diffbetweenlowhighlanguage">Different Between Low and High Level Language</a>
+                            <a class="w3-bar-item w3-button" href="#assembler">Assembler</a>
+                            <a class="w3-bar-item w3-button" href="#compiler">Compiler</a>
+                            <a class="w3-bar-item w3-button" href="#interpreter">Interpreter</a>
+                            <a class="w3-bar-item w3-button" href="#sourcecodeandobjectcode">Source Code and Object Code</a>
+                            <a class="w3-bar-item w3-button" href="#CompilationandExecutionProcess">Compilation and Execution Process</a>
+                            <!-- <a class="w3-bar-item w3-button" href="#sec3">Custom</a> -->
+                            <!-- <a class="w3-bar-item w3-button" href="#support">Support</a> -->
+                            <!-- <a class="w3-bar-item w3-button" href="#tools">Tools</a> -->
+                            
+                        </div>
+                        </div> 
+
+
+                    <!-- SearchBar End  -->
+                  
+                    <!-- ------------Right hidden items----------- -->
+
+                    <div id="demo" class="w3-bar-block w3-bnultrasoft-color w3-hide w3-hide-large w3-hide-medium  w3-animate-zoom w3-animate-fading">
+                        <a href="../ittoolsandnetworkbasics.html" class="w3-bar-item w3-button w3-hover-white">Olevel M1</a>
+                        <a href="../webdesigningandpublishing.html" class="w3-bar-item w3-button w3-hover-white">Olevel M2</a>
+                        <a href="../python.html" class="w3-bar-item w3-button w3-hover-white">Olevel M3</a>
+                        <a href="../iot.html" class="w3-bar-item w3-button w3-hover-white">Olevel M4</a>
+                      </div>
+                    <!-- ------------Right hidden items----------- -->
+   
+
+        </div>
+        <!-- Page content header  End-->
+
+        <!-- Page content Body Start -->
+
+            
+
+ <!-- Page content Coding part Start -->
+
+
+
+
+<section id="ProgrammingLanguages" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                       
+
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>Introduction of Programming</u></h2>
+                       
+                        <h4><b>&#10028;</b> <u>Programming:</u> </h4>                         
+                        <p> &#10028; Programming is the process of creating a set of instructions that tells a computer how to perform a task. <br>
+                          &#10028; Programming can be done by using a variety of computer programming language such as Java, Python, C++ etc.</p>
+                        <br>
+                        <h4> <b>&#10028;</b> <u>Programming language:</u> </h4>  
+                        <p>&#10028; Programming language is the computer language that is used by programmers (developers) to design and write the computer programs to communicate with computer. <br>
+                         &#10028; A programming language is mainly used to develop desktop applications, web application and mobile application.</p>
+                         </div>
+
+                    </div> 
+                </div>
+            </div>
+
+
+
+</section> 
+
+
+
+<section id="classificationofcomputerlanguage" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-left"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Classification of Computer Language</u></h2>
+               
+                    <img src="content/img/python/classificationofprogramminglanguage.png" class="w3-round w3-center"  alt="image" style="width:100%">         
+            </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+
+<section id="lowlevellanguage" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Low-Level Language</u></h2>
+               
+                <p>  &#10028;  A Low-Level language is machine-dependent (0's and 1's) programming language. It contains basic instructions readable only by the machine.</p>                        
+              
+                <br>
+                <h4 id="machinelanguage"><u>Low-Level Language is divided into two parts:-</u> </h4> 
+                <h5>1)  Machine Level Language  &nbsp;&nbsp;&nbsp;&nbsp; 2) Assembly Level Language     </h5>
+
+                <p ><b> &#10028; <u>Machine Language :</u></b></p> 
+                <p>  &#10028; Machine Language is a type of low-level programming language and named as first generation of programming language. <br> 
+                 &#10028; Machine language is a collection of binary digits (0,1) or bits that the computer reads.  <br>
+                 &#10028; It does not required any translator to convert the programs because computers directly understand the machine language programs. </p>
+                 <p><b>Example : </b> <br> H = 72 (01001000) and I = 73 (01001001) <br>
+                 HI= [01001000 01001001]</p>
+
+                 <br>
+               
+                 <p><u>Advantage of Machine Level Language:</u> </p> 
+                 <p> &#10028;   It does not required any translator to translate the code. <br>
+                    &#10028;  It takes very less time and very efficient to execute a program, because there is no translated take place. <br>
+                    &#10028;  Machine level languages are directly interacting with computer system.
+                </p>
+                <p><u>Disadvantage of Machine Level Language:</u> </p> 
+                <p id="assemblylanguage"> &#10028; Binary code is unreadable because it is too hard to understand and program. <br>
+                    &#10028;  Debugging process is very hard because it is very difficult to finding error.  <br>
+                    &#10028;  It is a machine dependent language, due to the program design for one machine, the code is no use of other machine.
+                </p>
+                
+                <br>
+
+                
+                <p><b> &#10028; <u>Assembly Language :</u></b> </p>
+                 <p>   &#10028; Assembly level language is also type of low-level programming language and named as second generation of programming language. <br>
+                    &#10028; It is designed for specific processors which means it directly communicate with computer's hardware. <br> 
+                    &#10028; The problem which we are facing in machine level language are reduced in assembly level language by symbol which is Human understandable. <br>
+                    &#10028; The assembly language code is not portable because the data is stored in computer's register and computer has to know the different sets of registers.
+                </p>
+                <p><b>Example : </b> <b>ADD</b> for addition, <b>SUB</b> for subtraction, <b>CMP</b> for comparision etc. So it is easier to write and understand such symbols are also known as <b>Mnemonics. </b></p>
+                <p>   As we know that the computers can only understand the machine-level instructions, so we required translator that convert the assembly code into machine code. <br> The translator used for translating the assembly code is known as an <b>assembler</b>.
+                </p>   
+                
+                <br>
+               
+                <p><u>Advantage of Assembly Level Language:</u>  </p> 
+                <p> &#10028; To develop a program it takes less time due to human understandable symbol are used. <br>
+                    &#10028; It allows complex jobs to run in simple way. <br>
+                    &#10028;  Debugging process is easy due to easily find errors here, because it is use English keyboard (symbol) instead of binary digits.
+                
+                </p>
+                <p><u>Disadvantage of Assembly Level Language:</u>  </p> 
+                <p> &#10028; It required translator to translate the code, so it is time consuming. <br> 
+                    &#10028; Major disadvantage is program written for one computer might not run in other computer with different hardware configuration. <br>
+                    &#10028; It needs more size or memory of the computer to run the long program written in assembly language.
+                </p>
+                
+
+               </div>
+             
+              
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+
+
+
+<section id="highlevellanguage" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-left"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>High Level Language</u></h2>
+               
+                <h4><b>&#10028;</b> <u>High Level Language:</u> </h4>  
+                <p>&#10028; High Level Language is the upper level language and also known as the third generation programming language. <br>
+                    &#10028;  A high level language means general english language which is very near to human understanding. <br>
+                    &#10028; Those programs written in high level language must required software to translate the program into machine understandable code. <br>
+                    &#10028; The software is called <b>compiler or/and interpreter</b>, the main job of the software is to take source code of the program and convert that the code into machine code. <br>
+                    &#10028; Using high level programming language we can easily write program/code accurately and reduce the mistake in program. <br>
+                    &#10028; Some high level programming language are BASIC (Beginners' All-purpose Symbolic Instruction Code), FORTRAN (FORmula TRANslation), C++, Java, C Sharp (C#), Python, Visual Basic, Perl, Ruby, PHP and many more. </p>
+                    <br>
+                    <p><u>Advantage of High Level Language:</u>  </p> 
+                    <p> &#10028; Easy to understand, implement and well maintain because of human understandable language are used. <br>
+                        &#10028; Debugging process is very easy, here the programmers have time to think about overall logic rather than a thinking about a program code errors due to the use of compiler/interpreter can detected and located the error easily. <br>
+                        &#10028; It is machine independent the program written in high level language are portable and it can be execute on any type of computer with no modification at all.
+                    </p>
+                    <br>
+                    <p><u>Disadvantage of High Level Language:</u>  </p> 
+                    <p> &#10028; It takes additional translation time to translate the source code into machine code. <br>
+                        &#10028; It required converter (compiler and/or interpreter) to convert high level language into machine level language. <br>
+                        &#10028; Cannot communicate directly with hardware.
+                    </p>
+
+              
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+
+<section id="midlevelLanguage" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Middle Level Language</u></h2>
+               
+                <h4><b>&#10028;</b> <u>Middle Level Programming Language:</u> </h4>                         
+                <p> &#10028; Those programming language which supports features of both low level programming and high level programming language is called middle level language. <br>
+                    &#10028; This middle level programming language act as a bridge between hardware and software. </p> 
+
+                   <p> <b>Example: C language. </b></p> 
+
+                   <p>   &#10028; Programmer can use mid level programming language to do the system programming (for writing operating system like Unix) as well as application programming (for application software like Mozilla Firefox). </p>
+                    
+                   
+                </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="diffbetweenlowhighlanguage" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-left"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Different between Low Level Language and High Level Language</u></h2>
+               
+                    <table class="w3-table-all w3-panel ">
+                        <tr>
+                          <th>Low Level Language</th>
+                          <th>High Level Language</th>
+                        
+                        </tr>
+                        <tr>
+                          <td> &#10028; Low level programming language are machine dependent that means program written in a low level language are not portable.</td>
+                          <td>&#10028; High level programming languages are machine independent that means program written in high level language are portable.</td>
+                        
+                        </tr>
+                        <tr>
+                          <td>  &#10028; Low level language are very close to the hardware. They help in writing various program at the hardware level, so it require the knowledge of computer hardware.</td>
+                          <td>  &#10028; High level language do not provide various facilities at the hardware level so it does not require the knowledge of computer hardware.</td>
+                       
+                        </tr>
+                        <tr>
+                          <td>  &#10028; These are machine-friendly language that are very difficult to understand by human being but easy to understand and translate by machine.</td>
+                          <td> &#10028; These are programmer-friendly language that are manageable easy to understand and debug.</td>
+                      
+                        </tr>
+                        <tr>
+                          <td> &#10028; Low level language are required an assembler for direct translating the instruction to the machine language.</td>
+                          <td> &#10028; High level language required the use of compiler and/or interpreter for their translation into the machine code.</td>
+                        
+                        </tr>
+                        <tr>
+                          <td> &#10028; Low level language are not very common nowadays for programming.</td>
+                          <td> &#10028; High level language are very common and widely used for programming in today's time.</td>
+                        
+                        </tr>
+                        <tr>
+                          <td>&#10028; Some example of low level language include the machine language and assembly language.</td>
+                          <td>&#10028; Some example of high level language include Perl, BASIC, COBOL (Common Business-Oriented Language), JAVA, PHP (Hypertext Preprocessor), Python etc</td>
+                        
+                        </tr>
+                      </table>
+                   
+                </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section>
+
+<section id="assembler" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u><b>Language Processors: Assembler, Compiler, Interpreter</b></u></h2>
+                    <h2 class="w3-panel w3-center"><u>Assembler</u></h2>
+               
+              
+
+                   <p>   &#10028; The assembler is used to translate the program written in assembly language into machine code the source program is an input of assembler that contains assembly language instruction the output of generating by assembler is <b>object code or machine code</b> which is  understandable by the computer.  </p>
+                   <p>   &#10028; The assembler is basically able to convert these Mnemonics in binary code. Here, these Mnemonics also depend upon the architecture of machine.  </p>
+                   <p>   &#10028; For example the architecture of <b>Intel 8085 and Intel 8086</b> are different.  </p>
+                        
+                   <img src="content/img/python/assem.png" class="w3-round w3-center"  alt="image" style="width:100%">         
+       
+                   
+                </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+<section id="compiler" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-left"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Compiler</u></h2>
+               
+              
+
+                   <p>   &#10028; The language processor that reads the complete source program written in high level language as a whole in one, and it goes for translation which is in machine language.  </p>
+                  
+                   <p>   &#10028;  Example:  <b>C, C++, C# and  Java.</b>  </p>
+                   <p>   &#10028;  In compiler the source code is translated to object code successfully if it is free of error the compiler specify the error at the end of compilation with line numbers when they are found any error in source code.  </p>
+                        
+                   <img src="content/img/python/compiler.png" class="w3-round w3-center"  alt="image" style="width:100%">         
+       
+                   
+                </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="interpreter" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Interpreter</u></h2>
+               
+              
+
+                   <p>   &#10028; The translation of a single statement of the source program into machine code and execute immediately before moving onto the next line is called an interpreter.  </p>
+                   <p>   &#10028;  Example:  <b>Perl, Python and MATLAB (matrix laboratory)</b>  </p>
+                   <p>   &#10028; If there is an error in the statement, the interpreter terminates its translating process at that statement and display an error message the interpreter move on the next line for execution only, after the removal of the error. </p>      
+                   <img src="content/img/python/interpreter.png" class="w3-round w3-center"  alt="image" style="width:100%">         
+       
+                   
+                </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+
+
+
+<section id="sourcecodeandobjectcode" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-left"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Source Code and Object Code</u></h2>
+               
+              
+
+                  
+                    
+                    <img src="content/img/python/sourcecodeVSobjectcode.png" class="w3-round w3-center"  alt="image" style="width:100%">         
+       
+                   <p>&#10028; <b>Source code: </b>  Source code refers to high level code which is generated by human/programmer by using any text editor. It is written any high level language like C, Java, Python etc.</p>
+                   <p>&#10028; <b>Object Code: </b>Object code refers to low level code which is understandable by machine. It is written in machine language through compiler or assembler or any other translator. Object code contains a sequence of machine understandable instructions to which is CPU understand and executes. </p>
+                   <p>&#10028; <b>Byte Code:</b> Bytecode is an intermediate code between the source code and machine code it is a low-level code that is the result of compilation of the source code it is a process by virtual machine the virtual machine convert the bytecode into specific machine instruction that computer processor will understand. The virtual machine converts that code into machine code using the interpreter, the virtual machine uses the interpreter at the runtime.</p>
+                   <p>&#10028; <b> Machine Code:</b> Machine code is a set of instruction that is directly machine understandable and it is processed by CPU. The machine code is in binary (0's and 1's) format which is completely different from bytecode and source code. Machine code is obtained after the compilation or interpretation. It is also called a machine language.</p>
+                </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="CompilationandExecutionProcess" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                   <h2 class="w3-panel w3-center"><u>Compilation and Execution Process</u></h2>
+                   <p>&#10028; <b>Compilation : </b>  Compilation is the phase or steps for execution where a program source code is converted into object code and then transferred for execution.</p>
+               
+                   <img src="content/img/python/CompilationAndExecutionProcess.png" class="w3-round w3-center"  alt="image" style="width:100%">         
+                  <hr>
+                  <br>
+              <p> <b> Step 1:</b> In the first step of source code is check for any Syntax errors.</p>
+              <p> <b> Step 2: </b> After the syntax error are traced out, the source file is passed through a complier which first translate high level language into a object code ( A object code is not ready to executed).</p>
+              <p> <b> Step 3: </b> The Linker links the object code with pre-compiled library functions, thus creatiing an executable program.</p>  
+              <p> <b> Step 4:</b> Then, the executable program is loaded into the memory for execution. </p> <br> <br>
+              <p> <b> Linker: </b> A linker is special program that combines the object files, generated by compiler/assembler and other pieces of code to originate an executable file has <b>.exe </b>extension.</p>
+              <p> <b> Loader:</b> It is special program that takes input of executable files from linker, loads it to main memory, and prepares this code for execution by computer. </p>
+            
+            </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section>
+
+<!-- <section id="structured" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-left"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u> Structured Programming</u></h2>
+               
+              
+
+                  
+                    
+                    <img src="content/img/python/structure.png" class="w3-round w3-center"  alt="image" style="width:100%">         
+       
+                
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="ProceduralOrientedProgramming" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-left"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u> High Level Language : Procedural Objected Programming and Object-Oriented Programming</u></h2>
+               
+              
+
+                  
+                    
+                    <img src="content/img/python/ProceduralOrientedProgramming.png" class="w3-round w3-center"  alt="image" style="width:100%">         
+       
+                   <p>&#10028; <b>Procedural Programming </b> Procedural Programming can be defined as a programming model which is derived from structured programming. <br>
+                    
+                   </p>
+                  
+                
+                
+                </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section>  -->
+
+
+<!-- <section id="ProgrammingLanguages" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+                <h2 class="w3-panel w3-center">Example1</h2>
+
+                 <div class=" w3-leftbar w3-border-pink w3-border w3-round-large ">
+                   
+<pre class="line-numbers" data-line="15-25">
+<code class="language-java">
+package com.example.webviewtest;
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.webkit.WebView;
+
+public class MainActivity extends AppCompatActivity {
+private WebView webView;
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+    webView=findViewById(R.id.webviewforhighlight);
+    webView.getSettings().setJavaScriptEnabled(true);
+    webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+    webView.loadUrl("file:///android_asset/prismjs_template.html");
+}
+}
+
+
+x = "awesome"
+
+def myfunc():
+x = "fantastic"
+print("Python is " + x)
+
+myfunc()
+
+print("Python is " + x)
+
+
+</code>
+</pre>
+
+
+                 </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+  -->
+            
+              
+           
+
+   
+            
+            
+            <!-- Page content Coding part Start -->
+
+
+        <!-- Page content Body Start -->
+
+
+ <!-- Page Content End --> 
+ 
+ <script>
+ 
+ AOS.init();
+
+
+
+</script>
+</body>
+</html>

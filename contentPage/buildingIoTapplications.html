@@ -1,0 +1,3341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet of Things</title>
+   <!-- cdn links start -->
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+
+
+   <!-- cdn links end-->
+    
+    
+    
+    
+    <!-- content web page links  start-->
+    <link rel="stylesheet" href="content/content.css">
+    <script src="content/content.js"></script>
+
+    <link rel="stylesheet" href="content/prism.css">
+    <script src="content/prism.js"> </script>
+
+    <link rel="stylesheet" href="content/aos/aos.css">
+    <script src="content/aos/aos.js"></script>
+
+    <!-- content web page links end -->
+  
+
+
+
+</head>
+<body>
+
+
+    <!-- background image Start -->
+    <div class="backgrounds overlay">
+        <div class="background" style="background-image: url('content/img/hero.jpg');"></div>
+    </div>
+    <!-- background image End-->
+    
+    <!-- Sidebar Start -->
+
+
+
+    <div class="w3-sidebar w3-bnultrasoft-color topPadding   w3-card-4 w3-animate-left" style="display:none" id="mySidebar">
+        <div class="w3-bar  w3-hover-white">
+            <span class="w3-bar-item w3-padding-16  ">Contents</span> <button onclick="w3_close()" class="w3-bar-item w3-button w3-right w3-padding-16  w3-hover-black " >&times;</button>
+        </div>
+        
+        <div class="w3-bar-block  ">
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#ArduinoIDE"> Introduction to ArduinoIDE</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#IDEMenus">  Arduino IDE Menus</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#serialmonitor">  Role of serial monitor</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#CLanguage">  C Language</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#Ccomments">  C comments</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#CVariables">  C Variables</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#CFormatSpecifiers">  C Format Specifiers</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#sizeof">  C  Memory Size by sizeof </a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#CDecimalPrecision"> C Decimal Precision </a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#CUserInput"> C User Input </a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#ConstantsandLiterals"> Constants and Literals</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#ArithmeticOperators"> Arithmetic Operators</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#AssignmentOperators"> Assignment Operators</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#RelationalOperators"> Relational Operators</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#ConditionalStatement"> Conditional Statement</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#SwitchStatement"> Switch Statement</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#WhileLoop">WhileLoop</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#Do/WhileLoop">The Do/While Loop</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#CForLoop">C For Loop</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#InfiniteLoopinC">Infinite Loop in C</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#Arrays">Arrays in C</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#ClanguageKeywords">C language Keywords</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#CFunctions">C Functions</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#InterfacingwithArduinoIDE">Interfacing with Arduino IDE</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#BlinkingLED">Blinking LED</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#LEDwithButton">LED with Button</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#WorkingwithSensors-DHT">Working with Sensors-DHT</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#WorkingwithSensors-LDR">Working with Sensors-LDR</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#WorkingwithSensors-MQ135">Working with Sensors-MQ135</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#InterfacingKeypad">Working with Keypad</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#DisplaythedataonLCD">Display the data on LCD</a> 
+            
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#WorkingwithSensors-IR">Working with Sensors-IR</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#InterfacingHC-05">Interfacing HC-05</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#RelayModule">Relay Module</a> 
+
+           
+            <!-- <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#IoTLevel1">IoT Level 1</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#IoTLevel2">IoT Level 2</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#IoTLevel3">IoT Level 3</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#IoTLevel4">IoT Level 4</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#IoTLevel5">IoT Level 5</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#IoTLevel6">IoT Level 6</a>    -->
+
+               
+               
+            <!-- <a onclick="myFunction('Demo2')" class="w3-button  w3-hover-white w3-left-align w3-block w3-animate-zoom">Accordion <i class="fa fa-caret-down"></i></a>
+                <div id="Demo2" class="w3-hide w3-animate-zoom">
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 1</a>
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 2</a>
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 3</a>
+                </div>
+
+           <a class="w3-bar-item w3-button w3-animate-zoom w3-bnultrasoft-color w3-hover-white" href="quiz.html">Python Quiz Set1</a>     -->
+        </div>
+       
+
+
+    </div>
+
+
+
+
+
+
+
+    <!-- Sidebar Start End -->
+
+<!-- Page Content Start -->
+
+        <!-- Page content header Start -->
+
+
+
+
+        <div class="w3-bnultrasoft-color w3-top">
+            <button class="w3-button w3-xlarge  w3-hover-white" onclick="w3_open()" >&#9776;</button>
+
+            <a href="../ittoolsandnetworkbasics.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M1</a>
+            <a href="../webdesigningandpublishing.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M2</a>
+            <a href="../python.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M3</a>
+            <a href="../iot.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M4</a>
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium w3-xlarge w3-hover-white" onclick="myFunctionRightItem()" >&#9776;</a>
+
+           
+                        <!-- SearchBar start  -->
+
+                       
+
+                    <!-- <div class="w3-dropdown-click  w3-hover-black">
+                        
+                        <input class="w3-input w3-center w3-padding w3-round-xxlarge" type="text" placeholder="Search any contents..."  onclick="dropFunction()"  id="myInput" onkeyup="filterFunction()">
+                        <div class="w3-dropdown-content w3-bar-block w3-card w3-white" id="myDIV" >
+                        
+                            <a class="w3-bar-item w3-button"  href="#about">About</a>
+                            <a class="w3-bar-item w3-button" href="#base">Base</a>
+                            <a class="w3-bar-item w3-button" href="#sec1">Blog</a>
+                            <a class="w3-bar-item w3-button" href="#sec2">Contact</a>
+                            <a class="w3-bar-item w3-button" href="#sec3">Custom</a>
+                            <a class="w3-bar-item w3-button" href="#support">Support</a>
+                            <a class="w3-bar-item w3-button" href="#tools">Tools</a>
+                            
+                        </div>
+                        </div> -->
+
+
+                    <!-- SearchBar End  -->
+                  
+                    <!-- ------------Right hidden items----------- -->
+
+                    <div id="demo" class="w3-bar-block w3-bnultrasoft-color w3-hide w3-hide-large w3-hide-medium  w3-animate-zoom w3-animate-fading">
+                        <a href="../ittoolsandnetworkbasics.html" class="w3-bar-item w3-button w3-hover-white">Olevel M1</a>
+                        <a href="../webdesigningandpublishing.html" class="w3-bar-item w3-button w3-hover-white">Olevel M2</a>
+                        <a href="../python.html" class="w3-bar-item w3-button w3-hover-white">Olevel M3</a>
+                        <a href="../iot.html" class="w3-bar-item w3-button w3-hover-white">Olevel M4</a>
+                      </div>
+                    <!-- ------------Right hidden items----------- -->
+   
+
+        </div>
+
+
+
+
+        <section id="ArduinoIDE" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>Introduction to Arduino IDE</u></h2>
+
+                            <p> <b> &#10028; </b>The Arduino Integrated Development Environment - or Arduino Software (IDE) - contains a text editor for writing code, a message area, a text console, a toolbar with buttons for common functions and a series of menus.</p>
+                            <p> <b> &#10028; </b>It connects to the Arduino hardware to upload programs and communicate with them.</p>
+                            <p><b>&#10028; </b>Programs written using Arduino Software (IDE) are called <span style="color: rgb(115, 2, 7);">sketches.</span>  </p>
+                              <p> <b> &#10028;</b>   These sketches are written in the text editor and are saved with the file extension <span style="color: rgb(115, 2, 7);">.ino</span> .</p>  
+                            
+                            <img src="content/img/python/Introduction-to-Arduino-IDE-9.jpg" class="w3-round w3-center"  alt="image" style="width:100%">         
+                        
+                         <br>
+                          
+                       </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section> 
+
+        <section id="IDEMenus" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>Arduino IDE Menus</u></h2>
+                       
+                             <h3>  &#10028; File Menu :-</h3>
+                             <img src="content/img/python/filemenu.png" class="w3-round w3-center"  alt="image" style="width:100%">  
+                               <br>
+                               <br>
+                               <br>
+                               <h3>  &#10028; Edit Menu :-</h3> 
+                               <img src="content/img/python/editmenu.png" class="w3-round w3-center"  alt="image" style="width:100%">  
+                               <br>
+                               <br>
+                               <br>
+                               <h3>  &#10028; Sketch Menu :-</h3> 
+                               <img src="content/img/python/sketchmenu.png" class="w3-round w3-center"  alt="image" style="width:100%">  
+                               <br>
+                               <br>
+                               <br>
+                               <h3>  &#10028; Tool Menu :-</h3> 
+                               <img src="content/img/python/toolmenu.png" class="w3-round w3-center"  alt="image" style="width:100%">  
+                                <br>
+                                <br>
+                                <br>
+                                <h3>  &#10028; Help Menu :-</h3> 
+                                <img src="content/img/python/helpmenu.png" class="w3-round w3-center"  alt="image" style="width:100%">  
+                             
+                                
+
+
+                       </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section> 
+        <section id="serialmonitor" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>Role of Serial Monitor</u></h2>
+                         <ul class="w3-ul">
+                            <li> &#x21db;  The Serial Monitor is a tool in the Arduino IDE software that allows you to send and receive messages from your computer to an Arduino board. </li>
+                            <li>  &#x21db;  It is an essential tool when creating projects with Arduino, and can be used as a debugging tool, testing out concepts or to communicate by receiving and sending Serial Data.
+                            </li>
+                         </ul>
+                                
+                         <br>
+
+                         <h4>  Its Role :- </h4>
+   <p> <span style="color: rgb(115, 2, 7);">  <b> Arduino → PC:</b> </span> It receives data from Arduino and displays it on your computer screen. This is useful for debugging and monitoring. </p>
+   <p> <span style="color: rgb(115, 2, 7);">  <b>PC → Arduino: </b> </span>  You can send data (commands) from your computer to the Arduino board. </p>                       
+
+                         
+                       </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section> 
+
+        <section id="CLanguage" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>‘C’ Language</u></h2>
+                         <ul class="w3-ul">
+                            <li> &#10028;  C language was developed by Dennis MacAlistair Ritchie <b> (in short  Dennis Ritchie)</b> the Bell Telephone Laboratories in <b>1972.</b> </li>
+                              <li> &#10028; C compiler is a software that translates human-readable C language code into machine code or an intermediate code that can be executed by a computer’s central processing unit (CPU).</li>
+                              <li>&#10028; C is strongly associated with UNIX, as it was developed to write the UNIX operating system.</li>
+                               <li> &#10028; If you know C, you will have no problem learning other popular programming languages such as Java, Python, C++, C#, etc, as the syntax is similar.</li>
+                              <li> &#10028;  A compiler, like <span style="color: rgb(115, 2, 7);">GCC ( GNU Compiler Collection )</span> , to translate the C code into a language that the computer will understand.</li>
+                               <li>&#10028; C extension name is <b> <span style="color: rgb(115, 2, 7);">.c </span></b>  and  C++ extension name is <b> <span style="color: rgb(115, 2, 7);"> .cpp</span></b> </li>
+                            </ul>
+                         <br>
+                         <ul class="w3-ul">
+                            <li> <b>  Where C Language is used  ?</b></li>
+                           
+                           <li> &#x21db; Developing operating systems, such as Unix, Linux, and Windows. </li>
+                           <li> &#x21db; Developing embedded systems, such as microcontrollers, microprocessors, and other electronic devices.
+                        </li>
+                           <li> &#x21db; Developing system software, such as device drivers, compilers, and assemblers.</li>
+                           <li> &#x21db; Developing desktop applications, such as browsers and their extensions.</li>
+                           <li> &#x21db; Developing databases and other applications that require speed and efficiency.</li>
+                         
+
+
+
+
+                         </ul>
+                         <br>
+                         <h2 class="w3-panel w3-center"><u>Difference between C and C++ </u></h2>
+                          <table class="w3-table-all">
+                            <tr> <th> C Language  </th> <th> C++ Language </th></tr>
+                            <tr> <td> C Language is created by Dennis Ritchie. </td> <td> C++ was developed by Bjarne Stroustrup in 1979. </td></tr>
+                             <tr> <td> C supports procedural programming.  </td> <td> C++ supports both procedural and object oriented programming paradigms. </td> </tr>
+                             <tr> <td>Standard IO header is <span style="color: rgb(115, 2, 7);">stdio.h</span>  </td>  <td> Standard IO header is  <span style="color: rgb(115, 2, 7);">iostream.h </span></td></tr> 
+                        </table>
+                        <br>
+                        
+  <div class="w3-container  w3-sand w3-round-xlarge">
+    <p>  &#10028;  Write the following C code and save the file as <span style="color: rgb(115, 2, 7);">myfirstprogram.c</span> </p>
+
+    <p> <b>Example :</b></p>
+   
+<pre>
+<code class="language-java">
+#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Hello World!");
+    return 0;
+} 
+
+</code>
+</pre> 
+<p> <b> Output </b></p>
+<p>Hello World! </p>
+ <br>
+<ul class="w3-ul">
+  <li><b> How "Hello, World!" program works? </b></li>
+  <li>1)   The <span style="color: rgb(115, 2, 7);">#include</span>  is a preprocessor command that tells the compiler to include the contents of stdio.h (standard input and output) file in the program.
+</li>
+  <li>2) The <span style="color: rgb(115, 2, 7);">stdio.h</span>  file contains functions such as <span style="color: rgb(115, 2, 7);">scanf() and printf()</span>  to take input and display output respectively.
+</li>
+  <li>3)  If you use the <span style="color: rgb(115, 2, 7);">printf()</span>  function without writing #include &lt;stdio.h&gt;, the program will not compile.
+</li>
+  <li>4) The execution of a C program starts from the <span style="color: rgb(115, 2, 7);"> main()</span> function.
+</li>
+  <li>5) <span style="color: rgb(115, 2, 7);">printf()</span>  is a library function to send formatted output to the screen. In this program, <span style="color: rgb(115, 2, 7);">printf()</span>  displays Hello, World! text on the screen.
+</li>
+  <li>6) The <span style="color: rgb(115, 2, 7);">return 0;</span>  statement is the <span style="color: rgb(115, 2, 7);"> <b> "Exit status"</b></span>  of the program. In simple terms, the program ends with this statement.
+</li>
+</ul>
+
+
+
+</div>
+<br>
+<div class="w3-container  w3-pale-yellow w3-round-xlarge">
+    <p> <b> Note 1:</b>  Every C statement ends with a semicolon ;</p>
+    <p> <b> Note 2 : </b> The body of int main() could also been written as in { }</p>
+    <p> <b>Note 3</b> To output values or print text in C, you can use the printf() function:</p>
+   <p> <b> Note 4: </b>If you forget the double quotes in printf() , an error occurs.</p>
+   <p> <b>Remember: </b>  The compiler ignores white spaces. However, multiple lines makes the code more readable. </p>
+   
+   
+   
+    
+     </div>
+
+     <br>
+     <div class="w3-container  w3-sand w3-round-xlarge">
+        <p> &#10028; To insert a new line, you can use the <span style="color: rgb(115, 2, 7);"> \n</span> character:</p>
+
+        <p> <b>Example :</b></p>
+       
+    <pre>
+    <code class="language-java">
+#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Hello World!\nI am learning C.\nAnd it is awesome!");
+    return 0;
+  }
+
+    </code>
+    </pre> 
+    <p> <b> Output :-</b></p>
+    <p> Hello World!</p>
+    <p>I am learning C. </p>
+    <p> And it is awesome!</p>
+    </div>
+    <br>
+    <img src="content/img/python/escapse.png" class="w3-round w3-center"  alt="image" style="width:100%"> 
+    <br>
+    <br>
+    <br>
+    
+
+
+
+                             
+                       </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section> 
+
+        <section id="Ccomments" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>C comments</u></h2>
+                       
+                           <p> <b>Single-line Comments</b></p>
+                           <p> Single-line comments start with two forward slashes (//).</p>
+                           <div class="w3-container  w3-sand w3-round-xlarge">
+
+                            <p> <b>Example :</b></p>
+                           
+                        <pre>
+                        <code class="language-java">
+#include &lt;stdio.h&gt;
+
+int main() {
+    // This is a comment
+    printf("Hello World!"); // This is a comment
+    return 0;
+}  </code>
+                        </pre>
+        
+        </div>
+
+        <br>
+        <br>
+
+        <p> <b>C Multi-line Comments </b></p>
+        <p> Multi-line comments start with /* and ends with */. </p>
+                           <div class="w3-container  w3-sand w3-round-xlarge">
+
+                            <p> <b>Example :</b></p>
+                           
+                        <pre>
+                        <code class="language-java">
+#include &lt;stdio.h&gt;
+
+int main() {
+
+/* The code below will print the words Hello World!
+to the screen, and it is amazing */
+
+printf("Hello World!");
+    return 0;
+}  </code>
+                        </pre>
+        
+        </div>
+                 <br>
+                 <br>          
+
+
+                       </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section> 
+
+        <section id="CVariables" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>C Variables</u></h2>
+                            <p>&#10028; Variables are containers for storing data values, like numbers and characters.
+                            </p>
+                            <p>&#10028;In C, there are different types of variables (defined with different keywords), for example:
+                            </p>
+
+                            <ul class="w3-ul">
+                                <li> <span style="color: rgb(115, 2, 7);">int -</span> stores integers (whole numbers), without decimals, such as 123 or -123 </li> 
+                                <li> <span style="color: rgb(115, 2, 7);">float -</span> stores floating point numbers, with decimals, such as 19.99 or -19.99 </li> 
+                                <li> <span style="color: rgb(115, 2, 7);">char -</span> stores single characters, such as 'a' or 'B'. Characters are surrounded by single quotes </li> 
+
+                            </ul>
+
+                           
+
+
+
+
+                       
+                                <img src="content/img/python/cdatatype.png" class="w3-round w3-center"  alt="image" style="width:100%">         
+                        
+                         <br>
+                         <hr style="height: 1px; background-color: brown;">
+                         <br>
+
+                         <ul class="w3-ul">
+                            <li> <b> &#10028; The general rules for naming variables are:</b></li>
+                             <li>  &#x21db; Names can contain letters, digits and underscores. </li>
+                             <li>  &#x21db; Names must begin with a letter or an underscore (_). </li>
+                             <li> &#x21db; Names are case-sensitive (myVar and myvar are different variables). </li>
+                             <li> &#x21db; Names cannot contain whitespaces or special characters like !, #, %, etc. </li>
+                             <li> &#x21db; Reserved words (such as int) cannot be used as names. </li>
+
+
+
+
+
+ 
+
+                         </ul>
+                         <br>
+                         <br>
+                         <img src="content/img/python/cvariable.png" class="w3-round w3-center"  alt="image" style="width:100%">  
+                         
+                            <br>
+                            <br>
+                            <br>
+                            <div class="w3-container  w3-sand w3-round-xlarge">
+                                <p> &#x21db; This is not possible in C to print any variable.</p>
+
+                                <p> <b>Example :</b></p>
+                               
+                            <pre>
+                            <code class="language-java">
+int myNum = 15;
+printf(myNum);  // Nothing happens            
+                            </code>
+                            </pre> 
+                            </div>
+                            <br>
+                            <br>
+                            <br>
+                            <img src="content/img/python/basicdatatypes.png" class="w3-round w3-center"  alt="image" style="width:100%">  
+                            <br>
+                            <br> 
+                            <img src="content/img/python/multiplevariable.png" class="w3-round w3-center"  alt="image" style="width:100%">  
+                          
+                            <br>
+                            <br>
+
+
+                       </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section> 
+
+        <section id="CFormatSpecifiers" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>C Format Specifiers</u></h2>
+
+                            <p> &#10028;               Format specifiers are used together with the <span style="color: rgb(115, 2, 7);">printf()</span>  function to tell the compiler what type of data the variable is storing. </p>
+                            <p> &#10028; It is basically a  <span style="color: rgb(115, 2, 7);"> placeholder</span> for the variable value. </p>
+                            <p> &#10028; A format specifier starts with a percentage sign <span style="color: rgb(115, 2, 7);">%</span> , followed by a character. </p>
+
+                  <br>
+                  <br>
+
+
+                       
+                                <img src="content/img/python/formatspecifiers.png" class="w3-round w3-center"  alt="image" style="width:100%">         
+                        
+                         <br>
+                         <br>
+                         <br>
+                         <div class="w3-container  w3-sand w3-round-xlarge">
+
+                            <p> <b>Example :</b></p>
+                           
+                        <pre>
+                        <code class="language-java">
+                            <pre>
+                                <code class="language-java">
+#include &lt;stdio.h&gt;
+
+int main() {
+  
+    // Create variables
+    int myNum = 15;              // Integer (whole number)
+    float myFloatNum = 5.99;     // Floating point number
+    char myLetter = 'D';         // Character
+    char myname[] = "John";      // String
+  
+    
+    // Print variables
+    printf("Integer Number is = %d \n", myNum);
+    printf("Float Number is = %f \n", myFloatNum);
+    printf("Character is = %c \n", myLetter);
+    printf("My name is = %s \n", myname);
+    return 0;
+
+}  </code>
+                                </pre>
+                
+        
+                        </code>
+                        </pre> 
+                        <p> <b>Output :- </b></p>
+                        <p> Integer Number is = 15  </p>
+                         <p>Float Number is = 5.990000  </p>
+                        <p>Character is = D </p>
+                       <p> My name is = John </p>
+
+                     
+
+                        </div>
+                        <br>
+                        <br>
+                        <div class="w3-container  w3-sand w3-round-xlarge">
+                            <p> <b>   &#10028; Note: </b> In Python, multiple <span style="color: rgb(115, 2, 7);">print()</span>  function  is given then output will be in multiple lines because of <span style="color: rgb(115, 2, 7);">end="\n"</span>  by default. <br>
+                              But, in C language in <span style="color: rgb(115, 2, 7);"> printf() </span>  function there is no <span style="color: rgb(115, 2, 7);">\n</span>  by default.
+                            </p>
+
+                            <p> <b>Example:</b></p>
+                           
+                        <pre>
+                        <code class="language-java">
+#include &lt;stdio.h&gt;
+
+int main() {
+
+ printf("Hello World!");
+ printf("Hi World!");
+ printf("Hello World!");
+ printf("Hi World");
+ 
+ return 0;
+} 
+        
+                        </code>
+                        </pre> 
+                        <p> <b> Output :- </b></p>
+                        <p> Hello World!Hi World!Hello World!Hi World</p>
+                        </div>
+                        <br>
+                        <br>
+                       
+                        
+                       </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section> 
+        <section id="sizeof" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>C The sizeof Operator</u></h2>
+
+                            <p> <b>&#10028; </b>The memory size refers to how much space a type occupies in the computer's memory.</p>
+                            <p> <b>&#10028;   </b>To actually get the size (in bytes) of a data type or variable, use the <span style="color: rgb(115, 2, 7);">sizeof()</span> :</p>
+                            
+                            <div class="w3-container  w3-sand w3-round-xlarge">
+
+                                <p> <b>Example :</b></p>
+                               
+                            <pre>
+                            <code class="language-java">
+#include &lt;stdio.h&gt;
+
+int main() {
+
+
+    int myInt;
+    float myFloat;
+    double myDouble;
+    char myChar;
+    
+    printf("%lu\n", sizeof(myInt));
+    printf("%lu\n", sizeof(myFloat));
+    printf("%lu\n", sizeof(myDouble));
+    printf("%lu\n", sizeof(myChar));
+
+
+
+return 0;
+}</code>
+                            </pre>
+                            <p> <b> Output :- </b></p>
+                            <p>4 </p>
+                            <p>4 </p>
+                            <p>8 </p>
+                            <p>1 </p>
+                            </div>
+
+
+                            <p> <b> Note : </b>Note that we use the <span style="color: rgb(115, 2, 7);">%lu</span>  format specifer to print the result</p>
+                       
+                            <br>
+                            <br>
+                            <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+                                <p> <b>Labwork :</b></p>
+                                <p>   Q1) WAP to print your name by store your name in a variable.</p>
+                               <p>  Q2) WAP to calculate the area of a rectangle and print the area.
+                                <br>
+                                 [ <b> Hint : </b>  Area of rectangle is = area ]</p>
+                               <p>  Q3) WAP to print student name, age, fees, id, grade by taking all these in variables.
+
+                            </p>
+                            <p> Q4) WAP to find area of a square .</p>
+                            <p> Q5) WAP to find diameter, circumference and area of circle. 
+
+                                <br> 
+                                [ <b> Hint :</b> diameter = 2 * r,  circumference = 2* 3.14 * r ]
+                            </p>
+                            <p> Q6)  WAP to calculate Simple Interest, print the simple Interest by store P, T, R in variable.</p>
+
+                            <p> Q7) WAP to store two integers in two variables and print their sum. </p>
+                            <p> Q8) WAP to print 5 fruits name by store in variables.</p>
+                            
+                              
+                            </div>
+
+                            <br>
+                            <br>
+
+                       
+                       
+                       
+                        </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section> 
+
+
+        <section id="CDecimalPrecision" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>C Decimal Precision</u></h2>
+                          <br>
+                          <div class="w3-container  w3-sand w3-round-xlarge">
+                            <p> <b> &#10028; </b> If you print a floating point number, the output will show many digits by default after the decimal point:</p>
+
+                            <p> <b>Example :</b></p>
+                           
+                        <pre>
+                        <code class="language-java">
+float myFloatNum = 3.5;
+double myDoubleNum = 19.99;
+
+printf("%f\n", myFloatNum); // Outputs 3.500000
+printf("%lf", myDoubleNum); // Outputs 19.990000        
+                        </code>
+                        </pre>
+                        </div>
+                        <br>
+                        <br>
+                       
+                        <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+                            <p> <b> &#10028; </b> If you want to remove the extra zeros (set decimal precision), you can use a dot (.) followed by a number that specifies how many digits that should be shown after the decimal point:</p>
+
+                            <p> <b>Example :</b></p>
+                           
+                        <pre>
+                        <code class="language-java">
+#include &lt;stdio.h&gt;
+
+int main() {
+
+    float myFloatNum = 3.5;
+
+    printf("%f\n", myFloatNum); // Default will show 6 digits after the decimal point
+    printf("%.1f\n", myFloatNum); // Only show 1 digit
+    printf("%.2f\n", myFloatNum); // Only show 2 digits
+    printf("%.4f", myFloatNum);   // Only show 4 digits
+  
+    return 0;
+} </code>
+                        </pre> 
+                        </div>
+
+                              
+
+
+
+
+
+                        <br>
+                        <br>
+                       </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section> 
+
+        <section id="CUserInput" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>C User Input</u></h2>
+                       
+
+                            <p><b> &#10028; </b>  To get user input, you can use the <span style="color: rgb(115, 2, 7);"> scanf()</span> function:</p>
+                        
+                             <br>
+                             <div class="w3-container  w3-sand w3-round-xlarge">
+
+                                <p> <b>Example :</b></p>
+                               
+                            <pre>
+                            <code class="language-java">
+#include &lt;stdio.h&gt;
+
+int main() {
+
+
+    int myNum;
+    char myChar;
+
+    // Ask the user to type a number AND a character
+    printf("Type a number AND a character and press enter: \n");
+
+    // Get and save the number AND character the user types
+    scanf("%d %c", &myNum, &myChar);
+
+    // Print the number
+    printf("Your number is: %d\n", myNum);
+
+    // Print the character
+    printf("Your character is: %c\n", myChar);
+    
+    return 0;
+}  </code>
+                            </pre> 
+                            <p><b>Output :- </b></p>
+          <p>Type a number AND a character and press enter:</p>
+          <p>45</p>
+          <p>C</p>
+          <p>Your number is: 45 </p>
+          <p>Your character is: C </p>
+          <br>
+          <br>
+          <p> <b> Note : </b></p>
+          <p> <b> &#10028; </b> The <span style="color: rgb(115, 2, 7);">scanf()</span>  function takes two arguments: </p>
+          <p> <b>&#x21db;</b> The format specifier of the variable <span style="color: rgb(115, 2, 7);">(%d in the example above)</span> .</p>
+          <p> <b> &#x21db;</b> The reference operator <span style="color: rgb(115, 2, 7);">(&myNum)</span> , which stores the memory address of the variable.</p>
+         
+          <br>
+          
+
+                            </div>
+                            <br>
+                            <br>
+                            <br>
+                            <div class="w3-container  w3-sand w3-round-xlarge">
+                                <p><b>  &#10028; </b>Take String Input </p>
+
+                                <p> <b>Example :</b></p>
+                               
+                            <pre>
+                            <code class="language-java">
+#include &lt;stdio.h&gt;
+
+int main() {
+   
+    char Name1[30];
+    char Name2[30];
+
+    printf("Enter your  name 1: \n");
+    scanf("%s", Name1);
+
+    printf("Enter your name 2: \n");
+    scanf("%s", &Name2);
+
+    printf("Hello %s \n", Name1);
+    printf("Hello %s", Name2);
+
+    return 0;
+}             
+                            </code>
+                            </pre> 
+                            <p> <b> Output :- </b></p>
+                            <p>Enter your  name 1: </p>
+                            <p>Book</p>
+<p>Enter your name 2: </p>
+<p>Computer</p>
+<p>Hello Book </p>
+<p>Hello Computer</p>
+
+<p> <b> &#10028; Note:  </b> The <span style="color: rgb(115, 2, 7);">scanf()</span>  function has some limitations : </p>
+<p> <b>  &#x21db; </b> It can only display a single word (even if you type many words).</p>
+                            </div>
+
+                            <br>
+                            <br>
+                            <div class="w3-container  w3-sand w3-round-xlarge">
+                                <p>  <b> &#10028; </b>  <span style="color: rgb(115, 2, 7);">fgets() </span> function to <b>read a line of text.</b> </p>
+                                <p><b> &#10028; </b> It must include the following arguments:  <span style="color: rgb(115, 2, 7);"><b> the name of the string variable, sizeof(string_name), and stdin</b> </span> </p>
+                                <p><b> &#10028; </b> Stdin is stands for Standard Input.</p>
+                                <p> <b>Example :</b></p>
+                               
+                            <pre>
+                            <code class="language-java">
+#include &lt;stdio.h&gt; 
+int main() {
+
+    char fullName[30];
+    printf("Type your full name: \n");
+
+    fgets(fullName, sizeof(fullName), stdin);
+    printf("Hello %s", fullName);
+
+    return 0;
+} 
+</code>
+                            </pre> 
+                            <p> <b> Output :-</b></p>
+                            <p> Type your full name: </p>
+                            <p> John Doe</p>
+                            <p> Hello John Doe</p>
+                            </div>
+
+
+
+
+
+
+
+                       <br>
+                       <br>
+
+
+                       </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section> 
+
+        <section id="ConstantsandLiterals" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>Constants and Literals in C</u></h2>
+                         <p> <b> &#10028; Literals : </b> 
+                            Literals are the actual values that are directly written into your code to represent specific data. They are used to provide initial values for variables, as operands in expressions, or as direct values in statements.</p>
+                              
+                         <p> <b> &#10028; There are 4 types of literal in C: </b></p>
+                         <p><b>  &#x21db; Integer Literal   : </b> Eg:- int a=12;</p>
+                         <p> <b>  &#x21db; Float Literal :</b> Eg:- float a=12.5;</p>
+                         <p><b>  &#x21db; Character Literal :</b> Eg:- char a='B';</p>
+                         <p>  <b>  &#x21db; String Literal : </b> Eg:- char  a[]="Book";</p>
+                         <br>
+                         <br>
+                         <p><b> &#10028; Constants : </b> Constants are used to define values that remain fixed and cannot be changed during the execution of a program.</p>
+                         <p> <b> Example : </b> const float PI=3.14;</p>
+
+
+                       </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section> 
+        <section id="ArithmeticOperators" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u> Arithmetic Operators</u></h2>
+                       
+                                <img src="content/img/python/arithmeticinC.png" class="w3-round w3-center"  alt="image" style="width:100%">         
+                             <br>
+                             <br>
+                             <h2 class="w3-panel w3-center" id="AssignmentOperators" ><u> Assignment Operators</u></h2>
+                             <p> <b> &#10028; </b>Assignment operators are used to assign values to variables.</p>
+                             <p> <b> &#10028; </b>we use the assignment operator (=) to assign the value 10 to a variable called x.</p>
+                             <p> <b>&#x21db; </b> int x = 10;</p>
+                             <br>
+                             <h2 class="w3-panel w3-center" id="RelationalOperators"><u> Relational Operators</u></h2>
+                             <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240111004226/c-relational-operators.webp" class="w3-round w3-center"  alt="image" style="width:100%">         
+                             <br>
+
+                              <p> <b>&#x21db;  </b>In C, relational operators are the symbols that are used for comparison between two values.</p>
+                               <br>
+                               <br>
+                               <br>
+                               <div class="w3-container  w3-sand w3-round-xlarge">
+
+                                <p> <b>Labwork :</b></p>
+                                 <p>  Q9)  WAP to print your Full name by taking input from user. </p>
+                                 <p>  Q10)  WAP to  find sum, difference, product, quotient and modulus of two numbers input from user. </p>
+                                 <p> Q11) WAP  to input length and width of a rectangle and calculate perimeter, area of the rectangle.</p>
+                                 <p> Q12) WAP to input principle, time and rate (P, T, R) from user and find Simple Interest.</p>
+                                 <p> Q13) WAP to  accepts an employee's ID, total worked hours in a month and the amount he received per hour. Print the ID and salary (with two decimal places) of the employee for a particular month.</p>
+                                   <p> <b> Hint : </b> <br>
+                                    Input the Employees ID(Max. 10 chars): 0342 <br>
+                                    Input the working hrs: 8 <br>
+                                    Salary amount/hr: 15000 <br>
+                                    Expected Output: <br>
+                                    Employees ID = 0342 <br>
+                                    Salary = Rs 120000.00 <br>
+                                
+                                
+                                </p>
+
+                                <p> Q14) WAP that reads 5 numbers and  print the sums of all  values between them.</p>
+                                <p> Q15) WAP  to  a given integer (in hours) and convert it into  minutes and seconds.</p>
+                     
+                                </div>
+                                <br>
+                                <br>
+
+                                <p> <b>  &#10028; </b>In C programming language, the term "garbage value" refers to a value stored in a variable without being initialized or assigned a proper value. This can occur when a variable is declared but not initialized before it is used or when a variable is assigned the value of another variable that has not been initialized.</p>
+                                 <br>
+                                 <div class="w3-container  w3-sand w3-round-xlarge">
+
+                                    <p> <b>Example :</b></p>
+                                   
+                                <pre>
+                                <code class="language-java">
+#include &lt;stdio.h&gt;
+
+int main() {
+    float a;
+    int b;
+ 
+    int x=1;
+    printf("%f\n",a);
+    printf("%d",x+b);  
+    return 0;
+ 
+}                
+                                </code>
+                                </pre>
+                                <p><b> Output :- </b></p>
+                                <p>0.000000</p>
+                                <p>124</p>
+
+                                </div>
+                                <br>
+                                <br>
+                           
+                            </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section> 
+        <section id="ConditionalStatement" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>Conditional Statement</u></h2>
+                            <p><b> &#10028; </b>  The conditional statements (also known as decision control structures) such as if, if else, switch, etc. are used for decision-making purposes in C programs.  
+                            </p>
+                            <br>
+                            <p> <b>  &#10028; </b> Types of Conditional Statements in C :</p>
+                                           
+                        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230424101456/Conditional-Statements-in-c.webp" class="w3-round w3-center"  alt="image" style="width:100%"> 
+                              <br>
+                              <br>
+                              <div class="w3-container  w3-sand w3-round-xlarge">
+                                <p> <b> &#10028;The if Statement : </b>
+                                    Use the if statement to specify a block of code to be executed if a condition is true.</p>
+
+
+                                    <div class="w3-container  w3-sand w3-round-xlarge">
+
+                                        <p> <b>Syntax :</b></p>
+                                       
+                                    <pre>
+                                    <code class="language-java">
+if (condition) {
+    // block of code to be executed if the condition is true
+    }                    
+                                    </code>
+                                    </pre>
+                                    </div>
+
+                                <p> <b>Example :</b></p>
+                               
+                            <pre>
+                            <code class="language-java">
+#include &lt;stdio.h&gt;
+
+int main() {
+    if (20 > 18) {
+      printf("20 is greater than 18");
+    }  
+    return 0;
+}  </code>
+                            </pre> 
+                            <p> <b>Output :- </b></p>
+                            <p>20 is greater than 18 </p>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+                                
+
+                                <p> <b> &#10028;The else Statement: </b>
+                                    Use the else statement to specify a block of code to be executed if the condition is false. </p>
+                               
+
+                                        <p> <b>Syntax:</b></p>
+                                       
+                                    <pre>
+                                    <code class="language-java">
+if (condition) {
+// block of code to be executed if the condition is true
+} else {
+// block of code to be executed if the condition is false
+}                    
+                                    </code>
+                                    </pre> 
+                                 
+                                    <p> <b>Example :</b></p>
+                               
+                            <pre>
+                            <code class="language-java">
+#include &lt;stdio.h&gt;
+
+int main() {
+    int time = 20;
+    if (time < 18) {
+      printf("Good day.");
+    } else {
+      printf("Good evening.");
+    }
+    return 0;
+}  </code>
+                            </pre> 
+                            <p> <b>Output :- </b></p>
+                            <p>Good evening. </p>
+                            </div>
+
+                            <br>
+                            <br>
+                            <div class="w3-container  w3-sand w3-round-xlarge">
+
+                                
+
+                                <p> <b> &#10028;The else if Statement: </b>
+                                    Use the else if statement to specify a new condition if the first condition is false. </p>
+                               
+
+                                        <p> <b>Syntax:</b></p>
+                                       
+                                    <pre>
+                                    <code class="language-java">
+if (condition1) {
+    // block of code to be executed if condition1 is true
+} else if (condition2) {
+    // block of code to be executed if the condition1 is false and condition2 is true
+} else {
+    // block of code to be executed if the condition1 is false and condition2 is false
+}                    
+                                    </code>
+                                    </pre> 
+                                 
+                                    <p> <b>Example :</b></p>
+                               
+                            <pre>
+                            <code class="language-java">
+#include &lt;stdio.h&gt;
+
+int main() {
+    int time = 22;
+    if (time < 10) {
+      printf("Good morning.");
+    } else if (time < 20) {
+      printf("Good day.");
+    } else {
+      printf("Good evening.");
+    }
+    return 0;
+}  </code>
+                            </pre> 
+                            <p> <b>Output :- </b></p>
+                            <p>Good evening. </p>
+                            </div>
+
+
+
+
+                            <br>
+                            <br>
+                            
+  <div class="w3-container  w3-sand w3-round-xlarge">
+   <p> Nested if-else in C </p>
+    <p> <b>Example :</b></p>
+   
+<pre>
+<code class="language-java">
+#include &lt;stdio.h&gt;
+
+int main() 
+{ 
+    int i = 10; 
+  
+    if (i == 10) { 
+        // First if statement 
+        if (i < 15) 
+            printf("i is smaller than 15\n"); 
+  
+        // Nested - if statement 
+        // Will only be executed if statement above 
+        // is true 
+        if (i < 12) 
+            printf("i is smaller than 12 too\n"); 
+        else
+            printf("i is greater than 15"); 
+    } 
+  
+    return 0;
+}
+
+</code>
+</pre> 
+<p> <b> Output :- </b></p>
+<p>i is smaller than 15</p>
+<p>i is smaller than 12 too</p>
+
+
+</div>
+<br>
+<br>
+<div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+    <p> <b>Labwork 3:</b></p>
+    <p> Q16) WAP to check you are eligible for vote or not (age should be input bu user).</p>
+    <p>Q17) WAP to check even or odd (by user input)</p>
+   <p>Q18) WAP to input a number to check the number is prime or not. </p>
+  <p>Q19) Write a C program to find maximum between two numbers. </p>
+ <p>Q20) Write a C program to find maximum between three numbers. </p>
+<p>Q21) Write a C program to check whether a number is negative, positive or zero.</p>
+<p>Q22) Write a C program to check whether a number is divisible by 5 and 11 or not.</p>
+<p>Q23) Write a C program to input angles of a triangle and check whether triangle is valid or not.</p>
+<p>Q24)
+    Write a C program to input marks of five subjects Physics, Chemistry, Biology, Mathematics and Computer. Calculate percentage and grade according to following: <br>
+
+    Percentage >= 90% : Grade A <br>
+    Percentage >= 80% : Grade B <br>
+    Percentage >= 70% : Grade C <br>
+    Percentage >= 60% : Grade D <br>
+    Percentage >= 40% : Grade E <br>
+    Percentage < 40% : Grade F
+
+
+</p>
+
+
+<p> Q25)
+    Write a C program to input basic salary of an employee and calculate its Gross salary according to following: <br>
+    Basic Salary <= 10000 : HRA = 20%, DA = 80% <br>
+    Basic Salary <= 20000 : HRA = 25%, DA = 90% <br>
+    Basic Salary > 20000 : HRA = 30%, DA = 95%
+
+</p>
+
+
+
+
+</div>
+<br>
+<br>
+
+<div class="w3-container  w3-sand w3-round-xlarge">
+    <p> <b> &#10028; Short Hand If...Else (Ternary Operator): </b>There is also a short-hand if else, which is known as the ternary operator because it consists of three operands. </p>
+    <p><b>Syntax:</b></p>
+    <p>variable = (condition) ? expressionTrue : expressionFalse;</p>
+
+    <p> <b>Example :-</b></p>
+   
+<pre>
+<code class="language-java">
+#include &lt;stdio.h&gt;
+
+int main() {
+    int time = 20;
+    (time < 18) ? printf("Good day.") : printf("Good evening.");
+    return 0;
+} 
+</code>
+</pre> 
+<p><b>Output :- </b></p>
+<p>Good evening.</p>
+</div>
+
+
+<br>
+<br>
+<br>
+
+                            
+                       </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section> 
+        <section id="SwitchStatement" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>Switch Statement in C</u></h2>
+                            <p><b> &#10028; </b> In C, the switch case statement is used for executing one condition from multiple conditions. It is similar to an <span style="color: rgb(115, 2, 7);">if-else-if ladder</span> .  </p> 
+                             
+                            
+  <div class="w3-container  w3-sand w3-round-xlarge">
+
+    <p> <b>Syntax :</b></p>
+   
+<pre>
+<code class="language-java">
+switch (expression) {
+    case x:
+        // code block
+        break;
+    case y:
+        // code block
+        break;
+    default:
+        // code block
+    }
+</code>
+</pre> 
+</div>
+<br>
+
+<div class="w3-container  w3-sand w3-round-xlarge">
+
+    <p> <b>Example :</b></p>
+   
+<pre>
+<code class="language-java">
+#include &lt;stdio.h&gt;
+
+int main() {
+    int day = 4;
+    
+    switch (day) {
+    case 6:
+      printf("Today is Saturday");
+      break;
+    case 7:
+      printf("Today is Sunday");
+      break;
+    default:
+      printf("Looking forward to the Weekend");
+    }
+    
+    return 0;
+} 
+
+</code>
+</pre>
+<p><b> Output :- </b></p>
+<p> Looking forward to the Weekend</p>
+</div> 
+
+
+
+
+<br>
+<br>
+<br>
+                       </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section> 
+
+        <section id="WhileLoop" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>C While Loop</u></h2>
+                            <p><b> &#10028;  While Loop :- </b>The while loop loops through a block of code as long as a specified condition is <span style="color: rgb(115, 2, 7);">true</span> : </p>
+
+                            <div class="w3-container  w3-sand w3-round-xlarge">
+
+                                <p> <b>Syntax:</b></p>
+                               
+                            <pre>
+                            <code class="language-java">
+while (condition) {
+    // code block to be executed
+    }</code>
+                            </pre> 
+                            </div>
+                            <br>
+                            <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+                                <p> <b>Example</b></p>
+                               
+                            <pre>
+                            <code class="language-java">
+#include &lt;stdio.h&gt;
+
+int main() {
+    int i = 0;
+    
+    while (i < 5) {
+        printf("%d\n", i);
+        i++;
+    }
+    
+    return 0;
+} </code>
+                            </pre> 
+                            <p><b> Output :- </b></p>
+                            <p>0</p>
+                            <p>1</p>
+                            <p>2</p>
+                            <p>3</p>
+                            <p>4</p>
+                            </div>
+
+                            <br>
+                            <br>
+
+
+                             
+                       </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section> 
+        <section id="Do/WhileLoop" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>The Do/While Loop</u></h2>
+                            <p> <b> &#10028; </b> This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.</p>
+                       
+                                 
+
+                            <div class="w3-container  w3-sand w3-round-xlarge">
+
+                                <p> <b> Syntax:</b></p>
+                               
+                            <pre>
+                            <code class="language-java">
+do {
+    // code block to be executed
+    }
+while (condition);            
+                            </code>
+                            </pre> 
+                            </div>
+                            <br>
+                            <div class="w3-container  w3-sand w3-round-xlarge">
+
+                                <p> <b>Example :</b></p>
+                               
+                            <pre>
+                            <code class="language-java">
+#include &lt;stdio.h&gt;
+int main() {
+    int i = 0;
+    
+    do {
+      printf("%d\n", i);
+      i++;
+    }
+    while (i < 5);
+    
+    return 0;
+}</code>
+                            </pre> 
+                            <p> <b> Output :-  </b></p>
+                                <p>0</p>
+                                <p>1</p>
+                                <p>2</p>
+                                <p>3</p>
+                                <p>4</p>
+                            </div>
+                            <br>
+                            <div class="w3-container  w3-sand w3-round-xlarge">
+
+                                <p> <b>Labwork :</b></p>
+                                <p>Q26) Wap in C Lang to print your name 10 times by using Do/While loop. </p>
+   <p>Q27) WAP in C Lang to print the sum of all natural number by user input
+    by using while loop.</p>
+    <p>Q28) WAP in C Lang to print the all even number upto n term, n should taken by user by using while Loop. </p>                            
+
+ <p> Q29) WAP in C Lang to print the all odd number upto n term, n should taken by user by using Do/while Loop.</p>
+
+
+
+
+                                </div>
+
+                            <br>
+                            <br>
+                            <br>
+                       </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section> 
+
+        <section id="CForLoop" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>C For Loop</u></h2>
+                            <p><b> &#10028;  C For Loop  </b> : A for loop in C is a control structure that is used to run a block of instructions multiple times until a certain condition fails.</p>
+                              <p> <b> Syntax : </b></p>
+                               <p> for (expression 1; expression 2; expression 3) { <br>
+                                // code block to be executed <br>
+                              }</p> 
+
+                              <br>
+                              <br>
+                              <p>   <b>Expression 1</b> is executed (one time) before the execution of the code block. </p>
+                             <p> <b>Expression 2 </b>  defines the condition for executing the code block.</p>
+                            <p> <b>Expression 3 </b> is executed (every time) after the code block has been executed.</p>
+                             <br>
+                             <br>
+                             <div class="w3-container  w3-sand w3-round-xlarge">
+
+                                <p> <b>Example :</b></p>
+                               
+                            <pre>
+                            <code class="language-java">
+#include &lt;stdio.h&gt;
+
+int main() {
+    int i;
+    
+    for (i = 0; i < 5; i++) {
+        printf("%d\n", i);
+    }
+    
+    return 0;
+} </code>
+                            </pre>
+            
+            </div> 
+            <br>
+            <br>
+            <h2 class="w3-panel w3-center"><u>C Nested Loops</u></h2>
+            <p><b>  &#10028; Nested Loops : </b> It is also possible to place a loop inside another loop. This is called a nested loop.</p>
+         <p> <b> &#x21db; </b>The <span style="color: rgb(115, 2, 7);">"inner loop"</span>  will be executed one time for each iteration of the <span style="color: rgb(115, 2, 7);">"outer loop"</span>.</p>
+
+
+         <div class="w3-container  w3-sand w3-round-xlarge">
+
+            <p> <b>Example :</b></p>
+           
+        <pre>
+        <code class="language-java">
+#include &lt;stdio.h&gt;
+int main() {
+int i, j;
+
+// Outer loop
+for (i = 1; i <= 2; ++i) {
+  printf("Outer: %d\n", i);  // Executes 2 times
+
+  // Inner loop
+  for (j = 1; j <= 3; ++j) {
+    printf(" Inner: %d\n", j);  // Executes 6 times (2 * 3)
+  }
+
+ }
+
+}
+</code>
+        </pre>
+    <p> <b> Output :-</b></p>
+    <p> Outer: 1</p>
+     <p>  Inner: 1</p>
+    <p>Inner: 2</p>
+     <p>Inner: 3</p>
+    <p> Outer: 2</p>
+    <p>  Inner: 1</p>
+     <p>Inner: 2</p>
+    <p>Inner: 3</p>
+    
+        </div>
+
+
+
+                            <br>
+
+                       </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section> 
+
+        <section id="InfiniteLoopinC" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>Infinite Loop in C</u></h2>
+                       
+                            <div class="w3-container  w3-sand w3-round-xlarge">
+                             
+
+                                <p> <b>Syntax :</b> for loop Infinite</p>
+                               
+                            <pre>
+                            <code class="language-java">
+for(; ;)  
+{  
+    // body of the for loop.  
+}  
+                            </code>
+                            </pre>
+            
+            </div> 
+
+            <br>
+            <div class="w3-container  w3-sand w3-round-xlarge">
+
+                <p> <b>Example :</b> for loop Infinite</p>
+               
+            <pre>
+            <code class="language-java">
+#include &lt;stdio.h&gt;
+int main() {
+    for(;;)  
+    {  
+      printf("Hello World");  
+    }  
+ return 0;
+}</code>
+            </pre> 
+            </div>
+            <br>
+            <br>
+
+         
+            
+        
+            <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+                <p> <b>Syntax :</b> while loop Infinite</p>
+               
+            <pre>
+            <code class="language-java">
+#include &lt;stdio.h&gt;
+int main() {
+    while(1)  
+    {  
+       // body of the loop..  
+    }   
+ return 0;
+}</code>
+            </pre> 
+            </div>
+            <br>
+            <br>
+
+            <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+               
+
+                <p> <b>Example :</b></p>
+               
+            <pre>
+            <code class="language-java">
+#include &lt;stdio.h&gt;
+int main()  
+{  
+  int i=0;  
+  while(1)  
+  {  
+      i++;   
+      printf("i is :%d",i);  
+  }  
+return 0;  
+} </code>
+            </pre>
+            </div>
+        
+
+
+            <br>
+            <br>
+
+            <div class="w3-container  w3-sand w3-round-xlarge">
+
+                <p> <b>Syntax :</b>Do/While loop Infinite</p>
+               
+            <pre>
+            <code class="language-java">
+#include &lt;stdio.h&gt;
+int main() {
+    do  
+    {  
+        // body of the loop..  
+    }while(1);  
+ return 0;
+}</code>
+            </pre> 
+            </div>
+            <br>
+            <br>
+
+            <div class="w3-container  w3-sand w3-round-xlarge">
+               
+
+                <p> <b>Example :</b> Do/While loop Infinite</p>
+               
+            <pre>
+            <code class="language-java">
+#include &lt;stdio.h&gt;
+int main()  
+{  
+    do  
+    {  
+        printf("Hello\n");   
+    }while(1);   
+  return 0;  
+} </code>
+            </pre>
+            </div>
+            <br>
+
+                       </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section> 
+        <section id="Arrays" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>Arrays in C</u></h2>
+                            <p><b> &#10028; Arrays : </b>Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value. </p>
+                              <p> <b> &#x21db; </b> To create an array, define the data type <span style="color: rgb(115, 2, 7);">(like int)</span>  and specify the name of the array followed by <span style="color: rgb(115, 2, 7);">square brackets [].</span> </p> 
+                              <p> <b> &#x21db; </b>To insert values to it, use a comma-separated list, inside <span style="color: rgb(115, 2, 7);">curly braces</span>.</p> 
+                             <br>
+                             <br>
+                             <div class="w3-container  w3-sand w3-round-xlarge">
+
+                                <p> <b>Creating and Accessing array:</b></p>
+                               
+                            <pre>
+                            <code class="language-java">
+#include &lt;stdio.h&gt;
+    int main()  
+    {  
+        int myNumbers[] = {25, 50, 75, 100}; // Creating array
+        printf("%d", myNumbers[3]);    // Accessing array
+        return 0;  
+    } </code>
+                            </pre> 
+                            <p> <b>Output:</b></p>
+                            <p>100</p>
+                            </div>
+                            <br>
+                            
+  <div class="w3-container  w3-sand w3-round-xlarge">
+
+    <p> <b>Changing Array Element:</b></p>
+   
+<pre>
+<code class="language-java">
+    #include &lt;stdio.h&gt;
+    int main()  
+    {  
+        int myNumbers[] = {25, 50, 75, 100}; // Creating array
+        printf("Before :%d", myNumbers[0]);
+
+        myNumbers[0] = 33; // Changing
+        printf("After :%d", myNumbers[0]); 
+        return 0;  
+    }
+</code>
+</pre>
+<p><b>Output :</b></p>
+<p>Before : 25</p> 
+<p>After : 33</p> 
+</div>
+<br>
+<div class="w3-container  w3-sand w3-round-xlarge">
+
+    <p> <b>Loop Through an Array</b></p>
+   
+<pre>
+<code class="language-java">
+#include &lt;stdio.h&gt;
+int main()  
+{  
+    int myNumbers[] = {25, 50, 75, 100};
+            int i;
+
+            for (i = 0; i < 4; i++) {
+            printf("%d\n", myNumbers[i]);
+            } 
+            
+        return 0; 
+}
+</code>
+</pre> 
+<p> <b> Output :</b></p>
+<p>25 </p>
+<p>50</p>
+<p>75</p>
+<p>100</p>
+
+</div>
+<br>
+<div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+    <p> <b>Labwork:</b></p>
+    <p> <b> 30)</b>   WAP in C to print 10 element in Array by using for loop .</p>
+    <p> <b> 31)</b>   WAP to enter the size of array and enter the all elements by user print also.</p>
+    <p> <b>  32) </b>   WAP to print 10 times Your name by do while loop. </p>
+    <p> <b> 33) </b>   WAP to enter the size of array and enter the all elements by user and enter the any number from user to search in Array if found, then print "Found" otherwise print "Not Found".
+    </p>
+    <p> <b>  34)</b> WAP to enter the size of array and Array enter the all elements by user (in Array A) copy all elements (in Array B) and print all the elements of array B.               
+    </p>
+   
+    
+  
+    
+    
+      
+
+</div>
+
+
+<br>
+
+                     
+                       
+                       
+                            </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section> 
+
+        <section id="ClanguageKeywords" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>C language Keywords</u></h2>
+                       
+                                <img src="content/img/python/ckeywords.jpg" class="w3-round w3-center"  alt="image" style="width:100%">         
+                        
+                         <br>
+                         
+                       </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section> 
+
+        <section id="CFunctions" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>C Functions</u></h2>
+                       
+                          <p> <b>&#10028;  </b>   A function is a block of code which only runs when it is called.
+                          </p>
+                          <p> <b>&#10028;  </b>  You can pass data, known as parameters, into a function.
+                          </p>
+                          <p> <b>&#10028;  </b>  Functions are used to perform certain actions, and they are important for reusing code: Define the code once, and use it many times.
+                          </p>
+                         <br>
+                         <br>
+                         <h2 class="w3-panel w3-center"><u>Create a Function</u></h2>
+                         <p> <b>&#10028;  </b> To create (often referred to as declare) your own function, specify the name of the function, followed by parentheses () and curly brackets {}:
+                         </p>  
+                           
+                         <div class="w3-container  w3-sand w3-round-xlarge">
+
+                            <p> <b>Syntax :-</b></p>
+                           
+                        <pre>
+                        <code class="language-java">
+void myFunction() {
+    // code to be executed
+    }        
+                        </code>
+                        </pre> 
+ <p><b> Example Explained </b></p>
+ <p> <b> &#x21db; </b> myFunction() is the name of the function.</p>                       
+ <p> <b> &#x21db; </b> void means that the function does not have a return value. </p>                       
+ <p> <b> &#x21db; </b> Inside the function (the body), add code that defines what the function should do.</p>                       
+
+
+
+                        </div>
+
+                        <br>
+                        <h2 class="w3-panel w3-center"><u>Call a Function</u></h2>
+                        <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+                            <p> <b>Inside main, call myFunction():</b></p>
+                           
+                        <pre>
+                        <code class="language-java">
+// Create a function
+void myFunction() {
+    printf("I just got executed!");
+}
+
+int main() {
+    myFunction(); // call the function
+    return 0;
+}
+
+// Outputs "I just got executed!"</code>
+                        </pre> 
+                        </div>
+                        <br>
+                        <h2 class="w3-panel w3-center"><u>C Parameters and Arguments</u></h2>
+<div class="w3-container  w3-sand w3-round-xlarge">
+
+    <p> <b>Syntax:</b></p>
+    
+<pre>
+<code class="language-java">
+returnType functionName(parameter1, parameter2, parameter3) {
+    // code to be executed
+    }
+</code>
+</pre> 
+</div>
+
+<br>
+<div class="w3-container  w3-sand w3-round-xlarge">
+
+    <p> <b>Example:</b></p>
+   
+<pre>
+<code class="language-java">
+#include <stdio.h>
+void add(int x,int y) 
+{
+    int z=x+y;
+    printf("The sum of two number is =%d",z);
+}
+
+
+int main()  
+{  
+    add(4,8);  // passing arguments       
+    return 0; 
+} 
+</code>
+</pre>
+<p> <b>Output :-</b></p>
+<p> The sum of two number is =12</p>
+</div>
+
+<br>
+<h2 class="w3-panel w3-center"><u>Function return</u></h2>
+<div class="w3-container  w3-sand w3-round-xlarge">
+
+    <p> <b>Example:</b></p>
+   
+<pre>
+<code class="language-java">
+#include <stdio.h>
+int add(int x,int y) 
+{
+    int z=x+y;
+    return z;
+}
+
+
+int main()  
+{  
+    int z;
+    z= add(4,20);  // passing arguments  
+    printf("The sum of two number is =%d",z);     
+    return 0; 
+} 
+
+</code>
+</pre> 
+<p> <b> Output :- </b></p>
+<p> The sum of two number is =24</p>
+</div>
+
+
+<br>
+<div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+    <p> <b>Labwork :</b></p>
+   
+<p> <b> Q35) </b>  WAP to print simple interest where p,r,t, should be taken by user,
+    and create a function for multiplication (P*T*R) and return it. After return the multiplied value print SI( SI= P*T*R/100)
+    </p>
+   
+    <p> <b> Q36)</b>  WAP to make as a calculator such as add(), Mul(), Sub() by using return value in function. To perform calculation by two interger which is enter by user.
+    </p>
+    <p> <b>Q37) </b>  WAP in C to check if a given number is even or odd using the function and return also, the number should be enter by user.
+    </p>
+    <p> <b> Q38) </b> WAP in C to find the greatest number among two by using function and return also, the number should be enter by user.
+    </p>
+   <p> <b> Q39) </b>  WAP in C to print the series of number upto Nth, the N number is enter by user, by using Function.
+   </p> 
+   <p> <b> Q40) </b>WAP in C to find cube of a number using function, the number should be enter by user. </p> 
+   <p> <b> Q41) </b>WAP in C to find prime numbers in given range using functions, the range number should be enter by user.</p>
+
+   <p> <b> Q42) </b>WAP in C  to print even or odd numbers in given range using, the range number should be enter by user.</p>
+   <p> <b> Q43) </b>WAP in C to find reverse of a number using function.</p>
+   <p> <b> Q44) </b> WAP in C  to print fibonacci upto n<sup> th</sup>  term using function.</p>
+
+   <p> <b> Q45)</b> WAP in C to print sum of array elements using function, the array size is entered by user.</p>
+   <p> <b> Q46) </b>WAP in C to  find and print the  sum of digits using function.</p>
+   <p> <b> Q47) </b>WAP in C to find the maximum number among three number by using function, the three number is entered by user. </p>
+<p> <b> Q48)</b>   WAP to print a character by accept ASCII value from user by using function.</p>
+ <p> <b>Q49) </b>  WAP to print a ASCII value and by accept character from user by using function.</p> 
+
+<p> <b>Q50) </b>  WAP to print A to Z character by using function.</p>
+<p> <b>Q51) </b> WAP to create an Array of character, the is character  by accept from user, and enter a character from user (A) , if A should found in array then print "Found" otherwise not "Not Found".
+</p>
+
+ 
+
+<br>
+</div>
+<br>
+<br>
+
+
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section> 
+        
+
+        
+
+        <section id="InterfacingwithArduinoIDE" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>Interfacing with Arduino IDE </u></h2>
+
+                         
+
+                            <h4 class=" w3-center">Arduino Uno (R3)</h4>
+                            <img src="https://robu.in/wp-content/uploads/2020/07/1-3.jpg" class="w3-round w3-center"  alt="image" style="width:100%">         
+                             <br>
+                             <br>
+                             
+
+                            <h4> Some important notes :-</h4>
+                            <p> <b>  &#10028; </b> Arduino UNO is a microcontroller board based on the <span style="color: brown;"> <b>ATmega328P. </b> </span>   </p>
+                            <p> <b>  &#10028;  </b>Arduino UNO has 14 digital input/output pins (of which 6 can be used as PWM outputs).</p>
+                            <p> <b> &#10028;   </b>  <b>Pulse Width Modulation, or PWM,</b>  is a technique for getting analog results with digital means.</p>
+                            <p> <b> &#10028; Vin:  </b>   This is the input voltage pin of the Arduino board used to provide input supply from an external power source.
+                            </p> 
+                            <p> <b> &#10028; 5V:  </b>   This pin of the Arduino board is used as a regulated power supply voltage and it is used to give supply to the board as well as onboard components.
+                            </p>
+                             <p> <b>&#10028; 3.3V: </b>   This pin of the board is used to provide a supply of 3.3V which is generated from a voltage regulator on the board
+                             </p>
+                             <p> <b>&#10028;  GND:  </b> This pin of the board is used to ground the Arduino board.
+                             </p>
+                             <p> <b>&#10028;  Reset:</b>  This pin of the board is used to reset the microcontroller. 
+                             </p>
+                             <p> <b>&#10028; Analog Pins: </b>   The pins A0 to A5 are used as an analog input and it is in the range of 0-5V.
+                             </p>
+                             <p> <b>&#10028; Digital Pins:</b>    The pins 0 to 13 are used as a digital input or output for the Arduino board.
+                             </p>
+                             <p> <b>&#10028; Serial Pins: </b>   These pins are also known as a UART (Universal Asynchronous Receiver-Transmitter) pin. It is used for communication between the Arduino board and a computer or other devices.   The UART interface consists of two pins: the Rx and Tx pin. The Rx pin is used to receive data (it is  receiver pin number 0). The Tx pin is used to transmit data (it is transmitter pin number 1).
+                             </p>
+                             <p> <b>&#10028;  External Interrupt Pins:</b>  This pin of the Arduino board is used to produce the External interrupt and it is done by pin numbers 2 and 3.
+                             </p>
+                             <p> <b>&#10028; PWM Pins: </b>  This pins of the board is used to convert the digital signal into an analog by varying the width of the Pulse. The pin numbers 3,5,6,9,10 and 11 are used as a PWM pin.
+                             </p>
+                             <p> <b>&#10028; SPI Pins: </b>  This is the Serial Peripheral Interface (SPI) pin, it is used to maintain SPI communication with the help of the SPI library. SPI pins include:
+                             
+                               <ul class="w3-ul">
+                                <li> <b> &#x21db; SS: </b>  Pin number 10 is used as a Slave Select</li> 
+                                 <li> <b>&#x21db;  MOSI:</b> Pin number 11 is used as a Master Out Slave In </li>
+                                 <li> <b> &#x21db; MISO: </b>  Pin number 12 is used as a Master In Slave Out </li>
+                                <li> <b> &#x21db; SCK: </b> Pin number 13 is used as a Serial Clock</li>
+                              
+                              
+
+                               </ul>
+                            </p>
+ 
+
+
+                             <p> <b>&#10028; LED Pin: </b>   The board has an inbuilt LED using digital pin-13. The LED glows only when the digital pin becomes high.
+                             </p>
+                             <p> <b>&#10028; AREF Pin:</b>   This is an analog reference pin of the Arduino board. It is used to provide a reference voltage from an external power supply.
+                             </p>
+                             
+                               
+                            
+                            <br>
+                       </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section>
+
+        <section id="BlinkingLED" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>Interfacing Light Emitting Diode(LED)- Blinking LED:</u></h2>
+                       
+                         
+                         <p><b>&#x21db;  </b>This use case will be used for familiarizing the GPIO <span style="color: rgb(115, 2, 7);">(General Purpose Input / Output)</span>  peripheral of atmega micro
+                            controller. The LED will be used as a device and GPIO will work as output mode. </p> 
+
+                            
+                            
+                            
+                            
+                            <ul class="w3-ul"> 
+                                <li> <b>  &#10028; int : </b>  </li>
+                                <li> &#x21db; Integers are your primary data-type for number storage.</li>
+                                <li> &#x21db; On the Arduino Uno (and other ATmega based boards) an int stores a <span style="color: rgb(115, 2, 7);"> 16-bit (2-byte)</span> value. </li>
+                                <li> &#x21db; This yields a range of <span style="color: rgb(115, 2, 7);">-32,768 to 32,767 (minimum value of -2^15 and a maximum value of (2^15) - 1)</span> . </li>
+                             </ul>
+
+
+  <br>
+  <ul class="w3-ul">
+    <li> <b>  &#10028; Digital I/O </b> </li>
+    <li> <span style="color: rgb(115, 2, 7);"> <b> pinMode() </b></span> </li>
+    <li> <span style="color: rgb(115, 2, 7);"> <b>   digitalWrite() </b> </span></li>
+    <li>  <span style="color: rgb(115, 2, 7);"> <b> digitalRead()</b> </span> </li>
+  </ul>
+          <br>
+     
+  <div class="w3-container w3-pale-yellow w3-round-xlarge">
+    <p> &#10028; <span style="color: rgb(115, 2, 7);"> <b> pinMode() </b></span> It is used to configures the specified pin to behave either as an input or an output.</p>
+    <p> <b>  Syntax : </b></p>
+    <p>pinMode(pin, mode); </p>
+    
+    <p> <b> Parameters : </b></p>
+    <p><span style="color: rgb(115, 2, 7);">pin:</span> the Arduino pin number to set the mode of. </p>
+    <p><span style="color: rgb(115, 2, 7);">mode:</span>  INPUT, OUTPUT, or INPUT_PULLUP  </p>
+    <p> <b> Returns :</b>Nothing</p>
+    
+
+
+  </div>
+ <br>
+ <br>
+  <div class="w3-container w3-sand w3-round-xlarge">
+    <p> &#10028; <span style="color: rgb(115, 2, 7);"> <b> digitalWrite() </b></span> Write a HIGH or a LOW value to a digital pin.</p>
+    <p> <b>  Syntax : </b></p>
+    <p>digitalWrite(pin, value); </p>
+    
+    <p> <b> Parameters : </b></p>
+    <p><span style="color: rgb(115, 2, 7);">pin:</span> the Arduino pin number. </p>
+    <p><span style="color: rgb(115, 2, 7);">value:</span>  HIGH or LOW  </p>
+    <p> <b> Returns :</b>Nothing</p>
+  <p> <b>Note: </b>: Its voltage will be set to the corresponding value:  <span style="color: rgb(115, 2, 7);">5V (or 3.3V on 3.3V boards) for HIGH, 0V (ground) for LOW</span> .</p>
+  </div>
+  <br>
+  <div class="w3-container w3-pale-yellow w3-round-xlarge">
+    <p> &#10028; <span style="color: rgb(115, 2, 7);"> <b> digitalRead()</b></span> Reads the value from a specified digital pin, either HIGH or LOW.</p>
+    <p> <b>  Syntax : </b></p>
+    <p>digitalRead(pin); </p>
+    
+    <p> <b> Parameters : </b></p>
+    <p><span style="color: rgb(115, 2, 7);">pin:</span> the Arduino pin number you want to read. </p>
+   
+    <p> <b> Returns :</b>HIGH or LOW</p>
+   </div>
+   <br>
+  <div class="w3-container w3-sand w3-round-xlarge">
+    <p> &#10028; <span style="color: rgb(115, 2, 7);"> <b> delay()</b></span> Pauses the program for the amount of time (in milliseconds) specified as parameter. (There are 1000 milliseconds in a second.).</p>
+    <p> <b>  Syntax : </b></p>
+    <p>delay(ms); </p>
+    
+    <p> <b> Parameters : </b></p>
+    <p><span style="color: rgb(115, 2, 7);">ms:</span> the number of milliseconds to pause. </p>
+   
+    <p> <b> Returns :</b>Nothing</p>
+   </div>
+ <br>
+ <div class="w3-container  w3-sand w3-round-xlarge">
+
+    <p> <b>Example :</b> Default led (which is present on Arduino Board)</p>
+    <p> &#x21db; The  Default led is present in  pin number 13 which is represent by <span style="color: rgb(115, 2, 7);">LED_BUILTIN</span></p>
+   
+<pre>
+<code class="language-java">
+
+void setup() {
+    // put your setup code here, to run once:
+    pinMode(LED_BUILTIN, OUTPUT);
+    }
+    
+    void loop() {
+    // put your main code here, to run repeatedly:
+    digitalWrite(LED_BUILTIN,HIGH);
+    delay(1000);
+    digitalWrite(LED_BUILTIN,LOW);
+    delay(1000);
+    
+    }
+</code>
+</pre> 
+<p> <b> Note: </b>This program is for blinking Default led (builtin Led) which is delay by 1 second.</p>
+<hr style="background-color: black; height: 1px;">
+<pre>
+    <code class="language-java">
+    
+int ledPin=13; // Declaring pin 
+void setup() {
+    // put your setup code here, to run once:
+    pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+    // put your main code here, to run repeatedly:
+    digitalWrite(ledPin,HIGH);
+    delay(200);
+    digitalWrite(ledPin,LOW);
+    delay(200);
+
+}
+    </code>
+    </pre> 
+<p> <b> Note: </b>This program is for blinking Default led (builtin Led or pin 13) which is delay by 200 milliseconds.</p>
+
+</div>
+<br>
+<br>
+
+ <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+    <p> <b>Labwork:</b></p>
+    <p> <b> Q1) </b>WAP to Blink default Light Emitting Diode(LED) on Arduino board with the
+        delay of 2 sec. </p>
+    <p> <b> Q2) </b>WAP to Blink default Light Emitting Diode(LED) on Arduino board with the
+        delay of 500 ms. </p>
+    <p> <b> Q3) </b>WAP to Blink LED which is pin number 13 on Arduino board with the Blink On 
+        delay of 1 sec and Blink Off delay of 200 ms. </p>
+
+
+       
+
+</div>
+
+<br>
+<div class="w3-container  w3-sand w3-round-xlarge">
+  
+
+    <p> <b>Example :</b> To blink External 1 led on pin number 11 with delay of 1 second.</p>
+     <ul class="w3-ul">
+        <li> <b> Component Required</b></li>
+         <li>&#10028;  1 × Breadboard</li>
+        <li> &#10028; 1 × Arduino Uno R3 </li> 
+        <li>&#10028; 1 × LED </li> 
+        <li>&#10028; 1 × 330Ω Resistor </li> 
+        <li>&#10028; 2 × Jumper Wires </li> 
+     </ul>
+
+    <br>
+    <p> <b>Example :- </b>
+    <a href="https://www.tinkercad.com/things/lcMGDCnEHus-fantabulous-jofo-krunk"> See Live Demo.</a> </p>
+   
+   
+<pre>
+<code class="language-java">
+int ledPin=11;
+void setup()
+{
+    pinMode(ledPin, OUTPUT);
+}
+
+void loop()
+{
+    digitalWrite(ledPin, HIGH);
+    delay(1000); // Wait for 1000 millisecond(s)
+    digitalWrite(ledPin, LOW);
+    delay(1000); // Wait for 1000 millisecond(s)
+}
+</code>
+</pre> 
+</div>
+
+<h3 class="w3-panel w3-center"> Example : To blink External 1 led on pin number 11 with delay of 1 second : <br><u> See Circuit Design </u></h3>
+
+<img src="content/img/python/1ledblink.png" class="w3-round w3-center"  alt="image" style="width:100%">  
+
+
+<br>
+<br>
+
+<div class="w3-container  w3-sand w3-round-xlarge">
+    <p> <b>Example :</b> To blink External 3 leds on pin number 10, 11, 12 alternatively with delay of 1 second.</p>
+    <ul class="w3-ul">
+        <li> <b> Component Required</b></li>
+         <li> &#10028; 1 × Breadboard</li>
+        <li> &#10028; 1 × Arduino Uno R3 </li> 
+        <li>&#10028; 3 × LED </li> 
+        <li>&#10028; 3 × 330Ω Resistor </li> 
+        <li> &#10028; Jumper Wires </li> 
+     </ul>
+
+
+
+    <p> <b>Example:</b>  <a href="https://www.tinkercad.com/things/4O2iu3HFZQQ-3-leds-blink-on-pin-10-11-12-"> See Live Demo.</a></p>
+   
+<pre>
+<code class="language-java">
+    int ledPin10=10;
+    int ledPin11=11;
+    int ledPin12=12;
+    void setup()
+    {
+      pinMode(ledPin10, OUTPUT);
+      pinMode(ledPin11, OUTPUT);
+      pinMode(ledPin12, OUTPUT);
+    }
+    
+    void loop()
+    {
+      digitalWrite(ledPin10, HIGH);
+      delay(1000); 
+      digitalWrite(ledPin10, LOW);
+      delay(1000);
+      
+      digitalWrite(ledPin11, HIGH);
+      delay(1000); 
+      digitalWrite(ledPin11, LOW);
+      delay(1000);
+      
+      digitalWrite(ledPin12, HIGH);
+      delay(1000); 
+      digitalWrite(ledPin12, LOW);
+      delay(1000);
+      
+      
+    }
+
+</code>
+</pre>
+
+</div>
+<h3 class="w3-panel w3-center"> Example : To blink External 3 leds on pin number 10, 11, 12 alternatively with delay of 1 second:  <br> <u>See Circuit Design </u></h3>
+
+<img src="content/img/python/3ledblink.png" class="w3-round w3-center"  alt="image" style="width:100%">  
+
+
+<br>
+<br>
+
+
+
+<div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+    <p> <b>Labwork:</b></p>
+    <p> <b> Q4) </b> WAP to interface LED on pin no. 10 and blink  at the
+        delay of 5 ms.</p>
+    <p> <b> Q5) </b> WAP to interface two LEDs on pin no. 10,11 and blink alternatively at the
+        delay of 1 sec.</p>
+    <p> <b> Q6) </b> WAP to interface LEDs on pin no. 10,11,12,13 and blink alternatively at the
+        delay of 1 sec.</p>
+ 
+    <p> <b>  Q7) </b>WAP to run pattern(s) on LEDs connect at pins 10, 11, 12, 13 pattern example are:</p>
+
+<pre>
+    <code class="language-java">
+            
+a) on, off, on, off      b) on, off, off, off     
+   off, on, off, on         off, on, off, Off        
+   on, off, on, off         off, off, on, off        
+   off, on, off, on         off, off, off, on
+   
+   on/off -> 200ms          on/off -> 500ms 
+-----------------------------------------------------------
+
+c) on, on, off, off       d) on, on, off, off  
+   off, on, on, off          on, off, off, on
+   off, off, on, on          off, off, on, on
+                             on,  on,  on, off
+
+on->200ms / off->100ms       on->300ms / off->100ms  
+-----------------------------------------------------------
+
+e) on (200ms), on (200ms), Off (100ms), off (100ms)
+   off (100ms), off (100ms), on (200ms), on (200ms) 
+   on (50ms), on (50ms), Off (100ms), off (100ms)
+   off (100ms), off (100ms), on (200ms), on (200ms) 
+
+    </code>
+    </pre> 
+
+
+
+</div>
+ 
+
+               
+                 <br>
+                 <br>
+                        <p> <a href="https://www.arduino.cc/reference/en/" target="_blank"> Arduino programming language reference</a></p>    
+                       </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section> 
+        <section id="LEDwithButton" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>Interfacing LED with Button</u></h2>
+                       
+                             <p> Interfacing Button and To Print voltage in Serial Monitor when button is pressed </p>
+
+                             <img src="content/img/python/buttonwithserial.png" class="w3-round w3-center"  alt="image" style="width:100%">   
+                            
+  <div class="w3-container  w3-sand w3-round-xlarge">
+
+    <p> <b>Code Example :</b> </p>
+   
+<pre>
+<code class="language-java">
+    int pin2=2;
+    int x=0;
+    void setup()
+    {
+      Serial.begin(9600);
+      pinMode(pin2,INPUT);
+    }
+    
+    void loop()
+    {
+      x=digitalRead(pin2);
+      Serial.println(x);
+      delay(500);
+     }
+
+</code>
+</pre> 
+</div>
+<br>
+
+<div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+    <p> <b>&#10028; Serial.begin():</b> Sets the data rate in bits per second (baud) for serial data transmission.</p>
+  <p> <b>Syntax </b></p>
+    <p> Serial.begin(speed) </p>
+    <p> <b>Note :</b>The default baud rate in Arduino is <span style="color: rgb(115, 2, 7);"> 9600 bps (bits per second)</span>.</p>
+   <br>    
+   <br>
+   
+   <p> <b>&#10028; Serial.println() :  </b>Prints data to the serial port as human-readable ASCII text.</p>
+   <p> <b> Syntax</b></p>
+   <p>Serial.println(val) </p>
+   
+
+</div>
+<hr style="height: 1px; background-color: brown;">
+
+<br>
+<p>Interfacing Button and LED – glow when button is pressed </p>
+
+            
+<img src="content/img/python/glowledwhenbuttonpressed.png" class="w3-round w3-center"  alt="image" style="width:100%"> 
+<br>
+<div class="w3-container  w3-sand w3-round-xlarge">
+
+    <p> <b>Code Example:</b></p>
+   
+<pre>
+<code class="language-java">
+   
+    int buttonPin=6;
+    int ledPin=10;
+    int buttonInput=0;
+    void setup()
+    {
+      Serial.begin(9600);
+      pinMode(ledPin,OUTPUT);
+      pinMode(buttonPin,INPUT);
+      
+    }
+    
+    void loop()
+    {
+      buttonInput=digitalRead(buttonPin);
+      Serial.println(buttonInput);
+      delay(500);
+      
+      if (buttonInput==1){
+         
+        digitalWrite(ledPin,HIGH);
+      }
+      else{
+         digitalWrite(ledPin,LOW);
+      }
+      
+    }
+
+</code>
+</pre> 
+
+</div>
+<br>
+<div class="w3-container  w3-sand w3-round-xlarge">
+
+    <p> <b>Labwork :</b></p>
+
+    <p> <b> Q8) </b> WAP to print voltages (which is generated by button) on Serial Monitor when push button pressed.</p>
+    <p> <b> Q9) </b> WAP to glow 1 LED bulb when push button pressed.</p>
+    <p> <b> Q10) </b> WAP to glow 2 LED bulbs when push button pressed. (Hint: one led by one button and next led buld by next button)</p>
+    <p> <b> Q11) </b> WAP to glow 3 LED bulbs with three buttons ( Working as a Traffic Lights).</p>
+   <p> <b> Q12) </b>WAP to print your name on Serial Monitor when button pressed (button pin number on 10)</p>
+   <p> <b> Q13) </b>WAP to blink Led on 10, 11, 12, 13, with delay 1.5 seconds when button pressed (button pin number on 5) </p>
+   <p> <b> Q14) </b> WAP to glow/OFF led with push button, the led <span style="color: rgb(115, 2, 7);"></span> Glow only push button A and led Off only push button B.</p>
+
+   <p> <b> Q15) </b> WAP to blink led 10, 11, 12, 13 and reverse blink ( led 13, 12, 11, 10) with one button.</p>
+   <p> <b>Ans-15: Solution Code </b></p>
+   <pre>
+   <code class="language-java">
+    int t=0;	
+    void setup()
+    {
+      for(int x=2;x<=12;x++){ 
+        pinMode(x, OUTPUT);
+      }
+       pinMode(2, OUTPUT);
+       pinMode(3, OUTPUT);
+       pinMode(4, OUTPUT);
+       pinMode(5, OUTPUT);
+       pinMode(6, OUTPUT);
+       pinMode(7, OUTPUT);
+       pinMode(8, OUTPUT);
+       pinMode(9, OUTPUT);
+       pinMode(10, OUTPUT);
+       pinMode(11, OUTPUT);
+       pinMode(12, OUTPUT);
+       pinMode(13, INPUT_PULLUP);   
+    }
+    void loop()
+    {
+      if (digitalRead(13)== HIGH){
+      t++;
+       delay(100);
+      }
+      if(t==1){pattern1();}
+      if(t==2){pattern2();}
+      if(t==3){pattern3();}
+    }
+    void pattern1(){
+      for(int x=2;x<=12;x++){
+      digitalWrite(x,HIGH);
+        delay(100);
+        digitalWrite(x,LOW);
+        delay(100);
+      }
+    }
+    void pattern2(){
+      for(int x=12;x>=2;x--){
+      digitalWrite(x,HIGH);
+        delay(100);
+        digitalWrite(x,LOW);
+      }
+    }
+    void pattern3(){
+        t=1; 
+    }
+
+   </code>
+   </pre>
+  
+</div>
+
+<br>
+<div class="w3-container  w3-sand w3-round-xlarge">
+
+    <p> <b>Internal Working of button:</b></p>
+   <br>
+   
+   <video width="100%" controls>
+    <source src="push_button.mp4" type="video/mp4">
+   </video>
+   <br>
+   <p> <b>Labwork :</b></p>
+
+   <p> <b> Q16) </b>WAP to Glow/Off led by one button.</p>
+   <p> <b> Q17) </b>WAP to Glow/Off two led by one button.</p>
+
+</div>
+
+
+
+<br>
+<br>
+
+
+
+
+                        </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section> 
+        
+        <section id="WorkingwithSensors-DHT" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>Working with Sensors-DHT (Temperature Sensors)</u></h2>
+                           <p> <b> &#10028; analogRead() :  </b> Reads the value from the specified analog pin.</p>
+  
+   <p>&#x21db; <b>Syntax: </b> analogRead(pin)</p>
+                           
+ <p> &#x21db; <b>Parameters: </b> pin: the name of the analog input pin to read from.</p>
+
+<p> &#x21db; <b>Returns: </b>The analog reading on the pin.</p>
+
+<p> <b> Note :</b> <br>
+    
+    &#x21db;  Reading data from the sensor. This voltage is stored as a 10bit number ((0-1023)). <br>
+    &#x21db;   voltageOut = sensorRead * (aref_voltage / 1024.0);<br>
+    &#x21db;  Temperature (°C) = (voltageOut - 0.5) * 100;
+
+   
+    
+</p>
+<br>
+
+<p><b>analogReference(type)</b></p>
+<p> <b> Syntax : </b> analogReference(type)</p>
+<p> <b>Parameters </b> type (EXTERNAL)</p>
+<p> <B> Note :-</B> EXTERNAL: the voltage applied to the AREF pin (0 to 5V only) is used as the reference.</p>
+
+<br>
+<br>
+<img src="content/img/python/tmp.png" class="w3-round w3-center"  alt="image" style="width:100%">   
+<div class="w3-container  w3-sand w3-round-xlarge">
+
+    <p> <b>Example :-</b></p>
+   
+<pre>
+<code class="language-java">
+// The TMP36's Vout pin is connected to A0 of Arduino 
+#define analogPin A0 
+
+// Connect ARef to 3.3V 
+#define aref_voltage 3.3 
+
+void setup() { 
+// Begin serial communication at 9600 baud rate 
+Serial.begin(9600); 
+
+// Set the aref to something other than 5v 
+analogReference(EXTERNAL); 
+} 
+
+void loop() { 
+// The voltage output reading from the TMP36 sensor 
+int sensorRead = analogRead(analogPin); 
+
+// Convert that sensor reading into voltage 
+float voltageOut = sensorRead * (aref_voltage / 1024.0); 
+
+// The voltage is then converted to temperature in Celsius 
+float tempInC = (voltageOut - 0.5) * 100; 
+
+// Print the temperature in Celsius in serial monitor 
+Serial.print("Temperature: "); 
+Serial.print(tempInC); 
+Serial.print("\xB0"); // prints the degree symbol 
+Serial.print("C"); 
+Serial.print("\n"); 
+
+delay(200); // time in milliseconds to wait for the next reading 
+}
+</code>
+</pre> 
+</div>
+
+
+
+<div class="w3-container  w3-sand w3-round-xlarge">
+
+    <p> <b>Labwork :-</b></p>
+   <p> <b> Q18)</b> WAP in Arduino IDE, if the temperature is greater then 40 °C alert with Red Led Glow otherwise Red Led OFF.</p>
+   <p> <b> Q19)</b> WAP in Arduino IDE, working with TMP36 and Three Led Bulb. 
+    <br> &#x21db; If the temperature is greater then <span style="color: rgb(115, 2, 7);">40 °C alert with Red Led Glow,</span>  
+    <br>&#x21db; Temperature is greater then <span style="color: rgb(115, 2, 7);">20 °C and less then 40 °C  alert with Yellow Led Glow </span> 
+    <br> &#x21db; And Temperature is less then <span style="color: rgb(115, 2, 7);">20 °C alert with Green Led Glow.</span>  </p>
+
+</div>
+
+                      
+
+                            <br>
+                            <br>
+                       </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section>      
+        <section id="WorkingwithSensors-LDR" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>Working with Sensors-LDR</u></h2>
+                       
+                            <img src="content/img/python/ldrwithled.png" class="w3-round w3-center"  alt="image" style="width:100%"> 
+
+                            <div class="w3-container  w3-sand w3-round-xlarge">
+
+                                <p> <b>Example:</b></p>
+                               
+                            <pre>
+                            <code class="language-java">         
+int value;
+void setup()
+{
+    pinMode(13, OUTPUT);
+    pinMode(A0, INPUT);
+    
+}
+
+void loop()
+{
+    value=analogRead(A0);
+    
+    if(value<=300){
+    digitalWrite(13,HIGH);
+    }
+    else{
+    digitalWrite(13,LOW);
+    }  
+}
+</code>
+                            </pre> 
+                            
+                            </div>
+
+                            <div class="w3-container  w3-sand w3-round-xlarge">
+
+                                <p> <b>Labwork :</b></p>
+
+                                <p> <b> Q20) </b> WAP in Arduino IDE, if the LDR value is less than 250 then Glow the Led bulb.</p>
+                                <p> <b> Note : </b> Generally Register we use 1 Kilo Ohm in LDR. </p>
+                            </div>
+
+                            <br>
+                            <br>
+                       </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section>      
+        <section id="WorkingwithSensors-MQ135" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>Working with Sensors-MQ135</u></h2>
+                       
+                            <img src="content/img/python/MQ135Tinker.png" class="w3-round w3-center"  alt="image" style="width:100%"> 
+
+
+                            <div class="w3-container  w3-sand w3-round-xlarge">
+
+                                <p> <b>Example :</b></p>
+                               
+                            <pre>
+                            <code class="language-java">
+int val;
+void setup()
+{
+    pinMode(A0, INPUT);
+    Serial.begin(9600);
+}
+
+void loop()
+{
+    val=analogRead(A0);
+    Serial.print("Print Air Quality:");
+    Serial.println(val);
+    
+}   
+</code>
+     </pre> 
+                            </div>
+                            <br>
+                            <div class="w3-container  w3-sand w3-round-xlarge">
+
+                                <p> <b>Labwork :</b></p>
+
+                                <p> <b> Q21) </b> WAP Fire Alert System, if the MQ135 value is greater than 500 then Glow the Red Led bulb.</p>
+                               <p> <b> Note : </b> Generally Register we use 10 Kilo Ohm in Smoke Sensor. </p>
+                            </div>
+<br>
+<br>
+                            
+                       </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section>      
+          
+      
+
+        <section id="InterfacingKeypad" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>Interfacing Keypad</u></h2>
+                       
+                            <img src="content/img/python/KeyPadWorking.png" class="w3-round w3-center"  alt="image" style="width:100%">  
+                            <br>
+                            <div class="w3-container  w3-sand w3-round-xlarge">
+
+                                <p> <b>Example :-</b></p>
+                               
+                            <pre>
+                            <code class="language-java">
+#include &lt;Keypad.h&gt;
+
+    byte row = 4;
+    byte col = 4;
+    
+    char keys[4][4] = {
+    { '1', '2', '3', 'A' },
+    { '4', '5', '6', 'B' },
+    { '7', '8', '9', 'C' },
+    { '*', '0', '#', 'D' }
+    };
+    
+    byte rowpin[4] = { 9, 8, 7, 6 };
+    byte colpin[4] = { 5, 4, 3, 2 };
+    Keypad mykeypad = Keypad(makeKeymap(keys), rowpin, colpin, row, col);
+    
+    
+    void setup() {
+    Serial.begin(9600);
+    }
+    
+    
+    void loop() {
+    char presskey = mykeypad.getKey();
+        
+    if (presskey) {
+    Serial.println(presskey);
+    }
+        
+    }
+            
+                            </code>
+                            </pre> 
+                            </div>
+ <br>
+ <br>
+                          
+                       </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section>
+        <section id="Interfacingwithbuzzer" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>Interfacing with buzzer</u></h2>
+                       
+                            <img src="content/img/python/BuzzerWorking.png" class="w3-round w3-center"  alt="image" style="width:100%">  
+                            <br>
+                            <div class="w3-container  w3-sand w3-round-xlarge">
+
+                                <p> <b>Example :-</b></p>
+                               
+                            <pre>
+                            <code class="language-java">
+void setup()
+{
+    pinMode(13, OUTPUT);
+}
+
+void loop()
+{
+    digitalWrite(13, HIGH);
+    delay(1000);
+    digitalWrite(13, LOW);
+    delay(1000);
+}      
+                            </code>
+                            </pre> 
+                            </div>
+ <br>
+ <br>
+                          
+                       </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section>
+        
+
+        <section id="DisplaythedataonLCD" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>Display the data on LCD with Potentiometer</u></h2>
+                       
+ <p>We connect the following pins on LCD:</p>
+<ul class="w3-ul">
+<li>* LCD GND pin to GND </li>
+<li>* LCD VCC pin to 5V  <span style="color: rgb(115, 2, 7);"> (for Power)</span> </li>
+<li>* LCD VO pin  to wiper <span style="color: rgb(115, 2, 7);">(Potentiometer)</span> </li>
+<li>* LCD RS pin to digital pin 2  <span style="color: rgb(115, 2, 7);">(any digital pin)</span> </li>
+<li>* LCD R/W pin to GND</li>
+<li>* LCD Enable pin to digital pin 3 <span style="color: rgb(115, 2, 7);">(any digital pin)</span> </li>
+<li>* LCD D4 pin to digital pin 4  <span style="color: rgb(115, 2, 7);">(any digital pin)</span> </li>
+<li>* LCD D5 pin to digital pin 5  <span style="color: rgb(115, 2, 7);">(any digital pin) </span></li>
+<li>* LCD D6 pin to digital pin 6  <span style="color: rgb(115, 2, 7);">(any digital pin)</span></li>
+<li>* LCD D7 pin to digital pin 7  <span style="color: rgb(115, 2, 7);">(any digital pin)</span></li>
+<li>* LCD Anode with register (220 ohm) to 5V </li>
+<li>* LCD Cathode to GND </li>
+
+</ul>
+
+<br>
+
+               
+<img src="content/img/python/LCD_Interface.png" class="w3-round w3-center"  alt="image" style="width:100%">  
+<br>
+
+
+                          
+  <div class="w3-container  w3-sand w3-round-xlarge">
+
+    <p> <b>Example:</b></p>
+   
+<pre>
+<code class="language-java">
+#include &lt; LiquidCrystal.h &gt;
+
+        const int rs = 2, en = 3, d4 = 4, d5 = 5, d6 = 6, d7 = 7;
+        LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
+        
+        void setup() {
+         
+          lcd.begin(16, 2);
+          lcd.print("Hello, World!");
+        }
+        
+        void loop() {
+          // set the cursor to column 0, line 1
+          // (note: line 1 is the second row, since counting begins with 0):
+          lcd.setCursor(0, 1);
+          // print the number of seconds since reset:
+          lcd.print(millis() / 1000);
+        }
+
+</code>
+</pre> 
+</div>
+<br>   
+<br>   
+                       </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section>  
+
+        <section id="WorkingwithSensors-IR" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>Working with Sensors-IR</u></h2>
+                       
+                            <br>
+                            <br>
+                            <video width="100%" controls>
+                                <source src="ir_sensor.mp4" type="video/mp4">
+                            </video>
+
+                            <div class="w3-container  w3-sand w3-round-xlarge">
+
+                                <p> <b>Example :</b></p>
+                               
+                            <pre>
+                            <code class="language-java">
+int irSensor = 12;
+int buzzer = 7;
+void setup()
+{
+    Serial.begin(9600);
+    pinMode(irSensor, INPUT);
+    pinMode(buzzer, OUTPUT);
+}
+void loop()
+{
+    int value = digitalRead(irSensor);
+    Serial.println("");
+    Serial.print("Sensor Value = ");
+    Serial.print(value);
+    
+    if(value == 0)
+    {
+        digitalWrite(buzzer, HIGH);
+    }
+    else
+    {
+        digitalWrite(buzzer, LOW);
+    }
+    delay(50);
+}
+            
+                            </code>
+                            </pre> 
+                            </div>
+
+
+                          <br>   
+                          <br>   
+                       </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section>    
+
+
+        
+
+
+
+        <section id="InterfacingHC-05" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            
+                            <br>
+                            <br>
+                            <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+                             
+
+
+                                <p> <b>Serial Communication:</b> Serial Communication is the process of sending data from one device to another device sequentially.  <br>
+                                    In Serial communication the data bits are send serially from one device to another device providing faster means of communication.
+                                </p>
+                    
+                            </div>
+                            
+                            <h2 class="w3-panel w3-center"><u>Interfacing HC-05 (Bluetooth module)</u></h2>
+                       
+                            <br>
+                            <br>
+                            <video width="100%" controls>
+                                <source src="HC-05.mp4" type="video/mp4">
+                            </video>
+
+  <br>
+  <p><b> Example :-</b></p>
+  <img src="content/img/python/HC-05.png" class="w3-round w3-center"  alt="image" style="width:100%"> 
+
+
+
+                            <br>   
+                            <br>   
+                               
+                       </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section> 
+        
+        
+     
+
+
+
+        <section id="RelayModule" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>Control/handle 220V AC supply-Interfacing Relay Module</u></h2>
+                       <br>
+                       <br>
+                       <h1 class="w3-center"> Circuit Diagram</h1>
+                       <img src="content/img/python/relay_circuit.jpg" class="w3-round w3-center"  alt="image" style="width:100%"> 
+
+                       <br>
+                        <br>
+                           <a href="https://youtu.be/aSmrLFoumu0?si=0-qi3yONqNO9avpK"> Video Reference </a>
+                       
+                         <br>
+                         <br>
+                           <div class="w3-container  w3-sand w3-round-xlarge">
+
+                            <p> <b>Example Code:</b></p>
+                           
+                        <pre>
+                        <code class="language-java">
+int relay=2;
+
+void setup() 
+{
+    pinMode(2,OUTPUT);
+}
+
+void loop() 
+{
+    digitalWrite(relay,LOW); // For LED Bulb ON
+    delay(2000);
+    digitalWrite(relay,HIGH); // For LED Bulb OFF
+    delay(2000);
+}
+</code>
+                        </pre> 
+                        </div>
+
+                         <br>
+                         <br>
+                       
+                        </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section>      
+
+        
+       
+       
+ 
+ <script>
+ 
+ AOS.init();
+
+
+
+</script>
+</body>
+</html>

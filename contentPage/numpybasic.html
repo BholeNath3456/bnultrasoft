@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction of Python</title>
+   <!-- cdn links start -->
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+
+
+   <!-- cdn links end-->
+    
+    
+    
+    
+    <!-- content web page links  start-->
+    <link rel="stylesheet" href="content/content.css">
+    <script src="content/content.js"></script>
+
+    <link rel="stylesheet" href="content/prism.css">
+    <script src="content/prism.js"> </script>
+
+    <link rel="stylesheet" href="content/aos/aos.css">
+    <script src="content/aos/aos.js"></script>
+
+    <!-- content web page links end -->
+  
+
+
+
+</head>
+<body>
+
+
+    <!-- background image Start -->
+    <div class="backgrounds overlay">
+        <div class="background" style="background-image: url('content/img/hero.jpg');"></div>
+    </div>
+    <!-- background image End-->
+    
+    <!-- Sidebar Start -->
+
+
+
+     <div class="w3-sidebar w3-bnultrasoft-color topPadding   w3-card-4 w3-animate-left" style="display:none" id="mySidebar">
+        <div class="w3-bar  w3-hover-white">
+            <span class="w3-bar-item w3-padding-16  ">Contents</span> <button onclick="w3_close()" class="w3-bar-item w3-button w3-right w3-padding-16  w3-hover-black " >&times;</button>
+        </div>
+        
+        <div class="w3-bar-block  ">
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#NumpyIntroduction">Introduction of Numpy</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#NumPyGettingStarted">NumPy Getting Started</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#DataTypes">Data Types in NumPy</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#NumpyArrayDimensional">Numpy Array Dimensional</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#ArrayAttributes"> NumPy Array Attributes</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#ArrayCreationRoutines"> Array Creation Routines</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#ArrayFromExistingData"> Array From Existing Data</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#FromNumericalRanges"> Array From Numerical Ranges</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#Indexing&Slicing"> Array Indexing & Slicing</a> 
+           
+            
+            
+            <!-- <a class="w3-bar-item w3-button  w3-hover-white w3-animate-zoom" href="#sec2">About</a>
+            <a class="w3-bar-item w3-button  w3-hover-white w3-animate-zoom" href="#sec3">Contact</a>
+            <a class="w3-bar-item w3-button  w3-hover-white w3-animate-zoom" href="javascript:void(0)">Support</a>
+            <a onclick="myFunction('Demo1')" class="w3-button  w3-hover-white w3-left-align w3-block w3-animate-zoom">Accordion <i class="fa fa-caret-down"></i></a>
+                <div id="Demo1" class="w3-hide w3-animate-zoom">
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 1</a>
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 2</a>
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 3</a>
+                </div> 
+            <a onclick="myFunction('Demo2')" class="w3-button  w3-hover-white w3-left-align w3-block w3-animate-zoom">Accordion <i class="fa fa-caret-down"></i></a>
+                <div id="Demo2" class="w3-hide w3-animate-zoom">
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 1</a>
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 2</a>
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 3</a>
+                </div>
+
+           <a class="w3-bar-item w3-button w3-animate-zoom w3-bnultrasoft-color w3-hover-white" href="quiz.html">Python Quiz Set1</a>    
+       
+        -->
+       
+        </div>
+       
+
+
+    </div> 
+
+
+
+
+
+
+
+    <!-- Sidebar Start End -->
+
+<!-- Page Content Start -->
+
+        <!-- Page content header Start -->
+
+
+
+
+        <div class="w3-bnultrasoft-color w3-top">
+            <button class="w3-button w3-xlarge  w3-hover-white" onclick="w3_open()" >&#9776;</button>
+
+            <a href="../ittoolsandnetworkbasics.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M1</a>
+            <a href="../webdesigningandpublishing.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M2</a>
+            <a href="../python.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M3</a>
+            <a href="../iot.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M4</a>
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium w3-xlarge w3-hover-white" onclick="myFunctionRightItem()" >&#9776;</a>
+
+           
+                        <!-- SearchBar start  -->
+
+                       
+
+                     <!-- <div class="w3-dropdown-click  w3-hover-black">
+                        
+                        <input class="w3-input w3-center w3-padding w3-round-xxlarge" type="text" placeholder="Search any contents..."  onclick="dropFunction()"  id="myInput" onkeyup="filterFunction()">
+                        <div class="w3-dropdown-content w3-bar-block w3-card w3-white" id="myDIV" >
+                        
+                            <a class="w3-bar-item w3-button"  href="#pythonintroduction">Introduction of Python</a>
+                            <a class="w3-bar-item w3-button" href="#technicalStrengthofPython">Technical Strength of Python</a>
+                            <a class="w3-bar-item w3-button" href="#PythonInterpreter">Python Interpreter</a>
+                            <a class="w3-bar-item w3-button" href="#howtorunpython">Using CMD (Command Prompt)</a>
+                            <a class="w3-bar-item w3-button" href="#PythonComments">Python Comments</a>
+                            <a class="w3-bar-item w3-button" href="#PythonVariable">Python Variable</a>
+                            <a class="w3-bar-item w3-button" href="#PythonKeywords">Python Keywords</a>
+                            <a class="w3-bar-item w3-button" href="#PythonPrintFunction">Python Print Function</a>
+                            <a class="w3-bar-item w3-button" href="#PythonInputFunction">Python Input Function</a>
+                            <a class="w3-bar-item w3-button" href="#PythonDataType">Python DataType</a>
+                            <a class="w3-bar-item w3-button" href="#PythonConstants">Python Constants</a>
+                            <a class="w3-bar-item w3-button" href="#PythonLiteral">Python Literal</a>
+                            <a class="w3-bar-item w3-button" href="#PythonString">Python String</a>
+                            <a class="w3-bar-item w3-button" href="#PythonStringConcatenation">Python String Concatenation</a>
+                            <a class="w3-bar-item w3-button" href="#PythonFormatStrings">Python Format Strings</a>
+                            <a class="w3-bar-item w3-button" href="#PythonEscapeCharacter">Python Escape Character</a>
+                           
+                            
+                        </div>
+                        </div>  -->
+
+
+                    <!-- SearchBar End  -->
+                  
+                    <!-- ------------Right hidden items----------- -->
+
+                    <div id="demo" class="w3-bar-block w3-bnultrasoft-color w3-hide w3-hide-large w3-hide-medium  w3-animate-zoom w3-animate-fading">
+                        <a href="../ittoolsandnetworkbasics.html" class="w3-bar-item w3-button w3-hover-white">Olevel M1</a>
+                        <a href="../webdesigningandpublishing.html" class="w3-bar-item w3-button w3-hover-white">Olevel M2</a>
+                        <a href="../python.html" class="w3-bar-item w3-button w3-hover-white">Olevel M3</a>
+                        <a href="../iot.html" class="w3-bar-item w3-button w3-hover-white">Olevel M4</a>
+                      </div>
+
+                      
+                    <!-- ------------Right hidden items----------- -->
+   
+
+        </div>
+
+
+
+        
+<section id="NumpyIntroduction" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+              
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Introduction to NumPy</u></h2>
+               
+                    
+                      <p> <b>What is NumPy? </b></p>
+    
+                     <ul class="w3-ul">
+                        <li>  &#10028; NumPy is a Python library used for working with arrays. </li>
+                        <li>  &#10028; NumPy was created in <span style="color: rgb(115, 2, 7);"> <b>  2005 by Travis Oliphant</b></span>. It is an open source project and you can use it freely.
+                        </li>
+                        <li>  &#10028; NumPy stands for Numerical Python. </li>
+                       
+                        <li>  &#10028;  The array object in NumPy is called <span style="color: rgb(115, 2, 7);">ndarray</span> , it provides a lot of supporting functions that make working with ndarray very easy.
+                        </li>
+                        <li>  &#10028; Arrays are very frequently used in  <span style="color: rgb(115, 2, 7);">data science</span>, where speed and resources are very important.
+                        </li>
+
+                        
+
+                     </ul>
+                     <br>
+
+                     <p> <b> Which Language is NumPy written in? </b></p>
+   <p> &#x21db; NumPy is a Python library and is written partially in Python, but most of the parts that require fast computation are written in <span style="color: rgb(115, 2, 7);">C or C++.</span> 
+                      
+   </p>
+                    
+
+<br>
+
+<p> <b> Installation of NumPy</b></p>
+<p>  &#x21db; If you have Python and PIP already installed on a system, then installation of NumPy is very easy.
+</p>
+ <p>  &#x21db;  Install it using this command: </p>
+ <pre>
+    <code class="language-java">
+C:\Users\Your Name>pip install numpy</code>
+    </pre> 
+
+<br>
+<br>
+<p> <b>  What is PIP?</b> </p>
+ <p> &#x21db; PIP is a package manager for Python packages, or modules if you like. </p>
+<p> <b> Note:</b>  If you have Python version 3.4 or later, PIP is included by default.</p>
+<br>
+<br>
+<p> <b>What is a Package? </b></p>
+<p>&#x21db; A package contains all the files you need for a module. </p>
+<p>&#x21db; Modules are Python code libraries you can include in your project. </p>
+
+
+
+
+<br>
+<br>
+
+<p> <b> How to  Import NumPy ?</b></p>
+<p> &#x21db; Once NumPy is installed, import it in your applications by adding the import keyword: </p>
+
+<pre>
+    <code class="language-java">
+import numpy</code>
+    </pre> 
+<br>
+<br>
+
+
+
+
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="NumPyGettingStarted" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+              
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>NumPy Getting Started</u></h2>
+               
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+
+                        <p> <b>Example:</b> To print an array by using numpy.</p>
+                       
+                    <pre>
+                    <code class="language-java">
+import numpy
+
+arr = numpy.array([1, 2, 3, 4, 5])
+print(arr)
+print(type(arr))  
+                    </code>
+                    </pre>
+                    <p> <b>Output :-</b></p>
+                    <p>[1 2 3 4 5] </p>
+                    <p>< class 'numpy.ndarray' > </p>
+                    
+
+                    </div>
+                    <br>
+                    <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+                        <p> <b>NumPy as np </b></p>
+ <p> &#x21db; NumPy is usually imported under the <span style="color: rgb(115, 2, 7);">np</span>  alias.</p>
+ <p> &#x21db; alias: In Python alias are an alternate name for referring to the same thing.</p>
+ <p>  &#10028; Create an alias with the as keyword while importing: </p>
+ <p> import <span style="color: rgb(115, 2, 7);">numpy as np</span>  </p>
+<p> Now the NumPy package can be referred to as <span style="color: rgb(115, 2, 7);">np</span>  instead of numpy.</p>                     
+
+<p> <b>Example :</b></p>
+                       
+                    <pre>
+                    <code class="language-java">
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5])
+
+print(arr)
+</code>
+                    </pre>
+                    </div>
+                    <br>
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+                        <p> <b>Checking NumPy Version </b></p>
+                        <p>The version string is stored under <span style="color: rgb(115, 2, 7);">__version__</span>  attribute. </p>
+
+
+                        <p> <b>Example:</b></p>
+                       
+                    <pre>
+                    <code class="language-java">
+import numpy as np
+print(np.__version__)
+</code>
+                    </pre>
+                    <p>1.26.4   </p>
+                    </div>
+
+                    <br>
+                    <br>
+
+
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="DataTypes" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+              
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Data Types in NumPy</u></h2>
+
+                    <p> <b> &#10028;</b> NumPy has some extra data types, and refer to data types with one character, like i for integers, u for unsigned integers etc.
+                    </p>
+               <p> <b> &#x21db; </b>   Below is a list of all data types in NumPy and the characters used to represent them.
+               </p>
+                <ul class="w3-ul">
+                    <li>  i - integer</li>
+                    <li> b - boolean </li>
+                     <li> u - unsigned integer</li>
+                    <li>  f - float</li>
+                    <li>c - complex float </li>
+                    <li>    m - timedelta</li>
+                    <li>M - datetime </li>
+                    <li>O - object </li>
+                    <li>S - string </li>
+                    <li>U - unicode string </li>
+                    <li>  V - fixed chunk of memory for other type ( void ) </li>
+                   
+
+                </ul>
+
+
+                <br>
+                <br>
+                <h2 class="w3-panel w3-center"><u> The following table shows different scalar data types defined in NumPy.
+                </u></h2>
+
+                <table class="w3-table-all"> 
+
+               <tr> <th>Sr.No. </th>  <th>Data Types </th> <th>Description </th> </tr>
+
+               <tr>  <td>1 </td> <td>bool_ </td> <td>  Boolean (True or False) stored as a byte </td></tr>
+               <tr> <td> 2</td> <td>int_ </td> <td> Default integer type (same as C long; normally either int64 or int32) </td></tr>
+               <tr> <td> 3</td> <td>intc </td> <td> Identical to C int (normally int32 or int64)</td></tr>
+               <tr> <td>4 </td> <td>intp </td> <td>Integer used for indexing (same as C ssize_t; normally either int32 or int64) </td></tr>
+               <tr> <td> 5</td> <td> int8</td> <td> Byte (-128 to 127) </td></tr>
+               <tr> <td>6</td> <td> int16</td> <td>Integer (-32768 to 32767) </td></tr>
+               <tr> <td>7</td> <td>int32 </td> <td>Integer (-2147483648 to 2147483647) </td></tr>
+               <tr> <td>8 </td> <td> int64</td> <td> Integer (-9223372036854775808 to 9223372036854775807)</td></tr>
+               <tr> <td>9 </td> <td>uint8 </td> <td> Unsigned integer (0 to 255)</td></tr>
+               <tr> <td>10 </td> <td> uint16</td> <td>Unsigned integer (0 to 65535) </td></tr>
+               <tr> <td> 11</td> <td> uint32</td> <td>Unsigned integer (0 to 4294967295) </td></tr>
+               <tr> <td>12 </td> <td> uint64</td> <td>Unsigned integer (0 to 18446744073709551615) </td></tr>
+               <tr> <td>13 </td> <td>float_ </td> <td>Shorthand for float64 </td></tr>
+               <tr> <td> 14</td> <td>float16 </td> <td>Half precision float: sign bit, 5 bits exponent, 10 bits mantissa </td></tr>
+               <tr> <td>15</td> <td>float32 </td> <td>Single precision float: sign bit, 8 bits exponent, 23 bits mantissa</td></tr>
+               <tr> <td>16 </td> <td>float64 </td> <td>Double precision float: sign bit, 11 bits exponent, 52 bits mantissa </td></tr>
+               <tr> <td>17 </td> <td> complex_</td> <td> Shorthand for complex128</td></tr>
+               <tr> <td> 18</td> <td> complex64</td> <td> Complex number, represented by two 32-bit floats (real and imaginary components)</td></tr>
+               <tr> <td>19 </td> <td> complex128</td> <td>Complex number, represented by two 64-bit floats (real and imaginary components) </td></tr>
+                </table>
+                	
+  <br>
+  <h2 class="w3-panel w3-center"><u> Checking the Data Type of an Array.
+</u></h2>
+<p> &#x21db; The NumPy array object has a property called <span style="color: rgb(115, 2, 7);">dtype</span>  that returns the data type of the array:</p>
+<br>
+
+<div class="w3-container  w3-sand w3-round-xlarge">
+
+    <p> <b>Example 1:</b> Get the data type of an array object.</p>
+   
+<pre>
+<code class="language-java">
+import numpy as np
+a=np.array([1,2,3,4,5])
+print(a.dtype)
+
+</code>
+</pre> 
+<p> <b> Output :-</b></p>
+<p> int32</p>
+</div>
+<br>
+<div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+    <p> <b>Example 2:</b> </p>
+   
+<pre>
+<code class="language-java">
+import numpy as np
+a=np.array([1.3,2.7,3.5,4.2,5.6])
+print(a.dtype)
+</code>
+</pre> 
+<p> <b> Output :-</b></p>
+<p>float64</p>
+</div>
+<br>
+<div class="w3-container  w3-sand w3-round-xlarge">
+
+    <p> <b>Example 3:</b></p>
+   
+<pre>
+<code class="language-java">
+import numpy as np
+a=np.array(["A","B","C"])
+print(a.dtype)
+
+</code>
+</pre> 
+<p> <b> Output :-</b></p>
+<p> < U1 </p>
+</div>
+<br>
+
+
+
+
+<div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+    <p> <b>Example 4:</b></p>
+   
+<pre>
+<code class="language-java">
+import numpy as np
+a=np.array([-2147483648,-2147483647])
+print(a.dtype)
+
+</code>
+</pre> 
+<p> <b> Output :-</b></p>
+<p>int32</p>
+</div>
+<br>
+<div class="w3-container  w3-sand w3-round-xlarge">
+
+    <p> <b>Example 5:</b></p>
+   
+<pre>
+<code class="language-java">
+import numpy as np
+a=np.array([-2147483649,-2147483650])
+print(a.dtype)
+
+</code>
+</pre> 
+<p> <b> Output :-</b></p>
+<p>int64</p>
+</div>
+
+<br>
+
+<h2 class="w3-panel w3-center"><u>Creating Arrays With a Defined Data Type</u></h2>
+
+<p> <b>&#x21db; </b><span style="color: rgb(115, 2, 7);">dtype</span>  that allows us to define the expected data type of the array elements: By using <span style="color: rgb(115, 2, 7);"> dtype=np.int8</span> </p>
+
+<div class="w3-container  w3-sand w3-round-xlarge">
+
+    <p> <b>Example 1:</b>  Converting int32 to int8</p>
+   
+<pre>
+<code class="language-java">
+import numpy as np
+a=np.array([1,2,3,4], dtype=np.int8)
+print(a.dtype)
+</code>
+</pre> 
+<p> <b> Output :-</b></p>
+<p>int8</p>
+</div>
+<br>
+<div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+    <p> <b>Example 2:</b> Converting int32 to uint8</p>
+   
+<pre>
+<code class="language-java">
+import numpy as np
+a=np.array([1,2,3,4], dtype=np.uint8)
+print(a.dtype)
+</code>
+</pre> 
+<p> <b> Output :-</b></p>
+<p>uint8</p>
+</div>
+<br>
+<div class="w3-container  w3-sand w3-round-xlarge">
+
+    <p> <b>Example 3:</b> Converting int32 to float64 ( float_)</p>
+   
+<pre>
+<code class="language-java">
+import numpy as np
+a=np.array([1,2,3,4], dtype=np.float_)
+print(a.dtype)
+print(a)
+</code>
+</pre> 
+<p> <b> Output :-</b></p>
+<p>float64</p>
+<p> [1. 2. 3. 4.]</p>
+</div>
+
+<br>
+
+<div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+    <p> <b>Example 4:</b> Converting int32 to  String  </p>
+   
+<pre>
+<code class="language-java">
+import numpy as np
+a=np.array([1,2,3,4], dtype="S") 
+print(a.dtype)
+print(a)
+</code>
+</pre> 
+<p> <b> Output :-</b></p>
+<p>|S1</p>
+<p> [b'1' b'2' b'3' b'4']</p>
+</div>
+<br>
+<div class="w3-container  w3-sand w3-round-xlarge">
+
+    <p> <b>Example 5:</b> Converting int32 to Unicode String  </p>
+   
+<pre>
+<code class="language-java">
+import numpy as np
+a=np.array([1,2,3,4], dtype="U")
+print(a.dtype)
+print(a)
+</code>
+</pre> 
+<p> <b> Output :-</b></p>
+<p>< U1</p>
+<p> ['1' '2' '3' '4']</p>
+</div>
+
+<br>
+<h2 class="w3-panel w3-center"><u>Use Datatype as function</u></h2>
+<div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+    <p> <b>Example :</b> </p>
+   
+<pre>
+<code class="language-java">
+import numpy as np
+a=np.array([1,2,3,4])
+f=np.float64(a)
+print("Data Type :", a.dtype)
+print("Data Type :", f.dtype)
+</code>
+</pre> 
+<p> <b> Output :-</b></p>
+<p>Data Type : int32 </p>
+<p>Data Type : float64</p>
+</div>
+
+
+
+         
+         
+ 
+  <br>
+
+  <h2 class="w3-panel w3-center"><u>Converting Data Type by astype() function</u></h2>
+  <div class="w3-container  w3-sand w3-round-xlarge">
+
+    <p> <b>Example :</b></p>
+   
+<pre>
+<code class="language-java">
+import numpy as np
+
+arr = np.array([1.1, 2.1, 3.1])
+
+newarr = arr.astype('i')
+
+print(newarr)
+print(newarr.dtype)
+
+</code>
+</pre> 
+
+<p> <b> Output :- </b></p>
+<p>[1 2 3] </p>
+<p>int32 </p>
+
+</div>
+
+<br>
+<h2 class="w3-panel w3-center"><u>What if a Value Can Not Be Converted?</u></h2>
+<p> <b>  &#x21db; </b>If a type is given in which elements can't be casted then NumPy will raise a <span style="color: rgb(115, 2, 7);">ValueError</span> . </p>
+
+<div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+    <p> <b>Example:</b></p>
+   
+<pre>
+<code class="language-java">
+import numpy as np
+a=np.array(['a','b','c'],dtype='i')
+</code>
+</pre> 
+<p> <b> Output :</b></p>
+<p> <span style="color: rgb(115, 2, 7);">ValueError:</span>  invalid literal for int() with base 10: 'a'</p>
+</div>
+
+<br>
+<br>
+
+
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+
+<section id="NumpyArrayDimensional" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+              
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Numpy Array Dimensional</u></h2>
+
+                    <p> <b>  &#10028; </b>N-dimensional array (ndarray)</p>
+                    
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+                       <p> <b> &#x21db; </b> Single-Dimensional Numpy Array</p>
+                        <p> <b>Example:</b></p>
+                       
+                    <pre>
+                    <code class="language-java">
+import numpy as np
+a=np.array([10,20,30])
+print(a)</code>
+                    </pre> 
+                    <p> <b> Output :- </b></p>
+                    <p> [10 20 30]</p>
+
+                    </div>
+                    <br>
+                    <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+                        <p>  &#x21db; While creating multi-dimensional we can use <span style="color: rgb(115, 2, 7);">[] or ()</span>  inside [] bracket. </p>
+                        <p> <b> &#x21db; </b> Two-Dimensional Numpy Array</p>
+                         <p> <b>Example:</b></p>
+                        
+                     <pre>
+                     <code class="language-java">
+ import numpy as np
+ a=np.array([ (10,20,30),(40,50,60) ]) # same as a=np.array([[10,20,30],[40,50,60]])
+ print(a)
+</code></pre> 
+                     <p> <b> Output :- </b></p>
+                     <p> [[10 20 30]</p>
+                    <p>   [40 50 60]]</p>
+ 
+                     </div>
+                     <br>
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+                        <p> <b> &#x21db; </b> Three-Dimensional Numpy Array</p>
+                         <p> <b>Example:</b></p>
+                        
+                     <pre>
+                     <code class="language-java">
+ import numpy as np
+ a = np.array([[[1, 2, 3], [4, 5, 6]], [[1, 2, 3], [4, 5, 6]]]
+ print(a)</code>
+                     </pre> 
+                     <p> <b> Output :- </b></p>
+                     <p> [[[1 2 3]</p>
+                     <p> [4 5 6]]</p>
+                     <p>  [[1 2 3]</p>
+                     <p> [4 5 6]]]</p>
+                     </div>
+                     <br>
+                    <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+                        <p> <b> &#x21db; </b> Zero-Dimensional Numpy Array</p>
+                         <p> <b>Example:</b></p>
+                        
+                     <pre>
+                     <code class="language-java">
+ import numpy as np
+ a = np.array(4)
+ print(a)
+ print(a.ndim)
+
+</code>
+                     </pre> 
+                     <p> <b> Output :- </b></p>
+                     <p> 4</p>
+                     <p> 0</p>
+                    
+                     </div>
+
+
+
+
+                    <br>
+                    <br>
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="ArrayAttributes" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+              
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>NumPy - Array Attributes</u></h2>
+               
+               
+                 <p><b> &#10028; NumPy - Array Attributes: </b>In NumPy, attributes are properties of NumPy arrays that provide information about the array's shape, size, data type, dimension, and so on.</p> 
+                 <br>
+                 <div class="w3-container  w3-sand w3-round-xlarge">
+                    <p> <b> &#10028; Numpy Array <span style="color: rgb(115, 2, 7);">ndim</span>  Attribute :- </b></p>
+                    <p> &#x21db; The <span style="color: rgb(115, 2, 7);">ndim</span>  attribute returns the number of dimensions in the numpy array. </p>
+                    <p> <b>Example :</b></p>
+                   
+                <pre>
+                <code class="language-java">
+import numpy as np
+array1 = np.array([[2, 4, 6],[1, 3, 5]])
+print(array1.ndim)</code>
+                </pre>
+                <p> <b> Output :-</b></p>
+                <p> 2 </p>
+                </div>
+                <br>
+                <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+                    <p> <b> &#10028; Numpy Array <span style="color: rgb(115, 2, 7);">size</span>  Attribute :- </b></p>
+                    <p> &#x21db; The <span style="color: rgb(115, 2, 7);">size</span>  attribute returns the total number of elements in the given array. </p>
+                    
+                    <p> <b>Example :</b></p>
+                   
+                <pre>
+                <code class="language-java">
+import numpy as np
+array1 = np.array([[2, 4, 6],[1, 3, 5]])
+print(array1.size)</code>
+                </pre>
+                <p> <b> Ouput :-</b></p>
+                <p> 6 </p>
+                </div>
+                <br>
+                <div class="w3-container  w3-sand w3-round-xlarge">
+                    <p> <b> &#10028; Numpy Array <span style="color: rgb(115, 2, 7);">itemsize </span>  Attribute :- </b></p>
+                    <p> &#x21db; The <span style="color: rgb(115, 2, 7);">itemsize </span>  attribute determines size (in bytes) of each element in the array. </p>
+                    
+                    <p> <b>Example :</b></p>
+                   
+                <pre>
+                <code class="language-java">
+# dtype of array is int8 (1 byte) 
+import numpy as np
+array1 = np.array([6, 7, 8, 10, 13], dtype=np.int8)
+array2 = np.array([6, 7, 8, 10, 13], dtype=np.int32)
+print(array1.itemsize)  
+print(array2.itemsize)  </code>
+                </pre>
+                <p> <b> Ouput :-</b></p>
+                <p> 1 </p>
+                <p> 4 </p>
+
+                <p> <b> Note: </b>int8 is equal to <span style="color: rgb(115, 2, 7);">1 byte</span>. </p>
+                </div>
+                <br>
+                <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+                    <p> <b> &#10028; NumPy Array  <span style="color: rgb(115, 2, 7);">shape</span> Attribute </b> </p> 
+                    <p>&#x21db; In NumPy, the <span style="color: rgb(115, 2, 7);">shape</span>  attribute returns a <span style="color: rgb(115, 2, 7);">tuple of integers</span>  that gives the size of the array in each dimension.</p>
+                    
+                    <p> <b>Example 1</b></p>
+                   
+                <pre>
+                <code class="language-java">
+import numpy as np
+array1 = np.array([[1, 2, 3],[6, 7, 8]])
+# return a tuple that gives size of array in each dimension
+print(array1.shape)
+                </code>
+                </pre> 
+                <p> <b> Output :</b></p>
+                <p> (2, 3)</p>
+                <hr style="height: 1px; background-color: brown;">
+                    <p> <b>Example 2 :</b>Resizes the ndarray </p>
+                   
+                <pre>
+                <code class="language-java">
+# this resizes the ndarray 
+import numpy as np 
+
+a = np.array([[1,2,3],[4,5,6]]) 
+a.shape = (3,2) 
+print(a) 
+</code>
+                </pre> 
+                <p> <b> Output :</b></p>
+               
+ 
+ 
+                <p> [[1 2] </p>
+                <p> [3 4]</p>
+                <p>[5 6]] </p>
+                <hr style="height: 1px; background-color: brown;">
+
+   <p> <b>Example 3 :</b>NumPy also provides a reshape function to resize an array. </p>
+                   
+   <pre>
+   <code class="language-java">
+import numpy as np 
+a = np.array([[1,2,3],[4,5,6]]) 
+b = a.reshape(3,2) 
+print(b)
+</code>
+   </pre> 
+   <p> <b> Output :</b></p>
+   <p>[[1 2]</p>
+   <p>[3 4]</p>
+   <p> [5 6]]</p>
+<hr style="height: 1px; background-color: brown;">
+
+                </div>
+
+
+                <br>
+                <br>
+                <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+                    <p> <b>Labwork:</b></p>
+
+                    <p> Q158) WAP to create 1 dimensional numpy array of 10 integers, convert its datatype in <span style="color: rgb(115, 2, 7);"> Unsigned integer</span>.
+                    </p>
+                    <p>Q159) WAP to create 2 dimensional numpy array of 10 integers, convert its datatype in <span style="color: rgb(115, 2, 7);">float64</span> .
+                    </p>
+                    <p> Q160) WAP to create 2 dimensional numpy array of 10 float values, convert its datatype in  <span style="color: rgb(115, 2, 7);">interger32</span> by using 
+                        <span style="color: rgb(115, 2, 7);"> astype() </span> function.
+                        </p>
+                    <p> Q161) WAP to create 3 dimensional numpy array of 10 alphabet character, and check its <span style="color: rgb(115, 2, 7);"> number of dimensions</span> are 
+                        present.
+                       </p>
+                    <p>  Q162) WAP to create 2 dimensional numpy array of any number of integers, find the <span style="color: rgb(115, 2, 7);">total number of elements</span>  are present.
+                    </p>
+    <br>
+  
+
+<br>           
+                </div>
+                <br>
+                <br>
+<div class="w3-container  w3-sand w3-round-xlarge">
+    <h2 class="w3-panel w3-center"><u> Higher Dimensional Arrays</u></h2>
+    <p> &#x21db;  An array can have any number of dimensions.</p>
+  <p>  &#x21db;  When the array is created, you can define the number of dimensions by using the <span style="color: rgb(115, 2, 7);">ndmin</span>  argument.
+  </p>
+
+    <p> <b>Example:</b> Create an array with 5 dimensions and verify that it has 5 dimensions:</p>
+    
+<pre>
+<code class="language-java">
+import numpy as np
+
+arr = np.array([1, 2, 3, 4], ndmin=5)
+
+print(arr)
+print('number of dimensions :', arr.ndim)
+</code>
+</pre> 
+<p> <b> Ouput :</b></p>
+<p>[[[[[1 2 3 4]]]]] </p>
+<p>number of dimensions : 5</p>
+<br>
+<hr style="height: 1px; background-color: brown;">
+<br>
+<h2 class="w3-panel w3-center"><u> arange() in Numpy</u></h2>
+ <p> <b>  Syntax:- </b>arange(stop) | arange(start, stop) | arange(start, stop, step)  </p>
+
+ <p> &#x21db; Return evenly spaced values within a given interval.</p>
+<p> <b>Example :</b></p>
+                   
+<pre>
+<code class="language-java">
+import numpy as np
+a = np.arange(8)
+print(a)
+</code>
+</pre> 
+<p> <b> Output :- </b></p>
+<p> [0 1 2 3 4 5 6 7]</p>
+</div>
+
+                <br>
+                <br>
+                <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+                    <p> <b>Labwork:</b></p>
+                   <p>Q163) WAP to create 2d array of which shape is (2,3) and convert its shape into (3,2) and (1,6). </p>
+                   <p> Q164) WAP to create 3d array by which following shape is given below :-</p>
+                     <ul class="w3-ul">
+                      <li> a)  (2, 2, 2)</li>
+                      <li>b) (3, 2, 2) </li>
+                      <li>c) (2, 3, 2) </li>
+                      <li>d) (2, 3, 1) </li>
+                      <li>e) (1, 6, 1) </li>
+                     </ul>
+                </div>
+<br>
+<h2 class="w3-panel w3-center"><u>flags Attribute in Numpy</u></h2>
+<div class="w3-container  w3-sand w3-round-xlarge">
+    <p>  &#10028; The ndarray object has the following attributes. Its current values are returned by this function.
+  </p>
+
+    <p> <b>Example :</b></p>
+   
+<pre>
+<code class="language-java">
+import numpy as np
+x = np.array([1,2,3,4,5])
+print(x.flags)
+</code>
+</pre>
+<p> <b> Output :- </b></p>
+<p>C_CONTIGUOUS : True </p>
+<p> F_CONTIGUOUS : True </p>
+<p> OWNDATA : True </p>
+<p> WRITEABLE : True </p>
+<p>  ALIGNED : True </p>
+<p> WRITEBACKIFCOPY : False </p> 
+</div>
+<hr style="height: 1px; background-color: brown;">
+<div class="w3-container  w3-sand w3-round-xlarge">
+   <ul class="w3-ul">
+ 
+
+
+
+
+   <li>  <b>C_CONTIGUOUS (C) : </b>The data is in a single, C-style contiguous segment.</li>
+   <li>  <b> F_CONTIGUOUS (F) :</b>	The data is in a single, Fortran-style contiguous segment.</li>
+   <li><b>OWNDATA (O) :</b> The array owns the memory it uses or borrows it from another object.</li>
+   <li><b> WRITEABLE (W) :</b> The data area can be written to. Setting this to False locks the data, making it read-only.
+   </li>
+   <li><b>ALIGNED (A): </b>The data and all elements are aligned appropriately for the hardware.
+   </li>
+   <li> <b> WRITEBACKIFCOPY (X) :</b> This array is a copy of some other array. The C-API function PyArray_ResolveWritebackIfCopy must be called before deallocating to the base array will be updated with the contents of this array.
+   </li>
+   </ul> 
+
+</div>
+
+<br>
+</div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="ArrayCreationRoutines" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+              
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>NumPy - Array Creation Routines</u></h2>
+                 <p> &#10028; A new ndarray object can be constructed by any of the following array creation routines or using a low-level ndarray constructor.</p>
+                  <br>      
+                  <br>
+                  <h2 class="w3-panel w3-center"><u>numpy.empty()</u></h2>      
+
+                  <div class="w3-container  w3-sand w3-round-xlarge">
+                          <p> &#x21db; It creates an uninitialized array of specified shape and dtype.</p>
+                   
+ <p> <b> Syntax : </b>numpy.empty(shape, dtype = float, order = 'C')</p> 
+ <ul class="w3-ul">
+ <li><b>shape : int or tuple of int</b> <br>
+    Shape of the empty array. <span style="color: rgb(115, 2, 7);">e.g., (2, 3) or 2.</span> </li>
+ <li><b>dtype : data-type, optional</b> <br>
+    Desired output data-type for the array. <span style="color: rgb(115, 2, 7);"> e.g, numpy.int8. Default is numpy.float64.</span></li>
+ <li> <b> order : {'C', 'F'}, optional, default: 'C'</b> <br>
+    
+Whether to store multi-dimensional data in row-major (C-style) or column-major (Fortran-style) order in memory.
+ </li>
+ </ul>
+ 
+ 
+                         <p> <b>Example:</b></p>
+                   
+                <pre>
+                <code class="language-java">
+import numpy as np
+x = np.empty((2,3), dtype = np.int8)
+print(x)</code>
+                </pre> 
+                <p> <b>Output :- </b></p>
+                <p>[[ 32  32  32]</p>
+                <p> [ 32 104 116]]</p>
+                <br>
+                <p> <b> Note −</b> The elements in an array show random values as they are not initialized.</p>
+                </div>
+                <br>      
+                <br>
+                <h2 class="w3-panel w3-center"><u>numpy.zeros()</u></h2>
+                <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+ <p> &#10028; Return a new array of given shape and type, filled with zeros.</p>
+ <p><b>Syntax : </b>numpy.zeros(shape, dtype = float, order = 'C')</p>
+ <ul class="w3-ul">
+    <li><b>shape : int or tuple of int</b> <br>
+       Shape of the empty array. <span style="color: rgb(115, 2, 7);">e.g., (2, 3) or 2.</span> </li>
+    <li><b>dtype : data-type, optional</b> <br>
+       Desired output data-type for the array. <span style="color: rgb(115, 2, 7);"> e.g, numpy.int8. Default is numpy.float64.</span></li>
+    <li> <b> order : {'C', 'F'}, optional, default: 'C'</b> <br>
+       
+   Whether to store multi-dimensional data in row-major (C-style) or column-major (Fortran-style) order in memory.
+    </li>
+    </ul>
+
+
+                    <p> <b>Example :</b></p>
+                   
+                <pre>
+                <code class="language-java">
+import numpy as np
+x = np.zeros(5)
+print(x)</code>
+                </pre>
+                <p> <b>Output :- </b></p>
+                [ 0.  0.  0.  0.  0.]
+                </div>
+                <br>      
+                <br>
+                <h2 class="w3-panel w3-center"><u>numpy.ones()</u></h2>
+                <div class="w3-container  w3-sand w3-round-xlarge">
+ <p> &#10028; Returns a new array of specified size and type, filled with ones.</p>
+ <p><b>Syntax : </b>numpy.ones(shape, dtype = None, order = 'C')</p>
+ <ul class="w3-ul">
+    <li><b>shape : int or tuple of int</b> <br>
+       Shape of the empty array. <span style="color: rgb(115, 2, 7);">e.g., (2, 3) or 2.</span> </li>
+    <li><b>dtype : data-type, optional</b> <br>
+       Desired output data-type for the array. <span style="color: rgb(115, 2, 7);"> e.g, numpy.int8. Default is numpy.float64.</span></li>
+    <li> <b> order : {'C', 'F'}, optional, default: 'C'</b> <br>
+       
+   Whether to store multi-dimensional data in row-major (C-style) or column-major (Fortran-style) order in memory.
+    </li>
+    </ul>
+
+
+                    <p> <b>Example :</b></p>
+                   
+                <pre>
+                <code class="language-java">
+import numpy as np
+x = np.ones(5)
+print(x)</code>
+                </pre>
+                <p> <b>Output :- </b></p>
+                [1. 1. 1. 1. 1.]
+                </div>
+
+
+
+
+
+
+                <br>      
+                <br>
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+
+<section id="ArrayFromExistingData" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+              
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>NumPy - Array From Existing Data</u></h2>
+                    <p>&#x21db; To create an array from existing data.</p>
+                    <h2 class="w3-panel w3-center"><u>numpy.asarray()</u></h2>
+               <p> <b> &#10028; numpy.asarray() :</b> This function is used when we want to convert input to an array. Input can be lists, lists of tuples, tuples, tuples of tuples, tuples of lists and arrays.</p>
+                 <p>  <b> Syntax :</b> numpy.asarray(a, dtype = None, order = None)</p> 
+                    
+<ul class="w3-ul">
+
+    <li> <b> a : </b> Input data in any form such as list, list of tuples, tuples, tuple of tuples or tuple of lists
+    </li>
+    <li> <b> dtype :  </b>By default, the data type of input data is applied to the resultant ndarray
+    </li>
+    <li>	<b>order :</b> C (row major) or F (column major). C is default. </li>
+</ul>
+
+<div class="w3-container  w3-sand w3-round-xlarge">
+
+    <p> <b>Example 1 :</b> convert list to ndarray </p>
+   
+<pre>
+<code class="language-java">
+x = [1,2,3]
+a = np.asarray(x)
+print(a) 
+</code>
+</pre>
+<p> <b> Output :</b></p>
+<p>[1 2 3]</p>
+</div>
+
+<br>
+<div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+    <p> <b>Example 2:</b> ndarray from tuple  </p>
+   
+<pre>
+<code class="language-java">
+x = (1,2,3)
+a = np.asarray(x)
+print(a)
+</code>
+</pre>
+<p> <b> Output :</b></p>
+<p>[1 2 3]</p>
+</div>
+<br>
+<div class="w3-container  w3-sand w3-round-xlarge">
+
+    <p> <b>Example 3:</b> ndarray from list of tuples   </p>
+   
+<pre>
+<code class="language-java">
+x = [(1,2,3),(4,5,3)]
+a = np.asarray(x)
+print(a) 
+</code>
+</pre>
+<p> <b> Output :</b></p>
+<p>[[1 2 3]</p>
+<p>[4 5 3]]</p>
+</div>
+<br>
+<div class="w3-container  w3-sand w3-round-xlarge">
+ <p> <b>Labwork :</b></p>
+<p> <b>165) </b> WAP to create Array Creation Routines by using empty() function whose shape is (2,3,2) with datatype is uint32.</p>
+<p> <b>166) </b> WAP to create Array Creation Routines by using zeros() function whose shape is (1,3,2) with datatype is uint8.</p>
+<p> <b>167) </b> WAP to create Array Creation Routines by using ones() function whose shape is (3,3,2) with datatype is uint16.</p>
+<p> <b>168) </b> WAP to create Array From Existing Data by using asarray() function by passing 5 integers list.</p>
+<p> <b>169) </b> WAP to create Array From Existing Data by using asarray() function by passing 5 color name  list.</p>
+<p> <b>170) </b> WAP to create Array From Existing Data by using asarray() function by passing 10 integers  tuple.</p>
+<p> <b>171) </b> WAP to create Array From Existing Data by using asarray() function by passing  list of  tuple (5-5 integer).</p>
+
+</div>
+
+<br>
+<br>
+<div class="w3-container  w3-pale-yellow w3-round-xlarge">
+ <p> <b> &#10028; </b> What is the b in Python encode?</p>
+ <p> &#x21db; In Python, the <span style="color: rgb(115, 2, 7);">'b' character </span> before a string is used to specify the string as a <span style="color: rgb(115, 2, 7);">"byte string"</span> .</p>
+ <p><b> &#10028; </b> Difference between Strings and Byte Strings. </p>
+ <p> &#x21db;  Strings are normal characters that are in  human-readable format whereas Byte strings are strings that are in  bytes.  
+</p>
+
+<span style="color: rgb(115, 2, 7);"></span>
+ <p> <b>Example :</b></p>
+   
+<pre>
+<code class="language-java">
+normalText="Python"
+print("Original Human Readable Text:", normalText)
+print("Type of Original Human Readable Text:", type(normalText),"\n\n")
+
+
+
+byte_string1 = b"Python"  #Direct given byte string.
+print("Original Byte String 1:", byte_string1)
+print("Type of Original Byte String 1", type(byte_string1),"\n\n")
+
+
+
+byte_string2 = normalText.encode()
+
+print("Original Byte String 2:", byte_string2)
+print("Type of Original Byte String 2", type(byte_string2))
+
+</code>
+</pre> 
+<p><b> Output :- </b></p>
+<p>Original Human Readable Text: Python </p>
+<p> Type of Original Human Readable Text: < class 'str' > </p>
+<p>Original Byte String 1: b'Python' </p>
+<p> Type of Original Byte String 1 < class 'bytes' > </p>
+<p> Original Byte String 2: b'Python'</p>
+<p>Type of Original Byte String 2 < class 'bytes' > </p>
+
+<br>
+<p> <b> Note :</b> Generally, strings are converted to bytes first just like any other object because a computer can store data only in <span style="color: rgb(115, 2, 7);">bytes</span> . When working with byte strings in python, they are not converted into bytes as they are <span style="color: rgb(115, 2, 7);">already in bytes</span> .</p>
+</div>
+<br>
+<br>
+<h2 class="w3-panel w3-center"><u>numpy.frombuffer</u></h2>
+
+<div class="w3-container  w3-sand w3-round-xlarge">
+    <p>  &#10028; This function interprets a buffer as one-dimensional array. Any object that exposes the buffer interface is used as parameter to return an ndarray.</p>
+ <p> &#10028; <b>Syntax :- </b> numpy.frombuffer(buffer, dtype = float, count = -1, offset = 0)</p>
+
+ <ul class="w3-ul">
+
+    <li> <b> buffer </b> Any object that exposes buffer interface.</li>
+
+    <li> <b>dtype </b> Data type of returned ndarray. Defaults to float</li>
+    <li> <b> count</b> The number of items to read, default -1 means all data</li>
+    <li> <b> offset</b> The starting position to read from. Default is 0</li>
+ </ul>
+ 
+
+ 
+ <p> <b>Example 1 :</b></p>
+   
+<pre>
+<code class="language-java">
+s = b'Python'
+a=np.frombuffer(s, dtype = 'S1')
+print(a)
+
+a=np.frombuffer(s, dtype = 'S2')
+print(a)
+</code>
+</pre> 
+<p><b> Output :</b></p>
+<p> [b'P' b'y' b't' b'h' b'o' b'n']</p>
+<p>[b'Py' b'th' b'on'] </p>
+
+<hr style="height: 1px; background-color: brown;">
+
+
+<p> <b>Example 2 :</b></p>
+   
+<pre>
+<code class="language-java">
+s = b'Python Programming'
+a=np.frombuffer(s, dtype = 'S1', offset=10 ,count=4)
+print(a)
+
+</code>
+</pre> 
+<p><b> Output :</b></p>
+<p> [b'g' b'r' b'a' b'm']</p>
+
+<hr style="height: 1px; background-color: brown;">
+
+
+<p> <b>Example 3 :</b></p>
+   
+<pre>
+<code class="language-java">
+n=b'\x01\x02'
+a=np.frombuffer(n, dtype=np.uint8)
+print(a)
+</code>
+</pre> 
+<p><b> Output :</b></p>
+<p>[1 2]</p>
+<br>
+<br>
+
+</div>
+
+<h2 class="w3-panel w3-center"><u>numpy.fromiter</u></h2>
+<div class="w3-container  w3-pale-yellow w3-round-xlarge">
+  <p>  &#10028; This function builds an ndarray object from any iterable object. A new one-dimensional array is returned by this function.
+</p>
+    
+<p> <b> Syntax :- </b>  numpy.fromiter(iterable, dtype, count = -1)</p>
+
+<ul class="w3-ul">
+<li> <b> iterable : </b>   Any iterable object. </span> </li>
+ <li>  <b>    dtype :</b> Data type of resultant array</li>   
+
+  <li> <b> count :</b> The number of items to be read from iterator. Default is -1 which means all data to be read
+  </li>
+   
+</ul>
+
+
+   
+    <p> <b>Example 1:</b></p>
+   
+<pre>
+<code class="language-java">
+import numpy as np
+l=[1,2,3,4,5,6]
+x= np.fromiter(l, dtype = float)
+print(x)
+</code>
+</pre> 
+<p> <b> Output :- </b></p>
+<p> [1. 2. 3. 4. 5. 6.]</p>
+
+<hr style="height: 1px; background-color: brown;">
+    <p> <b>Example 2:</b></p>
+   
+<pre>
+<code class="language-java">
+import numpy as np
+l=[1,2,3,4,5,6]
+it=iter(l)
+x= np.fromiter(it, dtype = np.uint8)
+print(x)
+</code>
+</pre> 
+<p> <b> Output :- </b></p>
+<p>[1 2 3 4 5 6]</p>
+</div>
+
+
+
+                 
+                 <br>
+                 <br>
+
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+<section id="FromNumericalRanges" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+              
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Array From Numerical Ranges</u></h2>
+                <p>To create an array from numerical ranges.</p>
+                  
+                <h2 class="w3-panel w3-center"><u>numpy.arange</u></h2>
+<p>&#10028; This function returns an ndarray object containing evenly spaced values within a given range.</p>
+<p> <b> Syntax :</b> numpy.arange(start, stop, step, dtype)</p>
+
+<div class="w3-container  w3-sand w3-round-xlarge">
+
+    <p> <b>Example :</b></p>
+   
+<pre>
+<code class="language-java">
+import numpy as np
+x=np.arange(5)
+print(x)
+
+x=np.arange(5, dtype=np.float_)
+print(x)
+
+x=np.arange(10,30,3)
+print(x)
+
+</code>
+</pre>
+<p> <b> Output :- </b></p>
+<p>[0 1 2 3 4] </p>
+<p> [0. 1. 2. 3. 4.]</p>
+<p> [10 13 16 19 22 25 28]</p>
+
+</div>
+<br>
+<h2 class="w3-panel w3-center"><u>numpy.linspace</u></h2>
+<p> &#10028; This function is similar to arange() function. In this function, instead of step size, the number of evenly spaced values between the interval is specified.</p>
+<p> <b> Syntax :-</b> numpy.linspace(start, stop, num, endpoint, retstep, dtype)</p> 
+
+<ul class="w3-ul">
+
+    <li>  <b>start :  </b> The starting value of the sequence.</li>
+    <li> <b>stop : </b>  The end value of the sequence, included in the sequence if endpoint set to true.</li>
+
+    <li> <b> num  :</b> (optional)The number of evenly spaced samples to be generated. Default is 50.</li>
+    <li> <b> endpoint : </b> (optional) True by default, hence the stop value is included in the sequence. If false, it is not included
+    </li>	
+    
+    <li> <b>  retstep : </b>(optional) If true, returns samples and step between the consecutive numbers</li>
+    
+    <li> <b>dtype : </b>(optional) Data type of output ndarray</li>
+   
+
+ </ul>
+ <br>
+ <br>
+<div class="w3-container  w3-sand w3-round-xlarge">
+
+    <p> <b>Example 1:</b></p>
+   
+<pre>
+<code class="language-java">
+import numpy as np
+x=np.linspace(1,2,5)
+print(x)
+</code>
+</pre>
+<p> <b> Output :-</b></p>
+<p>[1.   1.25 1.5  1.75 2.  ]</p>
+</div>
+<br>
+<div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+    <p> <b>Example 2:</b></p>
+   
+<pre>
+<code class="language-java">
+# endpoint set to false 
+import numpy as np
+x = np.linspace(10,20, 5, endpoint = False)
+print(x)
+</code>
+</pre>
+<p> <b> Output :</b></p>
+<p>[10. 12. 14. 16. 18.]</p>
+</div>
+<br>
+<div class="w3-container  w3-sand w3-round-xlarge">
+
+    <p> <b>Example 3:</b></p>
+   
+<pre>
+<code class="language-java">
+# find retstep value
+import numpy as np
+x = np.linspace(1,2,5, retstep = True)
+print(x)
+# retstep here is 0.25
+</code>
+</pre>
+<p><b> Output :-</b></p>
+<p>(array([1.  , 1.25, 1.5 , 1.75, 2.  ]), 0.25)</p>
+</div>
+
+<br>
+<div class="w3-container  w3-sand w3-round-xlarge">
+<p> <b> Labwork :</b></p>    
+<p> <b> 172) </b> WAP to create Array From Existing Data by using frombuffer() function to print your name by 2-2 characters. </p>
+<p> <b> 173) </b> WAP to create Array From Existing Data by using frombuffer() function to print from "Programming Knowledge", Output must be "ming Know". </p>
+<p> <b> 174) </b> WAP to create Array From Existing Data by using frombuffer() function to print, Output must be [9 8]. </p>
+<p> <b> 175) </b> WAP to create Array From Numerical Ranges by using arange() function to print the following output.</p>
+ <ul class="w3-ul">
+  <li> a) [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] </li>
+  <li> b) [2., 3., 4., 5., 6., 7.] </li>
+  <li> c) [ 8., 11., 14., 17.]</li>
+  <li> d) [28, 32, 36, 40, 44, 48]</li>
+  <li> e) [3., 6., 9.]</li>
+ </ul>  
+<p> <b> 176) </b> WAP to create Array From Numerical Ranges by using linspace() function to print the following output.</p>
+<ul class="w3-ul">
+   <li> a) [2.  , 2.75, 3.5 , 4.25, 5.  ] </li> 
+   <li> b) [2. , 2.5, 3. , 3.5, 4. ] </li> 
+   <li> c) [10., 12., 14., 16., 18., 20., 22., 24., 26., 28.]</li> 
+   <li> d)  ([1. , 1.5, 2. , 2.5, 3. ]), 0.5)</li> 
+   <li> e) [4. , 4.5, 5. ]</li> 
+
+</ul>
+<br>
+</div>
+
+
+
+<br>
+<br>
+<br>
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="Indexing&Slicing" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+              
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>NumPy - Indexing & Slicing</u></h2>
+               
+
+                    <p> <b> &#10028; </b> Three types of indexing methods are available - field access, basic slicing and advanced indexing.</p>
+                     <p> <b>  &#10028; </b> A Python slice object is constructed by giving start, stop, and step parameters to the built-in slice function. This slice object is passed to the array to extract a part of array.</p>
+              
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+
+                        <p> <b>Example 1:</b></p>
+                       
+                    <pre>
+                    <code class="language-java">
+import numpy as np
+a=np.arange(10)
+s=slice(2,7,2)
+print(a[s])
+</code>
+                    </pre>
+                    <p> <b> Output :-</b></p>
+                    <p>[2 4 6]</p>
+                    </div>
+                    <br>
+                    <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+                        <p> <b>Example 2:</b></p>
+                       
+                    <pre>
+                    <code class="language-java">
+import numpy as np
+a=np.arange(10)
+b = a[2:7:2]
+print(b)</code>
+                    </pre>
+                    <p> <b> Output :-</b></p>
+                    <p>[2 4 6]</p>
+                    </div>
+                    <br>
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+
+                        <p> <b>Example 3:</b></p>
+                       
+                    <pre>
+                    <code class="language-java">
+import numpy as np 
+
+a = np.arange(10) 
+b = a[5] 
+print(b)</code>
+                    </pre>
+                    <p> <b> Output :-</b></p>
+                    <p>5</p>
+                    </div>
+                    <br>
+                    <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+                        <p> <b>Example 4:</b></p>
+                       
+                    <pre>
+                    <code class="language-java">
+import numpy as np 
+a = np.arange(10) 
+print(a[2:])</code>
+                    </pre>
+                    <p> <b> Output :-</b></p>
+                    <p>[2  3  4  5  6  7  8  9]</p>
+                    </div>
+                    <br>
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+
+                        <p> <b>Example 5:</b></p>
+                       
+                    <pre>
+                    <code class="language-java">
+import numpy as np 
+a = np.arange(10) 
+print (a[2:5])</code>
+                    </pre>
+                    <p> <b> Output :-</b></p>
+                    <p>[2  3  4]</p>
+                    </div>
+                    <br>
+                    <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+                        <p> <b>Example 6:</b></p>
+                       
+                    <pre>
+                    <code class="language-java">
+import numpy as np
+a = np.array([[1,2,3],[3,4,5],[4,5,6]])
+print(a)
+
+print('Now we will slice the array from the index a[1:]')
+print(a[1:])
+</code>
+                    </pre>
+                    <p> <b> Output :-</b></p>
+                    
+                    
+                   
+                  
+                    <p>[[1 2 3]</p>
+                   <p>[3 4 5]</p>
+                   <p> [4 5 6]]</p>
+                   <br>
+                   <p>Now we will slice the array from the index a[1:]</p>
+                  <p>[[3 4 5]</p> 
+                  <p> [4 5 6]]</p> 
+                   
+   
+                   
+
+                    </div>
+                    <br>
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+
+                        <p> <b>Example 7:</b></p>
+                       
+                    <pre>
+                    <code class="language-java">
+import numpy as np 
+a = np.array([[1,2,3],[3,4,5],[4,5,6]]) 
+
+print('Our array is:') 
+print(a) 
+  
+
+# this returns array of items in the second column 
+print('The items in the second column are:')  
+print (a[...,1]) 
+
+
+# Now we will slice all items from the second row 
+print('The items in the second row are:') 
+print(a[1,...]) 
+
+
+# Now we will slice all items from column 1 onwards 
+print('The items column 1 onwards are:') 
+print(a[...,1:])</code>
+                    </pre>
+                    <p> <b> Output :-</b></p>
+                    <p>  Our array is:</p>
+                   <p>[[1 2 3]</p>
+                  <p> [3 4 5]</p>
+                 <p> [4 5 6]] </p>
+<br>
+<p>The items in the second column are: </p> 
+<p>[2 4 5] </p>
+<br>
+
+<p>The items in the second row are:</p>
+<p>[3 4 5]</p>
+<br>
+<p>The items column 1 onwards are:</p>
+<p>[[2 3] </p>
+<p> [4 5]</p>
+<p> [5 6]] </p>
+
+
+                   
+                    </div>
+
+                    <br>
+                    <br>
+                    <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+                       <p><b>Flattening the arrays</b> </p>
+                       <p> Flattening array means converting a multidimensional array into a 1D array.
+                    </p> 
+                        <p> We can use <span style="color: rgb(115, 2, 7);"> reshape(-1)</span> to do this.</p>
+                        
+                        <p> <b>Example :</b></p>
+                       
+                    <pre>
+                    <code class="language-java">
+import numpy as np
+arr = np.array([[1, 2, 3], [4, 5, 6]])
+newarr = arr.reshape(-1)
+print(newarr)</code>
+                    </pre>
+                    <p> <b> Output :-</b></p>
+                    <p>[1 2 3 4 5 6]</p>
+                    </div>
+
+
+                 <br>
+                 <br>
+
+
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+    
+ 
+ <script>
+ 
+ AOS.init();
+
+
+
+</script>
+</body>
+</html>

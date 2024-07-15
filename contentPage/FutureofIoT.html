@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet of Things</title>
+   <!-- cdn links start -->
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+
+
+   <!-- cdn links end-->
+    
+    
+    
+    
+    <!-- content web page links  start-->
+    <link rel="stylesheet" href="content/content.css">
+    <script src="content/content.js"></script>
+
+    <link rel="stylesheet" href="content/prism.css">
+    <script src="content/prism.js"> </script>
+
+    <link rel="stylesheet" href="content/aos/aos.css">
+    <script src="content/aos/aos.js"></script>
+
+    <!-- content web page links end -->
+  
+
+
+
+</head>
+<body>
+
+
+    <!-- background image Start -->
+    <div class="backgrounds overlay">
+        <div class="background" style="background-image: url('content/img/hero.jpg');"></div>
+    </div>
+    <!-- background image End-->
+    
+    <!-- Sidebar Start -->
+
+
+
+    <div class="w3-sidebar w3-bnultrasoft-color topPadding   w3-card-4 w3-animate-left" style="display:none" id="mySidebar">
+        <div class="w3-bar  w3-hover-white">
+            <span class="w3-bar-item w3-padding-16  ">Contents</span> <button onclick="w3_close()" class="w3-bar-item w3-button w3-right w3-padding-16  w3-hover-black " >&times;</button>
+        </div>
+        
+        <div class="w3-bar-block  ">
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#needofSecurity">Need of security in IoT</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#FutureIoT">Future of IoT</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#ApplicationsofAI">Applications of AI</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#MachineLearning">Machine Learning</a>   
+           
+            <!-- <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#IoTLevel1">IoT Level 1</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#IoTLevel2">IoT Level 2</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#IoTLevel3">IoT Level 3</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#IoTLevel4">IoT Level 4</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#IoTLevel5">IoT Level 5</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#IoTLevel6">IoT Level 6</a>    -->
+
+               
+               
+            <!-- <a onclick="myFunction('Demo2')" class="w3-button  w3-hover-white w3-left-align w3-block w3-animate-zoom">Accordion <i class="fa fa-caret-down"></i></a>
+                <div id="Demo2" class="w3-hide w3-animate-zoom">
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 1</a>
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 2</a>
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 3</a>
+                </div>
+
+           <a class="w3-bar-item w3-button w3-animate-zoom w3-bnultrasoft-color w3-hover-white" href="quiz.html">Python Quiz Set1</a>     -->
+        </div>
+       
+
+
+    </div>
+
+
+
+
+
+
+
+    <!-- Sidebar Start End -->
+
+<!-- Page Content Start -->
+
+        <!-- Page content header Start -->
+
+
+
+
+        <div class="w3-bnultrasoft-color w3-top">
+            <button class="w3-button w3-xlarge  w3-hover-white" onclick="w3_open()" >&#9776;</button>
+
+            <a href="../ittoolsandnetworkbasics.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M1</a>
+            <a href="../webdesigningandpublishing.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M2</a>
+            <a href="../python.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M3</a>
+            <a href="../iot.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M4</a>
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium w3-xlarge w3-hover-white" onclick="myFunctionRightItem()" >&#9776;</a>
+
+           
+                        <!-- SearchBar start  -->
+
+                       
+
+                    <!-- <div class="w3-dropdown-click  w3-hover-black">
+                        
+                        <input class="w3-input w3-center w3-padding w3-round-xxlarge" type="text" placeholder="Search any contents..."  onclick="dropFunction()"  id="myInput" onkeyup="filterFunction()">
+                        <div class="w3-dropdown-content w3-bar-block w3-card w3-white" id="myDIV" >
+                        
+                            <a class="w3-bar-item w3-button"  href="#about">About</a>
+                            <a class="w3-bar-item w3-button" href="#base">Base</a>
+                            <a class="w3-bar-item w3-button" href="#sec1">Blog</a>
+                            <a class="w3-bar-item w3-button" href="#sec2">Contact</a>
+                            <a class="w3-bar-item w3-button" href="#sec3">Custom</a>
+                            <a class="w3-bar-item w3-button" href="#support">Support</a>
+                            <a class="w3-bar-item w3-button" href="#tools">Tools</a>
+                            
+                        </div>
+                        </div> -->
+
+
+                    <!-- SearchBar End  -->
+                  
+                    <!-- ------------Right hidden items----------- -->
+
+                    <div id="demo" class="w3-bar-block w3-bnultrasoft-color w3-hide w3-hide-large w3-hide-medium  w3-animate-zoom w3-animate-fading">
+                        <a href="../ittoolsandnetworkbasics.html" class="w3-bar-item w3-button w3-hover-white">Olevel M1</a>
+                        <a href="../webdesigningandpublishing.html" class="w3-bar-item w3-button w3-hover-white">Olevel M2</a>
+                        <a href="../python.html" class="w3-bar-item w3-button w3-hover-white">Olevel M3</a>
+                        <a href="../iot.html" class="w3-bar-item w3-button w3-hover-white">Olevel M4</a>
+                      </div>
+                    <!-- ------------Right hidden items----------- -->
+   
+
+        </div>
+
+
+        <section id="needofSecurity" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>Need of security in IoT - Why Security?</u></h2>
+                       
+                           <h4> &#10028; <b>IoT Security :</b></h4>  
+                           <p><b>Internet of things (IoT) </b> security is the practice of securing IoT devices and the network these devices use. Its primary goals are to maintain the privacy of users and confidentiality of data, ensure the security of devices and other related information. </p>  
+                           <br>
+                           <br>
+                           <h4> &#10028; <b> Need of security in IoT - Why Security?</b> </h4>
+                           <p> IoT security is important because it is the backbone of the internet. IoT devices are connected to each other and they are all connected to the internet. This means that if someone hacks into one of these devices, they can hack into all of them.</p>
+                           <br>
+                           <br>
+                           
+                           <h4>&#10028; <b>Types of IoT security</b></h4>
+                           <p> The three types of IoT security are: </p>
+                           <p> <span style="color: rgb(115, 2, 7);"> 1). Device Security </span> (protecting the physical device and its components)</p>
+                           <p><span style="color: rgb(115, 2, 7);">2). Network Security</span>  (securing the communication channels between devices and networks) </p>
+                           <p> <span style="color: rgb(115, 2, 7);">3). Data Security</span>   (ensuring the confidentiality and integrity of data transmitted and stored by IoT devices).</p>   
+                            <br>
+                            <br>
+                           <h4><b>&#10028; Protecting IoT devices or IoT security
+                            for consumer devices-  :</b></h4>
+                           <p>1. Change Default Passwords and set strong password  </p>
+                           <p> 2. Regularly Update Firmware and Software </p>
+                           <p>3. Use Encryption for Data Transmission </p>
+                           <p> 4. At Networks segment implement higher Level of  Firewalls</p>
+                           <p> 5. Monitor Device all the connected device regularly </p>
+                           <p> 6. Disable Unnecessary Features and Services</p>
+                           <p> 7. Use Multi-Factor Authentication</p>
+                           <p> 8. Change default router settings</p>
+                           <p> 9. Change default credentials (admin Id & Password) at cloud data panel</p>
+                            <p> 10. Regularly test your systems connected</p>
+                           <br>
+                           <br>
+                           <h4> <b> &#10028; Security Level in IoT</b></h4>
+                           <p> <b> Low-level attack:</b>  If an attacker tries to attack a network and his attack is not successful.
+                        </p>
+                        <p><b>Medium-level attack: </b>  If an attacker/intruder or an eavesdropper is just listening to the medium but do not alter the integrity of data.
+                        </p>
+                        <p><b>High-level attack: </b>  If an attack is carried on a network and it alters the integrity of data or modifies the data.
+                        </p>
+                        <p> <b>Extremely High-level attack: </b>  If an intruder/attacker attacks on a network by gaining unauthorized access and performing an illegal operation, making the network unavailable sending bulk messages, or jamming network.
+                        </p>
+                          
+
+
+                           <br>
+                           <br>
+                          
+
+                       </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section> 
+        <section id="FutureIoT" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>Future IoT eco system - Need of power full core for building secure algorithms</u></h2>
+                       
+                             
+                         <br>
+
+                         <h4>  &#10028; Future of the Internet of Things (IoT) </h4>
+                         <p> We are living in a digitalized world that is full of technological advancements. One of these technological advancements is Internet of Things (IoT). So, the IoT is considered as future of the Internet.</p>
+                         <p> In future, the Iot will completely change our living styles and business models.</p>
+                         <p>   It will permit people and devices to communicate anytime, anyplace, with any device under ideal conditions using any network and any service.</p>
+                          <p>  The IoT allows billions of devices, peoples, and services to connect with others and exchange information due to the increased usage of IoT devices.</p>
+                           
+                          <br>
+                          <h4>  &#10028; Examples for new trends - AI, ML penetration to IoT </h4>
+                          <p>Today, you are totally dependent on technologies. Artificial Intelligence (AI) and Internet of Things (IoT) are among the technologies that have great scope and prospects for the future.
+                        </p>
+                        <p> <b> AI penetration to IoT :-</b></p>
+                        <p> As we the term "AI" defined by <b>John McCarthy.</b></p>
+                        <p> Artificial Intelligence permits machines to learn, think, act, and react like humans. It helps machines to analyze and study the ancient information, perceive patterns and make real-time decisions.</p>
+                        <p>AI processes the vast amount of data generated by IoT devices, making IoT systems smarter, more efficient, and capable of proactive actions.</p>
+                      <p> AI can use historical IoT data to make self predictions about future events and take self decision. </p>
+                       
+                       <br>
+                       <h4>Real World Examples of AI in IoT </h4>
+                       <p> <b>1) Tesla Motors – Self Driving Cars:-</b> The Tesla Motors self-driving cars use the latest advancements in Artificial Intelligence and the Internet of Things.</p>
+                        <p> <b>How uses of AI in self driving car? </b> Whenever one car learns some new information, that is passed on to all the other cars. And that is used to predict the behavior of cars and pedestrians on the road in various circumstances. This is only possible, A unique feature of the Tesla self-driving cars uses of  AI Tesla self-driving cars is that all of them act like a connected network. </p>
+                       <br>
+                       <p> <b>2) WildTrack – Endangered Species Preservation:-</b> WildTrack’s footprint identification technique (FIT) uses IoT and AI algorithms to identify the species, individual, age and gender of an animal from its unique footprint. </p>
+                    
+                    </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section> 
+        <section id="ApplicationsofAI" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>Applications of artificial intelligence (AI)</u></h2>
+                       
+                             <h5> <b> &#10028; There are many different applications of AI, including: </b>
+                             </h5>
+                             <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+                                   <p>  <b>&#10028; AI in business intelligence :-</b> </p>
+                             
+                                <p> AI is playing an increasingly important role in business intelligence (BI). AI-powered BI tools can help businesses collect, analyze, and visualize data more efficiently and effectively. This can lead to improved decision-making, increased productivity, and reduced costs.</p>
+                                  <ul class="w3-ul">
+                                    <li> <p> <b>&#x21db; Some of the ways that AI is being used in BI include:</b></p></li>
+                                     <li> <b>Data collection: </b> Collecting data from a variety of sources, including structured data (for example, databases) and unstructured data (for example, text documents, images, and videos)
+                                       </li>
+                                    <li> <b>  Data analysis:</b>  To analyze data and identify patterns, trends, and relationships
+                                    </li>
+                                    <li> <b>  Data visualization:</b> AI can help create visualizations that make it easier to understand data
+                                    </li>
+                              
+                                     <li> <b>Decision-making:</b> Insights and recommendations generated by AI models can help drive data-driven decision-making for businesses
+                                    </li>
+                                  </ul>
+                            </div>
+                            <br>
+                            <div class="w3-container   w3-sand w3-round-xlarge">
+                                <p>  <b>&#10028; AI in healthcare :-</b> </p>
+
+                                <p> AI is also playing an increasingly important role in healthcare. AI-powered tools can help doctors diagnose diseases, develop new treatments, and provide personalized care to patients. For example:</p>
+
+                                <ul  class="w3-ul"> 
+  
+                                 <li> <b>Disease diagnosis:</b> AI can be used to analyze patient data and identify patterns that may indicate a disease. This can help doctors diagnose diseases earlier and more accurately.</li>
+                               
+                                 <li>  <b>Treatment development: </b> By analyzing large datasets of patient data, AI can identify new patterns and relationships that can be used to develop new drugs and therapies.</li>
+                                  <li> <b>Personalized care: </b> By analyzing a patient's data, AI can help doctors develop treatment plans that are tailored to the patient's specific needs.</li>
+                                </ul>
+                               
+                            </div>
+
+                            <br>
+                            <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+                                <p>  <b>&#10028; AI in education:-</b> </p>
+                                <p> AI could be used in education to personalize learning, improve student engagement, and automate administrative tasks for schools and other organizations.</p>
+   
+                                <ul class="w3-ul">
+                                    <li> <b>Personalized learning:</b> AI can be used to create personalized learning experiences for students. By tracking each student's progress, AI can identify areas where the student needs additional support and provide targeted instruction. </li>
+                                    <li> <b>Improved student engagement:</b> AI can be used to improve student engagement by providing interactive and engaging learning experiences. For example, AI-powered applications can provide students with real-time feedback and support. </li>
+                                    <li> <b> Automated administrative tasks:</b> Administrative tasks, such as grading papers and scheduling classes can be assisted by AI models, which will help free up teachers' time to focus on teaching.</li>
+                                </ul>
+                          </div>
+                          <br>
+                          <div class="w3-container   w3-sand w3-round-xlarge">
+                            <p>  <b>&#10028; AI in agriculture:-</b> </p>
+                            <p> Some of the ways that AI is being used in agriculture include:</p>
+                            <ul class="w3-ul">
+                                <li> <b>Crop yield improvement:</b> Analyzing data on soil conditions, weather patterns, and crop growth with AI models and tools could help to develop strategies that can improve crop yields.</li>
+                                <li> <b>Cost reduction:</b> Automating tasks with AI, such as harvesting and irrigation, which can reduce labor costs.</li>
+                                <li> <b>Environmental protection:</b> Monitoring and managing natural resources, such as water, weather and soil.</li>
+                            </ul>
+                        </div>
+                         <br>
+                         <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+                            <p>  <b>&#10028; AI in manufacturing:-</b> </p>
+                            <p> Some ways that AI may be used in manufacturing include:</p>
+                            <ul class="w3-ul">
+                                <li> <b> Improved efficiency:</b>  Automating tasks, such as assembly and inspection (to check that everything is correct).</li>
+                                 <li> <b> Increased productivity:</b>  Optimizing production processes.</li>
+                                  <li><b>Improved quality: </b> AI can be used to detect defects and improve quality control.</li>
+                            </ul>
+                            
+                        </div>
+                        <br>
+                        <div class="w3-container  w3-sand w3-round-xlarge">
+                            <p> <b>&#10028; Additional AI applications</b></p>
+                            <p> In addition to the applications listed above, AI is also being used in a variety of other industries, including:</p>
+
+                            <ul class="w3-ul"> 
+                                <li> <b> Finance:</b> AI is being used to detect fraud, manage risk, and make investment decisions.</li>
+                                <li> <b> Retail:</b> AI is being used to personalize the shopping experience, recommend products, and manage inventory.</li>
+                                <li> <b>Transportation: </b>   AI is being used to develop self-driving cars and improve traffic management.
+                                </li>
+                                <li> <b>Energy: </b>   AI is being used to improve energy efficiency and predict energy demand.
+                                </li>
+                                <li> <b> Government: </b>  AI is being used to improve public safety, detect crime, and provide citizen services.
+                                </li>
+                                 <li> <b>Natural language processing (NLP):</b> NLP allows computers to understand and generate human language. This technology is used in a variety of applications, such as machine translation, spam filtering etc.</li>
+                                <li> <b> Robotics:</b> Robotics is the branch of AI that deals with the design, construction, and operation of robots. Robots are used in a variety of applications, such as manufacturing, healthcare, and space exploration.</li>
+                                <li> <b> Machine learning (ML): </b> Machine learning is a subset of artificial intelligence. ML allows computers to learn from data and improve their performance over time. This technology is used in a variety of applications, such as predictive analytics, fraud detection, and recommendation systems.</li>
+                                </ul>
+                        </div>
+ <br>
+                            
+                        </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section> 
+
+        <section id="MachineLearning" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                      
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>Machine Learning</u></h2>
+                            <p><b> &#10028; Machine Learning :- </b> Machine learning is a subset of artificial intelligence or we can Machine learning (ML) is a branch of artificial intelligence (AI) and computer science that focuses on the using data and algorithms to enable AI to imitate the way that humans learn, gradually improving its accuracy.
+                             </p>
+                             <p>In other words, machine learning involves computers finding insightful information without being told where to look.</p>
+                             
+                         <br>
+                         <div class="w3-container  w3-sand w3-round-xlarge">
+                            <p> <b> &#x21db; How does machine learning work?</b></p>
+                            <p> Machine learning works by training algorithms on sets of data to achieve an expected outcome such as identifying a pattern or recognizing an object.</p>
+                            <p>Assuming the training data is of high quality, the more training samples the machine learning algorithm receives, the more accurate the model will become.</p>   
+                             <p> The algorithm fits the model to the data during training, in what is called the “fitting process.” If the outcome does not fit the expected outcome, the algorithm is re-trained again and again until it outputs the accurate response.</p>
+                        </div>
+                        <br>
+                        <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+                            <p> <b> &#x21db; How are AI and ML connected?</b></p>
+                            <p>While AI and ML are not quite the same thing, they are closely connected. The simplest way to understand how AI and ML relate to each other is:  </p>
+                              <ul class="w3-ul">
+                               <li> &#10028; AI is the <b>broader concept</b> of enabling a machine or system to sense, reason, act, or adapt like a human</li>
+                               <li> &#10028; ML is an application of AI that allows machines to extract knowledge from data and learn from it autonomously.</li>
+
+                              </ul>
+
+                            </div>
+
+                            <br>
+                            <br>
+                         
+                       </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section> 
+        
+        
+
+
+ 
+        <!-- Page content header  End-->
+
+        <!-- Page content Body Start -->
+
+            
+
+            <!-- Page content Coding part Start -->
+
+
+
+<!-- 
+         <section id="sec1" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                        <h2 class="w3-panel w3-center">Example1</h2>
+                         <div class=" w3-leftbar w3-border-pink w3-border w3-round-large ">
+                           
+<pre class="line-numbers" data-line="15-25">
+    <code class="language-java">
+      package com.example.webviewtest;
+      import androidx.appcompat.app.AppCompatActivity;
+      import android.os.Bundle;
+      import android.view.View;
+      import android.webkit.WebView;
+    
+      public class MainActivity extends AppCompatActivity {
+      private WebView webView;
+      @Override
+      protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_main);
+            webView=findViewById(R.id.webviewforhighlight);
+            webView.getSettings().setJavaScriptEnabled(true);
+            webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+            webView.loadUrl("file:///android_asset/prismjs_template.html");
+        }
+     }
+    
+    
+     x = "awesome"
+    
+     def myfunc():
+       x = "fantastic"
+       print("Python is " + x)
+     
+     myfunc()
+     
+     print("Python is " + x)
+    
+    
+    </code>
+    </pre>
+    
+
+                         </div>
+
+                    </div> 
+                </div>
+            </div>
+
+
+
+         </section> -->
+
+
+         
+            
+              
+           
+
+   
+            
+            
+            <!-- Page content Coding part Start -->
+
+
+        <!-- Page content Body Start -->
+
+
+ <!-- Page Content End --> 
+ 
+ <script>
+ 
+ AOS.init();
+
+
+
+</script>
+</body>
+</html>

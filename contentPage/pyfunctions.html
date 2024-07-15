@@ -1,0 +1,2125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction of Python</title>
+   <!-- cdn links start -->
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+
+
+   <!-- cdn links end-->
+    
+    
+    
+    
+    <!-- content web page links  start-->
+    <link rel="stylesheet" href="content/content.css">
+    <script src="content/content.js"></script>
+
+    <link rel="stylesheet" href="content/prism.css">
+    <script src="content/prism.js"> </script>
+
+    <link rel="stylesheet" href="content/aos/aos.css">
+    <script src="content/aos/aos.js"></script>
+
+    <!-- content web page links end -->
+  
+
+
+
+</head>
+<body>
+
+
+    <!-- background image Start -->
+    <div class="backgrounds overlay">
+        <div class="background" style="background-image: url('content/img/hero.jpg');"></div>
+    </div>
+    <!-- background image End-->
+    
+    <!-- Sidebar Start -->
+
+
+
+     <div class="w3-sidebar w3-bnultrasoft-color topPadding   w3-card-4 w3-animate-left" style="display:none" id="mySidebar">
+        <div class="w3-bar  w3-hover-white">
+            <span class="w3-bar-item w3-padding-16  ">Contents</span> <button onclick="w3_close()" class="w3-bar-item w3-button w3-right w3-padding-16  w3-hover-black " >&times;</button>
+        </div>
+        
+        <div class="w3-bar-block  ">
+           <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#PythonFunctions">Python Functions</a> 
+           <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#join">join() Method</a> 
+           <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#isspace()">isspace() Method</a> 
+           <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#isalpha()">isalpha() Method</a> 
+           <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#isdigit()">isdigit() Method</a> 
+           <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#isalnum()">isalnum() Method</a> 
+           <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#startswith()">startswith() Method</a> 
+           <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#endswith()">endswith() Method</a> 
+           <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#encode()">encode() Method</a> 
+           <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#max()">max() Method</a> 
+           <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#min()">min() Method</a> 
+           <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#pow()">pow() Method</a> 
+           <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#round()">round() Method</a> 
+           <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#int()">int() Method</a> 
+           <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#random()">random() Method</a> 
+           <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#ceil()">ceil() Method</a> 
+           <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#floor()">floor() Method</a> 
+           <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#sqrt()">sqrt() Method</a> 
+           <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#DateTimeFunctions">DateTime Method</a> 
+           <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#Function">Function</a> 
+           <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#PythonRecursion">Python Recursion</a> 
+           
+           
+            
+            <!-- <a class="w3-bar-item w3-button  w3-hover-white w3-animate-zoom" href="#sec2">About</a>
+            <a class="w3-bar-item w3-button  w3-hover-white w3-animate-zoom" href="#sec3">Contact</a>
+            <a class="w3-bar-item w3-button  w3-hover-white w3-animate-zoom" href="javascript:void(0)">Support</a>
+            <a onclick="myFunction('Demo1')" class="w3-button  w3-hover-white w3-left-align w3-block w3-animate-zoom">Accordion <i class="fa fa-caret-down"></i></a>
+                <div id="Demo1" class="w3-hide w3-animate-zoom">
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 1</a>
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 2</a>
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 3</a>
+                </div> 
+            <a onclick="myFunction('Demo2')" class="w3-button  w3-hover-white w3-left-align w3-block w3-animate-zoom">Accordion <i class="fa fa-caret-down"></i></a>
+                <div id="Demo2" class="w3-hide w3-animate-zoom">
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 1</a>
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 2</a>
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 3</a>
+                </div>
+
+           <a class="w3-bar-item w3-button w3-animate-zoom w3-bnultrasoft-color w3-hover-white" href="quiz.html">Python Quiz Set1</a>    
+       
+        -->
+       
+        </div>
+       
+
+
+    </div> 
+
+
+
+
+
+
+
+    <!-- Sidebar Start End -->
+
+<!-- Page Content Start -->
+
+        <!-- Page content header Start -->
+
+
+
+
+        <div class="w3-bnultrasoft-color w3-top">
+            <button class="w3-button w3-xlarge  w3-hover-white" onclick="w3_open()" >&#9776;</button>
+
+            <a href="../ittoolsandnetworkbasics.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M1</a>
+            <a href="../webdesigningandpublishing.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M2</a>
+            <a href="../python.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M3</a>
+            <a href="../iot.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M4</a>
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium w3-xlarge w3-hover-white" onclick="myFunctionRightItem()" >&#9776;</a>
+
+           
+                        <!-- SearchBar start  -->
+
+                       
+
+                     <!-- <div class="w3-dropdown-click  w3-hover-black">
+                        
+                        <input class="w3-input w3-center w3-padding w3-round-xxlarge" type="text" placeholder="Search any contents..."  onclick="dropFunction()"  id="myInput" onkeyup="filterFunction()">
+                        <div class="w3-dropdown-content w3-bar-block w3-card w3-white" id="myDIV" >
+                        
+                            <a class="w3-bar-item w3-button"  href="#pythonintroduction">Introduction of Python</a>
+                            <a class="w3-bar-item w3-button" href="#technicalStrengthofPython">Technical Strength of Python</a>
+                            <a class="w3-bar-item w3-button" href="#PythonInterpreter">Python Interpreter</a>
+                            <a class="w3-bar-item w3-button" href="#howtorunpython">Using CMD (Command Prompt)</a>
+                            <a class="w3-bar-item w3-button" href="#PythonComments">Python Comments</a>
+                            <a class="w3-bar-item w3-button" href="#PythonVariable">Python Variable</a>
+                            <a class="w3-bar-item w3-button" href="#PythonKeywords">Python Keywords</a>
+                            <a class="w3-bar-item w3-button" href="#PythonPrintFunction">Python Print Function</a>
+                            <a class="w3-bar-item w3-button" href="#PythonInputFunction">Python Input Function</a>
+                            <a class="w3-bar-item w3-button" href="#PythonDataType">Python DataType</a>
+                            <a class="w3-bar-item w3-button" href="#PythonConstants">Python Constants</a>
+                            <a class="w3-bar-item w3-button" href="#PythonLiteral">Python Literal</a>
+                            <a class="w3-bar-item w3-button" href="#PythonString">Python String</a>
+                            <a class="w3-bar-item w3-button" href="#PythonStringConcatenation">Python String Concatenation</a>
+                            <a class="w3-bar-item w3-button" href="#PythonFormatStrings">Python Format Strings</a>
+                            <a class="w3-bar-item w3-button" href="#PythonEscapeCharacter">Python Escape Character</a>
+                           
+                            
+                        </div>
+                        </div>  -->
+
+
+                    <!-- SearchBar End  -->
+                  
+                    <!-- ------------Right hidden items----------- -->
+
+                    <div id="demo" class="w3-bar-block w3-bnultrasoft-color w3-hide w3-hide-large w3-hide-medium  w3-animate-zoom w3-animate-fading">
+                        <a href="../ittoolsandnetworkbasics.html" class="w3-bar-item w3-button w3-hover-white">Olevel M1</a>
+                        <a href="../webdesigningandpublishing.html" class="w3-bar-item w3-button w3-hover-white">Olevel M2</a>
+                        <a href="../python.html" class="w3-bar-item w3-button w3-hover-white">Olevel M3</a>
+                        <a href="../iot.html" class="w3-bar-item w3-button w3-hover-white">Olevel M4</a>
+                      </div>
+
+                      
+                    <!-- ------------Right hidden items----------- -->
+   
+
+        </div>
+        <!-- Page content header  End-->
+
+        <!-- Page content Body Start -->
+
+            
+
+ <!-- Page content Coding part Start -->
+
+
+ <section id="PythonFunctions" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Python Functions </u></h2>
+               
+                   
+              
+                 <p><b> &#10028;  </b> Python Functions is a block of statements that return the specific task, a block of code which only runs when it is called. </p> 
+                <br>
+                 <p><b> &#10028; Some Benefits of Using Functions :</b> </p>
+                  <ul class="w3-ul">
+                    <li> 1) Increase Code Readability  </li>
+                    <li>2) Increase Code Reusability </li>
+                  </ul>
+                  <br>
+                   <p><b> &#10028; The syntax to declare a function is:</b></p>
+                  <img src="https://media.geeksforgeeks.org/wp-content/uploads/20220721172423/51.png" class="w3-round w3-center"  alt="image" style="width:100%">  
+                   <br>
+                   <p> <b> &#10028; Types of Functions in Python</b></p>
+                   <p>1) <b>Built-in library function:</b> These are Standard functions in Python that are available to use. </p>
+                   <p>2) <b>User-defined function: </b>  We can create our own functions based on our requirements. </p>
+                      <br>
+                      <p class="w3-center"> <b> &#10028; Some built-in library function: </b></p>
+                      <div class="w3-container  w3-sand w3-round-xlarge">
+                        
+                         <p> <b> &#x21db; <span style="color: rgb(115, 2, 7);"> eval()</span> : </b>The eval() function evaluates the specified expression, if the expression is a legal Python statement, it will be executed. </p>
+                       
+                         <img src="content/img/python/eval.png" class="w3-round w3-center"  alt="image" style="width:100%"> 
+                         <p> <b>Example :   </b> </p>
+                       
+                    <pre>
+                    <code class="language-java">
+expression = 'x*(x+1)*(x+2)'
+print(expression)
+
+x = 3
+
+result = eval(expression)
+print(result)    
+                    </code>
+                    </pre> 
+                    <p> <b>Output :- </b></p>
+                     <p>x*(x+1)*(x+2)</p>
+                      <p> 60</p>
+
+                    
+                    </div>
+                    <br>
+                    <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+                        <p>&#x21db;  The  <span style="color: rgb(115, 2, 7);"><b>count()</b></span> method returns the number of elements with the specified value.</p>
+                        <img src="content/img/python/count.png" class="w3-round w3-center"  alt="image" style="width:100%">  
+                        <p> <b>Example :</b></p>
+                       
+                    <pre>
+                    <code class="language-java">
+s="Assign"
+print(s.count("s"))    
+                    </code>
+                    </pre> 
+                    <p><b> Output :</b></p>
+                    <p> 2</p>
+                    </div>
+                    <br>
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+                        <p>&#x21db;   The <span style="color: rgb(115, 2, 7);"> <b>find()</b></span>  method finds the first occurrence of the specified value. <br>
+
+                            &#x21db;   The  <span style="color: rgb(115, 2, 7);"> <b> find()</b></span> method returns -1 if the value is not found.  <br>
+                            &#x21db; The   <span style="color: rgb(115, 2, 7);">find()</span> method is almost the same as the <span style="color: rgb(115, 2, 7);">index()</span>  method, the only difference is that the <span style="color: rgb(115, 2, 7);"> index()</span> method raises an exception if the value is not found.
+                        </p>
+                        <img src="content/img/python/find.png" class="w3-round w3-center"  alt="image" style="width:100%">  
+                         <br>
+
+                         <p> <b>Example 1:</b> Where in the text is the first occurrence of the letter "e"?:</p>
+                       
+                         <pre>
+                         <code class="language-java">
+txt = "Hello, welcome to my world."
+
+x = txt.find("e")
+
+print(x)  
+                         </code>
+                         </pre> 
+                         <p><b> Output :</b></p>
+                         <p> 1</p>
+                        
+                         <hr style="height: 1px; background-color: brown;">
+                        <p> <b>Example 2:</b> Where in the text is the first occurrence of the letter "e" when you only search between position 5 and 10?:</p>
+                       
+                    <pre>
+                    <code class="language-java">
+txt = "Hello, welcome to my world."
+
+x = txt.find("e", 5, 10)
+
+print(x)   
+                    </code>
+                    </pre> 
+                    <p><b> Output :</b></p>
+                    <p> 8</p>
+                    <hr style="height: 1px; background-color: brown;">
+                    <p> <b>Example 3:</b> If the value is not found, the <span style="color: rgb(115, 2, 7);">find()</span>  method returns <span style="color: rgb(115, 2, 7);"> -1</span>, but the <span style="color: rgb(115, 2, 7);">index()</span>  method will raise an exception:</p>
+                       
+                    <pre>
+                    <code class="language-java">
+txt = "Hello, welcome to my world."
+
+print(txt.find("q"))
+print(txt.index("q"))   
+                    </code>
+                    </pre> 
+                    <p><b> Output :</b></p>
+                    <p> -1</p>
+                    <p> ValueError: substring not found</p>
+                    <br>
+                </div>
+
+                <br>
+                    <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+                        <p>  &#x21db; The <span style="color: rgb(115, 2, 7);"> capitalize()</span> method returns a string where the first character is upper case, and the rest is lower case.</p>
+
+                        <p> <b>Example :</b></p>
+                       
+                    <pre>
+                    <code class="language-java">
+txt = "python is FUN!"
+
+x = txt.capitalize()
+
+print (x)    
+                    </code>
+                    </pre> 
+                    <p><b>Output :- </b></p>
+                    <p>Python is fun! </p>
+                    </div>
+                    <br>
+
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+                        <p>   &#x21db; The <span style="color: rgb(115, 2, 7);">title()</span>  method returns a string where the first character in every word is upper case. Like a header, or a title.</p>
+                        <p> <b> Note :- </b>If the word contains a number or a symbol, the first letter after that will be converted to upper case.</p>
+                        <p> <b>Example :</b></p>
+                       
+                    <pre>
+                    <code class="language-java">
+txt = "Welcome to my 2nd world"
+
+x = txt.title()
+
+print(x)</code>
+                    </pre> 
+                    <p><b>Output :- </b></p>
+                    <p>Welcome To My 2Nd World </p>
+                    </div>
+                    <br>
+                    <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+                      <p> <b> &#10028;</b> Note that the first letter after a non-alphabet letter is converted into a upper case letter.</p>
+                        <p> <b>Example:</b></p>
+                       
+                    <pre>
+                    <code class="language-java">
+txt = "hello b2b2b2 and 3g3g3g"
+
+x = txt.title()
+
+print(x)</code>
+                    </pre> 
+                    <p> <b> Output :- </b></p>
+                    <p> Hello B2B2B2 And 3G3G3G</p>
+                    </div>
+                    <br>
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+                        <p>  &#10028; The <span style="color: rgb(115, 2, 7);">lower()</span>  method returns in lower case  a string where all characters are lower case</p>
+                        <p> &#10028; <b>Note:-</b> Symbols and Numbers are ignored. </p>
+                        <p> <b>Example : </b>Lower case the string</p>
+                       
+                    <pre>
+                    <code class="language-java">
+txt = "Hello my FRIENDS"
+x = txt.lower()                        
+print(x)    
+                    </code>
+                    </pre> 
+                    <p><b>Output:-</b></p>
+                    <p> hello my friends </p>
+                    </div>
+                    <br>
+                    <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+                        <p> &#10028; The  <span style="color: rgb(115, 2, 7);">upper()</span> method returns in upper case a string where all characters are in upper case.</p>
+                       <p> &#10028; <b> Note :- </b> Symbols and Numbers are ignored.
+
+                       </p>
+                        <p> <b>Example : </b>Upper case the string:</p>
+                       
+                    <pre>
+                    <code class="language-java">
+txt = "Hello my friends"
+
+x = txt.upper()
+
+print(x)    
+                    </code>
+                    </pre> 
+                    <p> <b> Output :- </b></p>
+                    <p>HELLO MY FRIENDS </p>
+                    </div>
+                    <br>
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+                        <p>  &#10028; The <span style="color: rgb(115, 2, 7);">swapcase()</span>  method returns a string where all the upper case letters are lower case and vice versa.</p>
+
+                        <p> <b>Exmaple:</b></p>
+                       
+                    <pre>
+                    <code class="language-java">
+txt = "Hello My Name Is PETER"
+
+x = txt.swapcase()
+
+print(x)    
+                    </code>
+                    </pre>
+                    <p><b> Output :-</b></p>
+                    <p> hELLO mY nAME iS peter</p>
+                    </div>
+                    <br>
+                    <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+                        <p> &#10028; The <span style="color: rgb(115, 2, 7);"> islower()</span> method returns True if all the characters are in lower case, otherwise False.
+                        </p>
+                        <p> &#10028; Numbers, symbols and spaces are not checked, only alphabet characters.
+                        </p>
+ 
+
+                        <p> <b>Example:</b> Check if all the characters in the text are in lower case:</p>
+                       
+                    <pre>
+                    <code class="language-java">
+txt = "hello world!"
+
+x = txt.islower()
+
+print(x) 
+</code>
+                    </pre> 
+                    <p><b>Output :- </b></p>
+                    <p> True</p>
+                    </div>
+                    <br>
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+                        <p>&#10028; The <span style="color: rgb(115, 2, 7);">isupper()</span>  method returns True if all the characters are in upper case, otherwise False</p>
+                        <p>&#10028; Numbers, symbols and spaces are not checked, only alphabet characters.
+
+                        </p>
+
+                        <p> <b>Example:</b> Check if all the characters in the text are in upper case.</p>
+                       
+                    <pre>
+                    <code class="language-java">
+txt = "THIS IS NOW!"
+
+x = txt.isupper()
+
+print(x)
+    
+                    </code>
+                    </pre>
+                    <p> <b>Output :- </b></p>
+                    <p> True</p>
+                    </div>
+                    <br>
+                    <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+                        <p>  &#10028; The <span style="color: rgb(115, 2, 7);">istitle()</span>  method returns True if all words in a text start with a upper case letter, AND the rest of the word are lower case letters, otherwise False.</p>
+                        <p> &#10028; Symbols and numbers are ignored.</p>
+                        <p> <b>Example :</b>Check if each word start with an upper case letter:</p>
+                       
+                    <pre>
+                    <code class="language-java">
+txt = "Hello, And Welcome To My World!"
+
+x = txt.istitle()
+
+print(x)
+    
+                    </code>
+                    </pre>
+                    <p> <b>Output :- </b></p>
+                    <p>True</p>
+                    </div>
+                    <br>
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+                        <p>  &#10028; The <span style="color: rgb(115, 2, 7);">replace()</span>  method replaces a specified phrase with another specified phrase.</p>
+
+                        <img src="content/img/python/replace.png" class="w3-round w3-center"  alt="image" style="width:100%">
+                        <p> <b>Example :</b></p>
+                       
+                    <pre>
+                    <code class="language-java">
+txt = "I like bananas bananas bananas bananas"
+
+x = txt.replace("bananas", "apples",2)
+
+print(x)</code>
+                    </pre> 
+                    <p> <b>Output :- </b></p>
+                    <p> I like apples apples bananas bananas</p>
+                    </div>
+                    <br>
+
+
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+                        <p>  &#10028;  The <span style="color: rgb(115, 2, 7);">rfind()</span>  method finds the last occurrence of the specified value.
+                        </p>
+                        <p>  &#10028;  The <span style="color: rgb(115, 2, 7);">rfind()</span>  method returns -1 if the value is not found. </p>
+                       
+
+
+                        <p> <b>Example :</b></p>
+                       
+                    <pre>
+                    <code class="language-java">
+txt = "Hello, welcome to my world."
+
+x = txt.rfind("e", 5, 10)
+
+print(x)
+    
+                    </code>
+                    </pre>
+                    <p> <b> Output :- </b></p>
+                    <p> 8</p>
+                    </div>
+                    <br>
+                    <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+                       
+
+
+
+                        <p> &#10028;   The  <span style="color: rgb(115, 2, 7);">strip()</span>  method removes any leading, and trailing whitespaces.
+                        </p>
+                        <p> &#10028;  Leading means at the beginning of the string, trailing means at the end.</p>
+                        <p> &#10028;  You can specify which character(s) to remove, if not, any whitespaces will be removed. </p>
+           
+                        <img src="content/img/python/strip.png" class="w3-round w3-center"  alt="image" style="width:100%"> 
+                        <p> <b>Example 1:</b> Remove spaces at the beginning and at the end of the string:</p>
+                       
+                    <pre>
+                    <code class="language-java">
+txt = "     banana     "
+
+x = txt.strip()
+
+print("of all fruits", x, "is my favorite")    
+                    </code>
+                    </pre>
+                    <p> <b>Output :- </b></p>
+                    <p> of all fruits banana is my favorite</p>
+                    <br>
+
+                    <hr style="height: 1px; background-color: brown;">
+                  
+
+                        <p> <b>Example 2:</b> Remove the leading and trailing characters:</p>
+                       
+                    <pre>
+                    <code class="language-java">
+txt = ",,,,,rrttgg.....banana....rrr"
+
+x = txt.strip(",.grt")
+
+print(x)</code>
+                    </pre>
+                    <p> <b>Output :- </b></p>
+                    <p> banana</p>
+
+                    </div>
+ <br> 
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+                        <p>   &#10028; The <span style="color: rgb(115, 2, 7);">lstrip()</span>  method removes any leading characters (space is the default leading character to remove).</p>
+
+                        <p> <b>Example 1 :</b> Remove spaces to the left of the string:</p>
+                       
+                    <pre>
+                    <code class="language-java">
+txt = "     banana     "
+
+x = txt.lstrip()
+
+print("of all fruits", x, "is my favorite")    
+                    </code>
+                    </pre> 
+                    <p> <b> Output :- </b></p>
+                    <p> <pre>of all fruits banana      is my favorite</pre></p>
+
+                    <hr style="height: 1px; background-color: brown;">
+                 
+
+                        <p> <b>Example 2 :</b> Remove the leading characters:</p>
+                       
+                    <pre>
+                    <code class="language-java">
+txt = ",,,,,ssaaww.....banana"
+
+x = txt.lstrip(",.asw")
+
+print(x)</code>
+                    </pre> 
+                    <p> <b> Output :- </b></p>
+                    <p> banana</p>
+
+                    </div>
+                    <br>
+                    <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+                        <p>  &#10028; The <span style="color: rgb(115, 2, 7);">rstrip()</span>  method removes any trailing characters (characters at the end a string), space is the default trailing character to remove.</p>
+
+                        <p> <b>Example 1:</b> Remove any white spaces at the end of the string:</p>
+                       
+                    <pre>
+                    <code class="language-java">
+txt = "     banana     "
+
+x = txt.rstrip()
+
+print("of all fruits", x, "is my favorite")    
+                    </code>
+                    </pre> 
+                    <p> <b> Output :- </b></p>
+                    <p> <pre> of all fruits      banana is my favorite</pre></p>
+                    <hr style="height: 1px; background-color: brown;">
+
+                    <p> <b>Example 2:</b> Remove the trailing characters if they are commas, periods, s, q, or w:</p>
+                   
+                    <pre>
+                    <code class="language-java">
+txt = "banana,,,,,ssqqqww....."
+
+x = txt.rstrip(",.qsw")
+
+print(x)</code>
+                    </pre> 
+                    <p> <b>Output :- </b></p>
+                    <p> banana</p>
+    
+                    </div>
+                    <br>
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+                        <p> &#10028;    The <span style="color: rgb(115, 2, 7);">split()</span>  method splits a string into a list.</p>
+                        <p> &#10028; You can specify the separator, default separator is any whitespace.
+                        </p>
+                      
+
+                        
+                        <p> <b>Example 1 :</b> Split a string into a list where each word is a list item:</p>
+                       
+                    <pre>
+                    <code class="language-java">
+txt = "welcome to the jungle"
+
+x = txt.split()
+
+print(x)</code>
+                    </pre> 
+                    <p> <b> Output :- </b></p>
+                    <p> ['welcome', 'to', 'the', 'jungle']</p>
+
+
+                    <hr style="height: 1px; background-color: brown;"> 
+
+                    <p> <b>Example 2:</b> Split the string, using comma, followed by a space, as a separator:</p>
+                   
+                    <pre>
+                    <code class="language-java">
+txt = "hello, my name is Peter, I am 26 years old"
+
+x = txt.split(", ")
+
+print(x) </code>
+                    </pre> 
+                    <p> <b> Output :- </b></p>
+                    <p> ['hello', 'my name is Peter', 'I am 26 years old']</p>
+                    <hr style="height: 1px; background-color: brown;"> 
+
+   <p> <b>Example 3:</b> Use a hash character as a separator:</p>
+                   
+                <pre>
+                <code class="language-java">
+txt = "apple#banana#cherry#orange"
+
+x = txt.split("#")
+
+print(x)</code>
+
+                </pre> 
+                <p> <b> Output :- </b></p>
+                <p> ['apple', 'banana', 'cherry', 'orange']</p>
+                <hr style="height: 1px; background-color: brown;"> 
+                <p> <b>Example 4:</b> Split the string into a list with max 2 items:</p>
+                   
+                <pre>
+                <code class="language-java">
+txt = "apple#banana#cherry#orange"
+
+# setting the maxsplit parameter to 1, will return a list with 2 elements as a same!
+x = txt.split("#", 1)
+
+print(x)</code>
+                </pre> 
+                <p> <b>Output :- </b></p>
+                <p>['apple', 'banana#cherry#orange']</p>
+                    </div>
+                    <br>
+
+                    <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+                        <p> &#10028;  The <span style="color: rgb(115, 2, 7);">partition()</span>  method searches for a specified string, and splits the <span style="color: rgb(115, 2, 7);">string into a tuple</span>  containing three elements.</p>
+                         <ul class="w3-ul"> 
+                           <li> &#x21db; The first element contains the part before the specified string. <span style="color: rgb(115, 2, 7);">(everything before the "match")</span> 
+                        </li>
+                        <li> &#x21db; The second element contains the specified string. <span style="color: rgb(115, 2, 7);">(the "match")</span>  </li>
+                        <li>&#x21db; The third element contains the part after the string. <span style="color: rgb(115, 2, 7);">(everything after the "match")</span> </li>
+                         </ul>
+                        
+
+
+
+                        <p> <b>Example 1:</b></p>
+                       
+                    <pre>
+                    <code class="language-java">
+txt = "I could to eat bananas all day"
+
+x = txt.partition("eat")
+
+print(x)    
+                    </code>
+                    </pre> 
+                    <p> <b>Output :- </b></p>
+                    <p> ('I could to ', 'eat', ' bananas all day')</p>
+                    
+                    <p> <b>Note:</b> This method searches for the first occurrence of the specified string.</p>
+                    <hr style="height: 1px; background-color: brown;">
+                   
+                   
+                    <p> <b>Example 2:</b></p>
+                   
+                    <pre>
+                    <code class="language-java">
+txt = "I could to eat bananas all day"
+
+x = txt.partition("apple")
+
+print(x) </code>
+                    </pre> 
+                    <p><b>Output:-</b></p>
+                    <p> ('I could to eat bananas all day', '', '') </p>
+                    <ul class="w3-ul">
+                        <li> &#10028; If the specified  <span style="color: rgb(115, 2, 7);"> value is not found</span> , the partition() method returns a tuple containing:</li>
+                        <li> &#x21db; 1 - the whole string  </li>
+                        <li> &#x21db; 2 - an empty string </li>
+                        <li> &#x21db; 3 - an empty string</li>
+                   </ul>
+
+                </div>
+
+                
+
+
+
+
+
+
+                   
+
+
+
+
+                  <br>
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+
+
+<section id="join" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+              
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <br>
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+                        <p> &#10028; The <span style="color: rgb(115, 2, 7);"> join()</span> method takes all items in an iterable and joins them into one string.</p>
+
+                        <p> <b>Example :</b></p>
+                       
+                    <pre>
+                    <code class="language-java">
+myList = ["A", "B", "C"]
+
+x = "@".join(myList)
+
+print(x)
+
+
+myTuple = ("A", "B", "C")
+
+x = "#".join(myTuple)
+
+print(x)
+
+
+
+myDict = {"name": "John", "country": "USA"}
+mySeparator = "-"
+
+x = mySeparator.join(myDict)
+
+print(x)
+    
+                    </code>
+                    </pre> 
+                    <p><b> Output :- </b></p>
+                    <p> A@B@C </p> 
+                    <p>A#B#C </p> 
+                    <p>name-country </p>
+
+                    <p> <b> Note 1: </b>A string must be specified as the separator.</p>
+    <p> <b> Note 2: </b>When using a dictionary as an iterable, the returned values are the keys, not the values.</p>
+
+                    
+                   
+                   
+                    </div>
+
+                    <br>
+                    <div id="isspace()" class="w3-container  w3-pale-yellow w3-round-xlarge">
+                        <p>  &#10028; The <span style="color: rgb(115, 2, 7);">isspace()</span>  method returns True if all the characters in a string are whitespaces, otherwise False.</p>
+
+                        <p> <b>Example:</b></p>
+                       
+                    <pre>
+                    <code class="language-java">
+txt = "   "
+txt1 = "   s   "
+
+x = txt.isspace()
+y = txt1.isspace()
+
+print(x)
+print(y) 
+    
+                    </code>
+                    </pre>
+                    <p> <b> Output :- </b></p>
+                    <p> True</p>
+                    <p> False</p>
+                  
+               </div>
+
+               <br>
+               <div id="isalpha()" class="w3-container  w3-sand w3-round-xlarge">
+                <p> &#10028; The  <span style="color: rgb(115, 2, 7);">isalpha() </span> method returns True if all the characters are alphabet letters (a-z).
+                </p>
+               <p> &#10028; Example of characters that are not alphabet letters: <span style="color: rgb(115, 2, 7);">(space)!#%&? etc</span> .</p>
+
+
+                <p> <b>Example :</b></p>
+               
+            <pre>
+            <code class="language-java">
+txt = "BNUltrasoftXyZ"
+txt1 = "BNUltrasoft10"
+x = txt.isalpha()
+y = txt1.isalpha()
+
+print(x)
+print(y)
+            </code>
+            </pre> 
+            <p><b>Output :-</b></p>
+            <p>True</p>
+            <p>False</p>
+            </div>
+
+            <br>
+            <div id="isdigit()" class="w3-container  w3-pale-yellow w3-round-xlarge">
+                <p> &#10028;  The <span style="color: rgb(115, 2, 7);">isdigit()</span>  method returns True if all the characters are digits, otherwise False. </p>
+              
+
+                <p> <b>Example :</b></p>
+               
+            <pre>
+            <code class="language-java">
+txt = "847389"
+txt1 = "348B0"
+x = txt.isdigit()
+y = txt1.isdigit()
+
+print(x)
+print(y)
+            </code>
+            </pre> 
+            <p><b>Output :-</b></p>
+            <p>True</p>
+            <p>False</p>
+            </div>
+            <br>
+            <div id="isalnum()" class="w3-container  w3-sand w3-round-xlarge">
+                <p> &#10028;   The <span style="color: rgb(115, 2, 7);">isalnum() </span>  method returns True if all the characters are alphanumeric, meaning alphabet letter (a-z) and numbers (0-9).
+                </p>
+                <p> &#10028;   Example of characters that are not alphanumeric:<span style="color: rgb(115, 2, 7);">(space)!#%&? etc</span> .
+                </p>
+              
+                <p> <b>Example :</b></p>
+               
+            <pre>
+            <code class="language-java">
+txt = "BNUltrasoft10"
+txt1 = "BNUltrasoft 10"
+
+x= txt.isalnum()
+y = txt1.isalnum()
+
+print(x)
+print(y)</code>
+            </pre> 
+            <p><b>Output :-</b></p>
+            <p>True</p>
+            <p>False</p>
+            </div>
+
+            <br>
+            <div id="startswith()" class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+                <p>  &#10028; The  <span style="color: rgb(115, 2, 7);">startswith()</span> method returns True if the string starts with the specified value, otherwise False.</p>
+
+                <p> <b>Example :</b></p>
+               
+            <pre>
+            <code class="language-java">
+txt = "Hello, welcome to my world."
+
+x = txt.startswith("Hello")
+
+print(x)
+            </code>
+            </pre> 
+            <p><b>Output :- </b></p>
+            <p> True</p>
+
+            <hr style="height: 1px; background-color: brown;">
+            <br>
+            <img src="content/img/python/startwith.png" class="w3-round w3-center"  alt="image" style="width:100%"> 
+    <br>
+    <hr style="height: 1px; background-color: brown;">
+    <p> <b>Example 2:</b></p>
+                   
+    <pre>
+    <code class="language-java">
+txt = "Hello, welcome to my world."
+
+x = txt.startswith("wel", 7, 20)
+
+print(x)
+    </code>
+    </pre> 
+    <p><b> Output :- </b></p>
+    <p> True</p>
+
+            </div>
+            
+                           
+     <br>
+
+
+     <div id="endswith()" class="w3-container  w3-sand w3-round-xlarge">
+        <p> &#10028; The <span style="color: rgb(115, 2, 7);">endswith()</span>  method returns True if the string ends with the specified value, otherwise False.</p>
+
+        <p> <b>Example:</b></p>
+       
+    <pre>
+    <code class="language-java">
+txt = "Hello, welcome to my world."
+
+x = txt.endswith(".")
+y = txt.endswith("my world.")
+
+print(x)
+print(y)
+    </code>
+    </pre> 
+    <p> <b> Output :-</b></p>
+    <p>True</p>
+    <p>True</p>
+   
+    <hr style="height: 1px; background-color: brown;">
+    <img src="content/img/python/endswith.png" class="w3-round w3-center"  alt="image" style="width:100%">
+   <br>
+    <p> <b>Example 2:</b> Check if position 5 to 11 ends with the phrase "my world.":</p>
+                   
+    <pre>
+    <code class="language-java">
+txt = "Hello, welcome to my world."
+
+x = txt.endswith("my world.", 5, 11)
+
+print(x)</code>
+    </pre> 
+    <p><b>Output :-</b></p>
+    <p> False</p>
+    </div>
+    <br>
+
+   
+
+           
+       
+
+
+
+
+
+
+    </div>
+    </div>
+    </div>
+   
+</div>
+
+
+</section> 
+
+
+<section id="encode()" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+              
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Python Strings encode() method</u></h2>
+               
+
+                    <p> <b> &#10028; </b> Python String <span style="color: rgb(115, 2, 7);">encode()</span>  converts a string value into a collection of bytes, using an encoding scheme specified by the user.</p>
+                   
+                    <p> <b>  &#10028; Note :- </b> Python uses <span style="color: rgb(115, 2, 7);"> <b>utf-8 </b></span>as  its encoding by default.</p>
+                     <br>
+                     <br>
+                     <img src="content/img/python/encode.png" class="w3-round w3-center"  alt="image" style="width:100%"> 
+
+                     <br>
+                     <br>
+
+                     <h2 class="w3-panel w3-center"><u>Python Strings decode() method</u></h2>
+                     <p> <b> &#10028; </b>This works opposite to the encode. It accepts the encoding of the encoding string to decode it and returns the original string.</p>
+               
+                      <br>
+                      <div class="w3-container  w3-sand w3-round-xlarge">
+
+                        <p> <b>Example of encode and decode :</b> ascii to ascii</p>
+                       
+                    <pre>
+                    <code class="language-java">
+# defining a new string
+example = "BNUltrasoft"
+
+# Encoding the input string and storing it in a new variable
+encodedString = example.encode(encoding='utf8')
+
+# Displaying the encoded string
+print ("Input string in the encoded format: ")
+print (encodedString)
+
+# Displaying the decoded string
+print ("Input string in the decoded format: ")
+decodedString = encodedString.decode('utf8', 'strict')
+print (decodedString)    
+                    </code>
+                    </pre> 
+                    <p><b>Output :-</b></p>
+                    <p>  Input string in the encoded format: </p>
+                   <p>b'BNUltrasoft'</p>
+<p>Input string in the decoded format:</p>
+ <p>BNUltrasoft</p>
+
+                    </div>
+                      <br>
+
+                     <div class="w3-container  w3-sand w3-round-xlarge">
+
+                        <p> <b>Example of real encode :- </b></p>
+                       
+                    <pre>
+                    <code class="language-java">
+txt = "My name is Ståle"
+
+print(txt.encode(encoding="ascii",errors="backslashreplace"))
+print(txt.encode(encoding="ascii",errors="ignore"))
+print(txt.encode(encoding="ascii",errors="namereplace"))
+print(txt.encode(encoding="ascii",errors="replace"))
+print(txt.encode(encoding="ascii",errors="xmlcharrefreplace"))
+print(txt.encode(encoding="ascii",errors="strict"))    
+                    </code>
+                    </pre> 
+                    <p> <b> Output :-</b></p>
+                    <p>b'My name is St\\xe5le'  </p>                 
+                    <p>b'My name is Stle'  </p>                 
+                    <p>b'My name is St\\N{LATIN SMALL LETTER A WITH RING ABOVE}le' </p>                 
+                    <p>b'My name is St?le' </p>                 
+                    <p>b'My name is St &# 229; le'  </p>                 
+                   
+
+
+
+
+
+                    
+                    
+                    </div>
+                    <br>
+                    <br>
+
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+
+<section id="P" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+              
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center" id="max()"><u>Python max() Function
+
+                    </u></h2>
+               
+                    <p><b> &#10028; </b>The  <span style="color: rgb(115, 2, 7);">max()</span> function returns the item with the highest value, or the item with the highest value in an iterable.
+                    </p>
+                 <p> <b>  &#10028;  </b> If the values are strings, an alphabetically comparison is done. </p>   
+                     <br>
+                     <p> <b>Syntax :</b></p>
+                     <p> max(n1, n2, n3, ...) Or  max(iterable)</p>
+                      <br>
+                      <div class="w3-container  w3-sand w3-round-xlarge">
+
+                        <p> <b>Example :- </b></p>
+                       
+                    <pre>
+                    <code class="language-java">
+x = max("B", "J",  "K", "G")
+a = max(1, 5, 13, 9)
+
+print(x)
+print(a)    
+                    </code>
+                    </pre> 
+                    <p> <b> Output :- </b></p>
+                    <p>K </p>
+                    <p> 13</p>
+                    </div>
+
+                    <br>
+                    <br>
+                    <h2 class="w3-panel w3-center" id="min()"><u>Python min() Function
+
+                    </u></h2>
+                     
+
+                <p> <b>&#10028;  </b>  The <span style="color: rgb(115, 2, 7);">min()</span>  function returns the item with the lowest value, or the item with the lowest value in an iterable.
+                </p>
+                <p> <b>&#10028;  </b> If the values are strings, an alphabetically comparison is done.</p>
+   <br>
+   <p> <b>Syntax :</b></p>
+   <p> min(n1, n2, n3, ...) Or  min(iterable)</p>
+   <br>
+   <div class="w3-container  w3-sand w3-round-xlarge">
+
+    <p> <b>Example:</b></p>
+    
+<pre>
+<code class="language-java">
+x = min("B", "J",  "K", "G")
+a = min(1, 5, 13, 9)
+
+print(x)
+print(a)
+</code>
+</pre> 
+<p> <b>Output :-</b></p>
+<p> B</p>
+<p> 1</p>
+</div>
+<br>
+<br>
+<h2 class="w3-panel w3-center" id="pow()"><u>Python pow() Function
+
+</u></h2>
+<p> &#10028;The  <span style="color: rgb(115, 2, 7);">pow()</span> function returns the value of x to the power of y (x <sup>y</sup>). </p>
+<p> &#10028; If a third parameter is present, it returns x to the power of y, modulus z.</p>
+
+<img src="content/img/python/pow.png" class="w3-round w3-center"  alt="image" style="width:100%">             
+ 
+
+<div class="w3-container  w3-sand w3-round-xlarge">
+
+    <p> <b> Example :- </b> Return the value of 2 to the power of 3 (same as 2 * 2 * 2):</p>
+   
+<pre>
+<code class="language-java">
+x = pow(2, 3)
+print(x)
+</code>
+</pre> 
+<p> <b> Output :- </b></p>
+<p> 8</p>
+</div>
+<br>
+<div class="w3-container  w3-sand w3-round-xlarge">
+
+    <p> <b>Example 2:</b> Return the value of 2 to the power of 3, modulus 5 (same as (2 * 2 * 2) % 5):</p>
+   
+<pre>
+<code class="language-java">
+x = pow(2, 3, 5)
+print(x)
+</code>
+</pre> 
+<p> <b> Output :- </b></p>
+<p> 3</p>
+</div>
+<br>
+<br>
+
+<h2 class="w3-panel w3-center" id="round()"><u>Python round() Function</u></h2>
+  <p> <b> &#10028; </b> The <span style="color: rgb(115, 2, 7);">round()</span>  function returns a floating point number that is a rounded version of the specified number, with the specified number of decimals.</p>            
+   <p> <b> &#10028; </b> The <span style="color: rgb(115, 2, 7);">default number of decimals is 0</span> , meaning that the function will return the nearest integer.
+
+   </p>  
+   <br>            
+   <br>
+   <img src="content/img/python/round.png" class="w3-round w3-center"  alt="image" style="width:100%">             
+ <br>
+ <div class="w3-container  w3-sand w3-round-xlarge">
+
+    <p> <b>Example :</b></p>
+   
+<pre>
+<code class="language-java">
+x = round(5.76543)
+y = round(5.76543,2)
+print(x)
+print(y)
+</code>
+</pre>
+<p> <b>Output :- </b></p>
+
+
+<p>6</p>
+<p>5.77</p>
+</div>
+<br>
+<h2 class="w3-panel w3-center" id="int()"><u>Python int() Function</u></h2>
+<p> <b> &#10028; </b> The  <span style="color: rgb(115, 2, 7);">int()</span> function converts the specified value into an integer number.</p>
+ <br>
+<img src="content/img/python/int.png" class="w3-round w3-center"  alt="image" style="width:100%"> 
+ <br>
+ <div class="w3-container  w3-sand w3-round-xlarge">
+
+    <p> <b>Example :</b></p>
+   
+<pre>
+<code class="language-java">
+x = int(12.5)
+y = int("13")
+print(x)
+print(y)
+</code>
+</pre> 
+<p> <b> Output :- </b></p>
+<p>12</p>
+<p>13</p>
+</div>         
+<br>
+<br>
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="random()" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+              
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Python  random() Method</u></h2>
+                  <p> <b>  &#10028;</b> The <span style="color: rgb(115, 2, 7);">random()</span>  method returns a random floating number between 0 and 1.</p>
+                 <p> <b>Syntax : </b></p>
+                  <p> random.random()</p>
+                  <br>
+                  <div class="w3-container  w3-sand w3-round-xlarge">
+
+                    <p> <b>Example :</b></p>
+                   
+                <pre>
+                <code class="language-java">
+import random
+
+print(random.random())
+                </code>
+                </pre> 
+                <p> <b> Output :- </b></p>
+                <p> 0.502832480499048</p>
+                </div>
+                <br>
+                <h2 class="w3-panel w3-center" id="ceil()"><u>Python math.ceil() Method
+
+                </u></h2>
+                <p> <b>&#10028; </b>The <span style="color: rgb(115, 2, 7);">math.ceil()</span>  method rounds a number UP to the nearest integer, if necessary, and returns the result.</p>
+
+
+                <div class="w3-container  w3-sand w3-round-xlarge">
+
+                    <p> <b>Example :- </b></p>
+                   
+                <pre>
+                <code class="language-java">
+# Import math library
+import math
+
+# Round a number upward to its nearest integer
+print(math.ceil(1.4))
+print(math.ceil(5.3))
+print(math.ceil(-5.3))
+print(math.ceil(22.6))
+print(math.ceil(10.0))
+</code>
+                </pre> 
+                <p> <b> Output :- </b></p>
+                
+
+
+
+
+                <p>2</p>
+                <p>6</p>
+                <p>-5</p>
+                <p>23</p>
+                <p>10</p>
+                </div>
+                <br>
+                <h2 class="w3-panel w3-center" id="floor()"><u>Python math.floor() Method
+
+                </u></h2>
+                <p> <b>&#10028; </b>The <span style="color: rgb(115, 2, 7);">math.floor()</span> method rounds a number DOWN to the nearest integer, if necessary, and returns the result.</p>
+
+<br>
+<div class="w3-container  w3-sand w3-round-xlarge">
+
+    <p> <b>Example:</b></p>
+   
+<pre>
+<code class="language-java">
+# Import math library
+import math
+
+# Round numbers down to the nearest integer
+print(math.floor(0.6))
+print(math.floor(1.4))
+print(math.floor(5.3))
+print(math.floor(-5.3))
+print(math.floor(22.6))
+print(math.floor(10.0))
+</code>
+</pre> 
+<p> <b> Output :- </b></p>
+<p>0</p>
+<p>1</p>
+<p>5</p>
+<p>-6</p>
+<p>22</p>
+<p>10</p>
+</div>
+
+
+
+
+
+                <br>
+                <br>
+
+                  
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+
+<section id="sqrt()" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+              
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Python math.sqrt() Method</u></h2>
+               
+                    <p><b> &#10028; <span style="color: rgb(115, 2, 7);"> math.sqrt() :-</span> </b> The <span style="color: rgb(115, 2, 7);">math.sqrt()  </span>  method returns the square root of a number. </p>
+                     <p> <b> &#x21db; Note :</b>  The number must be greater than or equal to 0.</p>
+                    <br>
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+
+                        <p> <b>Example :</b></p>
+                       
+                    <pre>
+                    <code class="language-java">
+import math
+
+print (math.sqrt(9))
+print (math.sqrt(25))    
+                    </code>
+                    </pre> 
+                    <p><b> Output :- </b></p>
+                    <p>3.0</p>
+                    <p>5.0</p>
+                    </div>
+
+                    <br>
+                    <br>
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+
+                        <p> <b>Example 2:</b></p>
+                       
+                    <pre>
+                    <code class="language-java">
+import math
+
+print (math.sqrt(-5)) #ValueError: math domain error
+print (math.sqrt("A")) #TypeError: must be real number, not str
+print (math.sqrt(A))  #NameError: name 'A' is not defined    
+                    </code>
+                    </pre>
+                    <p><b>Note :- </b></p>
+                    <p>  &#x21db; If the number is less than 0, it returns a <span style="color: rgb(115, 2, 7);">ValueError</span> </p>
+                    <p> &#x21db; If the value is not a number, it returns a <span style="color: rgb(115, 2, 7);">TypeError</span> </p>
+                    <p>  &#x21db; If the value is not defined, it returns a <span style="color: rgb(115, 2, 7);">NameError</span> </p>
+                    </div>
+                    <br>
+                    <br>
+
+                     
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+<section id="DateTimeFunctions" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+              
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Date & Time Functions</u></h2>
+
+                    <p> <b> &#x21db; </b>A date in Python is not a data type of its own, but we can import a module named <span style="color: rgb(115, 2, 7);"> <b>datetime </b></span>  to work with dates as date objects.</p>
+
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+
+                        <p> <b>Example 1:</b> Get Current Date and Time</p>
+                       
+                    <pre>
+                    <code class="language-java">
+import datetime
+
+# get the current date and time
+now = datetime.datetime.now()
+
+print(now)</code>
+                    </pre> 
+                    <p><b>Output :- </b></p>
+                    <p> 2024-05-03 18:58:50.888514 </p>
+                    </div>
+                       <br>
+                       <div class="w3-container  w3-sand w3-round-xlarge">
+
+                        <p> <b>Example 2:</b> Get Current Date</p>
+                       
+                    <pre>
+                    <code class="language-java">
+import datetime
+
+# get current date
+current_date = datetime.date.today()
+
+print(current_date)</code>
+                    </pre>  
+                    <p><b>Output :-</b></p>
+                    <p> 2024-05-03</p>
+                    <hr style="height: 1px; background-color: brown;">
+                
+                   <p> <b>Example 3: </b>Another way to Get Current Date <span style="color: rgb(115, 2, 7);">(by Import Only date Class)</span> </p>
+                       
+                   <pre>
+                   <code class="language-java">
+from datetime import date
+
+d = date.today()
+print(d)</code>
+                   </pre>  
+                   <p><b>Output :-</b></p>
+                   <p> 2024-05-03</p>
+
+
+
+
+
+                    </div>
+                    <br>
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+
+                        <p> <b>Example :</b> Print today's year, month and day.</p>
+                       
+                    <pre>
+                    <code class="language-java">
+from datetime import date
+
+# date object of today's date
+today = date.today() 
+
+print("Current year:", today.year)
+print("Current month:", today.month)
+print("Current day:", today.day)</code>
+                    </pre> 
+                    <p><b>Output :- </b></p>
+                    <p>Current year: 2024 </p>
+                    <p> Current month: 5</p>
+                    <p> Current day: 3</p>
+                    
+                    </div>
+                    <br>
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+         <p><b>Creating Date Objects : </b> To create a date, we can use the <span style="color: rgb(115, 2, 7);">datetime() </span> (class constructor)  of the datetime module.</p>
+                        <p> <b>Example:</b></p>
+                       
+                    <pre>
+                    <code class="language-java">
+import datetime
+
+x = datetime.datetime(2024, 4, 30)
+
+print(x)    
+                    </code>
+                    </pre> 
+                    <p><b>Output :- </b></p>
+                    <p>2024-04-30 00:00:00</p>
+                    </div>
+                    <br>
+                    <h2 class="w3-panel w3-center"><u> The strftime() Method</u></h2>
+                    <p> <b>  &#10028; </b>The <span style="color: rgb(115, 2, 7);"> datetime</span> object has a method for formatting date objects into readable strings.</p>
+                   
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+
+
+                        <p> <b>Example:</b></p>
+                       
+                    <pre>
+                    <code class="language-java">
+import datetime
+
+x = datetime.datetime(2024, 8, 1)
+
+print(x.strftime("%B"))    
+                    </code>
+                    </pre>
+                    <p><b> Output :-</b></p>
+                    <p>August</p>
+                    </div>
+                    <br>
+                    <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+                        <p> <b> &#x21db;</b> A reference of all the legal format codes:</p>
+                        <table class="w3-table-all">
+                            <tr> <th>Directive </th> <th> Description</th> <th>Example </th></tr>
+                            <tr> <td>%a </td> <td>Weekday, short version </td> <td>Wed </td></tr>
+                            <tr>  <td>%A </td> <td>	Weekday, full version </td> <td>Wednesday </td></tr>
+                            <tr>  <td>%w </td> <td>Weekday as a number 0-6, 0 is Sunday </td> <td> 3</td></tr>
+                            <tr>  <td>%d </td> <td>Day of month 01-31 </td> <td>31 </td></tr>
+                            <tr>  <td>%b </td> <td>Month name, short version </td> <td>Dec </td></tr>
+                            <tr>  <td> %B</td> <td>Month name, full version </td> <td>December </td></tr>
+                            <tr>  <td>%m </td> <td>Month as a number 01-12 </td> <td>12 </td></tr>
+                            <tr>  <td> %y</td> <td> Year, short version, without century</td> <td> 18</td></tr>
+                            <tr>  <td> %Y</td> <td>Year, full version </td> <td> 2018</td></tr>
+                            <tr>  <td>%H </td> <td>Hour 00-23 </td> <td>17 </td></tr>
+                            <tr>  <td> %I</td> <td>Hour 00-12 </td> <td>05 </td></tr>
+                            <tr>  <td>%p</td> <td>AM/PM </td> <td> PM</td></tr>
+                            <tr>  <td> %M</td> <td> Minute 00-59</td> <td>41 </td></tr>
+                            <tr>  <td>%S </td> <td>Second 00-59 </td> <td>08 </td></tr>
+                        </table>
+                        <br>
+
+
+                    </div>
+                    <br>
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+                        <p> <b> &#10028; </b>Python DateTime –<span style="color: rgb(115, 2, 7);"> strptime()</span> Function</p>
+                        <p> <b> &#x21db; Syntax:</b> <span style="color: rgb(115, 2, 7);">datetime.strptime(time_data, format_data)</span> </p>
+                        <p> <b>Example :</b></p>
+                       
+                    <pre>
+                    <code class="language-java">
+from datetime import datetime
+date_string = '2024-01-01 13:30:45'
+date_object = datetime.strptime(date_string, '%Y-%m-%d %H:%M:%S')
+print(date_object)</code>
+                    </pre> 
+                    <p><b>Output :- </b></p>
+                    <p>2024-01-01 13:30:45</p>
+                    </div>
+                   
+
+
+               
+                    <br>
+                    <br>
+                    <br>
+                    
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="Function" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+              
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Function</u></h2>
+                    <br>
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+                        <p><b>Creating a Function :</b></p>
+
+                        <p> <b>Example :</b></p>
+                       
+                    <pre>
+                    <code class="language-java">
+def my_function():
+    print("Hello from a function")    
+                    </code>
+                    </pre> 
+                    </div>
+                    <br>
+                    <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+                        <p><b>Calling a Function:</b> To call a function, use the function name followed by parenthesis:</p>
+
+                        <p> <b>Example :</b></p>
+                       
+                    <pre>
+                    <code class="language-java">
+def my_function():
+    print("Hello from a function")
+my_function() 
+                    </code>
+                    </pre> 
+                    <p> <b> Output :- </b></p>
+                    <p> Hello from a function</p>
+                    </div>
+                    <br>
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+                        <p> <b>  Arguments :  </b> Information can be passed into functions as arguments.</p>
+                       
+
+
+                        <p> <b>Example :- </b></p>
+                       
+                    <pre>
+                    <code class="language-java">
+def my_function(x):
+    print("I Like to eat",x)
+
+my_function("Mango")
+my_function("Food")
+my_function("Banana")</code>
+                    </pre> 
+                    <p> <b> Output :- </b></p>
+                    <p> I Like to eat Mango</p>
+                    <p>I Like to eat Food</p>
+                     <p>I Like to eat Banana</p>
+                     <br>
+                     <p> <b>&#10028;  Parameters or Arguments?</b></p>
+    <p>   A parameter is the variable listed inside the parentheses in the function definition.
+    </p>
+   <p>An argument is the value that is sent to the function when it is called. </p>
+
+                    </div>
+                    <br>
+                    
+  <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+    <p> <b>&#10028;</b> Number of Arguments </p>
+    
+
+    <p> <b>Example :</b></p>
+   
+<pre>
+<code class="language-java">
+def my_function(x,y):
+    print("I Like to eat",x,y)
+
+my_function("Mango","Banana")
+</code>
+</pre> 
+<p><b>Output :- </b></p>
+<p>I Like to eat Mango Banana</p>
+
+</div>
+<br>
+
+
+<div class="w3-container  w3-pale-yellow w3-round-xlarge">
+    <p> <b>&#10028; Number of Arguments</b>  </p>
+    <p> <b>Note:- </b>By default, a function must be called with the correct number of arguments. Meaning that if your function expects 2 arguments, you have to call the function with 2 arguments, not more, and not less.</p>
+
+   
+    
+
+    <p> <b>Example :</b></p>
+   
+<pre>
+<code class="language-java">
+def my_function(x,y,z):
+    print("I Like to eat",x,y)
+
+my_function("Mango","Banana")
+</code>
+</pre> 
+<p><b>Output :- </b></p>
+<p> <span style="color: rgb(115, 2, 7);">TypeError:</span> my_function() missing 1 required.</p>
+
+</div>
+<br>
+<div class="w3-container  w3-sand w3-round-xlarge">
+    <p> <b> Arbitrary Arguments, *args</b></p>
+    <p> If you do not know how many arguments that will be passed into your function, add a <span style="color: rgb(115, 2, 7);"> *</span> before the parameter name in the function definition.</p>
+
+    <p> <b>Example :</b></p>
+   
+<pre>
+<code class="language-java">
+def my_function(*x):
+    print("I like: ",x[2])
+
+my_function("Mango","Banana","Apple")
+</code>
+</pre> 
+<p> <b> Output :- </b></p>
+<p> I like:  Apple</p>
+</div>
+<br>
+<div class="w3-container  w3-pale-yellow w3-round-xlarge">
+    <p> <b> &#10028; Keyword Arguments </b></p>
+    <p> &#x21db; You can also send arguments with the  <span style="color: rgb(115, 2, 7);">key = value</span> syntax. </p>
+    <p>&#x21db; This way the order of the arguments does not matter. </p>
+
+
+
+    <p> <b>Example :</b></p>
+   
+<pre>
+<code class="language-java">
+def my_function(x,y,z):
+    print("I like: ",z)
+
+my_function(x="Mango",z="Banana",y="Apple")
+</code>
+</pre>
+<p> <b> Output :- </b></p>
+<p> I like:  Banana</p>
+</div>
+
+                  <br>
+                  <br>
+
+                  <div class="w3-container  w3-sand w3-round-xlarge">
+
+                    <p> <b>Labwork :</b></p>
+                    <p> Q139) WAP to create a function for add two numbers by passing Arguments.</p>
+                    <p> Q140) WAP to create a function for <span style="color: rgb(115, 2, 7);">add , sub, mul, div, mod</span>  two numbers by passing Arguments.</p>
+                  <p> Q141) WAP to create a function for reverse a string by passing Arguments as user input.</p>
+                  <p> Q142) WAP to create a function for that takes a number as a parameter and checks whether the number is prime or not.</p>
+                  <p> Q143) WAP to create a function to find the maximum of three numbers must be user input.</p>
+                </div>
+                <br>             
+                <br>
+
+
+
+                <div class="w3-container  w3-sand w3-round-xlarge">
+                    <p> <b>Arbitrary Keyword Arguments, **kwargs </b></p>
+
+                    <p> <b>Example:</b></p>
+                   
+                <pre>
+                <code class="language-java">
+def my_function(**fruits):
+    print("I like to eat " + fruits["y"])
+
+my_function(x = "Apple", y = "Pineapple")</code>
+                </pre>
+                <p><b> Output:-</b></p> 
+                <p> I like to eat Pineapple.</p>
+                </div>
+                <br>
+                <div class="w3-container  w3-sand w3-round-xlarge">
+                    <p> <b> &#10028; Default Parameter Value : </b>If we call the function without argument, it uses the default value:</p>
+
+                    <p> <b>Example:</b></p>
+                   
+                <pre>
+                <code class="language-java">
+def my_function(country = "Norway"):
+    print("I am from " + country)
+
+my_function("Sweden")
+my_function("India")
+my_function() # target default parameter
+my_function("Brazil")
+                </code>
+                </pre> 
+                <p><b>Output :-</b></p>
+                <p>I am from Sweden</p>
+                <p>I am from India</p>
+                <p>I am from Norway</p>
+                <p>I am from Brazil</p>
+                </div>
+                <br>
+                <div class="w3-container  w3-sand w3-round-xlarge">
+
+                    <p> <b>Passing a List as an Argument:</b> You can send any data types of argument to a function (string, number, list, dictionary etc.), and it will be treated as the same data type inside the function.</p>
+                   
+                <pre>
+                <code class="language-java">
+def my_function(food):
+    for x in food:
+         print(x)
+
+fruits = ["apple", "banana", "cherry"]
+
+my_function(fruits)
+                </code>
+                </pre> 
+                <p><b>Output</b></p>
+                <p> apple</p>
+               <p>banana</p>
+  <p>cherry</p>
+
+
+                </div>
+
+                <br>
+                <div class="w3-container  w3-sand w3-round-xlarge">
+                    <p><b>Return Values :</b>
+                        To let a function return a value, use the return statement:</p>
+
+                    <p> <b>Create a constant.py:</b></p>
+                   
+                <pre>
+                <code class="language-java">
+def my_function(x):
+    return 5 * x
+
+print(my_function(3))
+print(my_function(5))
+print(my_function(9))
+                </code>
+                </pre> 
+                <p><b>Output :-</b></p>
+                <p>15</p>
+                <p>25</p>
+                <p>45</p>
+                </div>
+                <br>
+                <div class="w3-container  w3-sand w3-round-xlarge">
+
+                    <p> <b>Labwork :-</b></p>
+                    <p> Q144) WAP to create a function to sum all the numbers in a list.</p>
+                    <p>Q145) WAP to create a  function to multiply all the numbers in a list.</p>
+                   <p> Q146) WAP to create a function to calculate the factorial of a number. The function accepts the number as an argument.</p>
+                   <p> Q147) WAP to create a function to print the even numbers from a given list.</p>
+                   <p> Q148) WAP to create a function to print the largest item from a given list. </p>
+                   <p> Q149) WAP to create a function that inputs a number and prints the multiplication table of that number.</p>
+                  <p> Q150) WAP a function to calculate power of a number raised to other : Eg a <sup>b</sup></p> a and b must be by the user.
+                 </div>
+
+
+
+
+
+
+
+
+                <br>             
+                <br></div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="PythonRecursion" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+              
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Python Recursion</u></h2>
+                    <p><b> &#10028; </b> Python also accepts function recursion, which means a defined function can call itself. </p> 
+                    <br>
+                    <p> <b> Syntax :</b></p>
+                  
+                    <img src="https://www.programiz.com/sites/tutorial2program/files/python-recursion-function.png" class="w3-round w3-center"  alt="image" style="width:100%">   
+                    <br>
+                    <br>
+
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+
+                        <p> <b>Example :</b> To print "Hello, World!" 10 times:</p>
+                       
+                    <pre>
+                    <code class="language-java">
+def recursive_hello_world(n):
+    if n > 0:
+         print("Hello, World!")
+         recursive_hello_world(n - 1)
+
+recursive_hello_world(10)</code>
+                    </pre> 
+                    </div>
+                    <br>
+                    <br>
+                    <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+                        <p> <b>Labwork: </b></p>
+                        <p> Q151) WAP to print "Your name" 20 times by using recursion.</p>
+                        <p> Q152) WAP to print factorial of a number by using recursion, the number should be accept by user. </p>
+                        <p> Q153) WAP to print the Fibonacci sequence using recursion.</p>
+                    </div>
+
+                    <br>
+                    <br>
+                    <h2 class="w3-panel w3-center"><u> Global and Local Variables in Python</u></h2>
+                    <br>
+                    <p> <b>  &#10028; Local Variables: </b>Local variables in Python are those which are initialized inside a function and belong only to that particular function. <span style="color: rgb(115, 2, 7);">It cannot be accessed anywhere outside the function.</span> </p>
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+
+                        <p> <b>Example:</b>Creating and accessing local variables:</p>
+                       
+                    <pre>
+                    <code class="language-java">
+def f():
+    
+    # local variable
+    s = "Python"
+    print(s)
+
+f()
+print(s) #Trying to access the local variable.
+</code>
+                    </pre> 
+                    <p><b>Output :-</b></p>
+                    <p>Python </p>
+                    <p> NameError: name 's' is not defined</p>
+                    </div>
+                    <br>
+                    <br>
+                    <p> <b>  &#10028; </b>  Python Global variables are those which are not defined inside any function and have a global scope.</p>
+
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+
+                        <p> <b>Example:</b> Creating and accessing global variables: </p>
+                       
+                    <pre>
+                    <code class="language-java">
+# This function uses global variable s
+def f():
+    print("Inside Function:", s)
+
+# Global scope
+s = "I love Python"
+f()
+print("Outside Function:", s)</code>
+                    </pre>
+                    <p> <b> Output :-</b></p>
+                    <p>Inside Function: I love Python </p>
+                    <p>Outside Function: I love Python</p>
+
+                    </div>
+
+
+
+              <br>
+              <br>
+              <br>
+                </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+
+
+
+
+<!-- 
+Coding Part
+
+<section id="sec1" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                        <h2 class="w3-panel w3-center">Example1</h2>
+
+                         <div class=" w3-leftbar w3-border-pink w3-border w3-round-large ">
+                           
+<pre class="line-numbers" data-line="15-25">
+    <code class="language-java">
+      package com.example.webviewtest;
+      import androidx.appcompat.app.AppCompatActivity;
+      import android.os.Bundle;
+      import android.view.View;
+      import android.webkit.WebView;
+    
+      public class MainActivity extends AppCompatActivity {
+      private WebView webView;
+      @Override
+      protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_main);
+            webView=findViewById(R.id.webviewforhighlight);
+            webView.getSettings().setJavaScriptEnabled(true);
+            webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+            webView.loadUrl("file:///android_asset/prismjs_template.html");
+        }
+     }
+    
+    
+     x = "awesome"
+    
+     def myfunc():
+       x = "fantastic"
+       print("Python is " + x)
+     
+     myfunc()
+     
+     print("Python is " + x)
+    
+    
+    </code>
+    </pre>
+    
+
+                         </div>
+
+                    </div> 
+                </div>
+            </div>
+
+
+
+</section> 
+ -->
+
+         
+            
+              
+           
+
+   
+            
+            
+            <!-- Page content Coding part Start -->
+
+
+        <!-- Page content Body Start -->
+
+
+ <!-- Page Content End --> 
+ 
+ <script>
+ 
+ AOS.init();
+
+
+
+</script>
+</body>
+</html>

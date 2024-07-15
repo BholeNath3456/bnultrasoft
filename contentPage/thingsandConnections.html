@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Things and Connection</title>
+   <!-- cdn links start -->
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+
+
+   <!-- cdn links end-->
+    
+    
+    
+    
+    <!-- content web page links  start-->
+    <link rel="stylesheet" href="content/content.css">
+    <script src="content/content.js"></script>
+
+    <link rel="stylesheet" href="content/prism.css">
+    <script src="content/prism.js"> </script>
+
+    <link rel="stylesheet" href="content/aos/aos.css">
+    <script src="content/aos/aos.js"></script>
+
+    <!-- content web page links end -->
+  
+
+
+
+</head>
+<body>
+
+
+    <!-- background image Start -->
+    <div class="backgrounds overlay">
+        <div class="background" style="background-image: url('content/img/hero.jpg');"></div>
+    </div>
+    <!-- background image End-->
+    
+    <!-- Sidebar Start -->
+
+
+
+    <div class="w3-sidebar w3-bnultrasoft-color topPadding   w3-card-4 w3-animate-left" style="display:none" id="mySidebar">
+        <div class="w3-bar  w3-hover-white">
+            <span class="w3-bar-item w3-padding-16  ">Contents</span> <button onclick="w3_close()" class="w3-bar-item w3-button w3-right w3-padding-16  w3-hover-black " >&times;</button>
+        </div>
+        
+        <div class="w3-bar-block  ">
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#WorkingofControlledSystems">Working of Controlled Systems</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#open-loop">Open Loop Controlled Systems</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#closed-loop">Closed Loop Controlled Systems</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#OSI_Model">OSI Model</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#TcpIP">TCP / IP Model</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#modes">Type of modes</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#ProcessFlowofIoT">Process Flow of IoT</a>   
+           
+            <!-- <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#IoTLevel1">IoT Level 1</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#IoTLevel2">IoT Level 2</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#IoTLevel3">IoT Level 3</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#IoTLevel4">IoT Level 4</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#IoTLevel5">IoT Level 5</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#IoTLevel6">IoT Level 6</a>    -->
+
+               
+               
+            <!-- <a onclick="myFunction('Demo2')" class="w3-button  w3-hover-white w3-left-align w3-block w3-animate-zoom">Accordion <i class="fa fa-caret-down"></i></a>
+                <div id="Demo2" class="w3-hide w3-animate-zoom">
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 1</a>
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 2</a>
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 3</a>
+                </div>
+
+           <a class="w3-bar-item w3-button w3-animate-zoom w3-bnultrasoft-color w3-hover-white" href="quiz.html">Python Quiz Set1</a>     -->
+        </div>
+       
+
+
+    </div>
+
+    <!-- Sidebar Start End -->
+
+<!-- Page Content Start -->
+
+        <!-- Page content header Start -->
+
+
+
+
+        <div class="w3-bnultrasoft-color w3-top">
+            <button class="w3-button w3-xlarge  w3-hover-white" onclick="w3_open()" >&#9776;</button>
+
+            <a href="../ittoolsandnetworkbasics.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M1</a>
+            <a href="../webdesigningandpublishing.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M2</a>
+            <a href="../python.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M3</a>
+            <a href="../iot.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M4</a>
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium w3-xlarge w3-hover-white" onclick="myFunctionRightItem()" >&#9776;</a>
+
+           
+                        <!-- SearchBar start  -->
+
+                       
+
+                    <!-- <div class="w3-dropdown-click  w3-hover-black">
+                        
+                        <input class="w3-input w3-center w3-padding w3-round-xxlarge" type="text" placeholder="Search any contents..."  onclick="dropFunction()"  id="myInput" onkeyup="filterFunction()">
+                        <div class="w3-dropdown-content w3-bar-block w3-card w3-white" id="myDIV" >
+                        
+                            <a class="w3-bar-item w3-button"  href="#about">About</a>
+                            <a class="w3-bar-item w3-button" href="#base">Base</a>
+                            <a class="w3-bar-item w3-button" href="#sec1">Blog</a>
+                            <a class="w3-bar-item w3-button" href="#sec2">Contact</a>
+                            <a class="w3-bar-item w3-button" href="#sec3">Custom</a>
+                            <a class="w3-bar-item w3-button" href="#support">Support</a>
+                            <a class="w3-bar-item w3-button" href="#tools">Tools</a>
+                            
+                        </div>
+                        </div> -->
+
+
+                    <!-- SearchBar End  -->
+                  
+                    <!-- ------------Right hidden items----------- -->
+
+                    <div id="demo" class="w3-bar-block w3-bnultrasoft-color w3-hide w3-hide-large w3-hide-medium  w3-animate-zoom w3-animate-fading">
+                        <a href="../ittoolsandnetworkbasics.html" class="w3-bar-item w3-button w3-hover-white">Olevel M1</a>
+                        <a href="../webdesigningandpublishing.html" class="w3-bar-item w3-button w3-hover-white">Olevel M2</a>
+                        <a href="../python.html" class="w3-bar-item w3-button w3-hover-white">Olevel M3</a>
+                        <a href="../iot.html" class="w3-bar-item w3-button w3-hover-white">Olevel M4</a>
+                      </div>
+                    <!-- ------------Right hidden items----------- -->
+   
+
+        </div>
+<!-- Page content header  End-->
+
+        <!-- Page content Body Start -->
+
+
+        <section id="WorkingofControlledSystems" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                       
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>Working of Controlled Systems</u></h2>
+                       
+                            <p><b>&#10028; Control System : </b> Control system is a way of arranging and combining components in such a way that the desired output is obtained. <br> &#10028; In simple terms, Control systems are used to <span style="color: rgb(115, 2, 7);">
+                                control the behavior of devices or any process </span>. <br>&#10028; It works on the principle of the <span style="color: rgb(115, 2, 7);"> 
+                                input-process-output </span> cycle.</p>
+                                <img src="content/img/python/controlledsystem.png" class="w3-round w3-center"  alt="image" style="width:100%">   
+                               
+                         <br>
+                         <p>&#10028; It is made up of three components mainly:<span style="color: rgb(115, 2, 7);">sensor, controller, and actuator</span> .<br>&#10028; Here,  the <span style="color: rgb(115, 2, 7);"> sensor senses</span> physical characteristics such as pressure, and temperature and converts them into an electrical signal and it generates an output signal which is used to <span style="color: rgb(115, 2, 7);"> control the actuator</span> .</p>
+                        
+                         <br>
+                         <p><b> Examples of Control Systems:-</b></p>
+                         <p>Control systems has various examples and it is widely used in day to day applications.
+                        </p>
+                         <ul class="w3-ul">
+                            <li><b> &#10028; Elevators – </b>In order to control or to regulate acceleration and braking mechanisms, Control systems are used.
+                            </li>
+                            <li><b>&#10028; Smart Coffee Machine – </b> For to control water temperature, coffee strength, and brewing rate control systems are used and all these properties are balanced to give desired flavor.
+                            </li>
+                            <li> <b>&#10028; Home Security and Automation – </b> For to control and monitor wide aspects of home security such as cameras, sensors, motion detectors.
+                            </li>
+                           <li><b>&#10028;Traffic light control systems –</b> When an input processes through control system the output of three lights turned ON for some particular duration of time. Here input signal determines the output and It works based on timely basis.
+                           </li>
+                         </ul>
+                         <br>
+                         <br>
+                         <p><b>There are basically two types of control systems: </b></p>
+                         <p>1). Open-loop control system</p>
+                         <p>2). Closed-loop control system</p>
+
+                         <br>
+                         <div id="open-loop" class="w3-container  w3-sand w3-round-xlarge">
+
+                            <p > <b>&#10028; Open-loop control system : </b> An open loop control system is a type of control system in which the output has <span style="color: rgb(115, 2, 7);"> no effect or influence </span>on the control action.  <br>  An open-loop controller, also called a <span style="color: rgb(115, 2, 7);">non-feedback controller</span>  because it does not use feedback to determine whether its input has achieved the <span style="color: rgb(115, 2, 7);">desired goal (Output) or not</span> . It means that the system does not observe the output.</p>
+                            <p> <b>Note: </b>Open-loop control system is it doesn’t continuously monitor the system’s behavior.</p>
+                           
+                            <br>
+                             <img src="content/img/python/open-loop-control-system.jpg" class="w3-round w3-center"  alt="image" style="width:100%"> 
+                                
+                              <br>
+                            <ul class="w3-ul">
+                                <li> <b> &#10028; Examples of open-loop control systems in daily life include:</b></li>
+                                <li><b>1). <span style="color: rgb(115, 2, 7);">Electric Hand Drier :–</span> </b> Hot air (output) comes out as long as you keep your hand under the machine, irrespective of how much your hand is dried or not.</li>
+                                <li> <b>2). <span style="color: rgb(115, 2, 7);">Automatic Washing Machine :–</span> </b> This machine runs according to the pre-set time irrespective of washing is completed or not.</li>
+                                <li><b>3). <span style="color: rgb(115, 2, 7);">Light Switch :– </span> </b>  Lamps glow whenever the light switch is on irrespective of light is required or not.</li>
+                            
+                            </ul>
+                            <br>
+                            <ul class="w3-ul">
+                                <li> <b>  &#10028;  The main advantages of the open loop control system are listed below:</b></li>
+                                <li> 1).  Open Loop Control Systems are very simple and easy to design.</li>
+                                <li> 2).  Maintenance of an open loop control system is very simple.</li>
+                                <li> 3). It is cheaper than other types of control systems.</li>
+                                <li> 4). It is very easy to operate.</li>
+                            </ul>
+
+                            <br>
+                            <ul class="w3-ul">
+                                <li> <b> &#10028; The main disadvantages of the open loop control system are listed below: </b></li>
+                                <li> 1). They are inaccurate in nature.</li>
+                                <li> 2).  They are unreliable in nature. </li>
+                                <li>3). If their output is affected by some external disturbances, there is no way to correct them automatically as these are non-feedback systems.</li>
+                                   
+                            
+                            </ul>
+
+                    </div>
+                        
+                      <br>
+                      <br>
+                      <div id="closed-loop" class="w3-container  w3-sand w3-round-xlarge">
+
+                        <p> <b> &#10028; Closed-loop control system :</b> In an Closed-loop control system sensors used to provide system performance and then adjust the control input accordingly. This system is also called <span style="color: rgb(115, 2, 7);">feedback control system</span>. This feedback automatically makes suitable changes in the output due to external disturbance.</p>
+                         <br>
+                         <img src="content/img/python/closed-loop-control-system.jpg" class="w3-round w3-center"  alt="image" style="width:100%">  
+                        <br>
+                        <ul class="w3-ul">
+                            <li> <b>  &#10028; Examples of closed-loop control systems in daily life include:</b></li>
+                             <li> <span style="color: rgb(115, 2, 7);"> <b>1). Automatic Electric Iron:–</b> </span>Heating elements are controlled by the output temperature of the iron.</li>
+                             <li> <span style="color: rgb(115, 2, 7);"> <b> 2). An Air Conditioner :–</b></span>  An air conditioner functions depending upon the temperature of the room.</li>
+                              <li><span style="color: rgb(115, 2, 7);"> <b>3). Missile Launched and Auto Tracked by Radar:-</b> </span> The direction of the missile is controlled by comparing the target and position of the missile.</li>
+                            </ul>
+                        <br>
+                        <ul class="w3-ul">
+                            <li><b> &#10028;  Advantages of closed-loop control systems include:</b></li>
+                            <li> 1). Any error arising in output and it is corrected due to the presence of a feedback signal. So it is highly accurate.</li>
+                            <li> 2). They can automatically correct the errors by means of the feedback signal. </li>
+                          
+                        </ul>
+                        <br>
+                        <ul class="w3-ul">
+                          <li> <b> &#10028;Disadvantages of a closed-loop control systems include: </b></li>
+                           <li>1). They are very complex and complicated to design.</li>
+                           <li>2). Economically they are very costlier.</li>
+                           <li>3). More time and efforts are needed to design a stable closed loop system.</li>
+                        </ul>
+
+
+                     
+            </div>
+            <br>
+            <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+                <p><b> &#10028; Difference Between Open Loop and Closed Loop Control System:</b></p>
+                <br>
+                   <table class="w3-table-all">
+                    <tr> <th> Open Loop Control System</th> <th>Closed Loop Control System</th></tr>
+                    <tr> <td> It is economical (cheaper) and inaccuracy.</td> <td>It is expensive and accurate. </td></tr>
+                    <tr> <td>It does not have an feedback path. </td> <td>It has an feedback path. </td></tr> 
+                    <tr> <td> Control action is not dependent on output.</td> <td> Control action is dependent on output.</td></tr> 
+                    <tr> <td> It is designed easily. </td> <td>It is hard to design. </td></tr>
+                   <tr>  <td>It is called Non feedback control system </td> <td>It is called Feedback control system. </td></tr>
+                </table>
+                <br>
+            </div>
+            <br>
+
+
+                       </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section> 
+
+        <section id="OSI_Model" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                       
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>Connectivity Models :- TCP/IP versus OSI Model,</u></h2>
+                               <br>
+                               <p> <b>&#10028;</b> Data communication is a process or act in which we can send or receive data. For data communication two models are available.</p>
+
+                                <ul class="w3-ul">
+                                    <li>1). OSI Model </li>
+                                    <li>2).  TCP/IP Model </li>
+                                </ul>
+                                <div class="w3-container  w3-sand w3-round-xlarge">
+                                 <br>
+                                 <h2 class="w3-center"><u>OSI Model</u></h2>
+                                 <ul class="w3-ul">
+                                 <li> &#10028; OSI stands for Open Systems Interconnection.</li>
+                                  <li>&#10028; It has 7 layers, each layer performs its task independently.</li>    
+                                  <li>&#10028;  OSI model was developed by the <span style="color: rgb(115, 2, 7);">International Organization for Standardization (ISO)</span>  in <b>1984</b>.</li>
+                              </ul>
+                                 <br>
+
+                                 <img src="content/img/python/osi.jpg" class="w3-round w3-center"  alt="image" style="width:100%">   
+                                 
+                                 <ul class="w3-ul">
+                                    <li>  <p><h3>&#10028; Application Layer – Layer 7 :-</h3>   These applications produce the data, which has to be transferred over the network. This layer also serves as a window for the application services to access the network and for displaying the received information to the user. <br> <br> <b>Example:</b> <span style="color: rgb(115, 2, 7);">Application – Browsers, Skype Messenger, etc.</span> <br> <b>Functions of the Application Layer :-</b>  This layer produce, access, retrieve, and manage the data by using an application. </p> </li>
+                                    <li> <p><h3>&#10028; Presentation Layer – Layer 6:-</h3>  The presentation layer is also called the Translation layer. The data in this layer is <span style="color: rgb(115, 2, 7);">encrypted, reduces</span>  to transmitted on the network. <br>
+                                        <br><b>  Functions of the Presentation Layer:-</b> <br>
+                                        <b> Translation:</b> For example, ASCII (American Standard Code for Information Interchange) to EBCDIC (Extended binary coded decimal interchange code). <br>
+                                       <b>Encryption / Decryption:</b>  Data encryption translates the data into another form or code. The encrypted data is known as the <span style="color: rgb(115, 2, 7);">ciphertext</span>  and the decrypted data is known as <span style="color: rgb(115, 2, 7);">plain text</span> . A <span style="color: rgb(115, 2, 7);">same key value </span> is used for encrypting as well as decrypting data. <br>
+                                       <b> Compression: </b>  Reduces the number of bits that need to be transmitted on the network. </p></li>
+                                       <li><p><h3>&#10028; Session Layer – Layer 5 :-</h3> This layer is responsible for the establishment of connection, maintenance of sessions (time), and authentication, and also ensures security. </li>
+                                       <li><p><h3>&#10028; Transport Layer – Layer 4 :-</h3> It is responsible for the <span style="color: rgb(115, 2, 7);">end-to-end delivery</span>  of the complete message. The transport layer also provides the acknowledgment of the <span style="color: rgb(115, 2, 7);">successful data transmission and re-transmits the data</span>  if an error is found. </li>
+                                       
+                                        <li><p><h3>&#10028;Network Layer – Layer 3 :-</h3> The network layer works for the transmission of data from one host to the other located in different networks. It also takes care of <span style="color: rgb(115, 2, 7);">packet routing i.e. selection of the shortest path </span> to transmit the packet, from the number of routes available. The <span style="color: rgb(115, 2, 7);">sender & receiver’s IP addresses are placed in the header</span>  by the network layer.</p></li>
+                                         
+                                   
+                                        <li><p><h3>&#10028;Data Link Layer (DLL) – Layer 2 :-</h3> The data link layer is responsible for the node-to-node delivery of the message. The main function of this layer is to make sure data transfer is error-free from one node to another, over the physical layer. When a packet arrives in a network, it is the responsibility of the DLL to transmit it to the Host using its MAC address.<br>
+                                           <br> The Data Link Layer is divided into two sublayers:  <br>
+                                           <br>1) Logical Link Control (LLC)
+                                           <br>2) Media Access Control (MAC)
+                                            
+                                        </p> </li>
+                                        <li><p><h3>&#10028;Physical Layer – Layer 1:-</h3> The lowest layer of the OSI reference model is the physical layer. It is responsible for the actual physical connection between the devices. The physical layer contains information in the form of bits. It is responsible for transmitting individual bits (0s and 1s) from one node to the next.<br>
+                                         <b>Note : </b> Hub, Repeater, Modem, and Cables are Physical Layer devices.
+                                        </p></li>
+                                    </ul>
+                               
+                               
+                                </div>
+                              
+ 
+                         <br>
+
+
+                         
+  <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+    <p> <b>What is the Flow of Data in OSI Model?</b></p>
+    <p>&#10028; When we transfer information from one device to another, it travels through 7 layers of OSI model. </p>
+    <p>&#10028; First data travels down through  7 layers from the sender’s end.</p>
+    <p>&#10028; And then climbs back 7 layers on the receiver’s end. </p>
+    <br>
+    <img src="content/img/python/osi_flow.png" class="w3-round w3-center"  alt="image" style="width:100%">  
+     <br>
+     <p><b>Let’s look at it with an Example:</b></p>
+     <ul class="w3-ul">
+       <li> <b> <span style="color: rgb(115, 2, 7);"> William sends an e-mail to his friend Henry. </span> </b></li>
+       <li> <b> &#10028; Step 1:</b> William interacts with e-mail application like Gmail, outlook, etc. Writes his email to send. <b> <span style="color: rgb(115, 2, 7);">(This happens in Layer 7: Application layer)</span> </b> </li>
+       <li><b>  &#10028; Step 2:</b> Mail application prepares for data transmission like encrypting data and formatting it for transmission. <b> <span style="color: rgb(115, 2, 7);"> (This happens in Layer 6: Presentation Layer)</span> </b>
+    </li>
+    <li> <b> &#10028; Step 3:</b> There is a connection established between the sender and receiver on the internet. <b> <span style="color: rgb(115, 2, 7);">(This happens in Layer 5: Session Layer)</span></b> 
+    </li>
+    <li>  <b> &#10028; Step 4:</b> Email data is broken into smaller segments. It adds sequence number and error-checking information to maintain the reliability of the information. <b> <span style="color: rgb(115, 2, 7);">(This happens in Layer 4: Transport Layer)</span> </b> 
+    </li>
+    <li>  <b> &#10028; Step 5:</b> Addressing of packets is done in order to find the best route for transfer. <b> <span style="color: rgb(115, 2, 7);">(This happens in Layer 3: Network Layer)</span></b> 
+    </li>
+    <li> <b>  &#10028; Step 6:</b> Data packets are encapsulated into frames, then MAC address is added for local devices and then it checks for error using error detection. <b> <span style="color: rgb(115, 2, 7);">(This happens in Layer 2: Data Link Layer)</span></b> 
+    </li>
+    <li> <b> &#10028; Step 7:</b> Lastly Frames are transmitted in the form of electrical/ optical signals over a physical network medium like ethernet cable or WiFi.
+    </li>
+    <li>  <span style="color: rgb(115, 2, 7);">After the email reaches the receiver i.e. Henry, the process will reverse and decrypt the e-mail content. At last, the email will be shown on Henry’s email client. </span> 
+    </li>
+    </ul>
+    
+
+      
+      
+      
+      
+     
+      
+      
+      
+ </div>
+ <br>
+                         
+                       </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section> 
+
+        <section id="TcpIP" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                       
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>TCP/IP Model</u></h2>
+                       
+                                <img src="content/img/python/tcpvsosi.jpeg" class="w3-round w3-center"  alt="image" style="width:100%">         
+                        
+                         <br>
+                         <p><b> &#10028;TCP/IP Model: </b> The TCP/IP model is a network model that is based on the structure of the network protocol stack. Each of the four layers in the TCP/IP model is visible within a TCP/IP network packet.</p> 
+                        <ul class="w3-ul">
+                            <li> <b>These four layers include:-</b></li>
+                            <li> <b>1). Application Layer:</b> The Application layer combines the OSI Application, Presentation, and Session layers and is responsible for high-level application protocols, representation, and session management.</li>
+                              <li> <b>2). Transport Layer: </b> The Transport layer maps to the OSI Transport layer and is responsible for end-to-end connectivity, data integrity, and flow control.</li>
+                              <li> <b>3). Internet Layer:</b> Like the Network layer in the OSI model, the TCP/IP Internet layer manages routing and packet forwarding.</li>
+                                <li> <b>4). Network Access Layer</b>: The Network Access Layer in the TCP/IP model maps to the Data Link and Physical layers in the OSI model and is responsible for the physical and logical connections between devices.</li>
+                            </ul>
+
+                            <br>
+                            <br>
+                            <img src="content/img/python/tcpipvsosi.png" class="w3-round w3-center"  alt="image" style="width:100%">  
+                       </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section> 
+
+
+        <section id="modes" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                       
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>Different type
+                                of modes using wired and wireless methodology</u></h2>
+                                <p><b> &#10028; Communication Mode / Transmission Mode: </b>  It is mechanism of transferring data between two
+                                    devices connected using a network. Here, transmission is the action of transferring data from one
+                                    position or person to another.</p> 
+
+                                    <ul class="w3-ul">
+                                        <li> <b>There are three types of transmission mode:</b></li>
+                                        <li><b> 1). Simplex Mode:</b> This communication is unidirectional that means one-way communication.
+                                            It means that only one device can transmit data, the another can receive only.
+                                            Example: Television, Keyboard etc. </li>
+                                        <li> <b>2).Half-Duplex: </b> In Half-Duplex mode, both units communicate over the same medium, but only one
+                                            unit can send data at a time. When one device is sending, the other can only receive and
+                                            vice-versa. Example : Walkie-Talkie
+                                            </li> 
+                                        <li> <b>3). Full-Duplex:</b>  In full-duplex mode, both units can transmit and receive simultaneously.
+                                            In full-duplex mode contains two physical separate transmission paths, one for sending and
+                                            another for receiving. Example: Mobile Network.</li>   
+
+                                    </ul>
+                                    <br>
+                                    <br>
+                                    <img src="content/img/python/transmissionmode.png" class="w3-round w3-center"  alt="image" style="width:100%">  
+                         <br>
+                        
+                        
+                       </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section> 
+
+        <section id="ProcessFlowofIoT" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                       
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>The process flow of an IoT application</u></h2>
+                       <p> <b>  &#10028; Process flow of an IoT :- </b> IoT system architecture is often described as a four-stage process in which data flows from sensors attached to “things” through a network and eventually on to a corporate data center or the cloud for processing, analysis and storage.</p>
+                            
+                         <br>
+                         <ul class="w3-ul">
+                            <li> <b>STAGE 1: Sensors and Actuators: </b> A sensor might detect a condition or event that requires an almost immediate response so that an actuator can perform remediation actions in real time.</li>
+                             <li> <b>STAGE 2: Internet Gateways :</b> Here, collects raw data from the sensors and converts it from analog into digital format. The data is sending through an Internet gateway via wireless WANs (such as Wi-Fi or Cellular) or wired WANs for the next stage of processing.</li>
+                           <li> <b> STAGE 3: Pre-processing: </b> Once the IoT data has been digitized, it will need processing to further reduce  the data volume before it goes to the data center or cloud.</li>
+                          <li><b> STAGE 4: In-depth Analysis in the Cloud or Data Center:</b> At Stage 4 in the process, powerful IT systems can be brought to bear to analyze, manage, and securely store the data.</li>
+                      </ul>
+                          <br>
+                          
+                       </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section> 
+        
+
+            
+
+<!-- Page content Coding part Start -->
+
+
+
+<!-- 
+         <section id="sec1" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                        <h2 class="w3-panel w3-center">Example1</h2>
+                         <div class=" w3-leftbar w3-border-pink w3-border w3-round-large ">
+                           
+<pre class="line-numbers" data-line="15-25">
+    <code class="language-java">
+      package com.example.webviewtest;
+      import androidx.appcompat.app.AppCompatActivity;
+      import android.os.Bundle;
+      import android.view.View;
+      import android.webkit.WebView;
+    
+      public class MainActivity extends AppCompatActivity {
+      private WebView webView;
+      @Override
+      protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_main);
+            webView=findViewById(R.id.webviewforhighlight);
+            webView.getSettings().setJavaScriptEnabled(true);
+            webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+            webView.loadUrl("file:///android_asset/prismjs_template.html");
+        }
+     }
+    
+    
+     x = "awesome"
+    
+     def myfunc():
+       x = "fantastic"
+       print("Python is " + x)
+     
+     myfunc()
+     
+     print("Python is " + x)
+    
+    
+    </code>
+    </pre>
+    
+
+                         </div>
+
+                    </div> 
+                </div>
+            </div>
+
+
+
+         </section> -->
+
+
+         
+            
+              
+           
+
+   
+            
+            
+            <!-- Page content Coding part Start -->
+
+
+        <!-- Page content Body Start -->
+
+
+ <!-- Page Content End --> 
+ 
+ <script>
+ 
+ AOS.init();
+
+
+
+</script>
+</body>
+</html>

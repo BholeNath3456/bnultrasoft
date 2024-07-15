@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet of Things</title>
+   <!-- cdn links start -->
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+
+
+   <!-- cdn links end-->
+    
+    
+    
+    
+    <!-- content web page links  start-->
+    <link rel="stylesheet" href="content/content.css">
+    <script src="content/content.js"></script>
+
+    <link rel="stylesheet" href="content/prism.css">
+    <script src="content/prism.js"> </script>
+
+    <link rel="stylesheet" href="content/aos/aos.css">
+    <script src="content/aos/aos.js"></script>
+
+    <!-- content web page links end -->
+  
+
+
+
+</head>
+<body>
+
+
+    <!-- background image Start -->
+    <div class="backgrounds overlay">
+        <div class="background" style="background-image: url('content/img/hero.jpg');"></div>
+    </div>
+    <!-- background image End-->
+    
+    <!-- Sidebar Start -->
+
+
+
+    <div class="w3-sidebar w3-bnultrasoft-color topPadding   w3-card-4 w3-animate-left" style="display:none" id="mySidebar">
+        <div class="w3-bar  w3-hover-white">
+            <span class="w3-bar-item w3-padding-16  ">Contents</span> <button onclick="w3_close()" class="w3-bar-item w3-button w3-right w3-padding-16  w3-hover-black " >&times;</button>
+        </div>
+        
+        <div class="w3-bar-block  ">
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#IntroductiontoInternetofThings">Introduction to IoT</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#IoTWorks">IoT Works</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#CharacteristicsofIoT">Characteristics of IoT</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#ApplicationsofIoT">Applications of IoT</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#ComponentsofIoT">Components of IoT</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#LayersofIoT">Layers of IoT</a>  
+
+            <!-- <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#IoTLevel1">IoT Level 1</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#IoTLevel2">IoT Level 2</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#IoTLevel3">IoT Level 3</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#IoTLevel4">IoT Level 4</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#IoTLevel5">IoT Level 5</a>   
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#IoTLevel6">IoT Level 6</a>    -->
+
+             <a onclick="myFunction('Demo1')" class="w3-button  w3-hover-white w3-left-align w3-block w3-animate-zoom">IoT Levels (1 to 6) <i class="fa fa-caret-down"></i></a>
+                <div id="Demo1" class="w3-hide w3-animate-zoom">
+                <a href="#IoTLevel1" class="w3-button  w3-hover-white w3-block w3-left-align">IoT Level 1</a>
+                <a href="#IoTLevel2" class="w3-button  w3-hover-white w3-block w3-left-align">IoT Level 2</a>
+                <a href="#IoTLevel3" class="w3-button  w3-hover-white w3-block w3-left-align">IoT Level 3</a>
+                <a href="#IoTLevel4" class="w3-button  w3-hover-white w3-block w3-left-align">IoT Level 4</a>
+                <a href="#IoTLevel5" class="w3-button  w3-hover-white w3-block w3-left-align">IoT Level 5</a>
+                <a href="#IoTLevel6" class="w3-button  w3-hover-white w3-block w3-left-align">IoT Level 6</a>
+               
+                </div> 
+                <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#buildingblockofIoT">Building blocks of IoT</a>  
+
+                <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#IoTdesignmethodology">IoT Design Methodology</a>  
+                
+                <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#physicaldesign">Physical Design of IoT</a>  
+                <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#LogicalDesign">Logical Design of IoT</a>  
+              
+               
+            <!-- <a onclick="myFunction('Demo2')" class="w3-button  w3-hover-white w3-left-align w3-block w3-animate-zoom">Accordion <i class="fa fa-caret-down"></i></a>
+                <div id="Demo2" class="w3-hide w3-animate-zoom">
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 1</a>
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 2</a>
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 3</a>
+                </div>
+
+           <a class="w3-bar-item w3-button w3-animate-zoom w3-bnultrasoft-color w3-hover-white" href="quiz.html">Python Quiz Set1</a>     -->
+        </div>
+       
+
+
+    </div>
+
+
+
+
+
+
+
+    <!-- Sidebar Start End -->
+
+<!-- Page Content Start -->
+
+        <!-- Page content header Start -->
+
+
+
+
+        <div class="w3-bnultrasoft-color w3-top">
+            <button class="w3-button w3-xlarge  w3-hover-white" onclick="w3_open()" >&#9776;</button>
+
+            <a href="../ittoolsandnetworkbasics.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M1</a>
+            <a href="../webdesigningandpublishing.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M2</a>
+            <a href="../python.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M3</a>
+            <a href="../iot.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M4</a>
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium w3-xlarge w3-hover-white" onclick="myFunctionRightItem()" >&#9776;</a>
+
+           
+                        <!-- SearchBar start  -->
+
+                       
+
+                    <!-- <div class="w3-dropdown-click  w3-hover-black">
+                        
+                        <input class="w3-input w3-center w3-padding w3-round-xxlarge" type="text" placeholder="Search any contents..."  onclick="dropFunction()"  id="myInput" onkeyup="filterFunction()">
+                        <div class="w3-dropdown-content w3-bar-block w3-card w3-white" id="myDIV" >
+                        
+                            <a class="w3-bar-item w3-button"  href="#about">About</a>
+                            <a class="w3-bar-item w3-button" href="#base">Base</a>
+                            <a class="w3-bar-item w3-button" href="#sec1">Blog</a>
+                            <a class="w3-bar-item w3-button" href="#sec2">Contact</a>
+                            <a class="w3-bar-item w3-button" href="#sec3">Custom</a>
+                            <a class="w3-bar-item w3-button" href="#support">Support</a>
+                            <a class="w3-bar-item w3-button" href="#tools">Tools</a>
+                            
+                        </div>
+                        </div> -->
+
+
+                    <!-- SearchBar End  -->
+                  
+                    <!-- ------------Right hidden items----------- -->
+
+                    <div id="demo" class="w3-bar-block w3-bnultrasoft-color w3-hide w3-hide-large w3-hide-medium  w3-animate-zoom w3-animate-fading">
+                        <a href="../ittoolsandnetworkbasics.html" class="w3-bar-item w3-button w3-hover-white">Olevel M1</a>
+                        <a href="../webdesigningandpublishing.html" class="w3-bar-item w3-button w3-hover-white">Olevel M2</a>
+                        <a href="../python.html" class="w3-bar-item w3-button w3-hover-white">Olevel M3</a>
+                        <a href="../iot.html" class="w3-bar-item w3-button w3-hover-white">Olevel M4</a>
+                      </div>
+                    <!-- ------------Right hidden items----------- -->
+   
+
+        </div>
+
+        <section id="IntroductiontoInternetofThings" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                       
+        
+                         <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                            <h2 class="w3-panel w3-center"><u>Introduction to Internet of Things</u></h2>
+                       
+                           
+                           <div class="w3-container  w3-sand w3-round-xlarge">
+                            <h5> <a href="https://www.youtube.com/watch?v=ATshNXHY-KE" target="_blank"><u>Point to remember:</u></a>  </h5> 
+                            <p> <b> &#10028;</b> IoT stands for <b>Internet of Things</b>.</p>
+                            <p> <b>&#10028;</b> The term Internet of Things was invented in <b>1999 </b>by the computer scientist <b>Kevin Ashton</b>.</p>
+                            <p> <b>&#10028;</b> IoT, is a network of physical devices. These devices can <span style="color: rgb(115, 2, 7);">transfer data</span>  to one another <span style="color: rgb(115, 2, 7);">without human beings</span>.</p>
+                            <p><b>&#10028;</b> The main goal of the IoT is to <span style="color: rgb(115, 2, 7);">create self-reporting devices</span>  that can communicate with each other <span style="color: rgb(115, 2, 7);">in real time</span>.</p>
+                            <p> <b>&#10028;</b> The IoT device includes  such as <span style="color: rgb(115, 2, 7);"> smart coffee makers, smart washing machine, smart home security systems like fire alarm , smart webcams , smart Apple Watches, routers, smart speaker devices like  Amazon Alexa and Google Home. </span></p>
+                           </div>
+                           <br>
+
+                      
+                         
+                         
+                       
+                        
+                        
+                        </div>
+        
+                    </div> 
+                </div>
+            </div>
+        
+        
+        
+        </section> 
+
+        
+<section id="IoTWorks" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-left"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>How Does IoT Works?</u></h2>
+               
+                        <img src="content/img/python/workingofiot.png" class="w3-round w3-center"  alt="image" style="width:100%">         
+                
+                 <br>
+                
+                 <p><b> &#10028; Step 1: </b>IoT devices are physical devices like sensors, that collect data.</p> 
+                 <p><b> &#10028; Step 2: </b>When the data is  collected by the sensors then it shared to an IoT gateway, which acts as a central hub.</p> 
+                 <p> <b>&#10028; Step 3: </b>The software then analyzes the data and transmits the data to users via an app or website.</p>
+                 <br>
+                 <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+                    <h2 class="w3-panel w3-center"><u>Advantage of IoT</u></h2>
+                    
+                    <ul class="w3-ul">
+                     <li> 1). We can easily access any information setting from any part of the globe in real time even if we are not physically present. </li>
+                     <li> 2) It minimizes human effort because IoT devices connect and communicate with one another and perform a variety of tasks without the need for human beings.</li>
+                      <li> 3) Patient care can be performed more effectively in real time without the need for a doctor’s visit.</li>
+                     <li> 4) By automating activities, it saves us a lot of time, it reduces the human effort then it definitely saves out time.</li>
+                    </ul>
+
+                 </div>
+                 <br>
+                 <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+                    <h2 class="w3-panel w3-center"><u>Disadvantage of IoT</u></h2>
+                    
+                    <ul class="w3-ul">
+                     <li> 1). People are most habituated to have a click based work making them lazy to any sort of physical activities. </li>
+                     <li> 2). We lose control of our lives—our lives will be fully controlled, reliant and dependent on technology.</li>
+                     <li> 3). Unskilled workers are at a high risk of losing their jobs, which could lead to unemployment.</li>
+                     <li> 4). Even we are provide higher security, hackers may access to the system and steal personal information. Due to so many devices to the internet, there is a risk that our information as it can be misused. </li>
+                    </ul>
+
+                 </div>
+               
+  <br>
+
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="CharacteristicsofIoT" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Characteristics of IoT</u></h2>
+               
+                       
+                 <br>
+                 <ul class="w3-ul">
+                    <li>  <b>  1). Connectivity :-  </b> Connectivity is an essential feature of IoT. IoT can connect through several wireless devices, like sensors, mobile phones, trackers, etc. This way, the person will not have to wait for an internet connection to operate a device.  </li>
+               
+                    <li> <b> 2). Identity of Things :-  </b> Identity helps to differentiate between various internet devices. It is essential to give a unique identity to every device so that we can select the device and send the command to it.</li>
+                   <li> <b>3). Intelligence :- </b> The intelligence of IoT devices depends on the sensors' intelligence. As we know the sensors are automatically detects the changing environment send the data to the user for further analysis. </li>
+                  <li> <b> 4). Dynamic and Self-Adapting :- </b> IoT devices are dynamic, Assume a CCTV camera meant for surveillance. It should be work in different conditions and different light situations (morning, afternoon, and night).</li>
+                  <li> <b> 5). Scalability :- </b> The number of elements connected to the IoT zone is increasing day by day. Hence, an IoT setup can capable of handling the massive expansion. it can handled appropriately and accurately.</li>
+                  <li> <b>6). Self Upgradation :- </b> It also allows the set up of a network for the addition of any new IoT devices. Thus, the technology can quickly start working without delay if the setup has already been done.</li>
+                  <li> <b> 7). Architecture :- </b> The architecture of IoT is designed in a way that it is capable of supporting various devices, technologies, and protocols. Its main work is to confirm whether each connected device does not interfere with the other. </li>
+                   <li> <b> 8). Security :- </b> With the increasing number of IoT devices, issues regarding the security of personal data have arisen. There might be a chance of data leakage, Maintaining safety and security is a big dare for IoT. However, it still handles it without any disruption.</li>
+                   <li> <b>9). Network :- </b> With the increasing number of IoT devices in a network, it becomes difficult to maintain communication for proper functioning. However, cloud service and gateway are a few methods that can solve such problems. Because IoT devices can communicate with one another, it is more effective and adaptable than other current technologies.</li>
+                  <li> <b>10). Data :- </b> The data gathered from IoT devices are analyzed for future prediction. Example weather condition information which is collected by sensor (Temperature and humidity sensors).</li>
+               
+                </ul>
+                 
+               
+
+
+                <br>
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section>
+
+<section id="ApplicationsofIoT" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-left"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Applications of IoT</u></h2>
+                   <br>
+
+                   <ul class="w3-ul">  
+                    <li> <b> 1).  IoT Applications in Smart Home :</b> This is one of the most famous applications of IoT is in Smart Homes. oT allows you to connect all your home applications like air conditioners, lighting, locks, thermostat, theft alarm systems, and Air Quality Monitor etc into a single system and have the control at your fingertips with a smartphone. </li>
+                    <li> <b> 2). IoT Applications in Smart Pollution Control : </b>Pollution is one of the biggest problems in most of the cities in the world. Sometimes it’s not clear if we are inhaling oxygen in such a situation,
+                        IoT has helped address the major issue of pollution. It enables controlling the pollution levels to more breathable standards. Data related to city pollution such as vehicular , weather, airflow direction, traffic levels, and more are collected using sensors in combination with IoT. </li>
+                    <li> <b>3). IoT Applications in Smart Cities : </b> This can be done with a combination of sensors in different capacities all over the city that can be used for various tasks ranging from managing the traffic, controlling handling waste management, creating smart buildings, optimizing streetlights, etc.</li>
+                    <li><b>4).  IoT Applications in Water Supply :</b>An IoT smart water meter tracks the quality, pressure, and consumed quantity of water in a household or industry. An IoT smart water sensor can be used to track the flow of water across the entire plant and over the distribution channels. Helping in leakage detection, to reduce water wastage. </li>
+                    <li> <b>5). IoT Applications in Agriculture :</b>Food is an integral part of life without which we cannot survive. IoT makes monitoring and management of micro-climate conditions a reality, which in turn increases production. Using IoT technology can sense soil moisture and nutrients, in conjunction with weather data This can be done by first collecting data for a farm such as soil quality, sunlight levels, seed type, and rainfall density from various sources like farm sensors, satellites, local weather stations etc. </li>
+
+                   </ul>
+                   <br>
+               </div>
+            
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="ComponentsofIoT" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Main Components of IoT</u></h2>
+               
+                 <p><b> &#10028; </b>  There are typically 4 main components of IoT :-  </p>
+                  <ul class="w3-ul"> 
+                    <li>&#10028; <span style="color: rgb(115, 2, 7);"> <b>Sensors and actuators</b></span>  </li>
+                    <li>&#10028; <span style="color: rgb(115, 2, 7);"> <b>Connectivity</b></span>  </li>
+                    <li>&#10028; <span style="color: rgb(115, 2, 7);"> <b>Data processing</b></span>  </li>
+                    <li>&#10028; <span style="color: rgb(115, 2, 7);"> <b>User interface</b></span>  </li>
+                   
+                  </ul>
+                    
+                 <br>
+                 <p><b> &#10028; Sensors and actuators :- </b> <br> These are the devices that collect data from the environment and carry out actions based on that data. They are sometimes referred to as “things” in IoT. <br>
+
+                    Sensors are used to collect data, such as temperature, light, sound, or pressure. Actuators, on the other hand, are used to carry out an action based on the data that has been collected, such as turning on a light or opening a door.</p> 
+                
+
+                <p><b> &#10028; Connectivity :-  </b> Connectivity element plays a very significant task in IoT. After the data is collected, it needs a way to get to the cloud (or other data storage location) so it can be processed and analyzed. This is where connectivity comes in. <br>
+
+                    Connectivity refers to the various technologies that are used to connect devices to the internet, such as WiFi, Bluetooth, cellular, or satellite. The data that was gathered through the sensors is then transmitted over the internet using one of these technologies. </p>    
+                
+
+               <p> <b> &#10028; Data processing :- </b> After data successfully uploads to the cloud, computing software, and big-data analytics process it needs to be processed and analyzed through data processing for the end-user. For example:- night vision and motion sensors can detect unauthorised activity within a defined parameter. Still, the signals get sent to the user via an alert or video footage.</p> 
+
+               <p> <b>  &#10028;  User interface :- </b> Last but not least, we have the user interface. The user interface is what allows humans to interact with IoT devices and systems. This is the last stage of the data processing. After getting notifications through email or text message, it helping us make a decision, the user may also be able to perform an action and affect the system, it also automatically notify security teams to take action on it.</p>
+                <br>
+                </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="LayersofIoT" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Layers of IoT</u></h2>
+               
+                        <img src="content/img/python/layerofiot.png" class="w3-round w3-center"  alt="image" style="width:100%">         
+                
+                 <br>
+                 <br>
+                  <p><b> &#10028;  Perception Layer : </b>  This is the first layer of IoT architecture. In the perception layer, number of sensors and actuators are used to gather useful information like temperature, moisture content, intruder detection, sounds, etc. The main function of this layer is to get information from surroundings and to pass data to another layer so that some actions can be done based on that information.
+                 </p>
+                 <p><b> &#10028; Network Layer :</b>    As the name suggests, it is the connecting layer between perception and middleware layer. It gets data from perception layer and passes data to middleware layer using networking technologies like 3G, 4G, UTMS, WiFI, infrared, etc. This is also called communication layer because it is responsible for communication between perception and middleware layer. All the transfer of data done securely keeping the obtained data confidential.
+                 </p>
+                 <p> <b>&#10028;   Middleware Layer : </b> Middleware Layer has some advanced features like storage, computation, processing, action taking capabilities. It stores all data-set and based on the device address and name it gives appropriate data to that device. It can also take decisions based on calculations done on data-set obtained from sensors.
+                 </p>
+                 <p> <b>&#10028; Application Layer :  </b>The application layer manages all application process based on information obtained from middleware layer. This application involves sending emails, activating alarm, security system, turn on or off a device, smartwatch, smart agriculture, etc.
+                 </p>
+                 <p> <b>&#10028;  Business Layer : </b>   The success of any device does not depend only on technologies used in it but also how it is being delivered to its consumers. Business layer does these tasks for the device. It involves making flowcharts, graphs, analysis of results, and how device can be improved, etc.
+                 </p>
+                 <br>
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="IoTLevel1" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>IoT level</u></h2>
+
+                    <p> <b> &#10028;</b> An IoT ecosystem can be designed on different levels. Each level is fundamentally a roadmap of how to deploy the components of the IoT ecosystem.</p>
+                     <p>There are  six different levels of IoT :- </p>
+                     <div class="w3-container  w3-sand w3-round-xlarge">
+
+                        <p> <b>1). Level 1:</b></p>
+                        <p>&#10028;   In this level all the components are deployed locally. There is no any cloud or external network involved in the process.
+                        </p>
+                        <p>&#10028; The data sensed in stored locally. </p>
+                        <p> &#10028; The data analysis is done locally.</p>
+                        <p> &#10028; The data generated in this level application is not huge.</p>
+                        <p> &#10028; Example: <b>Room temperature</b> is monitored using temperature sensor and data is stored/analysed locally. Based on analysis made, control action is triggered using mobile app or it can just help in status monitoring.</p>
+                       
+                        
+
+                       <br>
+                        <p class="w3-center"> <b>Diagram of IoT Level 1</b></p>
+                        <img src="content/img/python/iot_level_1.jpg" class="w3-round w3-center"  alt="image" style="width:100%">         
+                 <br> <br>
+                    </div>
+                 <br>
+                  <br> 
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="IoTLevel2" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-left"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <br>
+                    
+                     <div class="w3-container  w3-sand w3-round-xlarge">
+                        
+                        <p> <b>2). Level 2:</b></p>
+                        <p>&#10028;   In this level all the components are deployed locally except the servers. There is a cloud or an external network involved in the process.</p>
+                        <p>&#10028;  At the user’s end there are only sensors, routers and application. The cloud part is having the servers configured for the purpose of storage. This standard is good for those ecosystems where data is big. A huge amount of data is coming from many components in the ecosystem and that too on a rapid speed.</p>
+                        <p>&#10028; Data analysis is carried out locally. Cloud is used for only storage purpose.</p> 
+                        <p> &#10028; An example of Level 2 IoT is a <b>smart factory (product details such as product name, packing date, expring date etc. )</b>.</p>
+                       
+                        
+
+                       <br>
+                        <p class="w3-center"> <b>Diagram of IoT Level 2</b></p>
+                        <img src="content/img/python/iot_level_2.jpg" class="w3-round w3-center"  alt="image" style="width:100%">         
+                          <br> <br>
+                    </div>
+                 <br>
+                  <br> 
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+<section id="IoTLevel3" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <br>
+                    
+                     <div class="w3-container  w3-sand w3-round-xlarge">
+                        
+                        <p> <b>3). Level 3:</b></p>
+                        <p>&#10028;   In this level all the components are deployed locally, but the servers, data process and data analysed part are done on cloud.</p>
+                        <p>&#10028;  Here, also data is big. Frequency of data sensing is fast and collected sensed data is stored on cloud.</p>
+                        <p>&#10028; Data analysis is done on the cloud side and based on analysis control action is triggered using mobile app or web app.</p> 
+                        <p> &#10028; An example of Level 3 IoT is a <b>smart industry (tracking/monitoring of packing, services etc )</b>.</p>
+                       
+                        
+
+                       <br>
+                        <p class="w3-center"> <b>Diagram of IoT Level 3</b></p>
+                        <img src="content/img/python/iot_level_3.jpg" class="w3-round w3-center"  alt="image" style="width:100%">         
+                          <br> <br>
+                    </div>
+                 <br>
+                  <br> 
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="IoTLevel4" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <br>
+                    
+                     <div class="w3-container  w3-sand w3-round-xlarge">
+                        
+                        <p> <b>4). Level 4:</b></p>
+                        <p>&#10028;  At this level-4, multiple sensors are used which are independent of the others which are deployed locally.</p>
+                        <p>&#10028;  Here, the observer node is present on both side, which can observed/monitored the changing data or what happening in real time.</p>
+                        <p>&#10028;  The data collected using these sensors are uploaded to the cloud separately. The cloud storage is used in this level due to requirement of huge data storage.</p> 
+                        <p>&#10028;  The data analysis is performed on the cloud and based on which control action is triggered either using web app or mobile app.</p>
+                        <p> &#10028; An example of Level 4 IoT is a <b>smart cities (noise monitoring, pollution observing etc )</b>.</p>
+                       
+                        
+
+                       <br>
+                        <p class="w3-center"> <b>Diagram of IoT Level 4</b></p>
+                        <img src="content/img/python/iot_level_4.png" class="w3-round w3-center"  alt="image" style="width:100%">         
+                          <br> <br>
+                    </div>
+                 <br>
+                  <br> 
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+ 
+
+<section id="IoTLevel5" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <br>
+                    
+                     <div class="w3-container  w3-sand w3-round-xlarge">
+                        
+                        <p> <b>5). Level 5:</b></p>
+                        <p>&#10028;  At this level-5, Here, Multiple device are connected to the sensors and the sensing data send to the  coordinator node.</p>
+                        <p>&#10028;  The coordinator node collects data from the multiple device in locally then it send to the cloud.</p>
+                        <p>&#10028;  The data store and data analysis is performed on the cloud and based on which control action is triggered either using web app or mobile app.</p>
+                        <p>&#10028; There is an Observer Node also in the cloud part that observes the entire process.</p> 
+                        
+
+                       <br>
+                        <p class="w3-center"> <b>Diagram of IoT Level 5</b></p>
+                        <img src="content/img/python/iot_level_5.jpg" class="w3-round w3-center"  alt="image" style="width:100%">         
+                          <br> <br>
+                    </div>
+                 <br>
+                  <br> 
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+ 
+
+<section id="IoTLevel6" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <br>
+                    
+                     <div class="w3-container  w3-sand w3-round-xlarge">
+                        
+                        <p> <b>6). Level 6:</b></p>
+                        <p>&#10028;  At this level-6, Here, Multiple device are connected to the sensors and the sensing data send to the Centralized Controller.
+                            .</p>
+                        <p>&#10028;  Here, the observer node is present on both side, which can observed/monitored the changing data or what happening in real time.</p>
+                        <p>&#10028;  The Centralized Controller is present in cloud. But Centralized Controller monitors the status of all multiple device and send control commands to all connected devices to take an action.</p> 
+                        <p>&#10028;  The data is store and data analysis is performed on the cloud and based on which control action is triggered either using web app or mobile app.</p>
+                        <p>&#10028;  There is an Observer Node also in the cloud part that observes the entire process.</p>
+                        
+                        
+
+                       <br>
+                        <p class="w3-center"> <b>Diagram of IoT Level 6</b></p>
+                        <img src="content/img/python/iot_level_6.jpg" class="w3-round w3-center"  alt="image" style="width:100%">         
+                          <br> <br>
+                    </div>
+                 <br>
+                  <br> 
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+
+
+<section id="buildingblockofIoT" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Building Block of IoT</u></h2>
+                    <p><b> &#10028; An IoT system made up of four basic building blocks:  <span style="color: rgb(115, 2, 7);">Sensors, Processors, Gateways, and Applications.</span>  </b> </p> 
+                   
+                    <img src="content/img/python/buildingblocksofiot.png" class="w3-round w3-center"  alt="image" style="width:100%">  
+                     
+                 <br>
+                 
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="IoTdesignmethodology" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>IoT design Methodology</u></h2>
+                    <p><b> &#10028; IoT design methodology includes the following steps:- </b> </p> 
+                   
+                    <ul class="w3-ul">
+                     <li><span style="color: rgb(115, 2, 7);">  <b> Step 1 : The purpose and requirements of the system:-  </b>  </span> Here, We determine the purpose and requirements of the IoT ecosystem for example if it is for home automation, the purpose is to be able to operate home appliances anytime from anywhere in the world. Accordingly, the requirements are like necessary sensors, actuators, security systems, routers, UI etc.   </li>
+                     <li> <span style="color: rgb(115, 2, 7);"> <b> Step 2 : The process specification:-</b>  </span>  This step is about determining the use cases of different IoT systems based on the purpose and the requirements.  </li>
+                     <li> <span style="color: rgb(115, 2, 7);"> <b> Step 3 : The domain models:-</b>  </span>  It clarifies about the category of the IoT system that is proposed. For example, if we want to be able to track temperature of a patient, the IoT system is of healthcare domain. </li>
+                     <li> <span style="color: rgb(115, 2, 7);"> <b> Step 4 : The information models:- </b> </span> It defines the structure of all the information of data that will be produced in the IoT ecosystem.  </li>
+                     <li> <span style="color: rgb(115, 2, 7);"> <b> Step 5 : The service specifications:- </b>  </span> It will clarify  all the services such as inputs, possible outputs and other data-store related information. </li>
+                     <li> <span style="color: rgb(115, 2, 7);"> <b> Step 6 : The levels of IoT:- </b>  </span>  Depending upon the domain model and the objective, a certain level of IoT is determined in this step. It can be any level between level 1 and level 6.  </li>
+                     <li> <span style="color: rgb(115, 2, 7);"> <b> Step 7 : The functional view:-</b>  </span> It determines all the functionalities the IoT ecosystem will offer many functional groups are designed to specify which functionality of the system falls under which functional group.  </li>
+                     <li> <span style="color: rgb(115, 2, 7);"> <b> Step 8 : The operational view:- </b> </span> It determines the operational part of IoT ecosystem. It can include all the operations like setting up network, deployment of servers, development of UI etc.  </li>
+                     <li> <span style="color: rgb(115, 2, 7);"> <b> Step 9 : Integration of devices and components:-</b>  </span> It this step is about organizing all the components together in order to form a complete IoT system it can include the sensors, actuators, communication systems, network systems etc.  </li>
+                     <li> <span style="color: rgb(115, 2, 7);"> <b> Step 10 : Development of IoT application:-</b>  </span> This is the final step, this is the process of designing, building, and implementing software application.  </li>
+                    </ul>
+
+                     
+                 <br>
+                 
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="physicaldesign" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-left"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>The Physical Design of IoT</u></h2>
+                    <p><b> &#10028;  </b>A physical design of an IoT system refers to the <span style="color: rgb(115, 2, 7);"> Things in IoT ( individual node devices ) </span>  and their <span style="color: rgb(115, 2, 7);">protocols</span>  that are utilized to create a functional IoT ecosystem. Here, we deal with the actual components, protocols and things. </p> 
+                    <br>
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+                      <br>
+                      <h2 class="w3-panel w3-center"><u>Things in IoT </u></h2>
+                      <ul class="w3-ul">
+                        <li> <span style="color: rgb(115, 2, 7);"> <b> &#10028;  Things in IoT:</b> Things refer to all the components that relate with each other to perform a certain task.</span>   </li>
+                        <li>  <b> 1) Connectivity:</b> Devices like USB hosts and ETHERNET are used for connectivity between the devices and the server.
+                        </li>
+                       <li> <b>2)  Processor:</b> A processor like a CPU and other units are used to process the data. These data are further used to improve the decision quality of an IoT system.
+                     </li>
+                         <li> <b>3) Audio/Video Interfaces: </b> An interface like HDMI (High-Definition Multimedia Interface)  devices is used to record audio and videos in a system.
+                         </li>
+                         <li> <b>4) Input/Output interface: </b>  To give input and output signals to sensors, and actuators.
+                         </li>
+                        <li> <b> 5) Storage Interfaces: </b>  Things like Hard Disk are used to store the data generated from an IoT device.
+                        </li>
+                       <li> <b> 6) Graphics: </b>  GPU (graphics processing unit) are used to accelerate the creation of images.</li>
+                       <li> <b> 7) Memory Interfaces :</b> Memory like RAM (Random Access Memory) and Register are used for immediate data storage and retrieval.</li>
+                       
+                    
+                    
+                        
+                      
+                    
+                    </ul>
+
+                      
+
+                    </div>
+                    <br>
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+                        <h2 class="w3-panel w3-center"><u>IoT Protocols</u></h2>
+
+                        <img src="content/img/python/physical-design-of-iot-protocols.png" class="w3-round w3-center"  alt="image" style="width:100%">  
+                     
+                     <ul class="w3-ul">
+                          <li>   <span style="color: rgb(115, 2, 7);">  <b>  &#10028; IoT Protocols: </b>   IoT protocols help send commands and data between a network of devices controlled by sensors or other physical attributes like motion, temperature, or vibration. Here we categorize them on TCP/IP layers: <br> <b> <br> 1). Application <br> 2).  Transport <br> 3). Network  <br>4). Link layer </b> </span>
+                        </li>
+
+                           <li> <b>1) Application Layer :</b> This protocols define how the data can be sent over the network using the application interface.</li>
+                               
+                           <li> <b> Hyper Text Transfer Protocol (HTTP) :</b>  It provides a standard way to transfer documents and their contents in the form of HTML pages.</li>
+
+                           <li> <b> Constrained Application Protocol (COAP) :</b> It is server-based protocol. With this protocol, the COAP packet can be shared between different client nodes which are commanded by the COAP server.</li>    
+                           <li> <b> WebSocket: </b> WebSocket is bidirectional, full-duplex protocol that is used to  providing simultaneous two-way communication channels over a single Transmission Control Protocol (TCP) connection. </li>
+                           <li> <b> Message Queuing Telemetry Transport (MQTT) :</b>It is a machine to machine (M2M) connectivity protocol, this protocol is based on the publish-subscribe methodology in which clients receive the information through a <span style="color: rgb(115, 2, 7);"> broker only </span>to the subscribed topic.</li>
+                           <li> <b>  Extensible Messaging Presence Protocol (XMPP): </b>It provides instant messaging framework, allowing devices to exchange data, realtime status updates, Push Notifications. This protocol is mostly used by instant messaging applications like WhatsApp.</li>  
+                            <li> <b> Data Distribution Service (DDS) : </b> DDS is another publish-subscribe protocol but it is different from MQTT which connects them to server but here DDS protocol is a <span style="color: rgb(115, 2, 7);">broker-less</span>  architecture that’s why it is a high speed and high-performance protocol than MQTT as it is not dependent upon any intermediary system.</li>
+                            <li> <b> Advanced Message Queuing Protocol (AMQP) :</b> Here, Queues as a result it is focused on not losing messages. It useful for sending transactional messages that’s why mainly used in financial industry.</li>
+                        </ul>
+                      
+
+                    </div>
+                    <br>
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+
+                        <ul class="w3-ul">
+                        <li> <b>2) Transport Layer :</b> Protocols of this layer work for the better transfer reachability of data packets along the network.</li>
+                         <li> <b> Transmission Control Protocol ( TCP )  :</b> TCP ensures reliable, ordered data delivery by establishing a connection, performing error correction, and retransmitting lost packets.</li>
+                         <li> <b>User Datagram Protocol ( UDP ) :</b> UDP  is a connectionless protocol that prioritizes speed and low overhead but does not guarantee reliable delivery or perform error correction. </li>
+
+                        </ul>
+
+
+                    </div>
+                    <br>
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+
+                        <ul class="w3-ul">
+                        <li> <b>3) Network Layer :</b> Protocols of this layer work for the better routing and forwarding of data packets along the network .</li>
+                         <li> <b> Internet Protocol version 4 ( IPv4 )  :</b> Whenever a device is connected to internet, it assigned a <span style="color: rgb(115, 2, 7);"> 
+                            32-bit unique address  which identifies a device on a network </span> and makes it possible to connect our devices in IoT ecosystem.</li>
+                         <li> <b> Internet Protocol version 6 ( IPv6 ) :</b> It is Latest version of Internet Protocol <span style="color: rgb(115, 2, 7);"> which is 128-bit addresse </span> , IPv6 includes built-in security features and QoS support, which were not present in IPv4. IPv6 also provides better support for mobile networks and IoT devices, which require large address spaces. </li>
+                           <li> <b> IPv6 over Low-Power Wireless Personal Area Networks ( 6LowPAN ) : </b> Internet Protocol uses to the smallest devices, enabling low-power devices with limited processing capabilities to participate in the Internet of Things.</li>
+                        </ul>
+
+
+                    </div>
+                    <br>
+
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+
+                        <ul class="w3-ul">
+                            <li> <b>4) Link Layer : </b> Link-layer protocols are used to send data over the network’s physical layer. It also determines how the packets are coded and signaled by the devices.</li>
+                           
+                           <li> <b> IEEE 802.3 (Ethernet): </b>  Ethernet can be used to connect  fixed wired IOT devices to produce high speed local area network.
+                           </li>
+                           <li> <b> IEEE 802.11 (Wi-Fi): </b>  Wifi is used in most home and office networks to allow laptops, printers, smartphones, and other devices to communicate with each other.
+                           </li>
+                           <li> <b> IEEE 802.16 (Wi-Max): </b>   Worldwide Interoperability for Microwave Access (WiMAX), is a telecommunications technology aimed at providing wireless data over long distances in a variety of ways, from point-to-point links to full mobile cellular type access.
+                           </li>
+                           <li> <b>IEEE 802.15.4 (Zigbee/LR-WPAN): </b>  Zigbee is a protocol used to link smart devices like lights, plugs, and smart locks to a home network. Low-Rate Wireless Personal Area Network (LR-WPAN)
+                           </li>
+                           <li> <b>2G/3G/4G/5G: </b> It is different cellular telephony generations.
+                           </li>
+                          </ul> 
+                    </div>
+                   
+                      
+                 <br>
+                 
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+
+<section id="LogicalDesign" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Logical Design of IoT</u></h2>
+                 <p> <b>&#10028; </b> A logical design for an IoT system is the actual design of how its components (computers, sensors, and actuators) should be arranged to complete a particular function.</p>
+                 <br>
+                 <div class="w3-container  w3-sand w3-round-xlarge">
+                    <ul class="w3-ul">
+                        <li><b>IoT logical design includes:-</b></li>
+                        <li>1). IoT functional blocks: </li>
+                        <li>2). IoT communications models: </li>
+                        <li>3). IoT communication APIs: </li>
+    
+                     </ul>  
+                </div>
+               
+                 <br>
+                 <h4 class="w3-panel "> &#10028; <u>IoT functional blocks</u></h4> 
+                   <p>It handle the communication between the server and the host, enable monitoring control functions, manage the data transfer, secure the IoT system using authentication and different functions.</p>
+                   <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+          <p>IoT systems include several functional blocks such as :- <b> <br> <br>1). Devices <br> 2). Communication <br> 3). Security <br> 4). Services <br> 5). Management  <br> 6). Application. </b></p>
+              
+                 <br>
+
+                
+                     <ul class="w3-ul">
+                      <li> &#10028;  <b> Device: </b> An IoT system devices that provide
+                        sensing, actuation, monitoring and control
+                        functions. </li> 
+                      <li> &#10028; <b>Communication: </b>  Handles the communication for
+                            the IoT system.</li> 
+                      <li> &#10028; <b> Services:</b> Services for device monitoring, device
+                            control service, data publishing services etc.</li>  
+                      <li> &#10028; <b> Management: </b> This blocks provides various
+                            functions to manage the IoT system. </li> 
+                      <li> &#10028; <b> Security:</b> This block secures the IoT system and by
+                                providing functions such as authentication ,
+                                authorization, message and data security.</li> 
+                      <li>&#10028; <b> Application: </b>This is an interface that the users can
+                            use to control and monitor various aspects of the
+                            IoT system. Application also allow users to view the
+                            system status and view or analyze the processed
+                            data. </li>       
+                     </ul>
+               
+                 
+                    </div>
+                    <br>
+                    <br>
+                    <h4 class="w3-panel "> &#10028; <u>IoT communications models</u></h4> 
+                    <p> In IoT system there are four communication models. </p>
+
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+                      <ul class="w3-ul">
+                        <li><b> 1) Request-Response communication model :</b> </li>
+                        <li><b>2) Publish-Subscribe communication model: </b></li>
+                        <li> <b>3) Push-Pull communication model:</b> </li>
+                        <li><b>4) Exclusive Pair communication model: </b></li>
+                        
+
+
+
+                      </ul>
+
+                    </div>
+                    <br>
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+                        <p> 1) Request-Response communication model :</b> </p>
+                        <img src="content/img/python/requestresponseiot.jpg" class="w3-round w3-center"  alt="image" style="width:100%">   
+                       <br>
+                       <br>
+                    </div>
+                    <br>
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+                        <p> 2) Publish-Subscribe communication model: </b> </p>
+                        <img src="content/img/python/publishsubscribeiot.jpg" class="w3-round w3-center"  alt="image" style="width:100%">   
+                        <ul class="w3-ul">
+                         <li> &#10028;   Publishers are the source of data, Publishers are not aware of the consumers..
+                        </li>
+                         <li> &#10028;   Publishers send the data (topics wise) which are managed by the broker.
+                        </li>
+                         <li> &#10028;    When the broker receive data for a topic from the publisher, it sends the data to all the subscribed consumers.
+                        </li>
+                        </ul>
+                       <br>
+                    </div>
+                    <br>
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+                        <p> 3) Push-Pull communication model  :</b> </p>
+                        <img src="content/img/python/pushpull.jpg" class="w3-round w3-center"  alt="image" style="width:100%">   
+                        <ul class="w3-ul">
+                         <li> &#10028;   Publishers are not aware of the consumers.
+                        </li>
+                         <li> &#10028;  Queues help in send the messaging between the Producers and Consumers.
+                        </li>
+                         <li> &#10028;   Queues also act as a buffer which helps in situations when there is a mismatch between the rate at which the producers push data and the rate at which the consumer can pull data.
+                        </li>
+                        </ul>
+                       <br>
+                    </div>
+                    <br>
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+                        <p> 4) Exclusive Pair communication model  :</b> </p>
+                        <img src="content/img/python/exclusivepair.jpg" class="w3-round w3-center"  alt="image" style="width:100%">   
+                        <ul class="w3-ul">
+                         <li> &#10028;   Client and server can send messages to each other after connection setup. 
+                        </li>
+                         <li> &#10028;  Connection is setup it remains open until the client sends a request to close the connection.
+
+                        </li>
+                          </ul>
+                       <br>
+                    </div>
+                  
+                  
+                <br>
+                <br>
+                  
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="CommunicationAPIs" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>IoT Communication APIs</u></h2>
+               
+                    <div class="w3-container  w3-sand w3-round-xlarge"> 
+                        <p><b>In IoT, there are 2 communication APIs:– </b></p>
+                         <p> &#10028; REST Based Communication APIs</p>
+                         <p> &#10028;  Web Socket Based Communication APIs</p>
+                       
+                    </div>
+                    <br>
+                    <div class="w3-container  w3-sand w3-round-xlarge"> 
+                        <br>
+                          <p> 1). REST Based Communication APIs </p>
+                        <img src="content/img/python/rest.jpg" class="w3-round w3-center"  alt="image" style="width:100%">   
+                         
+                        <br>
+                        <br>
+                         <ul class="w3-ul"> 
+                            <li> &#10028; It focus on a system’s resources and how resource states are addressed and transferred. </li>
+                            <li> &#10028; REST APIs follow the request-response communication model. </li>
+                            <li> &#10028; REST APIs are stateless, meaning that each request is processed independently. </li>
+                         </ul>
+
+                    </div>
+                    <br>
+                    <div class="w3-container  w3-pale-yellow w3-round-xlarge"> 
+                        <br>
+                          <p> 2). Web Socket Based Communication APIs</p>
+                        <img src="content/img/python/websocket.jpg" class="w3-round w3-center"  alt="image" style="width:100%">   
+                         
+                        <br>
+                        <br>
+                         <ul class="w3-ul"> 
+                            <li> &#10028; Web Socket APIs allow bi-directional, full-duplex communication between clients and servers. </li>
+                            <li> &#10028; It follows the exclusive pair communication model. </li>
+                            <li> &#10028; This Communication API does not require a new connection to be set up for each message to be sent between clients and servers. Once the connection is set up the messages can be sent and received continuously without any interruption.  </li>
+                         </ul>
+
+                    </div>
+                    <br>
+                    <br>
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+                        <br>
+                        <p>Difference between Rest API and Web Socket API</p>
+                        <br>
+                        <div class="w3-responsive">
+                            <table class="w3-table-all">
+                                <tr> <th>REST API </th> <th>WEB SOCKET API </th> </tr>
+                                <tr> <td> It is Stateless protocol. It will not store the data.</td> <td>It is Stateful protocol. It will store the data.</td></tr>
+                                <tr> <td>It is Uni-directional. Only either server or client will communicate. </td> <td>It is Bi-directional. Messages can be received or sent by both server or client. </td></tr>
+                                <tr> <td>It is Request-response model. </td> <td> It is Full duplex model.</td> </tr>
+                                <tr> <td>New TCP connection will be set up for each HTTP request. </td> <td>Only Single TCP connection. </td></tr>
+                                <tr> <td>It depends upon the HTTP methods to retrieve the data.</td> <td>It depends upon the IP address and port number to retrieve the data.</td></tr>
+                            </table>
+
+                        </div>
+                         <br>
+                        
+                   </div>    
+
+
+                    
+                    
+                    <br>
+
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+
+                        <p> <b>Development tools used in IoT:</b></p>
+                        <p> &#10028; Arduino </p>
+                        <p>&#10028;  Eclipse IoT</p>
+                        <p>&#10028; IBM Watson</p>
+                        <p>&#10028; Raspberry Pi</p>
+                        <p>&#10028; OpenSCADA</p>
+
+
+
+                    
+                    </div>
+                    <br>
+               </div>
+            
+          
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+
+
+
+
+ 
+        <!-- Page content header  End-->
+
+        <!-- Page content Body Start -->
+
+            
+
+            <!-- Page content Coding part Start -->
+
+
+
+<!-- 
+         <section id="sec1" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                        <h2 class="w3-panel w3-center">Example1</h2>
+                         <div class=" w3-leftbar w3-border-pink w3-border w3-round-large ">
+                           
+<pre class="line-numbers" data-line="15-25">
+    <code class="language-java">
+      package com.example.webviewtest;
+      import androidx.appcompat.app.AppCompatActivity;
+      import android.os.Bundle;
+      import android.view.View;
+      import android.webkit.WebView;
+    
+      public class MainActivity extends AppCompatActivity {
+      private WebView webView;
+      @Override
+      protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_main);
+            webView=findViewById(R.id.webviewforhighlight);
+            webView.getSettings().setJavaScriptEnabled(true);
+            webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+            webView.loadUrl("file:///android_asset/prismjs_template.html");
+        }
+     }
+    
+    
+     x = "awesome"
+    
+     def myfunc():
+       x = "fantastic"
+       print("Python is " + x)
+     
+     myfunc()
+     
+     print("Python is " + x)
+    
+    
+    </code>
+    </pre>
+    
+
+                         </div>
+
+                    </div> 
+                </div>
+            </div>
+
+
+
+         </section> -->
+
+
+         
+            
+              
+           
+
+   
+            
+            
+            <!-- Page content Coding part Start -->
+
+
+        <!-- Page content Body Start -->
+
+
+ <!-- Page Content End --> 
+ 
+ <script>
+ 
+ AOS.init();
+
+
+
+</script>
+</body>
+</html>

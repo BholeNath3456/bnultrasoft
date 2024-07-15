@@ -1,0 +1,1932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction of Python</title>
+   <!-- cdn links start -->
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+
+
+   <!-- cdn links end-->
+    
+    
+    
+    
+    <!-- content web page links  start-->
+    <link rel="stylesheet" href="content/content.css">
+    <script src="content/content.js"></script>
+
+    <link rel="stylesheet" href="content/prism.css">
+    <script src="content/prism.js"> </script>
+
+    <link rel="stylesheet" href="content/aos/aos.css">
+    <script src="content/aos/aos.js"></script>
+
+    <!-- content web page links end -->
+  
+
+
+
+</head>
+<body>
+
+
+    <!-- background image Start -->
+    <div class="backgrounds overlay">
+        <div class="background" style="background-image: url('content/img/hero.jpg');"></div>
+    </div>
+    <!-- background image End-->
+    
+    <!-- Sidebar Start -->
+
+
+
+     <div class="w3-sidebar w3-bnultrasoft-color topPadding   w3-card-4 w3-animate-left" style="display:none" id="mySidebar">
+        <div class="w3-bar  w3-hover-white">
+            <span class="w3-bar-item w3-padding-16  ">Contents</span> <button onclick="w3_close()" class="w3-bar-item w3-button w3-right w3-padding-16  w3-hover-black " >&times;</button>
+        </div>
+        
+        <div class="w3-bar-block  ">
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#pythonintroduction">Introduction of Python</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#technicalStrengthofPython">Technical Strength of Python</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#PythonInterpreter">Python Interpreter</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#howtorunpython">Using CMD (Command Prompt)</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#PythonComments">Python Comments</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#PythonVariable">Python Variable</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#PythonKeywords">Python Keywords</a> 
+            <a class="w3-bar-item w3-button  w3-hover-white  w3-animate-zoom w3-animate-fading" href="#PythonPrintFunction">Python Print Function</a>
+            <a class="w3-bar-item w3-button w3-hover-white  w3-animate-zoom w3-animate-fading" href="#PythonInputFunction">Python Input Function</a>
+            <a class="w3-bar-item w3-button w3-hover-white  w3-animate-zoom w3-animate-fading" href="#PythonDataType">Python DataType</a>
+            <a class="w3-bar-item w3-button w3-hover-white  w3-animate-zoom w3-animate-fading" href="#PythonConstants">Python Constants</a>
+            <a class="w3-bar-item w3-button w3-hover-white  w3-animate-zoom w3-animate-fading" href="#PythonLiteral">Python Literal</a>
+            <a class="w3-bar-item w3-button w3-hover-white  w3-animate-zoom w3-animate-fading" href="#PythonString">Python String</a>
+            <a class="w3-bar-item w3-button w3-hover-white  w3-animate-zoom w3-animate-fading" href="#PythonStringConcatenation">Python String Concatenation</a>
+            <a class="w3-bar-item w3-button w3-hover-white  w3-animate-zoom w3-animate-fading" href="#PythonFormatStrings">Python Format Strings</a>
+            <a class="w3-bar-item w3-button w3-hover-white  w3-animate-zoom w3-animate-fading" href="#PythonEscapeCharacter">Python Escape Character</a>
+           
+            
+            
+            <!-- <a class="w3-bar-item w3-button  w3-hover-white w3-animate-zoom" href="#sec2">About</a>
+            <a class="w3-bar-item w3-button  w3-hover-white w3-animate-zoom" href="#sec3">Contact</a>
+            <a class="w3-bar-item w3-button  w3-hover-white w3-animate-zoom" href="javascript:void(0)">Support</a>
+            <a onclick="myFunction('Demo1')" class="w3-button  w3-hover-white w3-left-align w3-block w3-animate-zoom">Accordion <i class="fa fa-caret-down"></i></a>
+                <div id="Demo1" class="w3-hide w3-animate-zoom">
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 1</a>
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 2</a>
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 3</a>
+                </div> 
+            <a onclick="myFunction('Demo2')" class="w3-button  w3-hover-white w3-left-align w3-block w3-animate-zoom">Accordion <i class="fa fa-caret-down"></i></a>
+                <div id="Demo2" class="w3-hide w3-animate-zoom">
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 1</a>
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 2</a>
+                <a href="#" class="w3-button  w3-hover-white w3-block w3-left-align">Link 3</a>
+                </div>
+
+           <a class="w3-bar-item w3-button w3-animate-zoom w3-bnultrasoft-color w3-hover-white" href="quiz.html">Python Quiz Set1</a>    
+       
+        -->
+       
+        </div>
+       
+
+
+    </div> 
+
+
+
+
+
+
+
+    <!-- Sidebar Start End -->
+
+<!-- Page Content Start -->
+
+        <!-- Page content header Start -->
+
+
+
+
+        <div class="w3-bnultrasoft-color w3-top">
+            <button class="w3-button w3-xlarge  w3-hover-white" onclick="w3_open()" >&#9776;</button>
+
+            <a href="../ittoolsandnetworkbasics.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M1</a>
+            <a href="../webdesigningandpublishing.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M2</a>
+            <a href="../python.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M3</a>
+            <a href="../iot.html" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Olevel M4</a>
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium w3-xlarge w3-hover-white" onclick="myFunctionRightItem()" >&#9776;</a>
+
+           
+                        <!-- SearchBar start  -->
+
+                       
+
+                     <!-- <div class="w3-dropdown-click  w3-hover-black">
+                        
+                        <input class="w3-input w3-center w3-padding w3-round-xxlarge" type="text" placeholder="Search any contents..."  onclick="dropFunction()"  id="myInput" onkeyup="filterFunction()">
+                        <div class="w3-dropdown-content w3-bar-block w3-card w3-white" id="myDIV" >
+                        
+                            <a class="w3-bar-item w3-button"  href="#pythonintroduction">Introduction of Python</a>
+                            <a class="w3-bar-item w3-button" href="#technicalStrengthofPython">Technical Strength of Python</a>
+                            <a class="w3-bar-item w3-button" href="#PythonInterpreter">Python Interpreter</a>
+                            <a class="w3-bar-item w3-button" href="#howtorunpython">Using CMD (Command Prompt)</a>
+                            <a class="w3-bar-item w3-button" href="#PythonComments">Python Comments</a>
+                            <a class="w3-bar-item w3-button" href="#PythonVariable">Python Variable</a>
+                            <a class="w3-bar-item w3-button" href="#PythonKeywords">Python Keywords</a>
+                            <a class="w3-bar-item w3-button" href="#PythonPrintFunction">Python Print Function</a>
+                            <a class="w3-bar-item w3-button" href="#PythonInputFunction">Python Input Function</a>
+                            <a class="w3-bar-item w3-button" href="#PythonDataType">Python DataType</a>
+                            <a class="w3-bar-item w3-button" href="#PythonConstants">Python Constants</a>
+                            <a class="w3-bar-item w3-button" href="#PythonLiteral">Python Literal</a>
+                            <a class="w3-bar-item w3-button" href="#PythonString">Python String</a>
+                            <a class="w3-bar-item w3-button" href="#PythonStringConcatenation">Python String Concatenation</a>
+                            <a class="w3-bar-item w3-button" href="#PythonFormatStrings">Python Format Strings</a>
+                            <a class="w3-bar-item w3-button" href="#PythonEscapeCharacter">Python Escape Character</a>
+                           
+                            
+                        </div>
+                        </div>  -->
+
+
+                    <!-- SearchBar End  -->
+                  
+                    <!-- ------------Right hidden items----------- -->
+
+                    <div id="demo" class="w3-bar-block w3-bnultrasoft-color w3-hide w3-hide-large w3-hide-medium  w3-animate-zoom w3-animate-fading">
+                        <a href="../ittoolsandnetworkbasics.html" class="w3-bar-item w3-button w3-hover-white">Olevel M1</a>
+                        <a href="../webdesigningandpublishing.html" class="w3-bar-item w3-button w3-hover-white">Olevel M2</a>
+                        <a href="../python.html" class="w3-bar-item w3-button w3-hover-white">Olevel M3</a>
+                        <a href="../iot.html" class="w3-bar-item w3-button w3-hover-white">Olevel M4</a>
+                      </div>
+
+                      
+                    <!-- ------------Right hidden items----------- -->
+   
+
+        </div>
+        <!-- Page content header  End-->
+
+        <!-- Page content Body Start -->
+
+            
+
+ <!-- Page content Coding part Start -->
+
+
+ <section id="pythonintroduction" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Introduction of Python</u></h2>
+               
+                <h4><b>&#10028;</b> <u>Python:</u> </h4>                         
+                <p> &#10028; Python is easy to learn and use, open source and free, high level, interpreted, portable and object-oriented programming language. <br>
+                  &#10028; Python was created by <b>Guido van Rossum</b>, and first released on <b>February 20, 1991</b>. <br> 
+                  
+                  &#10028; While you may know the python as a large snake, the name of the Python programming language comes from an old BBC television comedy sketch series called Monty Python's Flying Circus. <br>
+
+                  &#10028; It support almost all <b>OS:</b>  Windows, macOS, Linux/UNIX, Android and a few other platforms. <br>
+                  
+                  &#10028; The files with the <b> .py </b> extension contain the python source code. <br>
+                  &#10028; The files with the <b> .pyc </b> extension contain the python compiled  bytecode. 
+                </p>
+                <br>
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="technicalStrengthofPython" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-left"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Technical Strength of Python</u></h2>
+               
+                <h4><b>&#10028;</b> <u>Python is Portable:</u> </h4>                         
+                <p> &#10028;  Python is portable Python is portable, it means that if we have a python code for windows. Python can be run equally on different platforms such as Windows, Linux, Mac OS etc. It enables programmers to develop the software several platform by writing a program only once.   </p>
+                <br>
+
+                <h4><b>&#10028;</b> <u>Python is Interpreted:</u> </h4>                         
+                <p> &#10028; Python is processed at the runtime by the interpreter, you do not need to compile your program before executing it.   </p>
+                <br>
+
+                <h4><b>&#10028;</b> <u>Python is Free and Open Source:</u> </h4>                         
+                <p> &#10028; In simple terms, you can freely distribute copies of this software, read its source code, make changes to it.   </p>
+                <br>
+                <h4><b>&#10028;</b> <u>Python is General-Purpose:</u> </h4>                         
+                <p> &#10028; It means that the Python can be used for a wide variety of development tasks including Data Science, Machine Learning, Artificial Intelligence, Software Development, Web Development etc.   </p>
+                <br>
+
+
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+
+<section id="PythonInterpreter" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Introduction to Python Interpreter
+                        and program execution</u></h2>
+               
+                        <img src="content/img/python/InternalWorkingofPython.png" class="w3-round w3-center"  alt="image" style="width:100%">         
+                
+                 <br>
+                 <p><b> &#10028; Python interpreter : </b> Python converts source code into series of bytecode in compilation stage. This bytecode cannot be understand by CPU directly. So, there is a need of mediator to do this tasks.Here interpreter comes into existence called the Python Virtual Machine.</p> 
+                 <p><b>  &#10028; Python Virtual Machine (PVM)</b> is a program which provides programming environment. The role of PVM is to convert the byte code instructions into machine code so the computer can execute those machine code instructions and display the output.</p>
+                 <p> <b>&#10028; Note : </b> The standard implementation of python is called <b>"CPython"</b>. Here, CPython can be defined as a both interpreter and compiler. CPython written in C and python.</p>
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="howtorunpython" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-left"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>How to run python programs by using CMD (Command Prompt)?</u></h2>
+               
+               
+                   <p> <b> &#10028; Step 1:-</b> Make a file using a text editor. (Open Notepad)</p>
+                   <p> <b> &#10028; Step 2:-</b> After writing the code save the file using <b>"filename.py"</b> </p>
+                   <p> <b> &#10028; Step 3:-</b> Now, Open <b> Command Prompt</b> then copy the location of your python file and  <b>"Type cd"</b> and paste the location.</p>
+                   <p> <b> &#10028; Step 4:-</b> Type <b>python filename.py</b> and press Enter. </p>
+                  
+                 
+                <br>
+         
+                <h4><b>&#10028;</b> <u>Labwork 1:</u> </h4>  
+                <p>  Write programs in python according to the following questions.</p>
+                <table class="w3-table-all">
+                    <tr> <th> To Print</th> <th> Desktop\Folder Name</th> <th> File Name</th>   </tr>
+                    <tr> <td> "Hi, Programmers"</td> <td> abc</td> <td> p1.py</td>   </tr>
+                    <tr> <td> "How are you?"</td> <td> abc</td> <td> p2.py</td>   </tr>
+                    <tr> <td> "Welcome to the Python"</td> <td> abc</td> <td> p3.py</td>   </tr>
+                    <tr> <td> "Programming World"</td> <td> abc</td> <td> p4.py</td>   </tr>
+                    
+
+
+                </table>
+                <br>
+
+                <h4><b>&#10028;</b> <u>Labwork 2:</u> </h4>  
+                <p>  Write programs in python according to the following questions.</p>
+                <table class="w3-table-all">
+                    <tr> <th> To Print</th> <th> Desktop\Folder Name</th> <th> File Name</th>   </tr>
+                    <tr> <td> "Hi, Programmers"</td> <td> __abc__</td> <td> p1.py</td>   </tr>
+                    <tr> <td> "How are you?"</td> <td> __abc__</td> <td> p2.py</td>   </tr>
+                    <tr> <td> "Welcome to the Python"</td> <td> __abc__</td> <td> p3.py</td>   </tr>
+                    <tr> <td> "Programming World"</td> <td>__abc__</td> <td> p4.py</td>   </tr>
+                    
+
+
+                </table>
+                <br>
+                <div class="w3-container w3-pale-yellow w3-round-xlarge">
+                    <p> <b> &#10028; To Compile:- <span style="color: rgb(25, 0, 249);"> python  -m py_compile </span>  <span style="color: rgb(252, 40, 47);"> p1.py  </span> press enter.</b></p>
+                    <p> <b> &#10028; To Run:-  <span style="color: rgb(25, 0, 249);"> python  </span>  <span style="color: rgb(252, 40, 47);"> p1.cpython-312.pyc  </span> press enter.</b> (under <b>__pycache__</b> folder)</p>
+    
+                </div>
+             
+               
+                <h4>  <b>         &#10028; </a></b> <a href="https://docs.python.org/3/library/functions.html" target="_blank">Labwork 3: </a> </h4> 
+                <p> Compile all files at once after that, run all files at once.</p>
+                <table class="w3-table-all">
+                    <tr> <th> To Print</th> <th> Desktop\Folder Name</th> <th> File Name</th>   </tr>
+                    <tr> <td> "Hi, Programmers"</td> <td>xyz</td> <td> p1.py</td>   </tr>
+                    <tr> <td> "How are you?"</td> <td> xyz</td> <td> p2.py</td>   </tr>
+                    <tr> <td> "Welcome to the Python"</td> <td>xyz</td> <td> p3.py</td>   </tr>
+                    <tr> <td> "Programming World"</td> <td>xyz</td> <td> p4.py</td>   </tr>
+                    
+
+
+                </table>
+
+            </a>
+                <br>
+
+               </div>
+
+
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+
+
+<section id="PythonComments" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Python Comments</u></h2>
+               
+                       
+                 <br>
+                 <h4><b>&#10028;</b> <u>Single Line Comments</u> </h4> 
+                 <p><b> &#10028; </b> Comments starts with a <b>#</b>, and Python will ignore them, it cannot be execute. </p> 
+                 <p><b> &#10028; </b> Comments can be used to explain Python code. </p>
+                 <div class="w3-container w3-pale-yellow w3-round-xlarge">
+                  <h4>Example:</h4>
+                   <p> print("Hello, World!") <span style="color: rgb(252, 40, 47);"> #This line says, to print Hello World.</span></p>
+                </div>
+                   
+                <h4><b>&#10028;</b> <u>Multiline Comments</u> </h4> 
+                <p><b> &#10028; </b>  Python does not really have a syntax for multiline comments. To add a multiline comment you could insert a <b>#</b> for each line: </p>
+                <div class="w3-container w3-pale-yellow w3-round-xlarge">
+                    <h4>Example:</h4>
+                      <p> <span style="color: rgb(252, 40, 47);"> #This is a comment</span> </p>
+                      <p> <span style="color: rgb(252, 40, 47);"> #written in</span> </p>
+                      <p> <span style="color: rgb(252, 40, 47);"> #more than just one line.</span> </p>
+                     <p> print("Hello, World!") </p>
+                  </div>
+                
+                <p><b> &#10028; </b>But you can add comments in triple quotes <b> (""") </b>in your code, it treat as comments in python.  </p>
+               
+                <div class="w3-container w3-pale-yellow w3-round-xlarge">
+                    <h4>Example:</h4>
+
+                    <span style="color: rgb(252, 40, 47);">
+                    """
+                    This is a comment <br>
+                    written in <br>
+                    more than just one line
+                    """
+                    </span>
+                    <p> print("Hello, World!") </p>
+                    
+
+                   
+                  
+                  
+                    </div>
+
+                 <p><b> &#10028; Note:  </b> As long as the string is not assigned to a variable, Python will read the code, but then ignore it.</p>
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="PythonVariable" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Python Variable</u></h2>
+               
+                        <img src="content/img/python/pythonvariable.jpg" class="w3-round w3-center"  alt="image" style="width:100%">         
+                
+                 <br>
+                 <h4><b>&#10028;</b> <u>Python Variable:</u> </h4> 
+                 <p> <b> &#10028; </b> Variable is the name that is used to refer memory location, it means that when you create a variable you reserve some space in memory.</p> 
+                 <p> <b> &#10028; </b> Python Variable we don't need to specify the type of variable.</p> 
+                 <p> <b> &#10028; </b> Python variable is also known as identifier.</p> 
+                 <br>
+                 <h4><b>&#10028;</b> <u>The rules for naming an identifier.</u> </h4> 
+                 <p> <b> &#10028; </b> A variable name must start with a letter or the underscore character.</p> 
+                 <p> <b> &#10028; </b> A variable name cannot start with a number.</p> 
+                 <p> <b> &#10028; </b> White space and special characters (!, @, #, %, etc.) are not allowed.</p> 
+                 <p> <b> &#10028; </b> Python is a case-sensitive programming language. So, variable names are case-sensitive (age, Age and AGE are three different variables).</p> 
+                 <p> <b> &#10028; </b> We cannot use Python reserve keyword has identifiers.</p> 
+                 <br>
+                 <div class="w3-container w3-pale-yellow w3-round-xlarge">
+                    <p><b>&#10028;</b> <u>Example of valid identifiers:</u>  <span style="color: rgb(25, 25, 248);"> <b>a123, _n, n_9 etc. </b></span></p> 
+                    <p><b>&#10028;</b> <u>Example of Invalid identifiers:</u>  <span style="color: rgb(255, 26, 26);"> <b>1a, n%4, n 9 etc. </b></span></p> 
+                  
+
+                 </div>
+                  
+                 <br>
+                 <h4><b>&#10028;</b> <u>Which of the following are valid Python identifiers? </u> </h4>
+                 <div class="w3-responsive"> 
+                    <table class="w3-table w3-pale-yellow ">
+                    
+
+                        <tr> <td>a.p</td> <td> a?4</td> <td>email</td> <td>marks10</td></tr>
+                        <tr> <td>20marks</td> <td> _my</td> <td>_python$val</td> <td>per%10</td></tr>
+                        <tr> <td>abc@xyz</td> <td> _abc2</td> <td>python2learn</td> <td>ca$h</td></tr>
+                        
+                        
+                        
+    
+                     </table>
+
+                 </div>
+              
+            
+                  <br>
+                 <h4><b>&#10028;</b> <u> The multi-word variable name can be created by the following method.</u> </h4> 
+                 <p><b> Camel Case -  </b> In the camel case, each word or abbreviation in the middle of begins with a capital letter. There is no intervention of whitespace. <br>  <span style="color: rgb(115, 2, 7);"> For example - nameOfStudent, valueOfVariable, etc. </span> </p>
+                 <p><b> Pascal Case - </b> It is the same as the Camel Case, but here the first word is also capital. <br> <span style="color: rgb(115, 2, 7);"> For example - NameOfStudent, etc. </span> </p>
+                 <p><b> Snake Case - </b>  In the snake case, Words are separated by the underscore. <br>  <span style="color: rgb(115, 2, 7);"> For example - name_of_student, etc.</span> </p>
+             
+
+ 
+                <br>
+                
+                </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section>
+
+<section id="PythonKeywords" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Python Keywords</u></h2>
+               
+                              <br>
+                 <p><b> &#10028; Python Keywords : </b> Reserve keywords are predefined in Python programming language is keywords are special meaning in specific operation this keywords cannot be used as variable names, function names, or any other identifiers.</p> 
+                 <div class="w3-container w3-pale-yellow w3-round-xlarge">
+
+                    
+                    <p> <b> To check the keyword list: </b></p>
+                    <p> <b><span style="color: rgb(115, 2, 7);"> >>> help()  </span>  press enter </b></p>
+                    <p> <b>  <span style="color: rgb(115, 2, 7);"> help> </span> keywords  press enter </b></p>
+
+                 </div>
+                 <p> <b>  &#10028; There are 35 keywords in Python 3.12.2</b></p>
+
+                 <div class="w3-responsive">
+                    <table class="w3-table-all">
+
+
+                        <tr> <td>and  </td> <td> break</td> <td>elif </td> <td>from </td> <td>is   </td> <td>pass </td> <td> with</td> </tr>
+                        <tr> <td>as  </td> <td>class  </td> <td>else  </td> <td>global </td> <td> lambda  </td> <td>raise </td> <td>yield </td> </tr>
+                        <tr> <td>assert  </td> <td>continue  </td> <td>except  </td> <td>if  </td> <td>nonlocal  </td> <td>return </td> <td>True </td> </tr>
+                        <tr> <td>async </td> <td>def </td> <td>finally </td> <td>import </td> <td> not </td> <td>try </td> <td>False </td> </tr>
+                        <tr> <td>await </td> <td>del  </td> <td>for  </td> <td>in  </td> <td> or </td> <td> while </td> <td> None</td> </tr>
+                       </table>
+
+                 </div>
+               
+                 
+                 <br> 
+                </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section>
+
+
+<section id="PythonPrintFunction" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Python print() Function</u></h2>
+
+                    <h4><b>&#10028;</b> <u>Python print() Function</u> </h4>  
+                    
+                    <p> &#10028; The print() function prints the specified message to the screen, or other standard output device. </p>
+                    <p> &#10028; The message can be a string, or any other object, the object will be converted into a string before written to the screen.
+                    </p>
+                    
+                    <div class="w3-container w3-pale-yellow w3-round-xlarge">
+
+                        <p> <b> The full syntax of <span style="color: rgb(115, 2, 7);"> print() </span> is:</b></p>
+                       
+<pre class="line-numbers" data-line="15-25">
+    <code class="language-java">
+print(object(s), sep=' ', end='\n', file=sys.stdout, flush=False)
+    </code>
+</pre>
+
+             </div>
+
+             <div class="w3-responsive">
+                <table class="w3-table-all">
+                    <tr> <th>Parameter </th> <th> Description </th></tr>
+                    <tr> <td>object(s) </td> <td> Any object, and as many as you like. Will be converted to string before printed. </td></tr>
+                    <tr> <td>sep='separator'</td> <td> <b>Optional.</b> Specify how to separate the objects, if there is more than one. <span style="color: rgb(115, 2, 7);">Default is ' '</span>  </td></tr>
+                    <tr> <td>end='end' </td> <td> <b>Optional.</b> Specify what to print at the end. <span style="color: rgb(115, 2, 7);">Default is '\n' (line feed)</span> </td></tr>
+                    <tr> <td>file </td> <td><b> Optional.</b> An object with a write method. <span style="color: rgb(115, 2, 7);">Default is sys.stdout</span>  </td></tr>
+                    <tr> <td>flush </td> <td> <b>Optional.</b> A Boolean, specifying if the output is flushed (True) or buffered (False). <span style="color: rgb(115, 2, 7);">Default is False.</span>  </td></tr>
+
+                </table>
+
+             </div>   
+             <br>
+             <h4><b>&#10028;</b> <u>Some Examples of Python print() </u> </h4> 
+             <div class="w3-container w3-pale-yellow w3-round-xlarge">
+
+                <p> <b>1)  print() without any argument.</b></p>
+               
+<pre class="line-numbers" data-line="15-25">
+<code class="language-java">
+print("Hello")
+print()
+print("World")
+</code>
+</pre>
+<p>Output:</p>
+<pre class="line-numbers" data-line="15-25">
+    <code class="language-java">
+Hello
+
+World 
+    </code>
+</pre>
+
+</div>
+
+<br>
+
+<div class="w3-container w3-sand w3-round-xlarge">
+
+    <p> <b>2)  Ignore blank line (In file <b>p1.py</b> ).</b></p>
+   
+<pre class="line-numbers" data-line="15-25">
+<code class="language-java">
+print("Hello")
+
+print("World")
+</code>
+</pre>
+<p>Output:</p>
+<pre class="line-numbers" data-line="15-25">
+<code class="language-java">
+Hello
+World 
+</code>
+</pre>
+
+</div>  
+
+<br>
+
+<div class="w3-container w3-pale-yellow w3-round-xlarge">
+
+    <p> <b>3)  print() with multiple arguments by using comma(,).</b></p>
+   
+<pre class="line-numbers" data-line="15-25">
+<code class="language-java">
+print("Hello","World")
+a=10
+print("The value of a is",a)
+</code>
+</pre>
+<p>Output:</p>
+<pre class="line-numbers" data-line="15-25">
+<code class="language-java">
+Hello World
+The value of a is 10
+</code>
+</pre>
+
+</div>
+
+<br>
+
+<div class="w3-container  w3-sand w3-round-xlarge">
+
+    <p> <b>4)   print() with separator.</b></p>
+   
+<pre class="line-numbers" data-line="15-25">
+<code class="language-java">
+print("Python","Programming","World", sep="-")
+</code>
+</pre>
+<p>Output:</p>
+<pre class="line-numbers" data-line="15-25">
+<code class="language-java">
+Python-Programming-World
+</code>
+</pre>
+
+</div>
+
+<br>
+
+<div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+    <p> <b>5)   print(), when we does not pass anything in separator then output will merge.</b></p>
+   
+<pre class="line-numbers" data-line="15-25">
+<code class="language-java">
+print("Python","Programming","World", sep="")
+</code>
+</pre>
+<p>Output:</p>
+<pre class="line-numbers" data-line="15-25">
+<code class="language-java">
+PythonProgrammingWorld
+</code>
+</pre>
+
+</div>
+
+<br>
+
+<div class="w3-container  w3-sand w3-round-xlarge">
+
+    <p> <b>6)   print() with end.</b></p>
+   
+<pre class="line-numbers" data-line="15-25">
+<code class="language-java">
+print("Hi" ,"Programmers")
+print("Welcome to", "Programming World")
+
+print("Hi" ,"Programmers", end="\n")
+print("Welcome to", "Programming World")
+</code>
+</pre>
+<p>Output:</p>
+<pre class="line-numbers" data-line="15-25">
+<code class="language-java">
+Hi Programmers
+Welcome to Programming World
+
+Hi Programmers
+Welcome to Programming World
+</code>
+</pre>
+
+</div>
+ <br>
+<div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+    <p> <b>7)   print() when we does not pass anything in end (e.g. end=" ") then output will merge.</b></p>
+   
+<pre class="line-numbers" data-line="15-25">
+<code class="language-java">
+print("Hi" ,"Programmers",end=" ")
+print("Welcome to", "Programming World")
+</code>
+</pre>
+<p>Output:</p>
+<pre class="line-numbers" data-line="15-25">
+<code class="language-java">
+Hi Programmers Welcome to Programming World
+</code>
+</pre>
+
+</div>
+      
+               
+                        
+                 <br>
+                 
+               
+                </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+<section id="PythonInputFunction" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-left"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u> Python input() Function</u></h2>
+               
+                      
+                    <h4><b>&#10028;</b> <u>Python input() Function</u> </h4> 
+                <p> &#10028; In Python we use input() function to take input from user it means input make the interpreter to wait to read the data directly from the keyboard.</p>
+              
+                <div class="w3-container w3-pale-yellow w3-round-xlarge">
+
+                    <p> <b> The Syntax of <span style="color: rgb(115, 2, 7);"> input() </span> is:</b></p>
+                   
+<pre class="line-numbers" data-line="15-25">
+<code class="language-java">
+input(prompt)
+</code>
+</pre>
+<p> <b> Note: </b> <br> </p>
+<p> &#10028; prompt is a string, representing a default message before the takes input.</p>
+<p> &#10028;  By default, it returns the user input in form of a string.</p>
+
+         </div>
+
+         <br>
+
+
+         <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+
+            <p> <b>1) Taking input() from the user.</b></p>
+           
+        <pre class="line-numbers" data-line="15-25">
+        <code class="language-java">
+name=input()
+print(name)
+            
+        </code>
+        </pre>
+        <p>Output:</p>
+        <pre class="line-numbers" data-line="15-25">
+        <code class="language-java">
+BNUltrasoft
+BNUltrasoft
+        </code>
+        </pre>
+        
+        </div>
+        <br>
+         <div class="w3-container  w3-sand w3-round-xlarge">
+
+            <p> <b>2) Taking input() from the user with a message.</b></p>
+           
+        <pre class="line-numbers" data-line="15-25">
+        <code class="language-java">
+name=input("Enter your name:")
+print(name)
+        </code>
+        </pre>
+        <p>Output:</p>
+        <pre class="line-numbers" data-line="15-25">
+        <code class="language-java">
+Enter your name:Rahul Kumar
+Rahul Kumar
+        </code>
+        </pre>
+        
+        </div>
+        <br>
+        <h4><b>&#10028;</b> <u>Labwork 4:</u> </h4> 
+        <div class="w3-container w3-sand w3-round-xlarge">
+     <p> Q1) WAP input any 3 numbers and find their sum, average and print them.</p>
+     <p> Q2) WAP input a number and display its cube.</p>
+     <p> Q3) WAP to input length and breadth of a rectangle, Calculate its area and perimeter.</p>
+     <p> Q4) WAP to input side of a square and calculate its area.</p>
+     <p> Q5) WAP to input any 5 students name and print them.</p>
+     <p> Q6) WAP to input the marks of any 5 subjects of a student. Calculate and print the total mark and percentage.</p>
+     <p> Q7) WAP to input the name, age and address of a student and display them.</p>
+     <p> Q8) WAP to input principal amount, rate, time. Calculate the simple interest. </p>
+     <p> Q9) WAP to input of radius of circle. Calculate and print area and circumference. <b>[Hint: Area=22/7*r*r;  Circumference=2*22/7*r]</b></p>
+     <p> Q10) WAP to input a number. Calculate and print the square of that number. </p>
+     <p> Q11)  WAP in python input  Fahrenheit from the user and calculate its Celsius. 
+        <b>[Hint: C = (F − 32) × 5 ⁄ 9]</b> </p>
+     <p> Q12) WAP in python input  Celsius from the user and calculate its Fahrenheit.
+        <b> [ Hint: F = C x (9 ⁄ 5) + 32 ] </b></p>
+     <p> Q13)  WAP in python input base and height of triangle and calculate its Area.
+        <b>  [ Hint : Area of a Triangle => A = ½ (b × h)] </b> </p> 
+     <p> Q14) WAP in python input radius and height of cylinder and calculate volume of Cylinder
+        <b> [ Hint :  PI*r*r*h ; PI= 3.14] </b>  </p>        
+     <p> Q15) WAP in python input length, breadth, height and calculate the volume of cuboid.
+        <b> [Hint:  l*b*h ]</b> </p>
+     <p>Q16)  WAP in python input selling price and loss price
+        from the user and calculate the Cost Price.
+        <b>[Hint: SP=Rs 500, Loss=20, CP=?] </b> </p>
+     <p>Q17) WAP in python input Cost Price and Profit price
+        from the user and calculate the Selling Price.
+        <b>[Hint: CP= Rs 300, Profit= Rs 40, SP=? ]</b> </p>   
+
+    <p>Q18) WAP in python input Selling Price
+        from the user and calculate Loss and Loss Percentage.  
+        If Cost Price is Rs 250. </p>
+     
+    <p> Q19) WAP in python input Selling Price from the user and    
+        calculate Profit and Profit Percentage. 
+        If Cost Price is Rs 800.  </p>
+    <p> Q20) WAP in python input Selling Price and Profit also
+        calculate Cost Price and Profit Percentage. </p>    
+
+   <p> Q21) WAP in python input 2  float number and print their sum. </p>
+   <p> Q22) WAP in python input 1 float number and 1 integer value, 
+    print their sum after converting the integer into float number. </p>
+
+<p>Q23)  WAP in python input 2 integer value, calculate their multiplication 
+    after converting into float value. </p>
+<p>Q24) WAP in python enter 4 digit number from the user, 
+    and reverse the number and print it.
+    <b>[Hint : 4567 output should be: 7654 ]</b>  </p>
+
+
+ <p>Q25) WAP in python input any three digit, 
+    and print the sum of cube of each digit of the given  number. </p> 
+
+<p>Q26) WAP in python input 5 digits integer number and find sum of first and last digit. </p>
+<p>Q27) WAP to input total selling price and profit of 15 items. 
+    Calculate C.P. of each item. </p>
+<p>Q28) WAP to input Basic Salary of an employee and calculate Gross Salary. <br> 
+    Where as: <br>
+     T.A. is 10% of B.S. <br>
+     D.A. is 15 % of B.S. <br>
+     HRA. is 20% of B.S.  <br>
+
+    <b> [ Hint: Gross Salary = TA + DA+ HRA + BS ] </b></p>    
+
+<p> Q29) WAP to input 5 digit integers number and find the sum of digits. </p>
+<p>Q30) WAP to input distance between two cities in Kilometre.
+    Convert into <b>m</b>  and <b>cm</b>. </p>
+<p>Q31) You have consider a currency system  in which there are,
+    7 notes of denomination. <br>
+   <b> Re 1, Rs 2, Rs 5, Rs 10, Rs 20, Rs 50, Rs 100.</b> <br>
+    WAP in python to input of N rupees, 
+    find out the number of notes (count the number of notes) 
+    that will be equal of same N rupees. </p>
+
+
+
+
+
+
+        </div>
+ <br>
+
+                </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="PythonDataType" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Python’s Built-in Data
+                        types</u></h2>
+               
+                        <img src="content/img/python/pythondatatype.png" class="w3-round w3-center"  alt="image" style="width:100%">         
+                
+                 <br>
+
+                 <h3> &#10028; Getting the Data Type</h3>
+                 <p> &#10028; You can get the data type of any object by using the <span style="color: rgb(115, 2, 7);">type()</span>  function:</p> 
+              
+                 <div class="w3-container  w3-sand w3-round-xlarge">
+
+                    <p> <b>Print the data type of the variable x:</b></p>
+                   
+                <pre class="line-numbers" data-line="15-25">
+                <code class="language-java">
+x = 5
+print(type(x))
+                </code>
+                </pre>
+                <p>Output:</p>
+                <pre class="line-numbers" data-line="15-25">
+                <code class="language-java">
+< class 'int' >
+                </code>
+                </pre>
+                
+                </div>
+
+<br>
+<p> &#10028; If you want to specify the data type, you can use the following 
+    constructor functions:</p>
+
+    <div class="w3-responsive">
+    
+    <table  class="w3-table-all">
+    <tr>
+    <th style="min-width:350px">Example</th>
+    <th>Data Type</th>
+  
+    </tr>
+    <tr>
+    <td>x = &quot;Hello World&quot;</td>
+    <td>str</td>
+    </tr>
+    <tr>
+    <td>x = 20</td>
+    <td>int</td>
+    </tr>
+    <tr>
+    <td>x = 20.5</td>
+    <td>float</td>
+    </tr>
+    <tr>
+    <td>x = 1j</td>
+    <td>complex</td>
+    </tr>
+    <tr>
+    <td>x = [&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;]</td>
+    <td>list</td>
+    </tr>
+      <tr>
+    <td>x = (&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;)</td>
+    <td>tuple</td>
+      </tr>
+      <tr>
+    <td>x = range(6)</td>
+    <td>range</td>
+      </tr>
+      <tr>
+    <td>x = {"name:" : "John", "age" : 36}</td>
+    <td>dict</td>
+      </tr>
+      <tr>
+    <td>x = {&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;}</td>
+    <td>set</td>
+      </tr>
+      <tr>
+    <td>x = frozenset({&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;})</td>
+    <td>frozenset</td>
+      </tr>
+      <tr>
+    <td>x = True</td>
+    <td>bool</td>
+      </tr>
+      <tr>
+    <td>x = b"Hello"</td>
+    <td>bytes</td>
+      </tr>
+      <tr>
+    <td>x = bytearray(5)</td>
+    <td>bytearray</td>
+      </tr>
+    <tr>
+    <td>x = memoryview(bytes(5))</td>
+    <td>memoryview</td>
+    </tr>
+    <tr>
+    <td>x = None</td>
+    <td>NoneType</td>
+    </tr>
+    </table>
+</div>
+
+
+                <br>
+              
+                </div>
+
+                
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="PythonConstants" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Python Constants</u></h2>
+               
+                   
+                 <br>
+                 <p><b> &#10028; Python Constants: </b>A constant is a special type of variable whose value cannot be changed.</p> 
+                 <p> &#10028;  Let's see how we declare constants in separate file and use it in the main file,</p>
+                  <div class="w3-container  w3-sand w3-round-xlarge">
+
+                    <p> <b>Create a constant.py:</b></p>
+                   
+                <pre class="line-numbers" data-line="15-25">
+                <code class="language-java">
+# declare constants 
+PI = 3.14
+GRAVITY = 9.8
+                </code>
+                </pre> <br>
+                <p> <b>Create a main.py:</b></p>
+                   
+                <pre class="line-numbers" data-line="15-25">
+                <code class="language-java">
+
+import constant
+
+print(constant.PI) # prints 3.14
+print(constant.GRAVITY) # prints 9.8
+                </code>
+                </pre>
+
+                <p>Output:</p>
+                <pre class="line-numbers" data-line="15-25">
+                <code class="language-java">
+3.14
+9.8
+                </code>
+                </pre>
+                
+                </div>
+                <br>
+
+                </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="PythonLiteral" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Python Literal</u></h2>
+               
+                   
+                 <br>
+                 <p><b> &#10028; Python Literal: </b>Literals are the actual values that are directly written into your code to represent specific data. They are used to provide initial values for variables, as operands in expressions, or as direct values in statements.</p> 
+                  <h4> Types of Literals in Python:</h4>
+                  <ul class="w3-ul">
+                    <li>1) String literals</li>
+                    <li>2) Character literal</li>
+                    <li>3) Numeric literals</li>
+                    <li>4) Boolean literals</li>
+                    <li>5) Special literals</li>
+                    <li>6) Literal Collections</li>
+
+
+
+                  </ul>
+                 <br>
+                 
+                  <div class="w3-container  w3-sand w3-round-xlarge">
+
+                    <p> <b>All example of Literals in Python</b></p>
+                   
+                <pre class="line-numbers" data-line="15-25">
+                <code class="language-java">
+
+#-------------------------------
+#Example Python String Literals
+#-------------------------------
+
+a='BNUltrasoft'   # in single quote
+b="BNUltrasoft"   # in double quotes
+c='''BN           
+      Ultra
+        Soft'''   # multi-line String
+
+
+#-------------------------------
+#Python Character literal
+#-------------------------------
+
+
+d='n'   # character literal in single quote
+e="a"   # character literal in double quotes
+
+#-------------------------------
+#Python Numeric literal
+#-------------------------------
+
+
+f=50     # Integer Literal
+g=12.5   # Float Literal
+h=7+5j   # Complex Literal
+
+#-------------------------------
+#Python Boolean literal
+#-------------------------------
+
+i=True   
+
+
+#-------------------------------
+#Python Special literal
+#-------------------------------
+
+water_remain = None
+
+
+#-------------------------------
+#Python literal collections
+#-------------------------------
+
+number = [1, 2, 3, 4, 5]    # List literals
+even_number = (2, 4, 6, 8)  # Tuple literals
+information = {'name': 'amit', 'age': 20, 'ID': 20} #Dictionary literal
+vowels = {'a', 'e', 'i', 'o', 'u'} #Set literal
+                    
+                </code>
+                </pre> 
+               
+                
+                </div>
+                <br>
+
+                </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="PythonString" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Python String</u></h2>
+               
+                   
+                 <br>
+                 <p><b> &#10028; Python String : </b> Python string is the collection of the characters surrounded by single quotes (' '), 
+                    double quotes (" "), or triple quotes(""" """)/(''' ''').</p> 
+
+                    <div class="w3-container  w3-sand w3-round-xlarge">
+
+<pre class="line-numbers" data-line="15-25">
+                    <code class="language-java">
+
+Eg 1: 'Hello Python' 
+Eg 2: "Hello Python" 
+Eg 3: '''Hello
+             Python'''
+Eg 4: """Hello 
+             Python"""
+      </code>
+</pre> 
+    
+</div>
+
+    <br>
+
+    <p><b> &#10028;  String Length:</b> To get the length of a string, use the <b>len()</b> function.</p>
+    <div class="w3-container  w3-sand w3-round-xlarge">
+
+        <pre class="line-numbers" data-line="15-25">
+                            <code class="language-java">
+a = "BNUltrasoft"
+print(len(a))
+           </code>
+        </pre> 
+<h3>Output: 11</h3>
+            
+</div> 
+<p><b>Note:</b> Python does not have a character data type, a single character is simply a string with a length of 1.</p>
+
+        <br> 
+        <p><b> &#10028;  Python String Indexing:</b> In Python, individual characters of a String can be accessed by using the method of Indexing.</p>
+         <p>a) The indexing of the Python strings starts from 0.</p>
+         <p>  b) Indexing allows negative address references to access characters from the back of the String, <br>
+            e.g. -1 refers to the last character, -2 refers to the second last character, and so on. 
+         </p>
+         <img src="content/img/python/pythonindexing.jpg" class="w3-round w3-center"  alt="image" style="width:100%"> 
+         
+         <p> <b>Note: 1</b> While accessing an index out of the range will cause an IndexError. <br> <span style="color: rgb(252, 40, 47);"> IndexError: string index out of range.</span></p>
+         
+
+ <p> <b>Note: 2 </b>Only Integers are allowed to be passed as an index, float or other types that will cause a TypeError. <br>  <span style="color: rgb(252, 40, 47);">TypeError: string indices must be integers, not 'float'.</span>
+ </p>
+ <br>
+
+ <p><b> &#10028;String Slicing in Python:  </b>  Python slicing can be done in two ways:</p>
+  <p> 1) Using the array slicing  [:: ] method <br> 2) Using a slice() method</p>
+<br>
+
+<p><b> &#10028; </b> 1) Using the List/array slicing  [ :: ]  method :-</p>
+<img src="content/img/python/arrayslicing.png" class="w3-round w3-center"  alt="image" style="width:100%"> 
+<p>a) In Python, the slice operator [n] is used to access the individual characters of the string.
+    where n is number of index.</p>
+    
+    <div class="w3-container  w3-sand w3-round-xlarge">
+       <h3>Example</h3>
+        <pre class="line-numbers" data-line="15-25">
+                            <code class="language-java">
+s="BNUltrasoft"
+print(s[2])
+           </code>
+        </pre> 
+<h3>Output: U</h3>
+            
+</div>    
+<p>b) Slicing in a String is done by using a Slicing operator, i.e., a colon (:). <br>
+    One thing to keep in mind while using this method is that the string returned 
+    after slicing includes the character at the start index but not the character at the last index. </p>        
+
+    <div class="w3-container  w3-sand w3-round-xlarge">
+        <h3>Example</h3>
+        <pre class="line-numbers" data-line="15-25">
+                            <code class="language-java">
+s="BNUltrasoft"
+print(s[2:7])
+           </code>
+        </pre> 
+<h3>Output: Ultra</h3>
+            
+</div> 
+ <br>
+
+ <div class="w3-container  w3-sand w3-round-xlarge">
+    <h4><b>&#10028;</b> <u>Labwork 5:</u> </h4> 
+    <p>Q32) WAP in python input your name and print first and last character of your name.</p>
+    <p>Q33) WAP in python input your name and print your surname.</p> 
+    <p>Q34) WAP in python input your name and print vowels character from your name.</p>  
+    <p> Q35) What will be the output of given array slicing. <b>  a="Python is easy" </b></p> 
+
+    <ul class="w3-ul">
+        <li>1) a[3:12] </li>
+        <li>2) a[11: ] </li>
+        <li>3) a[ :14] </li>
+        <li>4) a[ : ] </li>
+        <li>5) a[ 0 : ] </li>
+        <li>6) a[4: ] </li>
+        <li>7) a[1: :2] </li>
+        <li>8) a[ : :2 ] </li>
+        <li>9) a[ :6 :3 ] </li>
+        <li>10) a[ :8 :4 ] </li>
+        <li>11) a[ 4: :2 ] </li>
+        <li>12) a[ 2: 7 :2 ] </li>
+        <li>13) a[ 2: :2 ] </li>
+        <li>14) a[ 1:2:3 ] </li>
+        <li>15) a[ 8: :2 ] </li>
+
+    </ul>
+    <p> Q36) What will be the array slicing  of given following output when <b>  a="Programming Language" </b></p> 
+    <ul class="w3-ul">
+        <li> 1) PormigLnug</li>
+        <li> 2) gram</li>
+        <li> 3) ming</li>
+        <li> 4) gamn agae </li>
+        <li> 5) age </li>
+        <li> 6) rgam</li>
+        <li> 7) Pgmn</li>
+        <li> 8) amn </li>
+        <li> 9) PgmnLgg </li>
+        <li> 10) mmin</li>
+        <li> 11) m u</li>
+        <li> 12) agae </li>
+        <li> 13) ng Langu</li>
+        <li> 14) ai na</li>
+        <li> 15) rgamn agae</li>
+
+
+    </ul>
+
+    <br>
+</div>
+ <br>
+ <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+    <h4><b>&#10028;</b> <u>Working on Negative Slicing.</u> </h4> 
+    <p><b>When </b> a="Python"</p>
+     <table class="w3-table-all">
+        <tr> <th> Example</th> <th> Output</th></tr>
+        <tr> <td>a[ : :-1] </td> <td>nohtyp </td></tr>
+        <tr> <td>a[ : :+1] </td> <td>python</td></tr>
+        <tr> <td>a[-5] </td> <td>y </td></tr>
+        <tr> <td>a[-6:-2] </td> <td>pyth </td></tr>
+        <tr> <td>a[-6: ] </td> <td>python </td></tr>
+        <tr> <td>a[-6:-1]</td> <td> pytho </td></tr>
+        <tr> <td>a[-6:0] </td> <td> #no any print</td></tr>
+        <tr> <td> a[-6:-5] </td> <td> p</td></tr>
+        <tr> <td> a[-6:-4]</td> <td>py </td></tr>
+        <tr> <td>a[-5:-2:-1] </td> <td>#no any print </td></tr>
+        <tr> <td>a[-5:-2]</td> <td>yth </td></tr>
+        <tr> <td>a[-6: :-1]</td> <td>p </td></tr>
+        <tr> <td>a[-1: :-1]</td> <td> nohtyp</td></tr>
+
+
+     </table>
+
+   <p><b>&#10028; Note: [ start : stop : <span style="color: rgb(115, 2, 7);"> step </span>  ] </b>: When we provive <b>-1</b> on step then it prints in reverse order.  </p>
+
+  
+
+    <p> Q37) What will be the output of given array slicing. <b>a="Information Technology"</b></p>
+    <ul class="w3-ul">
+        <li>1) a[-17:-11] </li>
+        <li>2) a[-10:-4]</li>
+        <li>3) a[-5: :-1]</li>
+        <li>4) a[-5: :-2]</li>
+        <li>5) a[-1:-18:-1]</li>
+        <li>6) a[-1:-18:]</li>
+        <li>7) a[-2:-6:-1]</li>
+        <li>8) a[-7:-17:-1]</li>
+        <li>9) a[-22]</li>
+        <li>10) a[-19: :-1]</li>
+        <li>11) a[-5: :-3]</li>
+        <li>12) a[-1: :-5]</li>
+        <li>13) a[-1: -16 :-2]</li>
+        <li>14) a[-1: -20 :-3]</li>
+        <li>15) a[ : -11 :-3]</li>
+        <li>16) a[ :  :-2]</li>
+        <li>17) a[ : -5 :-2]</li>
+        <li>18)  a[ : -18 :]</li>
+        <li>19)  a[ -2:  :-4]</li>
+        <li>20) a[ : -6 :]</li>
+    </ul>
+    <p> Q38) What will be the array slicing of given following output when <b>a="Information Technology"</b>. [Using: Negative sign]</p>
+    <ul class="w3-ul">
+    <li>1) ygolonhceT noitamrofnI</li>
+    <li>2) logy</li> 
+    <li>3) noitamrofnI</li> 
+    <li>4) olonhceT noitamro</li>  
+    <li>5) mation Technology</li>
+    <li>6) nhceT noit</li>
+    <li>7) he otmo</li>
+    <li>8) rmation Technolo</li>
+    <li>9) nomto ehoo</li>
+    <li>10) glncTniar</li>
+    <li>11) hToao</li>
+    <li>12) cTniarf</li>
+    <li>13) hceT noitamrofn</li>
+    <li>14) yoohe otmon</li>
+    <li>15) IfrainTcnlg</li>
+    </ul>
+ </div>
+
+ <br>
+<br>
+<p><b> &#10028; </b> 2) Using the slice()  method :-</p>
+<div class="w3-container  w3-pale-yellow w3-round-xlarge">
+<h4> Syntax:-</h4>
+<li> slice(stop)</li>
+<li> slice(start, stop, step)</li>
+<p> Here, <br> &#10028; The <span style="color: rgb(115, 2, 7);"> <b> start </b></span>  parameter denotes the <b>starting</b>  index. <br> &#10028; The <span style="color: rgb(115, 2, 7);"><b>end</b></span>  parameter denotes the <b>ending</b>  index. <br> &#10028; The <span style="color: rgb(115, 2, 7);"> <b>step </b></span>  parameter denotes the number of elements to be <b>skipped</b>  during the slice operation.</p>
+<p><b>Note:</b> These are separated by <b>comma ( , )</b>.</p>
+</div>
+<br>
+<div class="w3-container  w3-sand w3-round-xlarge">
+<h4> Example:-</h4>
+
+<pre class="line-numbers" data-line="15-25">
+    <code class="language-java">
+a="Hello Python"
+
+s1=slice(11)  #Passing only stop
+s2=slice(0,11) #Passing start and stop 
+s3=slice(0,12,2)#Passing start, stop, step
+s4=slice(-1,-12,-1)#Passing start, stop, step but in negative
+
+print(a[s1])
+print(a[s2])
+print(a[s3])
+print(a[s4])
+</code></pre>
+
+</div>
+<br>
+<div class="w3-container  w3-sand w3-round-xlarge">
+    <h4> <u>Output:-</u></h4>
+    <p>Hello Pytho</p>
+    <p>Hello Pytho </p>
+<p>HloPto </p>
+<p> nohtyP olle</p>
+
+    </div>
+<br>
+    <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+        <h4><b>&#10028;</b> <u>Labwork 6:</u> </h4> 
+      <p> Q39) What will be the output when we passed the following  parameters in <span style="color: rgb(115, 2, 7);">slice() method</span> when <b>a="Information Technology"</b>.</p>
+    
+      <ul class="w3-ul">
+        <li> 1) slice(2,15,2)</li>
+        <li> 2) slice(3,15) </li>
+        <li> 3) slice(-1,-23,-1)</li>
+        <li> 4) slice(-4)</li>
+        <li> 5) slice(7) </li>
+        
+      </ul>
+      <p> Q40) What will be the slice() method of the following output when <b>a="Information Technology"</b>.</p>
+    
+      <ul class="w3-ul">
+        <li> 1) lncTn</li>
+        <li> 2) IfrainTcnl </li>
+        <li> 3) Information Technolo</li>
+        <li> 4) lonhceT n</li>
+        <li> 5) on Technolog </li>
+        
+      </ul>
+        </div>
+
+<br>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="PythonStringConcatenation" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-left"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Python - String Concatenation</u></h2>
+                   
+                 <br>
+                 <p><b> &#10028; String Concatenation : </b> To concatenate, or combine, two strings you can use the <b>+</b> operator.</p> 
+                 <div class="w3-container  w3-sand w3-round-xlarge">
+
+                    <p> <b>Example 1:</b></p>
+                   
+                <pre class="line-numbers" data-line="15-25">
+                <code class="language-java">
+a = "Hello"
+b = "Python"
+c = a + b
+print(c)
+</code>
+                </pre> 
+   <br>
+<p><b>Output:</b></p>
+<pre class="line-numbers" data-line="15-25">
+<code class="language-java">
+HelloPython
+</code>
+</pre>
+                
+</div>
+<br>
+<div class="w3-container  w3-sand w3-round-xlarge">
+
+    <p> <b>Example 2:</b></p>
+   
+<pre class="line-numbers" data-line="15-25">
+<code class="language-java">
+a = "Hello"
+b = "Python"
+c = a +" "+ b
+print(c)    
+</code>
+</pre> 
+<br>
+<p><b>Output:</b></p>
+<pre class="line-numbers" data-line="15-25">
+<code class="language-java">
+Hello Python
+</code>
+</pre>
+
+</div>
+<br>
+<div class="w3-container  w3-sand w3-round-xlarge">
+
+    <p> <b>Note: </b>we cannot combine strings and numbers like this:</p>
+   
+<pre class="line-numbers" data-line="15-25">
+<code class="language-java">
+age = 20
+name = "John"
+s = name+age
+print(s)
+</code>
+</pre> 
+<br>
+<p><b>Output:</b></p>
+<p><span style="color: rgb(115, 2, 7);">  <b>TypeError:</b> can only concatenate str (not "int") to str </span>
+   </p>
+
+</div>
+             
+<br>
+</div>
+
+    </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="PythonFormatStrings" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Python - Format Strings</u></h2>
+               
+                 
+                 <br>
+                 <p><b> &#10028; String Format : </b> The <span style="color: rgb(115, 2, 7);">format()</span>  method takes the passed arguments, formats them, and places them in the string where the placeholders <span style="color: rgb(115, 2, 7);"> {}</span>.</p> 
+               
+                 <div class="w3-container  w3-sand w3-round-xlarge">
+
+                    <p> <b>Note: </b>But we can combine strings and numbers by using the <span style="color: rgb(115, 2, 7);">format()</span>  method!</p>
+                   
+                <pre class="line-numbers" data-line="15-25">
+                <code class="language-java">
+age = 21
+txt = "My name is John, and I am {} years old."
+print(txt.format(age))
+                </code>
+                </pre> 
+                <br>
+                <p><b>Output:</b></p>
+               <p>My name is John, and I am 21 years old. </p>
+                
+                </div>
+                <br>
+                <p> <b> &#10028; </b>The <span style="color: rgb(115, 2, 7);">format()</span>  method takes unlimited number of arguments, and are placed into the respective placeholders.</p>
+               
+                 <div class="w3-container  w3-sand w3-round-xlarge">
+
+                    <p> <b>Example 1: </b>  </p>
+                   
+                <pre class="line-numbers" data-line="15-25">
+                <code class="language-java">
+qty = 3
+price = 300
+order="I want {} pieces of item for {} rupees."
+print(order.format(qty,price))
+                </code>
+                </pre> 
+                <br>
+                <p><b>Output:</b></p>
+             <p> I want 3 pieces of item for 300 rupees.</p>   
+                </div>
+
+
+                <br>
+                <p> <b> &#10028; Note: </b> You can use index numbers <span style="color: rgb(115, 2, 7);"> {0} </span>to be sure the arguments are placed in the correct placeholders:</p>
+               
+                 <div class="w3-container  w3-sand w3-round-xlarge">
+
+                    <p> <b>Example 2: </b> If we want this output: <span style="color: rgb(115, 2, 7);"> I want to pay 300 rupees for 3 pieces.</span></p>
+                   
+                <pre class="line-numbers" data-line="15-25">
+                <code class="language-java">
+qty = 3
+price = 300
+order="I want to pay {1} rupees for {0} pieces."
+print(order.format(qty,price))
+                </code>
+                </pre> 
+                <br>
+                <p><b>Output:</b></p>
+             <p> I want to pay 300 rupees for 3 pieces.</p>   
+                </div>
+
+
+                <br>
+
+                <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+                 <p> <b> &#10028; Try this: </b> </p>
+                
+                  <p>age = 36 <br>
+                    name = "John"</p>
+                  <p> <b>Output :</b>  His name is John. John is 36 years old.
+                </p>
+                
+                </div>
+                <br>
+
+                <p> <b> &#10028; Note: </b> Named indexes by entering a name inside the <span style="color: rgb(115, 2, 7);">curly brackets{} </span> , you must use names when you pass the parameter values in format <span style="color: rgb(115, 2, 7);">Eg: format(name = "value") </span> </p>
+               
+                <div class="w3-container  w3-sand w3-round-xlarge">
+
+                   <p> <b>Example: </b>  </p>
+                  
+               <pre class="line-numbers" data-line="15-25">
+               <code class="language-java">
+myinfo = "I am {name}, I am  {age} years old."
+print(myinfo.format(name = "John", age = 20))
+               </code>
+               </pre> 
+               <br>
+               <p><b>Output:</b></p>
+            <p> I am John, I am  20 years old. </p>   
+               </div>
+
+
+<br>
+
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+<section id="PythonEscapeCharacter" class="topPadding">
+    <div class="w3-container w3-panel">
+        <div data-aos="fade-right"  data-aos-duration="1000">
+            <div class="w3-white  w3-card w3-round-large   ">
+               
+
+                 <div class="w3-leftbar w3-border-pink w3-border w3-round-large w3-panel ">
+                    <h2 class="w3-panel w3-center"><u>Python Escape Character: </u></h2>
+               
+                      
+                 <br>
+                 <p><b> &#10028; Python Escape Character : </b>To insert characters that are illegal in a string, use an escape character.
+                    An escape character is a <span style="color: rgb(115, 2, 7);">backslash \</span>  followed by the character you want to insert.</p> 
+                
+                 <br>
+                 <table class="w3-table-all">
+                     <tr> <th>Escape Character </th> <th>Use </th></tr>
+                      <tr> <th> <span style="color: rgb(115, 2, 7);">\' </span> </th> <td> Print a single quote inside a string enclosed with single-quotes. </td></tr>
+                      <tr> <th> <span style="color: rgb(115, 2, 7);">\" </span> </th> <td> Print a double quote inside a string enclosed with double-quotes. </td></tr>
+                      <tr> <th> <span style="color: rgb(115, 2, 7);">\n </span> </th> <td> Print in new line, even if in the same line . </td></tr>
+                      <tr> <th> <span style="color: rgb(115, 2, 7);">\t </span> </th> <td> Print tab space in line. </td></tr>
+                      <tr> <th> <span style="color: rgb(115, 2, 7);">\b </span> </th> <td> Give a backspace. </td></tr>
+                      <tr> <th> <span style="color: rgb(115, 2, 7);">\\ </span> </th> <td> Prints a backlash character.  </td></tr>
+                      <tr> <th> <span style="color: rgb(115, 2, 7);">\\\\ </span> </th> <td> Prints two backlash character.  </td></tr>
+                      <tr> <th> <span style="color: rgb(115, 2, 7);">\ooo </span> </th> <td> Give the Octal representation.  </td></tr>
+                      <tr> <th> <span style="color: rgb(115, 2, 7);">\xhh </span> </th> <td> Give the Hexadecimal representation.  </td></tr>
+                
+                
+                </table>
+                <br>
+                <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+                  <p> <b> &#10028; Example of   <span style="color: rgb(115, 2, 7);"> \' </span>  </b></p>
+                  <pre>
+                    <code class="language-java">
+a="Father\'s Name:"
+print(a)
+                    </code>
+                    </pre> 
+                  <p> <b>Output:</b></p>
+                   <p>Father's Name:</p> 
+                </div>
+                <br>
+                <div class="w3-container  w3-sand w3-round-xlarge">
+                  <p> <b> &#10028; Example of   <span style="color: rgb(115, 2, 7);"> \" </span>  </b></p>
+                  <pre>
+                    <code class="language-java">
+a="He said, \"I want to eat.\""
+print(a)
+                    </code>
+                    </pre> 
+                  <p> <b>Output:</b></p>
+                   <p>He said, "I want to eat."</p> 
+                </div>
+                <br>
+                <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+                  <p> <b> &#10028; Example of   <span style="color: rgb(115, 2, 7);"> \n </span>  </b></p>
+                  <pre>
+                    <code class="language-java">
+a="Hello\nPython"
+print(a)
+                    </code>
+                    </pre> 
+                  <p> <b>Output:</b></p>
+                   <p>Hello<br>Python</p> 
+                </div> <br>
+
+                <div class="w3-container  w3-sand w3-round-xlarge">
+                    <p> <b> &#10028; Example of   <span style="color: rgb(115, 2, 7);"> \t </span>  </b></p>
+                    <pre>
+                      <code class="language-java">
+a="Hello\tPython"
+print(a)
+                      </code>
+                      </pre> 
+                    <p> <b>Output:</b></p>
+                     <p>Hello&nbsp;&nbsp;&nbsp;&nbsp;Python</p> 
+                  </div> <br>
+
+                  <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+                    <p> <b> &#10028; Example of   <span style="color: rgb(115, 2, 7);"> \b </span>  </b></p>
+                    <pre>
+                      <code class="language-java">
+  a="Python\bWorld"
+  print(a)
+                      </code>
+                      </pre> 
+                    <p> <b>Output:</b></p>
+                     <p>PythoWorld</p> 
+                  </div> <br>
+                  <div class="w3-container  w3-sand w3-round-xlarge">
+                    <p> <b> &#10028; Example of   <span style="color: rgb(115, 2, 7);"> \\ and \\\\ </span>  </b></p>
+                    <pre>
+                      <code class="language-java">
+a="Hello\\Python"
+b="Hello\\\\Python"
+print(a)
+print(b)
+                      </code>
+                      </pre> 
+                    <p> <b>Output:</b></p>
+                  <p>  Hello\Python <br>
+                    Hello\\Python</p>
+                  </div> <br>
+                  <div class="w3-container  w3-pale-yellow w3-round-xlarge">
+                    <p> <b> &#10028; Example of   <span style="color: rgb(115, 2, 7);"> \ooo </span>  </b></p>
+                    <p><b>Note : </b> ASCII of H=72, E=69, L=76, O=79 then in octal value is: 72=110, 69=105, 76=114, 79=117</p>
+                    <pre>
+                      <code class="language-java">
+a="\110\105\114\114\117"
+print(a)
+                      </code>
+                      </pre> 
+                    <p> <b>Output:</b></p>
+                     <p>HELLO</p> 
+                  </div>
+                  <br>
+              
+                  <div class="w3-container  w3-sand w3-round-xlarge">
+                    <p> <b> &#10028; Example of   <span style="color: rgb(115, 2, 7);">\xhh </span>  </b></p>
+                    <p><b>Note : </b> ASCII of H=72, E=69, L=76, O=79 then in Hexa value is: 72=48, 69=45, 76=4C, 79=4F</p>
+                    <pre>
+                      <code class="language-java">
+a="\x48\x45\x4C\x4C\x4F"
+print(a)
+                      </code>
+                      </pre> 
+                    <p> <b>Output:</b></p>
+                     <p>HELLO</p> 
+                  </div>
+                 <br>
+
+             
+  <div class="w3-container  w3-sand w3-round-xlarge">
+
+    <p> <b>Labwork</b></p>
+    <p>Q41) WAP in python to print the following output.</p>
+      <ul class="w3-ul">
+       <li> 1). My name is {}, I am {} years old. </li>
+       <li> 2). I want {} burgers and {} coffees at rupees {}.
+    </li> 
+    <li>3). I am {}, my father name is {} and my mother name is {}     <br> <span style="color: rgb(115, 2, 7);"> [Hint:  name="Yourname", fname="Your Father Name", mname="Your Mother Name"] </span> 
+    </li>
+    <li> 4). 
+    "Do the best you can until you know better." <br>
+       &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;        -Maya Angleou
+    </li>
+    <li> 5). "This" "is" "Python" "it" "is" "relesed" "in" 1991 "by" "Guido van Rossum"  [ Using + Operator]</li>
+    </ul>
+<pre>
+<code class="language-java">
+#Output    
+ThisisPythonitisrelesedin1991byGuido van Rossum
+
+</code>
+</pre> 
+
+</div>
+
+<br>
+
+               </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+
+</section> 
+
+
+<!-- 
+Coding Part
+
+<section id="sec1" class="topPadding">
+            <div class="w3-container w3-panel">
+                <div data-aos="fade-right"  data-aos-duration="1000">
+                    <div class="w3-white  w3-card w3-round-large   ">
+                        <h2 class="w3-panel w3-center">Example1</h2>
+
+                         <div class=" w3-leftbar w3-border-pink w3-border w3-round-large ">
+                           
+<pre class="line-numbers" data-line="15-25">
+    <code class="language-java">
+      package com.example.webviewtest;
+      import androidx.appcompat.app.AppCompatActivity;
+      import android.os.Bundle;
+      import android.view.View;
+      import android.webkit.WebView;
+    
+      public class MainActivity extends AppCompatActivity {
+      private WebView webView;
+      @Override
+      protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_main);
+            webView=findViewById(R.id.webviewforhighlight);
+            webView.getSettings().setJavaScriptEnabled(true);
+            webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+            webView.loadUrl("file:///android_asset/prismjs_template.html");
+        }
+     }
+    
+    
+     x = "awesome"
+    
+     def myfunc():
+       x = "fantastic"
+       print("Python is " + x)
+     
+     myfunc()
+     
+     print("Python is " + x)
+    
+    
+    </code>
+    </pre>
+    
+
+                         </div>
+
+                    </div> 
+                </div>
+            </div>
+
+
+
+</section> 
+ -->
+
+         
+            
+              
+           
+
+   
+            
+            
+            <!-- Page content Coding part Start -->
+
+
+        <!-- Page content Body Start -->
+
+
+ <!-- Page Content End --> 
+ 
+ <script>
+ 
+ AOS.init();
+
+
+
+</script>
+</body>
+</html>
